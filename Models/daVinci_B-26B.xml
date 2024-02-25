@@ -8,6 +8,8 @@
   </sound>
 
   <offsets>
+    <x-m>0</x-m>
+    <y-m>0</y-m>
     <z-m>0</z-m>
     <pitch-deg>0</pitch-deg>
   </offsets>
@@ -345,6 +347,7 @@ ________________________________________________________________________________
     <type>material</type>
     <object-name>PortWingAssy</object-name>
     <object-name>PortAileron</object-name>
+    <object-name>PortAileron.001</object-name>
     <object-name>PortOutsideFlap</object-name>
     <object-name>PortInsideFlap</object-name>
     <property-base>sim/model/livery</property-base>
@@ -356,6 +359,7 @@ ________________________________________________________________________________
     <type>material</type>
     <object-name>StarWingAssy</object-name>
     <object-name>StarAileron</object-name>
+    <object-name>StarAileron.001</object-name>
     <object-name>StarOutsideFlap</object-name>
     <object-name>StarInsideFlap</object-name>
     <property-base>sim/model/livery</property-base>
@@ -402,7 +406,7 @@ ________________________________________________________________________________
   <model>
     <path>Aircraft/daVinci_B-26B/Models/panel.xml</path>
     <offsets>
-      <x-m>2.310</x-m>
+      <x-m>-3.89</x-m><!--ok-->
       <y-m>-0.340</y-m>
       <z-m>0.700</z-m>
     </offsets>
@@ -420,7 +424,7 @@ center : has to be the coords for view n=0
     <name>target_positions</name>
     <path>Aircraft/daVinci_B-26B/instruments/target_positions/target_positions-model.xml</path>
     <offsets>
-      <x-m>.46</x-m>
+      <x-m>-5.74</x-m>
       <y-m>0</y-m>
       <z-m>.29</z-m>
     </offsets>
@@ -430,7 +434,7 @@ center : has to be the coords for view n=0
     <object-name>target_positions</object-name>
     <property>/instrumentation/my_aircraft/target_positions/view/heading-offset-deg</property>
     <center>
-      <x-m>.86</x-m>
+      <x-m>-5.74</x-m>
       <y-m>0</y-m>
       <z-m>.29</z-m>
     </center>
@@ -445,7 +449,7 @@ center : has to be the coords for view n=0
     <object-name>target_positions</object-name>
     <property>/instrumentation/my_aircraft/target_positions/view/pitch-offset-deg</property>
     <center>
-      <x-m>.86</x-m>
+      <x-m>-5.74</x-m>
       <y-m>0</y-m>
       <z-m>.29</z-m>
     </center>
@@ -483,7 +487,7 @@ ________________________________________________________________________________
     <property>sim/multiplay/generic/float[0]</property>
     <factor>-90</factor>
     <center>
-      <x-m>3.521</x-m>
+      <x-m>-8.879</x-m><!--ok-->
       <y-m>-0.232</y-m>
       <z-m>-0.219</z-m>
     </center>
@@ -499,7 +503,7 @@ ________________________________________________________________________________
     <property>sim/multiplay/generic/float[0]</property>
     <factor>90</factor>
     <center>
-      <x-m>3.521</x-m>
+      <x-m>-8.879</x-m><!--ok-->
       <y-m>0.232</y-m>
       <z-m>-0.219</z-m>
     </center>
@@ -521,7 +525,7 @@ ________________________________________________________________________________
     <!--property>/_debug/float</property-->
     <factor>-135</factor>
     <center> 
-      <x-m>7.407</x-m>
+      <x-m>1.207</x-m><!--ok-->
       <y-m>-1.0</y-m>
       <z-m>-0.349</z-m>
     </center>
@@ -545,7 +549,7 @@ ________________________________________________________________________________
       <entry><ind>1</ind><dep>112</dep></entry>
     </interpolation>
     <center> 
-      <x-m>7.407</x-m>
+      <x-m>1.207</x-m><!--ok-->
       <y-m>-0.697</y-m>
       <z-m>-0.826</z-m>
     </center>
@@ -559,7 +563,6 @@ ________________________________________________________________________________
     <type>rotate</type>
     <object-name>MidFuselage.002</object-name>
     <property>sim/multiplay/generic/float[1]</property>
-    <!--property>/_debug/float</property-->
     <interpolation>
       <entry><ind>0</ind><dep>0</dep></entry>
       <entry><ind>0.25</ind><dep>20</dep></entry>
@@ -568,7 +571,7 @@ ________________________________________________________________________________
       <entry><ind>1</ind><dep>75</dep></entry>
     </interpolation>
     <center> 
-      <x-m>0</x-m>
+      <x-m>-6.2</x-m><!--ok-->
       <y-m>-0.3768</y-m>
       <z-m>-0.1661</z-m>
     </center>
@@ -590,7 +593,7 @@ ________________________________________________________________________________
     <!--property>/_debug/float</property-->
     <factor>135</factor>
     <center> 
-      <x-m>7.407</x-m>
+      <x-m>1.207</x-m><!--ok-->
       <y-m>1.0</y-m>
       <z-m>-0.349</z-m>
     </center>
@@ -614,7 +617,7 @@ ________________________________________________________________________________
       <entry><ind>1</ind><dep>112</dep></entry>
     </interpolation>
     <center> 
-      <x-m>7.407</x-m>
+      <x-m>1.207</x-m><!--ok-->
       <y-m>0.697</y-m>
       <z-m>-0.826</z-m>
     </center>
@@ -637,7 +640,7 @@ ________________________________________________________________________________
       <entry><ind>1</ind><dep>75</dep></entry>
     </interpolation>
     <center> 
-      <x-m>0</x-m>
+      <x-m>-6.2</x-m><!--ok-->
       <y-m>0.3768</y-m>
       <z-m>-0.1661</z-m>
     </center>
@@ -656,7 +659,7 @@ ________________________________________________________________________________
   <model>
     <path>Aircraft/daVinci_B-26B/Models/Effects/exhaustsmoke.xml</path>
     <offsets>
-      <x-m>6.129</x-m>
+      <x-m>-0.071</x-m><!--ok-->
       <y-m>-4.179</y-m>
       <z-m>-0.194</z-m>
     </offsets>
@@ -664,7 +667,7 @@ ________________________________________________________________________________
   <model>
     <path>Aircraft/daVinci_B-26B/Models/Effects/exhaustsmoke.xml</path>
     <offsets>
-      <x-m>6.129</x-m>
+      <x-m>-0.071</x-m><!--ok-->
       <y-m>-2.476</y-m>
       <z-m>-0.194</z-m>
     </offsets>
@@ -672,7 +675,7 @@ ________________________________________________________________________________
   <model>
     <path>Aircraft/daVinci_B-26B/Models/Effects/exhaustsmoke.xml</path>
     <offsets>
-      <x-m>6.129</x-m>
+      <x-m>-0.071</x-m><!--ok-->
       <y-m>4.179</y-m>
       <z-m>-0.194</z-m>
     </offsets>
@@ -680,7 +683,7 @@ ________________________________________________________________________________
   <model>
     <path>Aircraft/daVinci_B-26B/Models/Effects/exhaustsmoke.xml</path>
     <offsets>
-      <x-m>6.129</x-m>
+      <x-m>-0.071</x-m><!--ok-->
       <y-m>2.476</y-m>
       <z-m>-0.194</z-m>
     </offsets>
@@ -690,7 +693,7 @@ ________________________________________________________________________________
   <model>
     <path>Aircraft/daVinci_B-26B/Models/Effects/contrail.xml</path>
     <offsets>
-      <x-m>11.586</x-m>
+      <x-m>5.386</x-m><!--ok-->
       <y-m> 3.360</y-m>
       <z-m>-0.200</z-m>
     </offsets>
@@ -698,7 +701,7 @@ ________________________________________________________________________________
   <model>
     <path>Aircraft/daVinci_B-26B/Models/Effects/contrail.xml</path>
     <offsets>
-      <x-m>11.586</x-m>
+      <x-m>5.386</x-m><!--ok-->
       <y-m> -3.360</y-m>
       <z-m>-0.200</z-m>
     </offsets>
@@ -708,7 +711,7 @@ ________________________________________________________________________________
   <model>
     <path>Aircraft/daVinci_B-26B/Models/Effects/cranking/cranking.xml</path>
     <offsets>
-      <x-m>6.129</x-m>
+      <x-m>-0.071</x-m><!--ok-->
       <y-m>-4.179</y-m>
       <z-m>-0.194</z-m>
       <pitch-deg>  35 </pitch-deg>
@@ -718,7 +721,7 @@ ________________________________________________________________________________
   <model>
     <path>Aircraft/daVinci_B-26B/Models/Effects/cranking/cranking.xml</path>
     <offsets>
-      <x-m>6.129</x-m>
+      <x-m>-0.071</x-m><!--ok-->
       <y-m>-2.476</y-m>
       <z-m>-0.194</z-m>
       <pitch-deg>  35 </pitch-deg>
@@ -728,7 +731,7 @@ ________________________________________________________________________________
   <model>
     <path>Aircraft/daVinci_B-26B/Models/Effects/cranking/cranking.xml</path>
     <offsets>
-      <x-m>6.129</x-m>
+      <x-m>-0.071</x-m><!--ok-->
       <y-m>4.179</y-m>
       <z-m>-0.194</z-m>
       <pitch-deg>  35 </pitch-deg>
@@ -738,7 +741,7 @@ ________________________________________________________________________________
   <model>
     <path>Aircraft/daVinci_B-26B/Models/Effects/cranking/cranking.xml</path>
     <offsets>
-      <x-m>6.129</x-m>
+      <x-m>-0.071</x-m><!--ok-->
       <y-m>2.476</y-m>
       <z-m>-0.194</z-m>
       <pitch-deg>  35 </pitch-deg>
@@ -769,14 +772,14 @@ ________________________________________________________________________________
     <property>engines/engine[1]/rpm</property>
     <factor>-0.5</factor>
     <center>
-      <x-m>3.553</x-m>
+      <x-m>-2.647</x-m><!--ok-->
       <y-m>-3.320</y-m>
       <z-m>0.135</z-m>
     </center>
     <axis>
-      <x>1.0</x>
-      <y>0.0</y>
-      <z>0.0</z>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
     </axis>
   </animation>
   <animation>
@@ -803,7 +806,7 @@ ________________________________________________________________________________
     <nopreview/>
     <path>Aircraft/daVinci_B-26B/Models/pdisk.xml</path>
     <offsets>
-      <x-m>3.553</x-m>
+      <x-m>-2.647</x-m><!--ok-->
       <y-m>-3.320</y-m>
       <z-m>0.135</z-m>
     </offsets>
@@ -828,14 +831,14 @@ ________________________________________________________________________________
     <property>engines/engine[0]/rpm</property>
     <factor>0.5</factor>
     <center>
-      <x-m>3.553</x-m>
+      <x-m>-2.647</x-m><!--ok-->
       <y-m>3.320</y-m>
       <z-m>0.135</z-m>
     </center>
     <axis>
-      <x>1.0</x>
-      <y>0.0</y>
-      <z>0.0</z>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
     </axis>
   </animation>
   <animation>
@@ -853,7 +856,7 @@ ________________________________________________________________________________
     <nopreview/>
     <path>Aircraft/daVinci_B-26B/Models/pdisk.xml</path>
     <offsets>
-      <x-m>3.553</x-m>
+      <x-m>-2.647</x-m><!--ok-->
       <y-m>3.320</y-m>
       <z-m>0.135</z-m>
     </offsets>
@@ -870,10 +873,10 @@ ________________________________________________________________________________
     <property>surface-positions/flap-pos-norm</property>
     <factor>-30</factor>
     <axis>
-      <x1-m>8.572</x1-m>
+      <x1-m>2.372</x1-m><!--ok-->
       <y1-m>-3.991</y1-m>
       <z1-m>0.742</z1-m>
-      <x2-m>8.277</x2-m>
+      <x2-m>2.077</x2-m><!--ok-->
       <y2-m>-6.574</y2-m>
       <z2-m>0.868</z2-m>
     </axis>
@@ -884,10 +887,10 @@ ________________________________________________________________________________
     <property>surface-positions/flap-pos-norm</property>
     <factor>-30</factor>
     <axis>
-      <x1-m>8.821</x1-m>
+      <x1-m>2.621</x1-m><!--ok-->
       <y1-m>-1.199</y1-m>
       <z1-m>0.569</z1-m>
-      <x2-m>8.681</x2-m>
+      <x2-m>2.481</x2-m><!--ok-->
       <y2-m>-2.636</y2-m>
       <z2-m>0.674</z2-m>
     </axis>
@@ -898,10 +901,10 @@ ________________________________________________________________________________
     <property>surface-positions/flap-pos-norm</property>
     <factor>30</factor>
     <axis>
-      <x1-m>8.572</x1-m>
+      <x1-m>2.372</x1-m><!--ok-->
       <y1-m>3.991</y1-m>
       <z1-m>0.742</z1-m>
-      <x2-m>8.277</x2-m>
+      <x2-m>2.077</x2-m><!--ok-->
       <y2-m>6.574</y2-m>
       <z2-m>0.868</z2-m>
     </axis>
@@ -912,10 +915,10 @@ ________________________________________________________________________________
     <property>surface-positions/flap-pos-norm</property>
     <factor>30</factor>
     <axis>
-      <x1-m>8.821</x1-m>
+      <x1-m>2.621</x1-m><!--ok-->
       <y1-m>1.199</y1-m>
       <z1-m>0.569</z1-m>
-      <x2-m>8.681</x2-m>
+      <x2-m>2.481</x2-m><!--ok-->
       <y2-m>2.636</y2-m>
       <z2-m>0.674</z2-m>
     </axis>
@@ -925,13 +928,14 @@ ________________________________________________________________________________
   <animation>
     <type>rotate</type>
     <object-name>PortAileron</object-name>
+    <object-name>PortAileron.001</object-name>
     <property>sim/multiplay/generic/float[13]</property>
     <factor> 25 </factor>
     <axis>
-      <x1-m>8.177</x1-m>
+      <x1-m>1.977</x1-m><!--ok-->
       <y1-m>-6.621</y1-m>
       <z1-m>0.776</z1-m>
-      <x2-m>7.858</x2-m>
+      <x2-m>1.658</x2-m><!--ok-->
       <y2-m>-10.231</y2-m>
       <z2-m>0.945</z2-m>
     </axis>
@@ -939,13 +943,14 @@ ________________________________________________________________________________
   <animation>
     <type>rotate</type>
     <object-name>StarAileron</object-name>
+    <object-name>StarAileron.001</object-name>
     <property>sim/multiplay/generic/float[13]</property>
     <factor>25 </factor>
     <axis>
-      <x1-m>8.177</x1-m>
+      <x1-m>1.977</x1-m><!--ok-->
       <y1-m>6.621</y1-m>
       <z1-m>0.776</z1-m>
-      <x2-m>7.858</x2-m>
+      <x2-m>1.658</x2-m><!--ok-->
       <y2-m>10.231</y2-m>
       <z2-m>0.945</z2-m>
     </axis>
@@ -959,15 +964,15 @@ ________________________________________________________________________________
     <property>surface-positions/elevator-pos-norm</property>
     <factor>-25</factor>
     <center>
-      <x-m>15.587</x-m>
+      <x-m>9.487</x-m><!--ok-->
       <y-m>-2.133</y-m>
       <z-m>1.128</z-m>
     </center>
     <axis>
-      <x1-m>15.472</x1-m>
+      <x1-m>9.272</x1-m><!--ok-->
       <y1-m>-0.561</y1-m>
       <z1-m>0.936</z1-m>
-      <x2-m>15.681</x2-m>
+      <x2-m>9.481</x2-m><!--ok-->
       <y2-m>-3.689</y2-m>
       <z2-m>1.344</z2-m>
     </axis>
@@ -979,15 +984,15 @@ ________________________________________________________________________________
     <property>surface-positions/elevator-pos-norm</property>
     <factor>25</factor>
     <center>
-      <x-m>15.570</x-m>
+      <x-m>9.37</x-m><!--ok-->
       <y-m>2.133</y-m>
       <z-m>1.123</z-m>
     </center>
     <axis>
-      <x1-m>15.472</x1-m>
+      <x1-m>9.272</x1-m><!--ok-->
       <y1-m>0.561</y1-m>
       <z1-m>0.936</z1-m>
-      <x2-m>15.681</x2-m>
+      <x2-m>9.481</x2-m><!--ok-->
       <y2-m>3.689</y2-m>
       <z2-m>1.344</z2-m>
     </axis>
@@ -1001,7 +1006,7 @@ ________________________________________________________________________________
     <property>surface-positions/rudder-pos-norm</property>
     <factor>20</factor>
     <center>
-      <x-m>14.952</x-m>
+      <x-m>8.752</x-m><!--ok-->
       <y-m>0</y-m>
       <z-m>2.548 </z-m>
     </center>
@@ -1024,7 +1029,7 @@ ________________________________________________________________________________
     <offset-deg>0</offset-deg>
     <factor>-1.2</factor>
     <center>
-      <x-m>1.922</x-m>
+      <x-m>-4.278</x-m><!--ok-->
       <y-m>0</y-m>
       <z-m>-0.427</z-m>
     </center>
@@ -1041,30 +1046,6 @@ ________________________________________________________________________________
                                                         RETRACT GEARS ANIMATIONS
   -->
 <!-- Gear Animations -->
-  <!-- on cache certaines parties retractees -->
-  <animation>
-    <type>select</type>
-    <object-name>PortWheel</object-name>
-    <condition>
-      <greater-than>
-        <property>gear/gear[2]/position-norm</property>
-        <value>0.02</value>
-      </greater-than>
-    </condition>
-  </animation>
-  <animation>
-    <type>select</type>
-    <object-name>PortGearActuators</object-name>
-    <object-name>PortGearMounts</object-name>
-    <object-name>PortUpperStrut</object-name>
-    <condition>
-      <greater-than>
-        <property>gear/gear[2]/position-norm</property>
-        <value>0.800</value>
-      </greater-than>
-    </condition>
-  </animation>
-
   <animation>
     <type>select</type>
     <object-name>StarWheel</object-name>
@@ -1105,7 +1086,7 @@ ________________________________________________________________________________
       <entry><ind>1</ind><dep>0</dep></entry>
     </interpolation>
     <center>
-      <x-m>8.9</x-m>
+      <x-m>2.7</x-m><!--ok-->
       <y-m>0</y-m>
       <z-m>-.4</z-m>
     </center>
@@ -1132,7 +1113,7 @@ ________________________________________________________________________________
       <entry><ind>1</ind><dep>0</dep></entry>
     </interpolation>
     <center>
-      <x-m>8.9</x-m>
+      <x-m>2.7</x-m><!--ok-->
       <y-m>0</y-m>
       <z-m>-.4</z-m>
     </center>
@@ -1160,7 +1141,7 @@ ________________________________________________________________________________
       <entry><ind>1</ind><dep>0</dep></entry>
     </interpolation>
     <center>
-      <x-m>1.922</x-m>
+      <x-m>-4.278</x-m><!--ok-->
       <y-m>0</y-m>
       <z-m>-0.427</z-m>
     </center>
@@ -1171,11 +1152,17 @@ ________________________________________________________________________________
     </axis>
   </animation>
 
-
-<!-- De-select non-visibile parts when retracted -->
+  <!-- on cache certaines parties retractees -->
   <animation>
     <type>select</type>
+    <object-name>NoseLowerStrut</object-name>
+    <object-name>NoseLowerStrut.001</object-name>
+    <object-name>NoseUpperSpringMount</object-name>
+    <object-name>NoseUpperSpring2</object-name>
+    <object-name>NoseLowerSpring2</object-name>
+    <object-name>NoseGearMount</object-name>
     <object-name>NoseWheel</object-name>
+    <object-name>NoseUpperStrut</object-name>
     <condition>
       <greater-than>
         <property>gear/gear[0]/position-norm</property>
@@ -1183,8 +1170,28 @@ ________________________________________________________________________________
       </greater-than>
     </condition>
   </animation>
-
-
+  <animation>
+    <type>select</type>
+    <object-name>PortWheel</object-name>
+    <condition>
+      <greater-than>
+        <property>gear/gear[2]/position-norm</property>
+        <value>0.02</value>
+      </greater-than>
+    </condition>
+  </animation>
+  <animation>
+    <type>select</type>
+    <object-name>PortGearActuators</object-name>
+    <object-name>PortGearMounts</object-name>
+    <object-name>PortUpperStrut</object-name>
+    <condition>
+      <greater-than>
+        <property>gear/gear[2]/position-norm</property>
+        <value>0.800</value>
+      </greater-than>
+    </condition>
+  </animation>
 
 
 <!--
@@ -1203,10 +1210,10 @@ ________________________________________________________________________________
       <entry><ind>1.0</ind><dep>-73.0</dep></entry>
     </interpolation>
     <axis>
-      <x1-m>1.769</x1-m>
+      <x1-m>-4.431</x1-m><!--ok-->
       <y1-m>-0.362</y1-m>
       <z1-m>-0.664</z1-m>
-      <x2-m>3.894</x2-m>
+      <x2-m>-2.306</x2-m><!--ok-->
       <y2-m>-0.469</y2-m>
       <z2-m>-0.874</z2-m>
     </axis>
@@ -1222,10 +1229,10 @@ ________________________________________________________________________________
       <entry><ind>1.0</ind><dep>72.0</dep></entry>
     </interpolation>
     <axis>
-      <x1-m>1.769</x1-m>
+      <x1-m>-4.431</x1-m><!--ok-->
       <y1-m>0.362</y1-m>
       <z1-m>-0.664</z1-m>
-      <x2-m>3.894</x2-m>
+      <x2-m>-2.306</x2-m><!--ok-->
       <y2-m>0.469</y2-m>
       <z2-m>-0.874</z2-m>
     </axis>
@@ -1244,10 +1251,10 @@ ________________________________________________________________________________
       <entry><ind>1.0</ind><dep>-70.0</dep></entry>
     </interpolation>
     <axis>
-      <x1-m>6.334</x1-m>
+      <x1-m>0.134</x1-m><!--ok-->
       <y1-m>-3.954</y1-m>
       <z1-m>-0.441</z1-m>
-      <x2-m>8.114</x2-m>
+      <x2-m>1.914</x2-m><!--ok-->
       <y2-m>-3.778</y2-m>
       <z2-m>-0.244</z2-m>
     </axis>
@@ -1264,10 +1271,10 @@ ________________________________________________________________________________
       <entry><ind>1.0</ind><dep>70.0</dep></entry>
     </interpolation>
     <axis>
-      <x1-m>6.332</x1-m>
+      <x1-m>0.132</x1-m><!--ok-->
       <y1-m>-2.682</y1-m>
       <z1-m>-0.432</z1-m>
-      <x2-m>8.254</x2-m>
+      <x2-m>2.054</x2-m><!--ok-->
       <y2-m>-2.854</y2-m>
       <z2-m>-0.238</z2-m>
     </axis>
@@ -1286,10 +1293,10 @@ ________________________________________________________________________________
       <entry><ind>1.0</ind><dep>72.0</dep></entry>
     </interpolation>
     <axis>
-      <x1-m>6.334</x1-m>
+      <x1-m>0.134</x1-m><!--ok-->
       <y1-m>3.954</y1-m>
       <z1-m>-0.441</z1-m>
-      <x2-m>8.114</x2-m>
+      <x2-m>1.914</x2-m><!--ok-->
       <y2-m>3.778</y2-m>
       <z2-m>-0.244</z2-m>
     </axis>
@@ -1306,10 +1313,10 @@ ________________________________________________________________________________
       <entry><ind>1.0</ind><dep>-70.0</dep></entry>
     </interpolation>
     <axis>
-      <x1-m>6.332</x1-m>
+      <x1-m>0.132</x1-m><!--ok-->
       <y1-m>2.682</y1-m>
       <z1-m>-0.432</z1-m>
-      <x2-m>8.254</x2-m>
+      <x2-m>2.054</x2-m><!--ok-->
       <y2-m>2.854</y2-m>
       <z2-m>-0.238</z2-m>
     </axis>
@@ -1356,7 +1363,7 @@ ________________________________________________________________________________
       <entry><ind>1</ind><dep>35</dep></entry>
     </interpolation>
     <center>
-      <x-m>2.008</x-m>
+      <x-m>-4.192</x-m><!--ok-->
       <y-m>0</y-m>
       <z-m>-1.126</z-m>
     </center>
@@ -1377,7 +1384,7 @@ ________________________________________________________________________________
       <entry><ind>1</ind><dep>-35</dep></entry>
     </interpolation>
     <center>
-      <x-m>1.982</x-m>
+      <x-m>-4.218</x-m><!--ok-->
       <y-m>0</y-m>
       <z-m>-1.639</z-m>
     </center>
@@ -1388,7 +1395,7 @@ ________________________________________________________________________________
     </axis>
   </animation>
 
-<!-- Suspensions Compression -->
+<!-- Left Suspensions Compression -->
   <animation>
     <name>PortGearAssy</name>
     <object-name>PortWheel</object-name>
@@ -1424,7 +1431,7 @@ ________________________________________________________________________________
       <entry><ind>1</ind><dep>45</dep></entry>
     </interpolation>
     <center>
-      <x-m>8.457</x-m>
+      <x-m>2.257</x-m><!--ok-->
       <y-m>0</y-m>
       <z-m>-0.522</z-m>
     </center>
@@ -1446,7 +1453,7 @@ ________________________________________________________________________________
       <entry><ind>1</ind><dep>-40</dep></entry>
     </interpolation>
     <center>
-      <x-m>8.47</x-m>
+      <x-m>2.27</x-m><!--ok-->
       <y-m>0</y-m>
       <z-m>-1.086</z-m>
     </center>
@@ -1457,6 +1464,7 @@ ________________________________________________________________________________
     </axis>
   </animation>
 
+<!-- Right Suspensions Compression -->
   <animation>
     <name>StarGearAssy</name>
     <object-name>StarWheel</object-name>
@@ -1492,7 +1500,7 @@ ________________________________________________________________________________
       <entry><ind>1</ind><dep>45</dep></entry>
     </interpolation>
     <center>
-      <x-m>8.457</x-m>
+      <x-m>2.257</x-m><!--ok-->
       <y-m>0</y-m>
       <z-m>-0.522</z-m>
     </center>
@@ -1514,7 +1522,7 @@ ________________________________________________________________________________
       <entry><ind>1</ind><dep>-40</dep></entry>
     </interpolation>
     <center>
-      <x-m>8.47</x-m>
+      <x-m>2.27</x-m><!--ok-->
       <y-m>0</y-m>
       <z-m>-1.086</z-m>
     </center>
@@ -1537,7 +1545,7 @@ ________________________________________________________________________________
     <property>sim/multiplay/generic/float[9]</property>
     <factor>40</factor>
     <center>
-      <x-m>1.966</x-m>
+      <x-m>-4.234</x-m><!--ok-->
       <y-m>0.000</y-m>
       <z-m>-2.031</z-m>
     </center>
@@ -1551,9 +1559,9 @@ ________________________________________________________________________________
     <type>spin</type>
     <object-name>PortWheel</object-name>
     <property>sim/multiplay/generic/float[10]</property>
-    <factor>-20</factor>
+    <factor>-40</factor>
     <center>
-      <x-m>8.212</x-m>
+      <x-m>2.012</x-m><!--ok-->
       <y-m>0</y-m>
       <z-m>-1.906</z-m>
     </center>
@@ -1567,9 +1575,9 @@ ________________________________________________________________________________
     <type>spin</type>
     <object-name>StarWheel</object-name>
     <property>sim/multiplay/generic/float[11]</property>
-    <factor>-20</factor>
+    <factor>-40</factor>
      <center>
-      <x-m>8.212</x-m>
+      <x-m>2.012</x-m><!--ok-->
       <y-m>0</y-m>
       <z-m>-1.906</z-m>
     </center>
@@ -1592,7 +1600,7 @@ ________________________________________________________________________________
   <model>
     <path>Aircraft/daVinci_B-26B/Models/Lights/LightPack.xml</path>
     <offsets>
-      <x-m>0</x-m>
+      <x-m>-6.2</x-m>
       <y-m>0</y-m>
       <z-m>0</z-m>
     </offsets>

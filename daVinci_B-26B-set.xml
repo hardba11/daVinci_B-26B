@@ -89,12 +89,12 @@ daVinci_B-26B configuration
         <front-direction-deg type="double">0</front-direction-deg>
         <x-offset-m type="double">0.0</x-offset-m>
         <y-offset-m type="double">0.29</y-offset-m>
-        <z-offset-m type="double">0.46</z-offset-m>
-        <pitch-offset-deg>-5</pitch-offset-deg>
+        <z-offset-m type="double">-5.74</z-offset-m>
+        <!--pitch-offset-deg>-5</pitch-offset-deg-->
         <heading-offset-deg>0</heading-offset-deg>
       </config>
     </view>
-    <view n="1">
+    <!--view n="1">
       <config>
         <target-z-offset-m type="double">6.0</target-z-offset-m>
       </config>
@@ -123,7 +123,7 @@ daVinci_B-26B configuration
       <config>
         <target-z-offset-m type="double">6.0</target-z-offset-m>
       </config>
-    </view>
+    </view-->
 
     <view n="100">
       <name>Navigation Deck</name>
@@ -139,7 +139,7 @@ daVinci_B-26B configuration
         <front-direction-deg type="double">0</front-direction-deg>
         <x-offset-m type="double">-0.58</x-offset-m>
         <y-offset-m type="double">0.423</y-offset-m>
-        <z-offset-m type="double">5.13</z-offset-m>
+        <z-offset-m type="double">-1.07</z-offset-m>
         <pitch-offset-deg>-14</pitch-offset-deg>
       </config>
     </view>
@@ -157,7 +157,7 @@ daVinci_B-26B configuration
         <front-direction-deg type="double">0</front-direction-deg>
         <x-offset-m type="double">0.0</x-offset-m>
         <y-offset-m type="double">0.57</y-offset-m>
-        <z-offset-m type="double">16.4</z-offset-m>
+        <z-offset-m type="double">10.2</z-offset-m>
         <pitch-offset-deg>-18</pitch-offset-deg>
         <heading-offset-deg>180</heading-offset-deg>
       </config>
@@ -176,7 +176,7 @@ daVinci_B-26B configuration
         <front-direction-deg type="double">0</front-direction-deg>
         <x-offset-m type="double">0.0</x-offset-m>
         <y-offset-m type="double">1.117</y-offset-m>
-        <z-offset-m type="double">11.64</z-offset-m>
+        <z-offset-m type="double">5.44</z-offset-m>
         <pitch-offset-deg>-12</pitch-offset-deg>
         <heading-offset-deg>180</heading-offset-deg>
       </config>
@@ -195,7 +195,7 @@ daVinci_B-26B configuration
         <front-direction-deg type="double">0</front-direction-deg>
         <x-offset-m type="double">0.0</x-offset-m>
         <y-offset-m type="double">0.099</y-offset-m>
-        <z-offset-m type="double">6.05</z-offset-m>
+        <z-offset-m type="double">-.15</z-offset-m>
         <pitch-offset-deg>-18</pitch-offset-deg>
         <heading-offset-deg>180</heading-offset-deg>
       </config>
@@ -214,7 +214,7 @@ daVinci_B-26B configuration
         <front-direction-deg type="double">0</front-direction-deg>
         <x-offset-m type="double">-0.390</x-offset-m><!--right-->
         <y-offset-m type="double">0.910</y-offset-m><!--up-->
-        <z-offset-m type="double">2.975</z-offset-m><!--back-->
+        <z-offset-m type="double">-3.225</z-offset-m><!--back-->
         <default-field-of-view-deg>120</default-field-of-view-deg>
         <pitch-offset-deg>-16.00</pitch-offset-deg>
       </config>

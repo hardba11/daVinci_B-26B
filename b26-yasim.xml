@@ -72,20 +72,20 @@
     <control-speed control="EXTEND" transition-time="7"/>
     <control-speed control="STEER" transition-time="0.00"/>
   </gear>
-<!-- right gear -->
-  <gear x="-2" y="3.284" z="-2.503" compression="0.6" spring="0.7" damp="3.0" dfric="0.9" sfric="0.9" stiction="1" >
-    <control-input axis="/controls/gear/brake-left" control="BRAKE"/>
-    <control-input axis="/controls/gear/brake-parking" control="BRAKE" split="true"/>
-    <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
-    <control-speed control="EXTEND" transition-time="6"/>
-    <control-output control="EXTEND" prop="/gear/gear[1]/position-norm"/>
-  </gear>
 <!-- left gear -->
   <gear x="-2" y="-3.284" z="-2.503" compression="0.6" spring="0.7" damp="3.0" dfric="0.9" sfric="0.9" stiction="1" >
     <control-input axis="/controls/gear/brake-right" control="BRAKE"/>
     <control-input axis="/controls/gear/brake-parking" control="BRAKE" split="true"/>
     <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
     <control-speed control="EXTEND" transition-time="8"/>
+    <control-output control="EXTEND" prop="/gear/gear[1]/position-norm"/>
+  </gear>
+<!-- right gear -->
+  <gear x="-2" y="3.284" z="-2.503" compression="0.6" spring="0.7" damp="3.0" dfric="0.9" sfric="0.9" stiction="1" >
+    <control-input axis="/controls/gear/brake-left" control="BRAKE"/>
+    <control-input axis="/controls/gear/brake-parking" control="BRAKE" split="true"/>
+    <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
+    <control-speed control="EXTEND" transition-time="6"/>
     <control-output control="EXTEND" prop="/gear/gear[2]/position-norm"/>
   </gear>
 
