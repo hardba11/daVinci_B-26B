@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>ControlLeversAssy.ac</path>
+
+  <animation>
+
+    <object-name>PortThrottleLever</object-name>
+    <object-name>PortThrottleKnob</object-name>
+    <object-name>StarThrottleLever</object-name>
+    <object-name>StarThrottleKnob</object-name>
+    <object-name>PortMixLever</object-name>
+    <object-name>PortMixKnob</object-name>
+    <object-name>StarMixLever</object-name>
+    <object-name>StarMixKnob</object-name>
+    <object-name>PortPitchLever</object-name>
+    <object-name>PortPitchKnob</object-name>
+    <object-name>StarPitchLever</object-name>
+    <object-name>StarPitchKnob</object-name>
+    <object-name>FlapLever</object-name>
+    <object-name>GearLever</object-name>
+
+  </animation>
+
+  <!-- Manette des gazs -->
+  <animation>
+    <type>rotate</type>
+    <object-name>PortThrottleLever</object-name>
+    <object-name>PortThrottleKnob</object-name>
+    <property>controls/engines/engine[0]/throttle</property>
+    <factor>-97</factor>
+    <center>
+      <x-m>2.583</x-m>
+      <y-m>  0.00000 </y-m>
+      <z-m>0.320</z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>StarThrottleLever</object-name>
+    <object-name>StarThrottleKnob</object-name>
+    <property>controls/engines/engine[1]/throttle</property>
+    <factor>-97</factor>
+    <center>
+      <x-m>2.583</x-m>
+      <y-m>  0.00000 </y-m>
+      <z-m>0.320</z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <!-- Manette de mixture -->
+  <animation>
+    <type>rotate</type>
+    <object-name>PortMixLever</object-name>
+    <object-name>PortMixKnob</object-name>
+    <property>controls/engines/engine[0]/mixture</property>
+    <factor>-97</factor>
+    <center>
+      <x-m>2.583</x-m>
+      <y-m>  0.00000 </y-m>
+      <z-m>0.320</z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+     <object-name>StarMixLever</object-name>
+     <object-name>StarMixKnob</object-name>
+    <property>controls/engines/engine[0]/mixture</property>
+    <factor>-97</factor>
+    <center>
+      <x-m>2.583</x-m>
+      <y-m>  0.00000 </y-m>
+      <z-m>0.320</z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <!-- Manette de pas d'hélice -->
+  <animation>
+    <type>rotate</type>
+    <object-name>PortPitchLever</object-name>
+    <object-name>PortPitchKnob</object-name>
+    <property>controls/engines/engine[0]/propeller-pitch</property>
+    <factor>-97</factor>
+    <center>
+      <x-m>2.583</x-m>
+      <y-m>  0.00000 </y-m>
+      <z-m>0.320</z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>StarPitchLever</object-name>
+    <object-name>StarPitchKnob</object-name>
+    <property>controls/engines/engine[1]/propeller-pitch</property>
+    <factor>-97</factor>
+    <center>
+      <x-m>2.583</x-m>
+      <y-m>  0.00000 </y-m>
+      <z-m>0.320</z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <!-- Manette des flaps -->
+  <animation>
+    <type>rotate</type>
+    <object-name>FlapLever</object-name>
+    <object-name>FlapKnob</object-name>
+    <property>surface-positions/flap-pos-norm</property>
+    <factor> 50</factor>
+    <center>
+      <x-m>2.583</x-m>
+      <y-m>  0.00000 </y-m>
+      <z-m>0.320</z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+<!-- Manette des flaps -->
+  <animation>
+    <type>rotate</type>
+    <object-name>GearLever</object-name>
+    <property>gear/gear[1]/position-norm</property>
+    <factor>50</factor>
+    <center>
+      <x-m>2.583</x-m>
+      <y-m>  0.00000 </y-m>
+      <z-m>0.320</z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  
+</PropertyList>

@@ -1,0 +1,34 @@
+
+<PropertyList>
+
+	<model>
+		<name>BlueFTAGsmoke</name>
+		<path>Aircraft/SpitfireVb_VooDoo/Models/Effects/ftag_smoke/smokeBlue.xml</path>
+	</model>
+	
+	<model>
+		<name>RedFTAGsmoke</name>
+		<path>Aircraft/SpitfireVb_VooDoo/Models/Effects/ftag_smoke/smokeRed.xml</path>
+	</model>
+	
+	<animation>
+		<type>select</type>
+		<object-name>BlueFTAGsmoke</object-name>
+		<condition>
+			<property>sim/multiplay/generic/int[17]</property>
+			<not><property>sim/multiplay/generic/int[18]</property></not>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+		<object-name>RedFTAGsmoke</object-name>
+		<condition>
+			<property>sim/multiplay/generic/int[17]</property>
+			<property>sim/multiplay/generic/int[18]</property>
+		</condition>
+	</animation>
+			
+			
+	
+</PropertyList>

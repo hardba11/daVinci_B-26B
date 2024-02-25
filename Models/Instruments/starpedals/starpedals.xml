@@ -1,0 +1,67 @@
+<?xml version="1.0" ?> 
+  <PropertyList> 
+
+    <path>PedalAssy.ac</path> 
+ 
+<animation>
+  <type>translate</type>
+  <object-name>LeftPedal</object-name>
+  <object-name>LeftPedalBase</object-name>
+  <property>controls/flight/rudder</property>
+  <factor>0.06</factor>
+  <axis>
+   <x>1.0</x>
+   <y>0.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>LeftPedal</object-name>
+  <property>controls/gear/brake-left</property>
+  <factor>-14</factor>
+  <axis>
+   <x>0.0</x>
+   <y>1.0</y>
+   <z>0.0</z>
+  </axis>
+  <center>
+   <x-m>0.107</x-m>
+   <y-m>-0.398</y-m>
+   <z-m>-0.025</z-m>
+  </center>
+ </animation>
+
+ <animation>
+  <type>translate</type>
+  <object-name>RightPedal</object-name>
+  <object-name>RightPedalBase</object-name>
+  <property>controls/flight/rudder</property>
+  <factor>-0.06</factor>
+  <axis>
+   <x>1.0</x>
+   <y>0.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>RightPedal</object-name>
+  <property>controls/gear/brake-right</property>
+  <factor>-14</factor>
+  <axis>
+   <x>0.0</x>
+   <y>1.0</y>
+   <z>0.0</z>
+  </axis>
+  <center>
+   <x-m>0.107</x-m>
+   <y-m>0.179</y-m>
+   <z-m>-0.025</z-m>
+  </center>
+ </animation>
+
+ 
+</PropertyList>

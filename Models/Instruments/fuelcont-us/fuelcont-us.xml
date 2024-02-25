@@ -1,0 +1,307 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+ <path>fuelcont-us.ac</path>
+
+ 
+ <animation>
+  <type>material</type>
+  <object-name>tankdisplay</object-name>
+  <object-name>needle1</object-name>
+  <object-name>needle2</object-name>
+  <object-name>needle3</object-name>
+  <object-name>needle4</object-name>
+  <object-name>needle5</object-name>
+  <object-name>tankdisplay1</object-name>
+  <object-name>tankdisplay2</object-name>
+  <object-name>tankdisplay3</object-name>
+  <object-name>tankdisplay4</object-name>
+  <emission>
+       <factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop>
+      <red>   0.017</red>
+      <green> 0.60 </green>
+      <blue>  0.65 </blue>
+    </emission>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>needle1</object-name>
+  <condition>
+   <equals>
+    <property>controls/fuel/indicator/tank-selected</property>
+    <value>0</value>
+   </equals>
+  </condition>
+ </animation>
+ <animation>
+  <type>rotate</type>
+  <object-name>needle1</object-name>
+  <property>consumables/fuel/tank[0]/level-gal_us</property>
+  <interpolation>
+   <entry>
+    <ind>0</ind>
+    <dep>54</dep>
+   </entry>
+   <entry>
+    <ind>200</ind>
+    <dep>-54</dep>
+   </entry>
+
+  </interpolation>
+  <axis>
+   <x>1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>needle2</object-name>
+  <condition>
+   <equals>
+    <property>controls/fuel/indicator/tank-selected</property>
+    <value>1</value>
+   </equals>
+  </condition>
+ </animation>
+ <animation>
+  <type>rotate</type>
+  <object-name>needle2</object-name>
+  <property>consumables/fuel/tank[1]/level-gal_us</property>
+  <interpolation>
+   <entry>
+    <ind>0</ind>
+    <dep>54</dep>
+   </entry>
+   <entry>
+    <ind>200</ind>
+    <dep>-54</dep>
+   </entry>
+
+  </interpolation>
+  <axis>
+   <x>1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>needle3</object-name>
+  <condition>
+   <equals>
+    <property>controls/fuel/indicator/tank-selected</property>
+    <value>2</value>
+   </equals>
+  </condition>
+ </animation>
+ <animation>
+  <type>rotate</type>
+  <object-name>needle3</object-name>
+  <property>consumables/fuel/tank[2]/level-gal_us</property>
+  <interpolation>
+   <entry>
+    <ind>0</ind>
+    <dep>54</dep>
+   </entry>
+   <entry>
+    <ind>200</ind>
+    <dep>-54</dep>
+   </entry>
+
+  </interpolation>
+  <axis>
+   <x>1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>needle4</object-name>
+  <condition>
+   <equals>
+    <property>controls/fuel/indicator/tank-selected</property>
+    <value>3</value>
+   </equals>
+  </condition>
+ </animation>
+ <animation>
+  <type>rotate</type>
+  <object-name>needle4</object-name>
+  <property>consumables/fuel/tank[3]/level-gal_us</property>
+  <interpolation>
+   <entry>
+    <ind>0</ind>
+    <dep>54</dep>
+   </entry>
+   <entry>
+    <ind>200</ind>
+    <dep>-54</dep>
+   </entry>
+
+  </interpolation>
+  <axis>
+   <x>1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>needle5</object-name>
+  <condition>
+   <equals>
+    <property>controls/fuel/indicator/tank-selected</property>
+    <value>4</value>
+   </equals>
+  </condition>
+ </animation>
+ <animation>
+  <type>rotate</type>
+  <object-name>needle5</object-name>
+  <property>consumables/fuel/tank[4]/level-gal_us</property>
+  <interpolation>
+   <entry>
+    <ind>0</ind>
+    <dep>54</dep>
+   </entry>
+   <entry>
+    <ind>200</ind>
+    <dep>-54</dep>
+   </entry>
+
+  </interpolation>
+  <axis>
+   <x>1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>tankdisplay1</object-name>
+  <condition>
+   <equals>
+    <property>controls/fuel/indicator/tank-selected</property>
+    <value>0</value>
+   </equals>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>tankdisplay2</object-name>
+  <condition>
+   <equals>
+    <property>controls/fuel/indicator/tank-selected</property>
+    <value>1</value>
+   </equals>
+  </condition>
+ </animation>
+
+
+ <animation>
+  <type>select</type>
+  <object-name>tankdisplay3</object-name>
+  <condition>
+   <equals>
+    <property>controls/fuel/indicator/tank-selected</property>
+    <value>2</value>
+   </equals>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>tankdisplay4</object-name>
+  <condition>
+   <equals>
+    <property>controls/fuel/indicator/tank-selected</property>
+    <value>3</value>
+   </equals>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>selector</object-name>
+  <object-name>swup</object-name>
+  <object-name>swdown</object-name>
+  <property>controls/fuel/indicator/tank-selected</property>
+  <interpolation>
+   <entry>
+    <ind>0</ind>
+    <dep>-45</dep>
+   </entry>
+   <entry>
+    <ind>1</ind>
+    <dep>45</dep>
+   </entry>
+   <entry>
+    <ind>2</ind>
+    <dep>135</dep>
+   </entry>
+   <entry>
+    <ind>3</ind>
+    <dep>225</dep>
+   </entry>
+
+  </interpolation>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>-0.042</z-m>
+  </center>
+ </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>swup</object-name>
+    <visible>false</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-adjust</command>
+  <property>controls/fuel/indicator/tank-selected</property>
+        <step>1</step>
+        <min>0</min>
+        <max>4</max>
+        <wrap>1</wrap>
+      </binding>
+    </action>
+ </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>swdown</object-name>
+    <visible>false</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-adjust</command>
+  <property>controls/fuel/indicator/tank-selected</property>
+        <step>-1</step>
+        <min>0</min>
+        <max>4</max>
+        <wrap>1</wrap>
+      </binding>
+    </action>
+ </animation>
+
+</PropertyList>
+
+

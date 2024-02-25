@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <model>
+    <name>BeaconFlare</name>
+    <path>Flares/Beacon-flare.xml</path>
+  </model>
+
+  <model>
+    <name>BeaconRemb</name>
+    <path>Rembrandt/Beacon-remb.xml</path>
+  </model>
+  
+  
+    <!-- COMPOSITOR REPLACEMENT CODE -->
+  <light>
+  <name>BeaconComp</name>
+  <type>point</type>
+ <position>
+      <x>0.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </position>
+    <direction>
+      <x>0.0</x>
+      <y>0.0</y>
+      <z>1.0</z>
+    </direction>
+    <ambient>
+      <r>0.03</r>
+      <g>0.01</g>
+      <b>0.01</b>
+      <a>1.0</a>
+    </ambient>
+    <diffuse>
+      <r>0.80</r>
+      <g>0.10</g>
+      <b>0.10</b>
+      <a>1.0</a>
+    </diffuse>
+    <specular>
+      <r>1.00</r>
+      <g>0.20</g>
+      <b>0.20</b>
+      <a>1.0</a>
+    </specular>
+    <dim-factor>
+      <expression>
+        <product>
+          <value>-1</value>
+          <sum>
+            <product>
+              <max>
+                <pow>
+                  <cos><property>/sim/time/sun-angle-rad</property></cos>
+                  <value>0.3</value>
+                </pow>
+                <value>0</value>
+              </max>
+              <value>0.6</value>
+            </product>
+            <value>-1</value>
+          </sum>
+        </product>
+      </expression>
+    </dim-factor>
+    <attenuation>
+      <c>1.0</c>
+      <l>0.05</l>
+      <q>0.1</q>
+    </attenuation>
+  <spot-exponent>5</spot-exponent>
+  <spot-cutoff>90</spot-cutoff>
+  <range-m>350</range-m>
+  
+</light>
+
+<animation>
+  <type>select</type>
+  <object-name>BeaconComp</object-name>
+		
+  <condition>
+  
+   <equals>
+    <property>sim/current-view/internal</property>
+    <value>false</value>
+   </equals>
+  
+  </condition>
+ </animation>
+
+
+  <animation>
+    <type>select</type>
+    <object-name>BeaconFlare</object-name>
+    <object-name>BeaconRemb</object-name>
+	<object-name>BeaconComp</object-name>
+    <condition>
+      <and>
+        <property>lightpack/beacon-state/state</property>
+        <not><property>sim/crashed</property></not>
+      </and>
+    </condition>
+  </animation>
+
+</PropertyList>

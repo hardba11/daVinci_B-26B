@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>PortYoke.ac</path>
+
+  <animation>
+    <object-name>Base</object-name>
+    <object-name>Yoke</object-name>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>Yoke</object-name>
+    <property>controls/flight/aileron</property>
+    <factor> -65</factor>
+    <center>
+      <x-m>2.681</x-m>
+      <y-m>-0.427</y-m>
+      <z-m>  0.615 </z-m>
+    </center>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <name>AllYoke</name>
+    <object-name>Base</object-name>
+    <object-name>Yoke</object-name>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>AllYoke</object-name>
+    <property>controls/flight/elevator</property>
+    <factor>-10</factor>
+    <center>
+      <x-m>2.628</x-m>
+      <y-m>-0.671</y-m>
+      <z-m>-0.102</z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+  
+</PropertyList>

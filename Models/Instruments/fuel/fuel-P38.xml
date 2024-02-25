@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+    <path>fuel-p38.ac</path>
+    
+
+        <animation>
+                <type>noshadow</type>
+                <object-name>FUEL</object-name>
+        </animation>
+
+
+<animation>
+  <type>material</type>
+  <object-name>Cadran</object-name>
+  <object-name>Aiguille</object-name>
+ <emission>
+      <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
+      <red>   0.50 </red>
+      <green> 0.25 </green>
+      <blue>  0.25 </blue>
+    </emission>
+ </animation>
+
+       
+
+        <animation>
+                <type>rotate</type>
+                <object-name>Aiguille</object-name>
+                <property>/consumables/fuel/total-fuel-gals</property>
+                <factor>0.51800052</factor>
+                <!--80 degres=1000lbs=154.44gal_us-->
+                <!--<interpolation>
+                        <entry>
+                                <ind>0</ind>
+                                <dep>0</dep>
+                        </entry>
+                        <entry>
+                                <ind>4000</ind>
+                                <dep>320</dep>
+                        </entry>
+                </interpolation>-->
+                <axis>
+                        <x>-1</x>
+                        <y>0</y>
+                        <z>0</z>
+                </axis>
+        </animation>
+
+</PropertyList>

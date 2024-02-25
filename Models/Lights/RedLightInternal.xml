@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <model>
+    <name>RedLightRemb</name>
+    <path>Aircraft/Sikorsky-76C/Models/Lights/Rembrandt/RedLightInternal-remb.xml</path>
+  </model>
+
+  <animation>
+    <type>select</type>
+    <object-name>RedLightRemb</object-name>
+    <condition>
+      <and>
+        <property>lightpack/nav-lights-intensity</property>
+        <not><property>sim/crashed</property></not>
+      </and>
+    </condition>
+  </animation>
+
+</PropertyList>
