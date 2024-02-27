@@ -1,10 +1,4 @@
-<?xml version="1.0"?>
-<!--
-************************************************************************
-daVinci_B-26B configuration
-************************************************************************
--->
-
+<?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
 
   <_debug>
@@ -16,10 +10,10 @@ daVinci_B-26B configuration
   <sim>
     <description>daVinci_B-26B</description>
     <author> Vodoun da Vinci, Detlef Faber, The FGUK Dev. Dream Team using Alphasim Freeware 3D Model, hardball</author>
-    <status>Beta</status>  
-    <flight-model>yasim</flight-model>
+    <status>Beta</status>
     <minimum-fg-version type="string">2020.3.16</minimum-fg-version>
-    <aero>b26-yasim</aero>
+    <flight-model>yasim</flight-model>
+    <aero>core/b26-yasim</aero>
 
     <fuel-fraction>0.2</fuel-fraction>
     <freeze>
@@ -30,27 +24,27 @@ daVinci_B-26B configuration
       <preview>
         <type>exterior</type>
         <splash type="bool">true</splash>
-        <path>Splashscreen/daVinci_B-26B-1.jpg</path>
+        <path>public/1.jpg</path>
       </preview>
       <preview>
         <type>exterior</type>
         <splash type="bool">true</splash>
-        <path>plashscreen/daVinci_B-26B-2.jpg</path>
+        <path>public/2.jpg</path>
       </preview>
       <preview>
         <type>exterior</type>
         <splash type="bool">true</splash>
-        <path>Splashscreen/daVinci_B-26B-3.jpg</path>
+        <path>public/3.jpg</path>
       </preview>
       <preview>
         <type>exterior</type>
         <splash type="bool">true</splash>
-        <path>Splashscreen/daVinci_B-26B-5.jpg</path>
+        <path>public/5.jpg</path>
       </preview>
       <preview>
         <type>exterior</type>
         <splash type="bool">true</splash>
-        <path>Splashscreen/daVinci_B-26B-6.jpg</path>
+        <path>public/6.jpg</path>
       </preview>
     </previews>
 
@@ -58,7 +52,7 @@ daVinci_B-26B configuration
     <allow-toggle-cockpit>false</allow-toggle-cockpit>
 
     <sound>
-      <path>Aircraft/daVinci_B-26B/Sounds/daVinci_B-26B-Sound.xml</path>
+      <path>Aircraft/daVinci_B-26B/sounds/sounds.xml</path>
     </sound>
 
     <panel>
@@ -67,13 +61,13 @@ daVinci_B-26B configuration
     </panel>
 
     <model>
-      <path>Aircraft/daVinci_B-26B/Models/daVinci_B-26B.xml</path>
+      <path>Aircraft/daVinci_B-26B/models/daVinci_B-26B.xml</path>
       <crew>
         <pilot>
           <visible>false</visible>
         </pilot>
       </crew>
-    </model> 
+    </model>
 
     <view n="0">
       <name>Nose</name>
@@ -94,36 +88,6 @@ daVinci_B-26B configuration
         <heading-offset-deg>0</heading-offset-deg>
       </config>
     </view>
-    <!--view n="1">
-      <config>
-        <target-z-offset-m type="double">6.0</target-z-offset-m>
-      </config>
-    </view>
-    <view n="2">
-      <config>
-        <target-z-offset-m type="double">6.0</target-z-offset-m>
-      </config>
-    </view>
-    <view n="3">
-      <config>
-        <target-z-offset-m type="double">6.0</target-z-offset-m>
-      </config>
-    </view>
-    <view n="4">
-      <config>
-        <target-z-offset-m type="double">6.0</target-z-offset-m>
-      </config>
-    </view>
-    <view n="5">
-      <config>
-        <target-z-offset-m type="double">6.0</target-z-offset-m>
-      </config>
-    </view>
-    <view n="6">
-      <config>
-        <target-z-offset-m type="double">6.0</target-z-offset-m>
-      </config>
-    </view-->
 
     <view n="100">
       <name>Navigation Deck</name>
@@ -158,7 +122,7 @@ daVinci_B-26B configuration
         <x-offset-m type="double">0.0</x-offset-m>
         <y-offset-m type="double">0.57</y-offset-m>
         <z-offset-m type="double">10.2</z-offset-m>
-        <pitch-offset-deg>-18</pitch-offset-deg>
+        <pitch-offset-deg>0</pitch-offset-deg>
         <heading-offset-deg>180</heading-offset-deg>
       </config>
     </view>
@@ -280,30 +244,30 @@ After Touchdown use Rudder and differential braking to keep the Aircraft straigh
       <path n="1" type="string">instruments/hud/hud.xml</path>
     </hud>
 
-    <menubar>
+    <!--menubar>
       <default>
         <menu n="10">
           <label>daVinci_B-26B</label>
-            <enabled type="bool">true</enabled>
-            <item>
-              <label>Select Livery</label>
-                <binding>
-                  <command>nasal</command>
-                  <script>aircraft.livery.dialog.toggle()</script>
-                </binding>
-            </item>
+          <enabled type="bool">true</enabled>
+          <item>
+            <label>Select Livery</label>
+            <binding>
+              <command>nasal</command>
+              <script>aircraft.livery.dialog.toggle()</script>
+            </binding>
+          </item>
         </menu>
       </default>
-    </menubar>
+    </menubar-->
 
     <systems>
       <electrical>
         <path>Aircraft/Generic/generic-electrical.xml</path>
       </electrical>
       <autopilot>
-        <path>Aircraft/daVinci_B-26B/Systems/VooDooPropAP1.xml</path>
+        <path>Aircraft/daVinci_B-26B/core/autopilot.xml</path>
       </autopilot>
-    </systems> 
+    </systems>
 
     <multiplay>
       <chat_display>1</chat_display>
@@ -371,7 +335,7 @@ After Touchdown use Rudder and differential braking to keep the Aircraft straigh
           <type>float</type>
           <property type="string">/sim/multiplay/generic/float[15]</property>
         </signal>
-         <signal>
+        <signal>
           <type>float</type>
           <property type="string">/sim/multiplay/generic/float[16]</property>
         </signal>
@@ -431,16 +395,16 @@ After Touchdown use Rudder and differential braking to keep the Aircraft straigh
     <engine n="0">
       <running>false</running>
       <magnetos>1</magnetos>
-       <!-- fake unimplemented settings -->
-       <fuel-pump-psi type="double">18</fuel-pump-psi>
-       <oil-pressure-psi type="double">75</oil-pressure-psi>
+      <!-- fake unimplemented settings -->
+      <fuel-pump-psi type="double">18</fuel-pump-psi>
+      <oil-pressure-psi type="double">75</oil-pressure-psi>
     </engine>
     <engine n="1">
       <running>false</running>
       <magnetos>1</magnetos>
-       <!-- fake unimplemented settings -->
-       <fuel-pump-psi type="double">18</fuel-pump-psi>
-       <oil-pressure-psi type="double">75</oil-pressure-psi>
+      <!-- fake unimplemented settings -->
+      <fuel-pump-psi type="double">18</fuel-pump-psi>
+      <oil-pressure-psi type="double">75</oil-pressure-psi>
     </engine>
   </engines>
 
@@ -491,7 +455,7 @@ After Touchdown use Rudder and differential braking to keep the Aircraft straigh
 
   <!-- Map Keys -->
   <input>
-    <keyboard include="Systems/Taifun-keyboard.xml"/>
+    <keyboard include="include/input-properties.xml"/>
   </input>
 
   <instrumentation>
@@ -515,17 +479,17 @@ After Touchdown use Rudder and differential braking to keep the Aircraft straigh
   <!-- Nasal files/scripts -->
   <nasal>
     <lights>
-      <file>Aircraft/daVinci_B-26B/Nasal/Lights.nas</file>
+      <file>Aircraft/daVinci_B-26B/core/lights.nas</file>
     </lights>
     <spit9>
-      <file>Aircraft/daVinci_B-26B/Nasal/spit9.nas</file>
-      <file>Aircraft/daVinci_B-26B/Nasal/liveries.nas</file>
+      <file>Aircraft/daVinci_B-26B/core/boost.nas</file>
+      <file>Aircraft/daVinci_B-26B/core/liveries.nas</file>
     </spit9>
     <doors>
-      <file>Aircraft/daVinci_B-26B/Nasal/doors.nas</file>
+      <file>Aircraft/daVinci_B-26B/core/doors.nas</file>
     </doors>
     <b26>
-      <file>Aircraft/daVinci_B-26B/Nasal/b-26.nas</file>
+      <file>Aircraft/daVinci_B-26B/core/b26.nas</file>
     </b26>
     <target_positions>
       <file type="string">Aircraft/daVinci_B-26B/instruments/target_positions/target_positions.nas</file>

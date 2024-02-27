@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+  <path>bing.ac</path>
+  <animation>
+    <type>material</type>
+    <object-name>CadranF</object-name>
+    <object-name>Cadran</object-name>
+    <object-name>Aiguille</object-name>
+    <emission>
+      <factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop>
+      <red>   0.017</red>
+      <green> 0.60 </green>
+      <blue>  0.65 </blue>
+    </emission>
+  </animation>
+  <animation>
+    <type>select</type>
+    <object-name>Masque</object-name>
+    <condition>
+      <less-than>
+        <property>/systems/electrical/outputs/instr-ignition-switch</property>
+        <value>27</value>
+      </less-than>
+    </condition>
+  </animation>
+  <animation>
+    <type>select</type>
+    <object-name>Temoin-Train</object-name>
+    <object-name>TemoinMTrain</object-name>
+    <condition>
+      <greater-than>
+        <property>/systems/electrical/outputs/instr-ignition-switch</property>
+        <value>27</value>
+      </greater-than>
+    </condition>
+  </animation>
+  <animation>
+    <type>select</type>
+    <object-name>Temoin-Train</object-name>
+    <condition>
+      <equals>
+        <property>/gear/gear/position-norm[0]</property>
+        <value>1.0</value>
+      </equals>
+    </condition>
+  </animation>
+  <animation>
+    <type>select</type>
+    <object-name>TemoinMTrain</object-name>
+    <condition>
+      <and>
+        <not-equals>
+          <property>/gear/gear/position-norm[0]</property>
+          <value>1.0</value>
+        </not-equals>
+        <not-equals>
+          <property>/gear/gear/position-norm[0]</property>
+          <value>0</value>
+        </not-equals>
+      </and>
+    </condition>
+  </animation>
+  <animation>
+    <type>select</type>
+    <object-name>Temoin-Actif</object-name>
+    <condition>
+      <greater-than>
+        <property>/controls/gear/brake-parking</property>
+        <value>0.99</value>
+      </greater-than>
+    </condition>
+  </animation>
+  <animation>
+    <type>rotate</type>
+    <object-name>Aiguille</object-name>
+    <property>controls/flight/flaps</property>
+    <interpolation>
+      <entry><ind>0</ind><dep>0</dep></entry>
+      <entry><ind>0.20</ind><dep>-15</dep></entry>
+      <entry><ind>0.40</ind><dep>-30</dep></entry>
+      <entry><ind>0.60</ind><dep>-60</dep></entry>
+      <entry><ind>1</ind><dep>-90</dep></entry>
+    </interpolation>
+    <center>
+      <x-m>0</x-m>
+      <y-m>-0.010</y-m>
+      <z-m>0.038</z-m>
+    </center>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+</PropertyList>
+
+
+
+

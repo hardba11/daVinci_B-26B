@@ -13,8 +13,8 @@ installation
 ------------
 
 1. download on github
-2. unzip the file `daVinci_B-26B-master.zip`
-3. rename the directory `daVinci_B-26B-master` to `daVinci_B-26B`
+2. unzip the file `daVinci_B-26B-main.zip`
+3. rename the directory `daVinci_B-26B-main` to `daVinci_B-26B`
 4. move the directory daVinci_B-26B in your addon aircraft directory (`/dir/of/my/hangars/daVinci_B-26B`)
 
 done
@@ -64,17 +64,21 @@ todo
 - add effects
     - exterior lights
     - flashlight
+    - rain
+- fix missing textures
+- add ground equipment
 
 ### UX
 
 - add instruments
     - tablet
+    - other
+- clickable instruments and doors
 - shortcuts
 - floodlight
 - menu gui
     - views
     - need assistance
-
-
+- adjust sound volume if window open/close
 
 
