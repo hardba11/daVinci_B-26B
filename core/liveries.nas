@@ -1,2 +1,2 @@
-aircraft.livery.init("Aircraft/daVinci_B-26B/Models/Liveries");
+aircraft.livery.init("Aircraft/daVinci_B-26B/models/liveries");
 

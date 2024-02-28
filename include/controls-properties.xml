@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <gear>
+    <brake-parking type="double">1.0</brake-parking>
+    <tailwheel-lock>true</tailwheel-lock>
+  </gear>
+
+  <armament>
+    <trigger type="bool">false</trigger>
+    <master-arm type="bool">true</master-arm>
+    <position-norm type="int">1</position-norm>
+  </armament>
+
+  <engines>
+    <engine n="0">
+      <magnetos>1</magnetos>
+      <boost type="double">0.45</boost>
+      <blower type="int">0</blower>
+    </engine>
+    <engine n="1">
+      <magnetos>1</magnetos>
+      <boost type="double">0.45</boost>
+      <blower type="int">0</blower>
+    </engine>
+  </engines>
+
+  <flight>
+    <slipstream type="double">1.0</slipstream>
+    <aileron-effectiveness type ="double">0.4</aileron-effectiveness>
+  </flight>
+
+  <lighting>
+    <panel-norm type="float">1.0</panel-norm>
+  </lighting>
+
+  <canopy>
+    <canopy-pos-norm type="float">1.0</canopy-pos-norm>
+  </canopy>
+
+  <smoke>0</smoke>
+
+  <fuel>
+    <switch-position-port>1</switch-position-port>
+    <switch-position-starb>1</switch-position-starb>
+  </fuel>
+
+</PropertyList>
+
+

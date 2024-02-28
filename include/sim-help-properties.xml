@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <key>
+    <name>d</name>
+    <desc>Toggle Windows and Entry Hatch to Nose Wheel Well</desc>
+  </key>
+  <key>
+    <name>D</name>
+    <desc>Toggle Bomb Bay Doors</desc>
+  </key>
+  <key>
+    <name>n</name>
+    <desc>Propeller Coarse</desc>
+  </key>
+  <key>
+    <name>N</name>
+    <desc>Propeller Fine</desc>
+  </key>
+  <key>
+    <name>h</name>
+    <desc>Toggle HUD</desc>
+  </key>
+  <key>
+    <name>M</name>
+    <desc>Leaner Mixture</desc>
+  </key>
+  <key>
+    <name>m</name>
+    <desc>Richer Mixture</desc>
+  </key>
+  <key>
+    <name>S</name>
+    <desc>Toggle VooDoo Smoke</desc>
+  </key>
+  <text>Remember to visit F10/Fuel and Payload and turn on Fuel before starting!
+
+Some notes on the propeller adjustment:
+
+Propeller pitch affects engine RPM and Manifold pressure, total speed. You *will* need to adjust it for maximum performance at altitude.
+
+The actual amount of propeller pitch is relative to the Prop Pitch levers in the cockpit. Remember that Throttle, Boost, Prop Pitch, and Mixture will all affect Manifold Pressure and speed at take off as well as
+at altitude.
+
+---Start up---
+Ensure propeller pitch is set to full fine. Enable fuel tank selection. All magnetos on. Press "s" to start and then reduce mixture (M) to 70%.
+
+---Take Off---
+Flaps down 10 degrees, Take off at 40" Manifold Pressure. Lift slightly back on the yoke and be prepared to use Aileron against Torque and use Rudder and differential braking to counteract swing. Lift Off at 120 MPH.
+
+---Landing---
+Beware: The engine runs on low rpm  Set propeller pitch to full fine pitch on approach.
+Lower Flaps and Gear under 160 MPH. Approach Speed is 140 MPH. A curved Approach is recommended, because visibility on final is bad. Speed at Treshold should be 120 MPH. Flare to Threepoint attitude before touchdown.
+After Touchdown use Rudder and differential braking to keep the Aircraft straight. Don't slam on the brakes.
+  </text>
+
+
+</PropertyList>
+
+

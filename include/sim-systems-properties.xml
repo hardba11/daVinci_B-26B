@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <electrical>
+    <path>Aircraft/Generic/generic-electrical.xml</path>
+  </electrical>
+
+  <autopilot>
+    <path>Aircraft/daVinci_B-26B/core/autopilot.xml</path>
+  </autopilot>
+
+</PropertyList>

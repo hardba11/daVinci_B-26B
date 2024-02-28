@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<PropertyList>
+
+ <replay-config type="int">0</replay-config>
+  <config n="0" include="/Aircraft/Generic/flightrecorder/generic-jet.xml">
+    <name type="string">B-26B Flight Recorder</name>
+    <signal>
+      <type>float</type> <!-- Canopy Position -->
+      <property type="string">/sim/model/door-positions/crew/position-norm</property>
+    </signal>
+    <signal>
+      <type>float</type> <!-- Slider Position -->
+      <property type="string">/sim/model/door-positions/passenger/position-norm</property>
+    </signal>
+    <signal>
+      <type>float</type>
+      <property type="string">/environment/relative-humidity</property>
+    </signal>
+    <signal>
+      <type>float</type>
+      <property type="string">/sim/multiplay/generic/int[1]</property>
+    </signal>
+    <signal>
+      <type>float</type>
+      <property type="string">/sim/multiplay/generic/float[14]</property>
+    </signal>
+    <signal>
+      <type>float</type>
+      <property type="string">/sim/multiplay/generic/float[15]</property>
+    </signal>
+    <signal>
+      <type>float</type>
+      <property type="string">/sim/multiplay/generic/float[16]</property>
+    </signal>
+    <signal>
+      <type>float</type>
+      <property type="string">/sim/model/surface-positions/rudder-pos-norm</property>
+    </signal>
+  </config>
+
+</PropertyList>
+
+

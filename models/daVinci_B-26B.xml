@@ -299,6 +299,23 @@ livery_update.stop();
       </not>
     </condition>
   </animation>
+
+<!-- lights -->
+  <animation>
+    <type>material</type>
+    <object-name>Panel</object-name>
+    <object-name>CenterConsole</object-name>
+    <object-name>3DSMesh_12</object-name>
+    <emission>
+      <factor-prop>/controls/lighting/panel-norm</factor-prop>
+      <red>.1</red>
+      <green>.3</green>
+      <blue>.3</blue>
+    </emission>
+  </animation>
+
+
+
 <!--
 ________________________________________________________________________________
                                                                 LIVERY SELECTION
@@ -787,7 +804,7 @@ ________________________________________________________________________________
   <model>
     <name>pdisk</name>
     <nopreview/>
-    <path>Aircraft/daVinci_B-26B/models/pdisk.xml</path>
+    <path>Aircraft/daVinci_B-26B/models/pdisk-left.xml</path>
     <offsets>
       <x-m>-2.647</x-m>
       <y-m>-3.320</y-m>
@@ -837,7 +854,7 @@ ________________________________________________________________________________
   <model>
     <name>pdisk</name>
     <nopreview/>
-    <path>Aircraft/daVinci_B-26B/models/pdisk.xml</path>
+    <path>Aircraft/daVinci_B-26B/models/pdisk-right.xml</path>
     <offsets>
       <x-m>-2.647</x-m>
       <y-m>3.320</y-m>
