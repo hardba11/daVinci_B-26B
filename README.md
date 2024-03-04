@@ -45,6 +45,7 @@ done
 - target position
 - hud
 - views
+- floodlight
 
 todo
 ----
@@ -57,10 +58,11 @@ todo
 
 ### fdm
 
-- autopilot improvment
+- autopilot/fdm improvment
 
 ### models
 
+- join objects
 - add effects
     - exterior lights
     - flashlight
@@ -71,11 +73,12 @@ todo
 ### UX
 
 - add instruments
-    - tablet
+    - tablet ?
     - other
-- clickable instruments and doors
+- clickable elements
+    - doors
+    - instruments ?
 - shortcuts
-- floodlight
 - menu gui
     - views
     - need assistance

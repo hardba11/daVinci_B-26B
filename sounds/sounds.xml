@@ -59,7 +59,7 @@
     <engine>
       <name>engine idle rpm</name>
       <mode>looped</mode>
-      <path>Aircraft/daVinci_B-26B/sounds/b26_engine_start.wav</path>
+      <path>Aircraft/daVinci_B-26B/sounds/b26_idle_rpm.wav</path>
       <condition> 
         <property>/engines/engine/running</property>
        <less-than> 
@@ -71,9 +71,9 @@
           <value>100</value>
         </greater-than>
         <greater-than>
-     <property>/consumables/fuel/total-fuel-gals</property>
-    <value>2.0</value>
-    </greater-than>
+         <property>/consumables/fuel/total-fuel-gals</property>
+        <value>2.0</value>
+        </greater-than>
       </condition>
       <volume>
         <property>/orientation/alpha-deg</property>
