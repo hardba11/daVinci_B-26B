@@ -7,15 +7,9 @@
     <path>Flares/GreenLight-flare.xml</path>
   </model>
 
-  <model>
-    <name>GreenLightRemb</name>
-    <path>Rembrandt/GreenLight-remb.xml</path>
-  </model>
-
   <animation>
     <type>select</type>
     <object-name>GreenLightFlare</object-name>
-    <object-name>GreenLightRemb</object-name>
     <condition>
       <and>
         <property>lightpack/nav-lights-intensity</property>
@@ -24,7 +18,7 @@
     </condition>
   </animation>
 
-  <!-- Coompositor lights -->
+  <!-- Compositor lights -->
   <light>
     <name>green1</name>
     <type>spot</type>

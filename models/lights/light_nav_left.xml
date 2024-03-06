@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertyList>
+
+  <path>als_light.ac</path>
+  <nopreview />
+
+  <effect>
+    <inherits-from>procedural-light-nav-left</inherits-from>
+    <object-name>als_light</object-name>
+  </effect>
+
+  <animation>
+    <type>select</type>
+    <object-name>als_light</object-name>
+    <condition>
+      <and>
+        <property>controls/lighting/nav-lights</property>
+        <property>systems/electrical/bus/commands</property>
+      </and>
+    </condition>
+  </animation>
+
+</PropertyList>

@@ -72,6 +72,7 @@ todo
 
 ### UX
 
+- lights
 - add instruments
     - tablet ?
     - other

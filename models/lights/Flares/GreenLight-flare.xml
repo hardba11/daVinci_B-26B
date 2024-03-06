@@ -33,14 +33,6 @@
     </expression>
   </animation>
   
-  <effect>
-   <inherits-from>Effects/model-transparent</inherits-from>
-   <condition>
-    <property>/sim/rendering/rembrandt/enabled</property>
-   </condition>
-   <object-name>Light</object-name> 
-  </effect>
-  
   <animation>
     <type>noshadow</type>
     <object-name>Light</object-name>

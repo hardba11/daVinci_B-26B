@@ -27,6 +27,7 @@
 
   <lighting>
     <panel-norm type="float">1.0</panel-norm>
+    <landing type="bool">1</landing>
   </lighting>
 
   <canopy>

@@ -7,18 +7,10 @@
   <animation>
     <object-name>flash</object-name>
     <attach>world</attach>
-  <placer>
-    <type>point</type>
-  </placer>
+    <placer>
+      <type>point</type>
+    </placer>
   </animation>
-
-  <effect>
-   <inherits-from>Effects/model-transparent</inherits-from>
-   <condition>
-    <property>/sim/rendering/rembrandt/enabled</property>
-   </condition>
-   <object-name>flash</object-name> 
-  </effect>
 
   <animation>
     <type>noshadow</type>
@@ -47,11 +39,10 @@
   </animation>
   
   <animation>
-     <type>scale</type>
-     <object-name>flash</object-name>
-     <property>lightpack/landing-lights-intensity</property>
+    <type>scale</type>
+    <object-name>flash</object-name>
+    <property>lightpack/landing-lights-intensity</property>
   </animation>
-  
 
   <animation>
     <type>material</type>

@@ -7,17 +7,10 @@
     <path>Flares/Strobe-flare.xml</path>
   </model>
 
-  <model>
-    <name>BeaconRemb</name>
-    <path>Rembrandt/Strobe-remb.xml</path>
-  </model>
-  
-  
-  <!-- COMPOSITOR REPLACEMENT CODE -->
   <light>
-  <name>StrobeComp</name>
-  <type>spot</type>
-  <position>
+    <name>StrobeComp</name>
+    <type>spot</type>
+    <position>
       <x>0.0</x>
       <y>0.0</y>
       <z>0.0</z>
@@ -70,19 +63,14 @@
       <l>0.05</l>
       <q>0.1</q>
     </attenuation>
-  <spot-exponent>5</spot-exponent>
-  <spot-cutoff>60</spot-cutoff>
-  <range-m>350</range-m>
-  
-</light>
-  
-  
-  
-  
+    <spot-exponent>5</spot-exponent>
+    <spot-cutoff>60</spot-cutoff>
+    <range-m>350</range-m>
+  </light>
+
   <animation>
     <type>select</type>
     <object-name>BeaconFlare</object-name>
-    <object-name>BeaconRemb</object-name>
      <object-name>StrobeComp</object-name>
     <condition>
       <and>

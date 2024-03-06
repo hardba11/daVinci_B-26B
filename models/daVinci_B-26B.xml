@@ -289,16 +289,32 @@ livery_update.stop();
     <type>select</type>
     <object-name>Glass</object-name>
     <object-name>Starglass</object-name>
-    <object-name>lamp</object-name>
+    <object-name>TurretGlass</object-name>
+    <object-name>PortWindowGlass</object-name>
+    <object-name>StarWindowGlass</object-name>
+    <!--object-name>lamp</object-name>
     <object-name>light_tran</object-name>
     <object-name>nav_lights</object-name>
-    <object-name>nav_light1</object-name>
+    <object-name>nav_light1</object-name-->
     <condition>
       <not>
         <property>sim/current-view/internal</property>
       </not>
     </condition>
   </animation>
+
+  <effect>
+    <inherits-from>Aircraft/daVinci_B-26B/models/effects/glass/glass</inherits-from>
+    <object-name>Glass</object-name>
+    <object-name>Starglass</object-name>
+    <object-name>TurretGlass</object-name>
+    <object-name>PortWindowGlass</object-name>
+    <object-name>StarWindowGlass</object-name>
+    <object-name>lamp</object-name>
+    <object-name>light_tran</object-name>
+    <object-name>nav_lights</object-name>
+    <object-name>nav_light1</object-name>
+  </effect>
 
 <!-- lights -->
   <animation>
@@ -314,7 +330,50 @@ livery_update.stop();
     </emission>
   </animation>
 
-
+  <animation>
+    <type>material</type>
+    <object-name>lights</object-name>
+    <object-name>lights.nose</object-name>
+    <ambient>
+      <red>1</red>
+      <green>1</green>
+      <blue>1</blue>
+    </ambient>
+    <emission>
+      <!--factor-prop>/controls/lighting/landing</factor-prop-->
+      <factor-prop>lightpack/nav-lights-intensity</factor-prop>
+      <red>1</red>
+      <green>1</green>
+      <blue>1</blue>
+    </emission>
+  </animation>
+  <model>
+    <name>landing-light-nose-right</name>
+    <path>Aircraft/daVinci_B-26B/models/lights/light_landing.xml</path>
+    <offsets>
+      <x-m type="float">-4.5</x-m>
+      <y-m type="float">0.1</y-m>
+      <z-m type="float">-1.0</z-m>
+    </offsets>
+  </model>
+  <model>
+    <name>landing-light-wing-left</name>
+    <path>Aircraft/daVinci_B-26B/models/lights/light_landing.xml</path>
+    <offsets>
+      <x-m type="float">-0.08</x-m>
+      <y-m type="float">-6.2</y-m>
+      <z-m type="float">0.87</z-m>
+    </offsets>
+  </model>
+  <model>
+    <name>landing-light-wing-right</name>
+    <path>Aircraft/daVinci_B-26B/models/lights/light_landing.xml</path>
+    <offsets>
+      <x-m type="float">-0.08</x-m>
+      <y-m type="float">6.2</y-m>
+      <z-m type="float">0.87</z-m>
+    </offsets>
+  </model>
 
 <!--
 ________________________________________________________________________________
@@ -474,9 +533,9 @@ ________________________________________________________________________________
     <type>translate</type>
     <object-name>PortOutsideWindowFrame</object-name>
     <object-name>PortInsideWindowFrame</object-name>
-    <object-name>PortWindowGlass</object-name>
     <object-name>StarOutsideWindowFrame</object-name>
     <object-name>StarInsideWindowFrame</object-name>
+    <object-name>PortWindowGlass</object-name>
     <object-name>StarWindowGlass</object-name>
     <property>sim/multiplay/generic/float[0]</property>
     <factor>0.510</factor>
@@ -873,12 +932,12 @@ ________________________________________________________________________________
     <property>surface-positions/flap-pos-norm</property>
     <factor>-30</factor>
     <axis>
-      <x1-m>2.372</x1-m><!--ok-->
-      <y1-m>-3.991</y1-m>
-      <z1-m>0.742</z1-m>
-      <x2-m>2.077</x2-m><!--ok-->
-      <y2-m>-6.574</y2-m>
-      <z2-m>0.868</z2-m>
+      <x1-m>2.285</x1-m>
+      <y1-m>-3.99</y1-m>
+      <z1-m>0.616</z1-m>
+      <x2-m>1.916</x2-m>
+      <y2-m>-6.595</y2-m>
+      <z2-m>0.738</z2-m>
     </axis>
   </animation>
   <animation>
@@ -887,12 +946,12 @@ ________________________________________________________________________________
     <property>surface-positions/flap-pos-norm</property>
     <factor>-30</factor>
     <axis>
-      <x1-m>2.621</x1-m><!--ok-->
-      <y1-m>-1.199</y1-m>
-      <z1-m>0.569</z1-m>
-      <x2-m>2.481</x2-m><!--ok-->
-      <y2-m>-2.636</y2-m>
-      <z2-m>0.674</z2-m>
+      <x1-m>2.567</x1-m>
+      <y1-m>-1.192</y1-m>
+      <z1-m>0.481</z1-m>
+      <x2-m>2.427</x2-m>
+      <y2-m>-2.668</y2-m>
+      <z2-m>0.55</z2-m>
     </axis>
   </animation>
   <animation>
@@ -901,12 +960,12 @@ ________________________________________________________________________________
     <property>surface-positions/flap-pos-norm</property>
     <factor>30</factor>
     <axis>
-      <x1-m>2.372</x1-m><!--ok-->
-      <y1-m>3.991</y1-m>
-      <z1-m>0.742</z1-m>
-      <x2-m>2.077</x2-m><!--ok-->
-      <y2-m>6.574</y2-m>
-      <z2-m>0.868</z2-m>
+      <x1-m>2.285</x1-m>
+      <y1-m>3.99</y1-m>
+      <z1-m>0.616</z1-m>
+      <x2-m>1.916</x2-m>
+      <y2-m>6.595</y2-m>
+      <z2-m>0.738</z2-m>
     </axis>
   </animation>
   <animation>
@@ -915,12 +974,12 @@ ________________________________________________________________________________
     <property>surface-positions/flap-pos-norm</property>
     <factor>30</factor>
     <axis>
-      <x1-m>2.621</x1-m><!--ok-->
-      <y1-m>1.199</y1-m>
-      <z1-m>0.569</z1-m>
-      <x2-m>2.481</x2-m><!--ok-->
-      <y2-m>2.636</y2-m>
-      <z2-m>0.674</z2-m>
+      <x1-m>2.567</x1-m>
+      <y1-m>1.192</y1-m>
+      <z1-m>0.481</z1-m>
+      <x2-m>2.427</x2-m>
+      <y2-m>2.668</y2-m>
+      <z2-m>0.55</z2-m>
     </axis>
   </animation>
 
@@ -930,14 +989,14 @@ ________________________________________________________________________________
     <object-name>PortAileron</object-name>
     <object-name>PortAileron.001</object-name>
     <property>sim/multiplay/generic/float[13]</property>
-    <factor> 25 </factor>
+    <factor>-25</factor>
     <axis>
-      <x1-m>1.977</x1-m><!--ok-->
-      <y1-m>-6.621</y1-m>
-      <z1-m>0.776</z1-m>
-      <x2-m>1.658</x2-m><!--ok-->
-      <y2-m>-10.231</y2-m>
-      <z2-m>0.945</z2-m>
+      <x1-m>1.93</x1-m>
+      <y1-m>-6.615</y1-m>
+      <z1-m>0.767</z1-m>
+      <x2-m>1.617</x2-m>
+      <y2-m>-10.24</y2-m>
+      <z2-m>0.95</z2-m>
     </axis>
   </animation>
   <animation>
@@ -945,14 +1004,14 @@ ________________________________________________________________________________
     <object-name>StarAileron</object-name>
     <object-name>StarAileron.001</object-name>
     <property>sim/multiplay/generic/float[13]</property>
-    <factor>25 </factor>
+    <factor>-25</factor>
     <axis>
-      <x1-m>1.977</x1-m><!--ok-->
-      <y1-m>6.621</y1-m>
-      <z1-m>0.776</z1-m>
-      <x2-m>1.658</x2-m><!--ok-->
-      <y2-m>10.231</y2-m>
-      <z2-m>0.945</z2-m>
+      <x1-m>1.93</x1-m>
+      <y1-m>6.615</y1-m>
+      <z1-m>0.767</z1-m>
+      <x2-m>1.617</x2-m>
+      <y2-m>10.24</y2-m>
+      <z2-m>0.95</z2-m>
     </axis>
   </animation>
 
@@ -1135,6 +1194,8 @@ ________________________________________________________________________________
     <object-name>NoseGearMount</object-name>
     <object-name>NoseWheel</object-name>
     <object-name>NoseUpperStrut</object-name>
+    <object-name>lights.nose</object-name>
+    <object-name>landing-light-nose-right</object-name>
     <property>gear/gear[0]/position-norm</property>
     <interpolation>
       <entry><ind>0</ind><dep>88</dep></entry>
@@ -1163,6 +1224,8 @@ ________________________________________________________________________________
     <object-name>NoseGearMount</object-name>
     <object-name>NoseWheel</object-name>
     <object-name>NoseUpperStrut</object-name>
+    <object-name>lights.nose</object-name>
+    <object-name>landing-light-nose-right</object-name>
     <condition>
       <greater-than>
         <property>gear/gear[0]/position-norm</property>
