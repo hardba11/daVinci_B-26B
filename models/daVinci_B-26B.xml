@@ -13,12 +13,19 @@
     <pitch-deg>0</pitch-deg>
   </offsets>
 
+<!--
+rotation de la tourelle
+  x 5.469
+  y 0
+  z 1.304
+-->
+
   <nasal>
     <load><![CDATA[
 var livery_update = aircraft.livery_update.new("Aircraft/daVinci_B-26B/models/liveries", 30);
 var self = cmdarg();
 var aliases = [];
-for (var i = 0; i &lt; 6; i += 1) {
+for (var i = 0; i < 6; i += 1) {
   var door = self.getNode("sim/model/bo105/doors/door[" ~ i ~ "]/position-norm", 1);
   var generic = self.getNode("sim/multiplay/generic/float[" ~ i ~ "]", 1);
   door.alias(generic);
@@ -533,9 +540,37 @@ ________________________________________________________________________________
     <type>translate</type>
     <object-name>PortOutsideWindowFrame</object-name>
     <object-name>PortInsideWindowFrame</object-name>
+    <object-name>PortWindowGlass</object-name>
+    <property>sim/multiplay/generic/float[0]</property>
+    <factor>0.510</factor>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  <animation>
+    <type>translate</type>
+    <object-name>PortOutsideWindowFrame</object-name>
+    <object-name>PortInsideWindowFrame</object-name>
+    <object-name>PortWindowGlass</object-name>
+    <property>sim/multiplay/generic/float[0]</property>
+    <interpolation>
+      <entry><ind>0</ind><dep>0</dep></entry>
+      <entry><ind>0.01</ind><dep>0.02</dep></entry>
+      <entry><ind>0.5</ind><dep>0.02</dep></entry>
+      <entry><ind>1</ind><dep>0</dep></entry>
+    </interpolation>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  <animation>
+    <type>translate</type>
     <object-name>StarOutsideWindowFrame</object-name>
     <object-name>StarInsideWindowFrame</object-name>
-    <object-name>PortWindowGlass</object-name>
     <object-name>StarWindowGlass</object-name>
     <property>sim/multiplay/generic/float[0]</property>
     <factor>0.510</factor>
@@ -545,6 +580,25 @@ ________________________________________________________________________________
       <z>0</z>
     </axis>
   </animation>
+  <animation>
+    <type>translate</type>
+    <object-name>StarOutsideWindowFrame</object-name>
+    <object-name>StarInsideWindowFrame</object-name>
+    <object-name>StarWindowGlass</object-name>
+    <property>sim/multiplay/generic/float[0]</property>
+    <interpolation>
+      <entry><ind>0</ind><dep>0</dep></entry>
+      <entry><ind>0.01</ind><dep>-0.02</dep></entry>
+      <entry><ind>0.5</ind><dep>-0.02</dep></entry>
+      <entry><ind>1</ind><dep>0</dep></entry>
+    </interpolation>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
   <animation>
     <type>rotate</type>
     <object-name>PortFloorAccessDoor</object-name>
@@ -1404,10 +1458,11 @@ ________________________________________________________________________________
     <object-name>NoseGearAssy</object-name>
     <property>sim/multiplay/generic/float[17]</property>
     <interpolation>
-      <entry><ind>0</ind><dep>0</dep></entry>
-      <entry><ind>.3</ind><dep>.1</dep></entry>
-      <entry><ind>.6</ind><dep>.2</dep></entry>
-      <entry><ind>1</ind><dep>.3</dep></entry>
+      <entry><ind>0</ind><dep>0</dep></entry> <!-- fixe -->
+      <entry><ind>.1</ind><dep>.03</dep></entry> <!-- fixe -->
+      <entry><ind>.2</ind><dep>.11</dep></entry> <!-- fixe -->
+      <!--entry><ind>.6</ind><dep>.25</dep></entry-->
+      <entry><ind>1</ind><dep>.2</dep></entry> <!-- fixe -->
     </interpolation>
     <axis>
       <x>0</x>
@@ -1420,9 +1475,9 @@ ________________________________________________________________________________
     <object-name>NoseUpperSpring2</object-name>
     <property>sim/multiplay/generic/float[17]</property>
     <interpolation>
-      <entry><ind>0</ind><dep>0</dep></entry>
-      <entry><ind>.3</ind><dep>15</dep></entry>
-      <entry><ind>.6</ind><dep>25</dep></entry>
+      <entry><ind>0</ind><dep>0</dep></entry> <!-- fixe -->
+      <entry><ind>.1</ind><dep>5</dep></entry> <!-- fixe -->
+      <entry><ind>.2</ind><dep>15</dep></entry> <!-- fixe -->
       <entry><ind>1</ind><dep>35</dep></entry>
     </interpolation>
     <center>
@@ -1441,9 +1496,9 @@ ________________________________________________________________________________
     <object-name>NoseLowerSpring2</object-name>
     <property>sim/multiplay/generic/float[17]</property>
     <interpolation>
-      <entry><ind>0</ind><dep>0</dep></entry>
-      <entry><ind>.3</ind><dep>-15</dep></entry>
-      <entry><ind>.6</ind><dep>-25</dep></entry>
+      <entry><ind>0</ind><dep>0</dep></entry> <!-- fixe -->
+      <entry><ind>.1</ind><dep>-5</dep></entry> <!-- fixe -->
+      <entry><ind>.2</ind><dep>-15</dep></entry> <!-- fixe -->
       <entry><ind>1</ind><dep>-35</dep></entry>
     </interpolation>
     <center>
@@ -1472,8 +1527,7 @@ ________________________________________________________________________________
     <property>sim/multiplay/generic/float[15]</property>
     <interpolation>
       <entry><ind>0</ind><dep>0</dep></entry>
-      <entry><ind>.2</ind><dep>.07</dep></entry>
-      <entry><ind>.3</ind><dep>.35</dep></entry>
+      <entry><ind>.3</ind><dep>.15</dep></entry>
       <entry><ind>1</ind><dep>.4</dep></entry>
     </interpolation>
     <axis>
@@ -1488,9 +1542,8 @@ ________________________________________________________________________________
     <property>sim/multiplay/generic/float[15]</property>
     <interpolation>
       <entry><ind>0</ind><dep>0</dep></entry>
-      <entry><ind>.15</ind><dep>8</dep></entry>
-      <entry><ind>.22</ind><dep>15</dep></entry>
-      <entry><ind>.3</ind><dep>38</dep></entry>
+      <entry><ind>.3</ind><dep>20</dep></entry>
+      <entry><ind>.5</ind><dep>26</dep></entry>
       <entry><ind>1</ind><dep>45</dep></entry>
     </interpolation>
     <center>
@@ -1510,9 +1563,8 @@ ________________________________________________________________________________
     <property>sim/multiplay/generic/float[15]</property>
     <interpolation>
       <entry><ind>0</ind><dep>0</dep></entry>
-      <entry><ind>.15</ind><dep>-8</dep></entry>
-      <entry><ind>.22</ind><dep>-15</dep></entry>
-      <entry><ind>.3</ind><dep>-38</dep></entry>
+      <entry><ind>.3</ind><dep>-20</dep></entry>
+      <entry><ind>.5</ind><dep>-26</dep></entry>
       <entry><ind>1</ind><dep>-40</dep></entry>
     </interpolation>
     <center>
@@ -1541,8 +1593,7 @@ ________________________________________________________________________________
     <property>sim/multiplay/generic/float[14]</property>
     <interpolation>
       <entry><ind>0</ind><dep>0</dep></entry>
-      <entry><ind>.2</ind><dep>.07</dep></entry>
-      <entry><ind>.3</ind><dep>.35</dep></entry>
+      <entry><ind>.3</ind><dep>.15</dep></entry>
       <entry><ind>1</ind><dep>.4</dep></entry>
     </interpolation>
     <axis>
@@ -1557,9 +1608,8 @@ ________________________________________________________________________________
     <property>sim/multiplay/generic/float[14]</property>
     <interpolation>
       <entry><ind>0</ind><dep>0</dep></entry>
-      <entry><ind>.15</ind><dep>8</dep></entry>
-      <entry><ind>.22</ind><dep>15</dep></entry>
-      <entry><ind>.3</ind><dep>38</dep></entry>
+      <entry><ind>.3</ind><dep>20</dep></entry>
+      <entry><ind>.5</ind><dep>26</dep></entry>
       <entry><ind>1</ind><dep>45</dep></entry>
     </interpolation>
     <center>
@@ -1579,9 +1629,8 @@ ________________________________________________________________________________
     <property>sim/multiplay/generic/float[14]</property>
     <interpolation>
       <entry><ind>0</ind><dep>0</dep></entry>
-      <entry><ind>.15</ind><dep>-8</dep></entry>
-      <entry><ind>.22</ind><dep>-15</dep></entry>
-      <entry><ind>.3</ind><dep>-38</dep></entry>
+      <entry><ind>.3</ind><dep>-20</dep></entry>
+      <entry><ind>.5</ind><dep>-26</dep></entry>
       <entry><ind>1</ind><dep>-40</dep></entry>
     </interpolation>
     <center>

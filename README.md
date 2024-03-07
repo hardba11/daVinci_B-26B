@@ -1,15 +1,18 @@
-**daVinci_B-26B**
+**B-26B**
 
 It is usable in [FLIGHTGEAR open source flight simulator](http://www.flightgear.org).
 
-why this fork of daVinci_B-26B from fguk/voodoo ?
+Why this fork of daVinci_B-26B from fguk/voodoo ?
 -------------------------------------------------
+
 
 Just for fun, and need to have a git repo.
 
 This version is unarmed and will have futur changes on the model to be more cosy.
 
-installation
+If you want the original version, please go to fguk hangar !
+
+Installation
 ------------
 
 1. download on github
@@ -17,14 +20,14 @@ installation
 3. rename the directory `daVinci_B-26B-main` to `daVinci_B-26B`
 4. move the directory daVinci_B-26B in your addon aircraft directory (`/dir/of/my/hangars/daVinci_B-26B`)
 
-done
+Done
 ----
 
-### files
+**files**
 
 - remove livery files
 
-### models
+**models**
 
 - gear animations
 - moving parts improvments
@@ -35,12 +38,12 @@ done
 - new gears
 - bugfix instrument
 
-### fdm
+**fdm**
 
 - new yasim
 - smooth gears
 
-### UX
+**UX**
 
 - target position
 - hud
@@ -50,17 +53,17 @@ done
 todo
 ----
 
-### files
+**files**
 
 - remake directory tree
 - utf8
 - remove useless files
 
-### fdm
+**fdm**
 
 - autopilot/fdm improvment
 
-### models
+**models**
 
 - join objects
 - add effects
@@ -70,7 +73,7 @@ todo
 - fix missing textures
 - add ground equipment
 
-### UX
+**UX**
 
 - lights
 - add instruments

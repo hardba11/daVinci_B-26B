@@ -435,7 +435,7 @@ name "slowpdisk"
 loc 0.00019988 0.0318626 -0.0244626
 data 9
 slowpdisk
-texture "3blade.png"
+texture "4blade.png"
 crease 80.000000
 numvert 34
 0.0187859 1.46019 -1.46751
