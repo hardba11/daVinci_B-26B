@@ -55,7 +55,7 @@
   -->
 
   <!-- landing lights -->
-  <!-- a powerful front facing spotlight -->
+  <!-- a powerful front facing spotlight
   <model>
     <name>LandingLight1</name>
     <path>Aircraft/daVinci_B-26B/models/lights/LandingLight.xml</path>
@@ -77,7 +77,7 @@
       <pitch-deg>-17</pitch-deg>
       <heading-deg>0</heading-deg>
     </offsets>
-  </model>
+  </model> -->
 
   <!-- taxi light -->
   <!-- a weaker front facing spotlight, often mounted on the front gear 

@@ -640,11 +640,11 @@ ________________________________________________________________________________
     <object-name>PortLowerBayDoorOutside</object-name>
     <object-name>PortLowerBayDoorInside</object-name>
     <property>sim/multiplay/generic/float[1]</property>
-    <factor>-135</factor>
+    <factor>-118</factor>
     <center>
-      <x-m>1.207</x-m>
-      <y-m>-1.0</y-m>
-      <z-m>-0.349</z-m>
+      <x-m>0</x-m>
+      <y-m>-1.039</y-m>
+      <z-m>-0.33</z-m>
     </center>
     <axis>
       <x>1</x>
@@ -661,13 +661,13 @@ ________________________________________________________________________________
       <entry><ind>0</ind><dep>0</dep></entry>
       <entry><ind>0.25</ind><dep>40</dep></entry>
       <entry><ind>0.5</ind><dep>72</dep></entry>
-      <entry><ind>0.75</ind><dep>97</dep></entry>
-      <entry><ind>1</ind><dep>112</dep></entry>
+      <entry><ind>0.75</ind><dep>100</dep></entry>
+      <entry><ind>1</ind><dep>120</dep></entry>
     </interpolation>
     <center>
       <x-m>1.207</x-m>
-      <y-m>-0.697</y-m>
-      <z-m>-0.826</z-m>
+      <y-m>-0.67</y-m>
+      <z-m>-0.798</z-m>
     </center>
     <axis>
       <x>1</x>
@@ -681,10 +681,10 @@ ________________________________________________________________________________
     <property>sim/multiplay/generic/float[1]</property>
     <interpolation>
       <entry><ind>0</ind><dep>0</dep></entry>
-      <entry><ind>0.25</ind><dep>20</dep></entry>
-      <entry><ind>0.5</ind><dep>41</dep></entry>
-      <entry><ind>0.75</ind><dep>60</dep></entry>
-      <entry><ind>1</ind><dep>75</dep></entry>
+      <entry><ind>0.25</ind><dep>17</dep></entry>
+      <entry><ind>0.5</ind><dep>37</dep></entry>
+      <entry><ind>0.75</ind><dep>58</dep></entry>
+      <entry><ind>1</ind><dep>74</dep></entry>
     </interpolation>
     <center>
       <x-m>-6.2</x-m>
@@ -706,14 +706,14 @@ ________________________________________________________________________________
     <object-name>StarLowerBayDoorOutside</object-name>
     <object-name>StarLowerBayDoorInside</object-name>
     <property>sim/multiplay/generic/float[1]</property>
-    <factor>135</factor>
+    <factor>-118</factor>
     <center>
-      <x-m>1.207</x-m>
-      <y-m>1.0</y-m>
-      <z-m>-0.349</z-m>
+      <x-m>0</x-m>
+      <y-m>1.039</y-m>
+      <z-m>-0.33</z-m>
     </center>
     <axis>
-      <x>1</x>
+      <x>-1</x>
       <y>0</y>
       <z>0</z>
     </axis>
@@ -727,13 +727,13 @@ ________________________________________________________________________________
       <entry><ind>0</ind><dep>0</dep></entry>
       <entry><ind>0.25</ind><dep>40</dep></entry>
       <entry><ind>0.5</ind><dep>72</dep></entry>
-      <entry><ind>0.75</ind><dep>97</dep></entry>
-      <entry><ind>1</ind><dep>112</dep></entry>
+      <entry><ind>0.75</ind><dep>100</dep></entry>
+      <entry><ind>1</ind><dep>120</dep></entry>
     </interpolation>
     <center>
       <x-m>1.207</x-m>
-      <y-m>0.697</y-m>
-      <z-m>-0.826</z-m>
+      <y-m>0.67</y-m>
+      <z-m>-0.798</z-m>
     </center>
     <axis>
       <x>-1</x>
@@ -747,10 +747,10 @@ ________________________________________________________________________________
     <property>sim/multiplay/generic/float[1]</property>
     <interpolation>
       <entry><ind>0</ind><dep>0</dep></entry>
-      <entry><ind>0.25</ind><dep>20</dep></entry>
-      <entry><ind>0.5</ind><dep>41</dep></entry>
-      <entry><ind>0.75</ind><dep>60</dep></entry>
-      <entry><ind>1</ind><dep>75</dep></entry>
+      <entry><ind>0.25</ind><dep>17</dep></entry>
+      <entry><ind>0.5</ind><dep>37</dep></entry>
+      <entry><ind>0.75</ind><dep>58</dep></entry>
+      <entry><ind>1</ind><dep>74</dep></entry>
     </interpolation>
     <center>
       <x-m>-6.2</x-m>

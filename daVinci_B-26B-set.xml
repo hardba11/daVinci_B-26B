@@ -67,6 +67,12 @@
           <visible>false</visible>
         </pilot>
       </crew>
+
+      <door-positions>
+        <windows-position-norm type="float">0</windows-position-norm>
+        <bay-position-norm type="float">0</bay-position-norm>
+      </door-positions>
+
     </model>
 
     <view n="0">
@@ -228,9 +234,6 @@
       <file>Aircraft/daVinci_B-26B/core/boost.nas</file>
       <file>Aircraft/daVinci_B-26B/core/liveries.nas</file>
     </spit9>
-    <doors>
-      <file>Aircraft/daVinci_B-26B/core/doors.nas</file>
-    </doors>
     <b26>
       <file>Aircraft/daVinci_B-26B/core/b26.nas</file>
     </b26>

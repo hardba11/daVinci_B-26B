@@ -77,7 +77,7 @@
     <control-input axis="/controls/gear/brake-right" control="BRAKE"/>
     <control-input axis="/controls/gear/brake-parking" control="BRAKE" split="true"/>
     <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
-    <control-speed control="EXTEND" transition-time="8"/>
+    <control-speed control="EXTEND" transition-time="7"/>
     <control-output control="EXTEND" prop="/gear/gear[1]/position-norm"/>
   </gear>
 <!-- right gear -->
@@ -85,7 +85,7 @@
     <control-input axis="/controls/gear/brake-left" control="BRAKE"/>
     <control-input axis="/controls/gear/brake-parking" control="BRAKE" split="true"/>
     <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
-    <control-speed control="EXTEND" transition-time="6"/>
+    <control-speed control="EXTEND" transition-time="7"/>
     <control-output control="EXTEND" prop="/gear/gear[2]/position-norm"/>
   </gear>
 
@@ -118,6 +118,26 @@
   <ballast x="2.78" y="0.26" z="0.0" mass="180"/>
   <ballast x="2.2" y="0" z="0.0" mass="240"/>
   <ballast x="-8.046" y="0" z="-0.278" mass="1300"/> 
+
+
+
+  <!--
+________________________________________________________________________________
+                                                                        HACK !!!
+  -->
+  <!-- ~~~~~~~~~~~~~~~~~~ window -->
+  <mstab x="0.1" y="0" z="0" length=".0001" chord=".0001" sweep=".0001" taper=".0001" dihedral="0" camber="0" incidence="0">
+    <control-input  control="FLAP0" axis="/controls/doors/windows" />
+    <control-output control="FLAP0" prop="/sim/model/door-positions/windows-position-norm" /> <!-- alias for MP -->
+    <control-speed  control="FLAP0" transition-time="3" />
+  </mstab>
+  <!-- ~~~~~~~~~~~~~~~~~~ window -->
+  <mstab x="0.1" y="0" z="0" length=".0001" chord=".0001" sweep=".0001" taper=".0001" dihedral="0" camber="0" incidence="0">
+    <control-input  control="FLAP0" axis="/controls/doors/bay" />
+    <control-output control="FLAP0" prop="/sim/model/door-positions/bay-position-norm" /> <!-- alias for MP -->
+    <control-speed  control="FLAP0" transition-time="14" />
+  </mstab>
+
 
 </airplane>
 

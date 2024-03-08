@@ -3,23 +3,46 @@
 <PropertyList>
 
   <keyboard>
+
     <key n="100">
       <name>d</name>
-      <desc>Canopy</desc>
+      <desc>Windows</desc>
       <binding>
-        <command>nasal</command>
-        <script>doors.crew.toggle();</script>
+        <command>property-toggle</command>
+        <property>/controls/doors/windows</property>
       </binding>
     </key>
 
     <key n="68">
       <name>D</name>
-      <desc>Passenger door</desc>
+      <desc>Bay</desc>
       <binding>
-        <command>nasal</command>
-        <script>doors.passenger.toggle();</script>
+        <command>property-toggle</command>
+        <property>/controls/doors/bay</property>
       </binding>
     </key>
+
+    <key n="103">
+      <name>g</name>
+      <desc>gear up</desc>
+      <binding>
+        <command>nasal</command>
+        <script>
+          <![CDATA[
+controls.gearDown(-1);
+          ]]>
+        </script>
+      <condition>
+        <not>
+          <property>/gear/gear[0]/wow</property>
+          <property>/gear/gear[1]/wow</property>
+          <property>/gear/gear[2]/wow</property>
+        </not>
+      </condition>
+      </binding>
+    </key>
+
+
 
     <key n="115">
       <name>s</name>
@@ -45,7 +68,7 @@
         </binding>
       </mod-up>
     </key>
-
+<!--
     <key n="83">
       <name>S</name>
       <desc>Toggle smoke</desc>
@@ -80,7 +103,7 @@
         <script>b26.shift_blower1_up()</script>
       </binding>
     </key>
-
+-->
   </keyboard>
 
 </PropertyList>

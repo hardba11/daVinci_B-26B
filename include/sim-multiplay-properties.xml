@@ -15,8 +15,8 @@
     <int n="8" alias="/systems/electrical/outputs/nav-lights">0</int>  <!-- 8 nav-lights -->
     <int n="9" alias="/sim/model/lights/beacon/state">false</int>      <!-- 9 strobe-lights -->
     <int n="10" alias="/controls/electric/key-pos">0</int>             <!-- 10 key position -->
-    <float n="0" alias="/sim/model/door-positions/crew/position-norm"/>
-    <float n="1" alias="/sim/model/door-positions/passenger/position-norm"/>
+    <float n="0" alias="/sim/model/door-positions/windows-position-norm"/>
+    <float n="1" alias="/sim/model/door-positions/bay-position-norm"/>
     <float n="2" alias="/position/gear-agl-m">0</float>   <!-- altitude for MP shadow -->
     <float n="3" alias="/position/altitude-ft">0</float>  <!-- altitude for Smoke/Trail -->
     <float n="4" alias="/engines/engine[0]/rpm"/>
