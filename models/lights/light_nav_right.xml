@@ -13,10 +13,7 @@
     <type>select</type>
     <object-name>als_light</object-name>
     <condition>
-      <and>
-        <property>controls/lighting/nav-lights</property>
-        <property>systems/electrical/bus/commands</property>
-      </and>
+      <property>controls/light/nav</property>
     </condition>
   </animation>
 

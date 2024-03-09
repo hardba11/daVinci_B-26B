@@ -184,7 +184,7 @@
         <front-direction-deg type="double">0</front-direction-deg>
         <x-offset-m type="double">-0.390</x-offset-m><!--right-->
         <y-offset-m type="double">0.910</y-offset-m><!--up-->
-        <z-offset-m type="double">-3.225</z-offset-m><!--back-->
+        <z-offset-m type="double">-3.305</z-offset-m><!--back-->
         <default-field-of-view-deg>120</default-field-of-view-deg>
         <pitch-offset-deg>-16.00</pitch-offset-deg>
       </config>

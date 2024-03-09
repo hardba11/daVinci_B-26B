@@ -8,7 +8,7 @@
     <object-name>HourHand</object-name>
     <object-name>SecondHand</object-name>
     <emission>
-      <factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop>
+      <factor-prop>/controls/light/instrument-norm</factor-prop>
       <red>   0.017</red>
       <green> 0.60 </green>
       <blue>  0.65 </blue>

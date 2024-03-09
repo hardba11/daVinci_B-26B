@@ -25,10 +25,16 @@
     <aileron-effectiveness type ="double">0.4</aileron-effectiveness>
   </flight>
 
-  <lighting>
+  <light>
+    <instrument-norm type="float">1.0</instrument-norm>
     <panel-norm type="float">1.0</panel-norm>
+    <cabin-norm type="float">1.0</cabin-norm>
+    <nav type="bool">1</nav>
+    <pos type="bool">1</pos>
+    <strobe type="bool">1</strobe>
     <landing type="bool">1</landing>
-  </lighting>
+    <taxi type="bool">1</taxi>
+  </light>
 
   <canopy>
     <canopy-pos-norm type="float">1.0</canopy-pos-norm>

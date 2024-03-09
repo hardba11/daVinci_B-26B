@@ -211,7 +211,7 @@
     <type>material</type>
     <object-name>throttleblock</object-name>
     <emission>
-      <factor-prop>/controls/lighting/panel-norm</factor-prop>
+      <factor-prop>/controls/light/panel-norm</factor-prop>
       <red>.1</red>
       <green>.3</green>
       <blue>.3</blue>

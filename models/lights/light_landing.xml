@@ -13,7 +13,7 @@
     <type>select</type>
     <object-name>als_light</object-name>
     <condition>
-      <property>/controls/lighting/landing</property>
+      <property>/controls/light/landing</property>
     </condition>
   </animation>
 

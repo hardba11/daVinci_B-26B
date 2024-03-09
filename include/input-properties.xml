@@ -32,17 +32,15 @@
 controls.gearDown(-1);
           ]]>
         </script>
-      <condition>
-        <not>
-          <property>/gear/gear[0]/wow</property>
-          <property>/gear/gear[1]/wow</property>
-          <property>/gear/gear[2]/wow</property>
-        </not>
-      </condition>
+        <condition>
+          <not>
+            <property>/gear/gear[0]/wow</property>
+            <property>/gear/gear[1]/wow</property>
+            <property>/gear/gear[2]/wow</property>
+          </not>
+        </condition>
       </binding>
     </key>
-
-
 
     <key n="115">
       <name>s</name>

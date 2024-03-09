@@ -20,10 +20,9 @@
     <object-name>StarPitchKnob</object-name>
     <object-name>FlapLever</object-name>
     <object-name>GearLever</object-name>
-
   </animation>
 
-  <!-- Manette des gazs -->
+  <!-- gaz -->
   <animation>
     <type>rotate</type>
     <object-name>PortThrottleLever</object-name>
@@ -41,7 +40,6 @@
       <z> 0 </z>
     </axis>
   </animation>
-
   <animation>
     <type>rotate</type>
     <object-name>StarThrottleLever</object-name>
@@ -60,7 +58,7 @@
     </axis>
   </animation>
 
-  <!-- Manette de mixture -->
+  <!-- mixture -->
   <animation>
     <type>rotate</type>
     <object-name>PortMixLever</object-name>
@@ -78,7 +76,6 @@
       <z> 0 </z>
     </axis>
   </animation>
-
   <animation>
     <type>rotate</type>
      <object-name>StarMixLever</object-name>
@@ -97,7 +94,7 @@
     </axis>
   </animation>
 
-  <!-- Manette de pas d'hélice -->
+  <!-- pas d'helice -->
   <animation>
     <type>rotate</type>
     <object-name>PortPitchLever</object-name>
@@ -115,7 +112,6 @@
       <z> 0 </z>
     </axis>
   </animation>
-
   <animation>
     <type>rotate</type>
     <object-name>StarPitchLever</object-name>
@@ -134,7 +130,7 @@
     </axis>
   </animation>
 
-  <!-- Manette des flaps -->
+  <!-- flaps -->
   <animation>
     <type>rotate</type>
     <object-name>FlapLever</object-name>
@@ -153,15 +149,15 @@
     </axis>
   </animation>
 
-<!-- Manette des flaps -->
+  <!-- trains -->
   <animation>
     <type>rotate</type>
     <object-name>GearLever</object-name>
-    <property>gear/gear[1]/position-norm</property>
+    <property>/controls/gear/gear-down</property>
     <factor>50</factor>
     <center>
       <x-m>2.583</x-m>
-      <y-m>  0.00000 </y-m>
+      <y-m>0.00000 </y-m>
       <z-m>0.320</z-m>
     </center>
     <axis>
@@ -170,6 +166,74 @@
       <z> 0 </z>
     </axis>
   </animation>
+  <animation>
+    <type>pick</type>
+    <object-name>GearLever</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/gear/gear-down</property>
+      </binding>
+      <condition>
+        <property>/controls/gear/gear-down</property>
+        <not>
+          <property>/gear/gear[0]/wow</property>
+          <property>/gear/gear[1]/wow</property>
+          <property>/gear/gear[2]/wow</property>
+        </not>
+      </condition>
+    </action>
+    <hovered>
+      <binding>
+        <command>set-tooltip</command>
+        <tooltip-id>tooltip-gear-toggle</tooltip-id>
+        <label>Toggle Gears</label>
+      </binding>
+    </hovered>
+  </animation>
 
-  
+  <!-- park -->
+  <animation>
+    <type>rotate</type>
+    <object-name>ParkingBrakeLever</object-name>
+    <property>/controls/gear/brake-parking</property>
+    <factor>50</factor>
+    <center>
+      <x-m>2.6</x-m>
+      <y-m>-0.153</y-m>
+      <z-m>0.101</z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+  <animation>
+    <type>pick</type>
+    <object-name>ParkingBrakeLever</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>
+          <![CDATA[
+controls.applyParkingBrake(-1);
+          ]]>
+        </script>
+      </binding>
+    </action>
+    <hovered>
+      <binding>
+        <command>set-tooltip</command>
+        <tooltip-id>tooltip-parkbrake-toggle</tooltip-id>
+        <label>Toggle Parkbrake</label>
+      </binding>
+    </hovered>
+  </animation>
+
+
 </PropertyList>
