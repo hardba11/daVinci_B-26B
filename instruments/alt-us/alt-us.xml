@@ -5,18 +5,10 @@
 
   <animation>
     <type>material</type>
-    <object-name>case0</object-name>
-    <object-name>case1</object-name>
-    <object-name>screws</object-name>
-  </animation>
-
-  <animation>
-    <type>material</type>
     <object-name>Face</object-name>
     <object-name>needle1</object-name>
     <object-name>needle2</object-name>
     <object-name>needle3</object-name>
-    <object-name>Background</object-name>
     <object-name>PressureDial</object-name>
     <emission>
       <factor-prop>/controls/light/instrument-norm</factor-prop>
@@ -84,8 +76,6 @@
     </axis>
   </animation>
 
-
-
   <animation>
     <type>pick</type>
     <object-name>Face</object-name>
@@ -98,7 +88,6 @@
       </binding>
     </hovered>
   </animation>
-
 
   <animation>
     <type>pick</type>
