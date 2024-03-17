@@ -6,8 +6,16 @@
     <path>Aircraft/daVinci_B-26B/instruments/mpmulti60-us/mpmulti60-us.xml</path>
     <offsets>
       <x-m>-0.107</x-m>
-      <y-m> 0.148</y-m>
-      <z-m> -0.024</z-m>
+      <y-m>0.148</y-m>
+      <z-m>-0.024</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/daVinci_B-26B/instruments/bezel/bezel2.xml</path>
+    <offsets>
+      <x-m>-0.107</x-m>
+      <y-m>0.148</y-m>
+      <z-m>-0.024</z-m>
      </offsets>
   </model>
   <model>
@@ -18,22 +26,46 @@
       <z-m> -0.025</z-m>
     </offsets>
   </model>
+  <model>
+    <path>Aircraft/daVinci_B-26B/instruments/bezel/bezel2.xml</path>
+    <offsets>
+      <x-m>-0.107</x-m>
+      <y-m>0.269</y-m>
+      <z-m>-0.025</z-m>
+    </offsets>
+  </model>
 
   <model>
     <path>Aircraft/daVinci_B-26B/instruments/engine/engine.xml</path>
     <offsets>
       <x-m>-0.106</x-m>
-      <y-m> 0.150 </y-m>
+      <y-m>0.150 </y-m>
       <z-m>-0.147</z-m>
-     </offsets>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/daVinci_B-26B/instruments/bezel/bezel2.xml</path>
+    <offsets>
+      <x-m>-0.106</x-m>
+      <y-m>0.150 </y-m>
+      <z-m>-0.147</z-m>
+    </offsets>
   </model>
   <model>
     <path>Aircraft/daVinci_B-26B/instruments/engine/engine.xml</path>
     <offsets>
       <x-m>-0.106</x-m>
-      <y-m> 0.267</y-m>
-       <z-m>-0.146</z-m>
+      <y-m>0.267</y-m>
+      <z-m>-0.146</z-m>
      </offsets>
+  </model>
+  <model>
+    <path>Aircraft/daVinci_B-26B/instruments/bezel/bezel2.xml</path>
+    <offsets>
+      <x-m>-0.106</x-m>
+      <y-m> 0.267</y-m>
+      <z-m>-0.146</z-m>
+    </offsets>
   </model>
 
   <model>
@@ -45,7 +77,23 @@
     </offsets>
   </model>
   <model>
+    <path>Aircraft/daVinci_B-26B/instruments/bezel/bezel2.xml</path>
+    <offsets>
+      <x-m>-0.105</x-m>
+      <y-m>0.148</y-m>
+      <z-m>-0.264</z-m>
+    </offsets>
+  </model>
+  <model>
     <path>Aircraft/daVinci_B-26B/instruments/vac/vac.xml</path>
+    <offsets>
+      <x-m>-0.105</x-m>
+      <y-m>0.268</y-m>
+      <z-m>-0.264</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/daVinci_B-26B/instruments/bezel/bezel2.xml</path>
     <offsets>
       <x-m>-0.105</x-m>
       <y-m>0.268</y-m>
@@ -84,7 +132,7 @@
   <model>
     <path>Aircraft/daVinci_B-26B/instruments/asi300-us/asi300-us.xml</path>
     <offsets>
-      <x-m>-0.095</x-m>
+      <x-m>-0.088</x-m>
       <y-m>-0.180</y-m>
       <z-m>-0.073</z-m>
     </offsets>
@@ -100,7 +148,7 @@
   <model>
     <path>Aircraft/daVinci_B-26B/instruments/att-us/att-us.xml</path>
     <offsets>
-      <x-m>-0.095</x-m>
+      <x-m>-0.088</x-m>
       <y-m>-0.075</y-m>
       <z-m>-0.073</z-m>
     </offsets>
@@ -116,7 +164,7 @@
   <model>
     <path>Aircraft/daVinci_B-26B/instruments/alt-us/alt-us.xml</path>
     <offsets>
-      <x-m>-0.095</x-m>
+      <x-m>-0.088</x-m>
       <y-m>0.026</y-m>
       <z-m>-0.073</z-m>
     </offsets>

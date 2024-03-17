@@ -15,7 +15,6 @@
     <condition>
       <and>
         <property>sim/model/lights/beacon/state</property>
-        <property>systems/electrical/bus/commands</property>
       </and>
     </condition>
   </animation>

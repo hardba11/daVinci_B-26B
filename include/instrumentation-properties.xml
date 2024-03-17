@@ -17,4 +17,8 @@
     </target_positions>
   </my_aircraft>
 
+  <attitude-indicator>
+    <horizon-offset-deg type="float">0</horizon-offset-deg>
+  </attitude-indicator>
+
 </PropertyList>

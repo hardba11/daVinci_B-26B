@@ -42,6 +42,20 @@
     </axis>
   </animation>
 
+  <animation>
+    <type>pick</type>
+    <object-name>Face</object-name>
+    <visible>true</visible>
+    <hovered>
+      <binding>
+        <command>set-tooltip</command>
+        <tooltip-id>tooltip-clock</tooltip-id>
+        <label>indicated speed : %d kt</label>
+        <property>instrumentation/airspeed-indicator/indicated-speed-kt</property>
+      </binding>
+    </hovered>
+  </animation>
+
 </PropertyList>
 
 

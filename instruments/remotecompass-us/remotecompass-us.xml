@@ -34,6 +34,21 @@
     </axis>
   </animation>
 
+  <animation>
+    <type>pick</type>
+    <object-name>Face</object-name>
+    <visible>true</visible>
+    <hovered>
+      <binding>
+        <command>set-tooltip</command>
+        <tooltip-id>tooltip-clock</tooltip-id>
+        <label>mag heading : %d</label>
+        <property>/orientation/heading-magnetic-deg</property>
+      </binding>
+    </hovered>
+  </animation>
+
+
 </PropertyList>
 
 

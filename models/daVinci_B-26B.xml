@@ -13,6 +13,54 @@
     <pitch-deg>0</pitch-deg>
   </offsets>
 
+  <effect>
+    <inherits-from>Aircraft/daVinci_B-26B/models/effects/piston</inherits-from>
+    <object-name>StarLowerStrut.001</object-name>
+    <object-name>PortLowerStrut.001</object-name>
+    <object-name>NoseLowerStrut</object-name>
+  </effect>
+
+  <effect>
+    <inherits-from>Aircraft/daVinci_B-26B/models/effects/aircraft</inherits-from>
+    <object-name>NoseFuselage</object-name>
+    <object-name>PortNoseGearDoor</object-name>
+    <object-name>StarNoseGearDoor</object-name>
+    <object-name>PortUpperBayDoorOutside</object-name>
+    <object-name>PortLowerBayDoorOutside</object-name>
+    <object-name>StarUpperBayDoorOutside</object-name>
+    <object-name>StarLowerBayDoorOutside</object-name>
+    <object-name>PortOutsideWindowFrame</object-name>
+    <object-name>StarOutsideWindowFrame</object-name>
+    <object-name>RearFusleageAssy</object-name>
+    <object-name>Rudder</object-name>
+    <object-name>Rudder.001</object-name>
+    <object-name>StarBayDoor</object-name>
+    <object-name>PortWingAssy</object-name>
+    <object-name>PortAileron</object-name>
+    <object-name>PortAileron.001</object-name>
+    <object-name>PortOutsideFlap</object-name>
+    <object-name>PortInsideFlap</object-name>
+    <object-name>StarWingAssy</object-name>
+    <object-name>StarAileron</object-name>
+    <object-name>StarAileron.001</object-name>
+    <object-name>StarOutsideFlap</object-name>
+    <object-name>StarInsideFlap</object-name>
+    <object-name>PortNacelle</object-name>
+    <object-name>PortSpinner</object-name>
+    <object-name>StarSpinner</object-name>
+    <object-name>PortInnerGearDoorOutside</object-name>
+    <object-name>PortOuterGearDoorOutside</object-name>
+    <object-name>StarNacelle</object-name>
+    <object-name>StarInnerGearDoorOutside</object-name>
+    <object-name>StarOuterGearDoorOutside</object-name>
+    <object-name>StarOutsideGearDoor</object-name>
+    <object-name>HorizStabsAssy</object-name>
+    <object-name>PortElevator</object-name>
+    <object-name>PortElevator.001</object-name>
+    <object-name>StarElevator</object-name>
+    <object-name>StarElevator.001</object-name>
+  </effect>
+
 <!--
 rotation de la tourelle
   x 5.469
@@ -62,64 +110,6 @@ rotation de la tourelle
     </emission>
   </animation>
 
-  <animation>
-    <type>material</type>
-    <object-name>lights</object-name>
-    <ambient>
-      <red>1</red>
-      <green>1</green>
-      <blue>1</blue>
-    </ambient>
-    <emission>
-      <factor-prop>/controls/light/landing</factor-prop>
-      <!--factor-prop>lightpack/nav-lights-intensity</factor-prop-->
-      <red>1</red>
-      <green>1</green>
-      <blue>1</blue>
-    </emission>
-  </animation>
-  <animation>
-    <type>material</type>
-    <object-name>lights.nose</object-name>
-    <ambient>
-      <red>1</red>
-      <green>1</green>
-      <blue>1</blue>
-    </ambient>
-    <emission>
-      <factor-prop>/controls/light/taxi</factor-prop>
-      <red>1</red>
-      <green>1</green>
-      <blue>1</blue>
-    </emission>
-  </animation>
-  <model>
-    <name>landing-light-nose-right</name>
-    <path>Aircraft/daVinci_B-26B/models/lights/light_taxi.xml</path>
-    <offsets>
-      <x-m type="float">-4.5</x-m>
-      <y-m type="float">0.1</y-m>
-      <z-m type="float">-1.0</z-m>
-    </offsets>
-  </model>
-  <model>
-    <name>landing-light-wing-left</name>
-    <path>Aircraft/daVinci_B-26B/models/lights/light_landing.xml</path>
-    <offsets>
-      <x-m type="float">-0.08</x-m>
-      <y-m type="float">-6.2</y-m>
-      <z-m type="float">0.87</z-m>
-    </offsets>
-  </model>
-  <model>
-    <name>landing-light-wing-right</name>
-    <path>Aircraft/daVinci_B-26B/models/lights/light_landing.xml</path>
-    <offsets>
-      <x-m type="float">-0.08</x-m>
-      <y-m type="float">6.2</y-m>
-      <z-m type="float">0.87</z-m>
-    </offsets>
-  </model>
 
 <!--
 ________________________________________________________________________________
@@ -781,8 +771,8 @@ ________________________________________________________________________________
     <type>rotate</type>
     <object-name>PortAileron</object-name>
     <object-name>PortAileron.001</object-name>
-    <property>sim/multiplay/generic/float[13]</property>
-    <factor>-25</factor>
+    <property>surface-positions/left-aileron-pos-norm</property>
+    <factor>-20</factor>
     <axis>
       <x1-m>1.93</x1-m>
       <y1-m>-6.615</y1-m>
@@ -796,8 +786,8 @@ ________________________________________________________________________________
     <type>rotate</type>
     <object-name>StarAileron</object-name>
     <object-name>StarAileron.001</object-name>
-    <property>sim/multiplay/generic/float[13]</property>
-    <factor>-25</factor>
+    <property>surface-positions/left-aileron-pos-norm</property>
+    <factor>-20</factor>
     <axis>
       <x1-m>1.93</x1-m>
       <y1-m>6.615</y1-m>
@@ -814,17 +804,17 @@ ________________________________________________________________________________
     <object-name>PortElevator</object-name>
     <object-name>PortElevator.001</object-name>
     <property>surface-positions/elevator-pos-norm</property>
-    <factor>-25</factor>
+    <factor>-15</factor>
     <center>
       <x-m>9.487</x-m>
       <y-m>-2.133</y-m>
       <z-m>1.128</z-m>
     </center>
     <axis>
-      <x1-m>9.272</x1-m><!--ok-->
+      <x1-m>9.272</x1-m>
       <y1-m>-0.561</y1-m>
       <z1-m>0.936</z1-m>
-      <x2-m>9.481</x2-m><!--ok-->
+      <x2-m>9.481</x2-m>
       <y2-m>-3.689</y2-m>
       <z2-m>1.344</z2-m>
     </axis>
@@ -834,17 +824,17 @@ ________________________________________________________________________________
     <object-name>StarElevator</object-name>
     <object-name>StarElevator.001</object-name>
     <property>surface-positions/elevator-pos-norm</property>
-    <factor>25</factor>
+    <factor>15</factor>
     <center>
       <x-m>9.37</x-m>
       <y-m>2.133</y-m>
       <z-m>1.123</z-m>
     </center>
     <axis>
-      <x1-m>9.272</x1-m><!--ok-->
+      <x1-m>9.272</x1-m>
       <y1-m>0.561</y1-m>
       <z1-m>0.936</z1-m>
-      <x2-m>9.481</x2-m><!--ok-->
+      <x2-m>9.481</x2-m>
       <y2-m>3.689</y2-m>
       <z2-m>1.344</z2-m>
     </axis>
@@ -856,7 +846,7 @@ ________________________________________________________________________________
     <object-name>Rudder</object-name>
     <object-name>Rudder.001</object-name>
     <property>surface-positions/rudder-pos-norm</property>
-    <factor>20</factor>
+    <factor>15</factor>
     <center>
       <x-m>8.752</x-m>
       <y-m>0</y-m>
@@ -1066,10 +1056,10 @@ ________________________________________________________________________________
       <entry><ind>1.0</ind><dep>-73.0</dep></entry>
     </interpolation>
     <axis>
-      <x1-m>-4.431</x1-m><!--ok-->
+      <x1-m>-4.431</x1-m>
       <y1-m>-0.362</y1-m>
       <z1-m>-0.664</z1-m>
-      <x2-m>-2.306</x2-m><!--ok-->
+      <x2-m>-2.306</x2-m>
       <y2-m>-0.469</y2-m>
       <z2-m>-0.874</z2-m>
     </axis>
@@ -1085,10 +1075,10 @@ ________________________________________________________________________________
       <entry><ind>1.0</ind><dep>72.0</dep></entry>
     </interpolation>
     <axis>
-      <x1-m>-4.431</x1-m><!--ok-->
+      <x1-m>-4.431</x1-m>
       <y1-m>0.362</y1-m>
       <z1-m>-0.664</z1-m>
-      <x2-m>-2.306</x2-m><!--ok-->
+      <x2-m>-2.306</x2-m>
       <y2-m>0.469</y2-m>
       <z2-m>-0.874</z2-m>
     </axis>
@@ -1107,10 +1097,10 @@ ________________________________________________________________________________
       <entry><ind>1.0</ind><dep>-70.0</dep></entry>
     </interpolation>
     <axis>
-      <x1-m>0.134</x1-m><!--ok-->
+      <x1-m>0.134</x1-m>
       <y1-m>-3.954</y1-m>
       <z1-m>-0.441</z1-m>
-      <x2-m>1.914</x2-m><!--ok-->
+      <x2-m>1.914</x2-m>
       <y2-m>-3.778</y2-m>
       <z2-m>-0.244</z2-m>
     </axis>
@@ -1127,10 +1117,10 @@ ________________________________________________________________________________
       <entry><ind>1.0</ind><dep>70.0</dep></entry>
     </interpolation>
     <axis>
-      <x1-m>0.132</x1-m><!--ok-->
+      <x1-m>0.132</x1-m>
       <y1-m>-2.682</y1-m>
       <z1-m>-0.432</z1-m>
-      <x2-m>2.054</x2-m><!--ok-->
+      <x2-m>2.054</x2-m>
       <y2-m>-2.854</y2-m>
       <z2-m>-0.238</z2-m>
     </axis>
@@ -1149,10 +1139,10 @@ ________________________________________________________________________________
       <entry><ind>1.0</ind><dep>72.0</dep></entry>
     </interpolation>
     <axis>
-      <x1-m>0.134</x1-m><!--ok-->
+      <x1-m>0.134</x1-m>
       <y1-m>3.954</y1-m>
       <z1-m>-0.441</z1-m>
-      <x2-m>1.914</x2-m><!--ok-->
+      <x2-m>1.914</x2-m>
       <y2-m>3.778</y2-m>
       <z2-m>-0.244</z2-m>
     </axis>
@@ -1169,10 +1159,10 @@ ________________________________________________________________________________
       <entry><ind>1.0</ind><dep>-70.0</dep></entry>
     </interpolation>
     <axis>
-      <x1-m>0.132</x1-m><!--ok-->
+      <x1-m>0.132</x1-m>
       <y1-m>2.682</y1-m>
       <z1-m>-0.432</z1-m>
-      <x2-m>2.054</x2-m><!--ok-->
+      <x2-m>2.054</x2-m>
       <y2-m>2.854</y2-m>
       <z2-m>-0.238</z2-m>
     </axis>
@@ -1197,11 +1187,11 @@ ________________________________________________________________________________
     <object-name>NoseGearAssy</object-name>
     <property>sim/multiplay/generic/float[17]</property>
     <interpolation>
-      <entry><ind>0</ind><dep>0</dep></entry> <!-- fixe -->
-      <entry><ind>.1</ind><dep>.03</dep></entry> <!-- fixe -->
-      <entry><ind>.2</ind><dep>.11</dep></entry> <!-- fixe -->
+      <entry><ind>0</ind><dep>0</dep></entry>
+      <entry><ind>.1</ind><dep>.03</dep></entry>
+      <entry><ind>.2</ind><dep>.11</dep></entry>
       <!--entry><ind>.6</ind><dep>.25</dep></entry-->
-      <entry><ind>1</ind><dep>.2</dep></entry> <!-- fixe -->
+      <entry><ind>1</ind><dep>.2</dep></entry>
     </interpolation>
     <axis>
       <x>0</x>
@@ -1214,9 +1204,9 @@ ________________________________________________________________________________
     <object-name>NoseUpperSpring2</object-name>
     <property>sim/multiplay/generic/float[17]</property>
     <interpolation>
-      <entry><ind>0</ind><dep>0</dep></entry> <!-- fixe -->
-      <entry><ind>.1</ind><dep>5</dep></entry> <!-- fixe -->
-      <entry><ind>.2</ind><dep>15</dep></entry> <!-- fixe -->
+      <entry><ind>0</ind><dep>0</dep></entry>
+      <entry><ind>.1</ind><dep>5</dep></entry>
+      <entry><ind>.2</ind><dep>15</dep></entry>
       <entry><ind>1</ind><dep>35</dep></entry>
     </interpolation>
     <center>
@@ -1235,9 +1225,9 @@ ________________________________________________________________________________
     <object-name>NoseLowerSpring2</object-name>
     <property>sim/multiplay/generic/float[17]</property>
     <interpolation>
-      <entry><ind>0</ind><dep>0</dep></entry> <!-- fixe -->
-      <entry><ind>.1</ind><dep>-5</dep></entry> <!-- fixe -->
-      <entry><ind>.2</ind><dep>-15</dep></entry> <!-- fixe -->
+      <entry><ind>0</ind><dep>0</dep></entry>
+      <entry><ind>.1</ind><dep>-5</dep></entry>
+      <entry><ind>.2</ind><dep>-15</dep></entry>
       <entry><ind>1</ind><dep>-35</dep></entry>
     </interpolation>
     <center>
@@ -1484,8 +1474,6 @@ ________________________________________________________________________________
     </hovered>
   </animation>
 
-
-
   <animation>
     <type>rotate</type>
     <object-name>btn_cabin_light</object-name>
@@ -1525,10 +1513,6 @@ ________________________________________________________________________________
     </hovered>
   </animation>
 
-
-
-
-
   <animation>
     <type>rotate</type>
     <object-name>btn_panel_light</object-name>
@@ -1558,6 +1542,13 @@ ________________________________________________________________________________
         <value>0</value>
         <value>1</value>
       </binding>
+      <binding>
+        <command>property-cycle</command>
+        <wrap type="bool">1</wrap>
+        <property>/controls/light/instrument-norm</property>
+        <value>0</value>
+        <value>1</value>
+      </binding>
     </action>
     <hovered>
       <binding>
@@ -1567,11 +1558,6 @@ ________________________________________________________________________________
       </binding>
     </hovered>
   </animation>
-
-
-
-
-
 
   <animation>
     <type>rotate</type>
@@ -1612,7 +1598,6 @@ ________________________________________________________________________________
     </hovered>
   </animation>
 
-
   <animation>
     <type>rotate</type>
     <object-name>btn_taxi_light</object-name>
@@ -1652,19 +1637,298 @@ ________________________________________________________________________________
     </hovered>
   </animation>
 
+  <animation>
+    <type>rotate</type>
+    <object-name>TrimWheel</object-name>
+    <property>/controls/flight/elevator-trim</property>
+    <factor>100</factor>
+    <center>
+      <x-m>-3.767</x-m>
+      <y-m>-0.188</y-m>
+      <z-m>0.27443</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
 
 <!--
 ________________________________________________________________________________
                                                                           LIGHTS
   -->
+
+  <animation>
+    <type>material</type>
+    <object-name>light_nav_green</object-name>
+    <ambient>
+      <red>0</red>
+      <green>1</green>
+      <blue>0</blue>
+    </ambient>
+    <emission>
+      <factor-prop>/controls/light/nav</factor-prop>
+      <red>0</red>
+      <green>10</green>
+      <blue>0</blue>
+    </emission>
+    <condition>
+      <and>
+        <property>/controls/light/nav</property>
+      </and>
+    </condition>
+  </animation>
+  <animation>
+    <type>material</type>
+    <object-name>light_nav_red</object-name>
+    <ambient>
+      <red>1</red>
+      <green>0</green>
+      <blue>0</blue>
+    </ambient>
+    <emission>
+      <factor-prop>/controls/light/nav</factor-prop>
+      <red>10</red>
+      <green>0</green>
+      <blue>0</blue>
+    </emission>
+    <condition>
+      <and>
+        <property>/controls/light/nav</property>
+      </and>
+    </condition>
+  </animation>
+  <animation>
+    <type>material</type>
+    <object-name>light_pos</object-name>
+    <ambient>
+      <red>1</red>
+      <green>1</green>
+      <blue>1</blue>
+    </ambient>
+    <emission>
+      <factor-prop>/controls/light/nav</factor-prop>
+      <red>10</red>
+      <green>10</green>
+      <blue>10</blue>
+    </emission>
+    <condition>
+      <and>
+        <property>/controls/light/nav</property>
+      </and>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>light_strobe</object-name>
+    <ambient>
+      <red>1</red>
+      <green>1</green>
+      <blue>1</blue>
+    </ambient>
+    <emission>
+      <factor-prop>sim/model/lights/strobe/state</factor-prop>
+      <red>10</red>
+      <green>10</green>
+      <blue>10</blue>
+    </emission>
+    <condition>
+      <and>
+        <property>/controls/light/nav</property>
+      </and>
+    </condition>
+  </animation>
+  <animation>
+    <type>range</type>
+    <object-name>light_strobe</object-name>
+    <min-m>0</min-m>
+    <max-property>sim/rendering/static-lod/bare</max-property>
+  </animation>
+  <animation>
+    <object-name>light_anticoll</object-name>
+    <type>material</type>
+    <ambient>
+      <red>1</red>
+      <green>0</green>
+      <blue>0</blue>
+    </ambient>
+    <emission>
+      <factor-prop>sim/model/lights/beacon/state</factor-prop>
+      <red>10</red>
+      <green>0</green>
+      <blue>0</blue>
+    </emission>
+    <condition>
+      <and>
+        <property>/controls/light/nav</property>
+      </and>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>lights</object-name>
+    <ambient>
+      <red>1</red>
+      <green>1</green>
+      <blue>1</blue>
+    </ambient>
+    <emission>
+      <factor-prop>/controls/light/landing</factor-prop>
+      <red>1</red>
+      <green>1</green>
+      <blue>1</blue>
+    </emission>
+  </animation>
+  <animation>
+    <type>material</type>
+    <object-name>lights.nose</object-name>
+    <ambient>
+      <red>1</red>
+      <green>1</green>
+      <blue>1</blue>
+    </ambient>
+    <emission>
+      <factor-prop>/controls/light/taxi</factor-prop>
+      <red>1</red>
+      <green>1</green>
+      <blue>1</blue>
+    </emission>
+  </animation>
+
+  <!-- ~~~~~~~~~~~~~~~~~~ als lights -->
   <model>
-    <path>Aircraft/daVinci_B-26B/models/lights/lights.xml</path>
+    <name>left light</name>
+    <path>Aircraft/daVinci_B-26B/models/lights/light_nav_left.xml</path>
     <offsets>
-      <x-m>-6.2</x-m>
-      <y-m>0</y-m>
-      <z-m>0</z-m>
+      <x-m type="float">0.6</x-m>
+      <y-m type="float">-10.65</y-m>
+      <z-m type="float">1.05</z-m>
     </offsets>
   </model>
+  <model>
+    <name>right light</name>
+    <path>Aircraft/daVinci_B-26B/models/lights/light_nav_right.xml</path>
+    <offsets>
+      <x-m type="float">0.6</x-m>
+      <y-m type="float">10.65</y-m>
+      <z-m type="float">1.05</z-m>
+    </offsets>
+  </model>
+  <model>
+    <name>tail light</name>
+    <path>Aircraft/daVinci_B-26B/models/lights/light_nav_tail.xml</path>
+    <offsets>
+      <x-m type="float">8.9</x-m>
+      <y-m type="float">0</y-m>
+      <z-m type="float">4.1</z-m>
+    </offsets>
+  </model>
+  <model>
+    <name>strobe light top</name>
+    <path>Aircraft/daVinci_B-26B/models/lights/light_strobe.xml</path>
+    <offsets>
+      <x-m type="float">1.44</x-m>
+      <y-m type="float">0</y-m>
+      <z-m type="float">1.24</z-m>
+    </offsets>
+  </model>
+  <model>
+    <name>strobe light bottom</name>
+    <path>Aircraft/daVinci_B-26B/models/lights/light_strobe.xml</path>
+    <offsets>
+      <x-m type="float">3.19</x-m>
+      <y-m type="float">0</y-m>
+      <z-m type="float">-1.09</z-m>
+    </offsets>
+  </model>
+  <model>
+    <name>anticoll light</name>
+    <path>Aircraft/daVinci_B-26B/models/lights/light_anticoll.xml</path>
+    <offsets>
+      <x-m type="float">-1.08</x-m>
+      <y-m type="float">0</y-m>
+      <z-m type="float">-1.38</z-m>
+    </offsets>
+  </model>
+  <model>
+    <name>landing-light-nose-right</name>
+    <path>Aircraft/daVinci_B-26B/models/lights/light_taxi.xml</path>
+    <offsets>
+      <x-m type="float">-4.5</x-m>
+      <y-m type="float">0.1</y-m>
+      <z-m type="float">-1.0</z-m>
+    </offsets>
+  </model>
+  <model>
+    <name>landing-light-wing-left</name>
+    <path>Aircraft/daVinci_B-26B/models/lights/light_landing.xml</path>
+    <offsets>
+      <x-m type="float">-0.08</x-m>
+      <y-m type="float">-6.2</y-m>
+      <z-m type="float">0.87</z-m>
+    </offsets>
+  </model>
+  <model>
+    <name>landing-light-wing-right</name>
+    <path>Aircraft/daVinci_B-26B/models/lights/light_landing.xml</path>
+    <offsets>
+      <x-m type="float">-0.08</x-m>
+      <y-m type="float">6.2</y-m>
+      <z-m type="float">0.87</z-m>
+    </offsets>
+  </model>
+
+
+<!--
+________________________________________________________________________________
+                                                             RAIN GROUND EFFECTS
+  -->
+  <model>
+    <path>Aircraft/daVinci_B-26B/models/effects/rain/rain_gear0.xml</path>
+    <offsets>
+      <x-m type="float">-4.2</x-m>
+      <y-m type="float">0</y-m>
+      <z-m type="float">-2</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/daVinci_B-26B/models/effects/rain/rain_gear1.xml</path>
+    <offsets>
+      <x-m type="float">2.8</x-m>
+      <y-m type="float">-3.3</y-m>
+      <z-m type="float">-2</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/daVinci_B-26B/models/effects/rain/rain_gear2.xml</path>
+    <offsets>
+      <x-m type="float">2.8</x-m>
+      <y-m type="float">3.3</y-m>
+      <z-m type="float">-2</z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/daVinci_B-26B/models/effects/rain/rain_engine0.xml</path>
+    <offsets>
+      <x-m type="float">-1.7</x-m>
+      <y-m type="float">-3.3</y-m>
+      <z-m type="float">-2</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/daVinci_B-26B/models/effects/rain/rain_engine1.xml</path>
+    <offsets>
+      <x-m type="float">-3.5</x-m>
+      <y-m type="float">3.3</y-m>
+      <z-m type="float">-2</z-m>
+    </offsets>
+  </model>
+
 
 </PropertyList>
 

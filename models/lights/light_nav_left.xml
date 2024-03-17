@@ -13,7 +13,9 @@
     <type>select</type>
     <object-name>als_light</object-name>
     <condition>
-      <property>controls/light/nav</property>
+      <and>
+        <property>/controls/light/nav</property>
+      </and>
     </condition>
   </animation>
 

@@ -13,7 +13,13 @@
     <type>select</type>
     <object-name>als_light</object-name>
     <condition>
-      <property>/controls/light/taxi</property>
+      <and>
+        <property>controls/light/taxi</property>
+        <equals>
+          <property>gear/gear[0]/position-norm</property>
+          <value>1</value>
+        </equals>
+      </and>
     </condition>
   </animation>
 

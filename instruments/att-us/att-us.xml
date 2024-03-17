@@ -3,7 +3,6 @@
   <path>att-us.ac</path>
   <animation>
     <type>material</type>
-    <object-name>Tube</object-name>
     <object-name>Horizon</object-name>
     <object-name>Pin</object-name>
     <object-name>Wings</object-name>
@@ -60,34 +59,7 @@
       <x>1</x>
     </axis>
   </animation>
-  <animation>
-    <type>rotate</type>
-    <object-name>CageKnob</object-name>
-    <property>instrumentation/attitude-indicator/caged</property>
-    <factor>90</factor>
-    <center>
-      <x-m>0</x-m>
-      <y-m>0.06</y-m>
-      <z-m>-0.06</z-m>
-    </center>
-    <axis>
-      <x>-1</x>
-    </axis>
-  </animation>
-  <animation>
-    <type>rotate</type>
-    <object-name>CageFlag</object-name>
-    <property>instrumentation/attitude-indicator/caged</property>
-    <factor>60</factor>
-    <center>
-      <x-m>0</x-m>
-      <y-m>0.04</y-m>
-      <z-m>-0.05</z-m>
-    </center>
-    <axis>
-      <x>-1</x>
-    </axis>
-  </animation>
+
   <animation>
     <type>translate</type>
     <object-name>Wings</object-name>
@@ -99,6 +71,49 @@
       <z>1</z>
     </axis>
   </animation>
+
+
+  <animation>
+    <type>pick</type>
+    <object-name>HorizKnob</object-name>
+    <visible>true</visible>
+    <action>
+      <button>3</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>instrumentation/attitude-indicator/horizon-offset-deg</property>
+        <step>0.2</step>
+        <min>-15</min>
+        <max>15</max>
+        <wrap>0</wrap>
+      </binding>
+    </action>
+    <action>
+      <button>4</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>instrumentation/attitude-indicator/horizon-offset-deg</property>
+        <step>-0.2</step>
+        <min>-15</min>
+        <max>15</max>
+        <wrap>0</wrap>
+      </binding>
+    </action>
+
+    <hovered>
+      <binding>
+        <command>set-tooltip</command>
+        <tooltip-id>tooltip-horizon-offest</tooltip-id>
+        <label>horizon offset</label>
+      </binding>
+    </hovered>
+  </animation>
+
+
+
+
 </PropertyList>
 
 
