@@ -21,9 +21,9 @@
     <float n="3" alias="/position/altitude-ft">0</float>  <!-- altitude for Smoke/Trail -->
     <float n="4" alias="/engines/engine[0]/rpm"/>
     <float n="5" alias="/engines/engine[0]/cranking"/>
-    <float n="6" alias="/gear/gear[0]/wow/"/>
-    <float n="7" alias="/gear/gear[1]/wow/"/>
-    <float n="8" alias="/gear/gear[2]/wow/"/>
+    <float n="6" alias="/gear/gear[0]/wow"/>
+    <float n="7" alias="/gear/gear[1]/wow"/>
+    <float n="8" alias="/gear/gear[2]/wow"/>
     <float n="9" alias="/gear/gear[0]/rollspeed-ms"/>
     <float n="10" alias="/gear/gear[1]/rollspeed-ms"/>
     <float n="11" alias="/gear/gear[2]/rollspeed-ms"/>

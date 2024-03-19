@@ -135,7 +135,7 @@ ________________________________________________________________________________
   <mstab x="0.1" y="0" z="0" length=".0001" chord=".0001" sweep=".0001" taper=".0001" dihedral="0" camber="0" incidence="0">
     <control-input  control="FLAP0" axis="/controls/doors/bay" />
     <control-output control="FLAP0" prop="/sim/model/door-positions/bay-position-norm" /> <!-- alias for MP -->
-    <control-speed  control="FLAP0" transition-time="14" />
+    <control-speed  control="FLAP0" transition-time="18" />
   </mstab>
 
 

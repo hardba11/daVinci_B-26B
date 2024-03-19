@@ -21,6 +21,10 @@
           <property>engines/engine[1]/rpm</property>
           <value>10</value>
         </greater-than>
+        <less-than>
+          <property>position/gear-agl-m</property>
+          <value>2</value>
+        </less-than>
       </and>
     </condition>
 
