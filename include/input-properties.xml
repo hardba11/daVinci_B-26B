@@ -17,8 +17,17 @@
       <name>D</name>
       <desc>Bay</desc>
       <binding>
-        <command>property-toggle</command>
-        <property>/controls/doors/bay</property>
+        <command>nasal</command>
+        <script>
+          <![CDATA[
+if (getprop("/controls/doors/bay") == 1) {
+    setprop("/controls/doors/bay", 0);
+    setprop("/controls/doors/scale", 0);
+} else {
+    setprop("/controls/doors/bay", 1);
+}
+          ]]>
+        </script>
       </binding>
     </key>
 

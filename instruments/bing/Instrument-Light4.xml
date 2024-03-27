@@ -11,7 +11,7 @@
 <PropertyList>
   <type>material</type>
   <emission>
-    <factor-prop>/controls/light/instrument-norm</factor-prop>
+    <factor-prop>/sim/model/rendering/relative-instrument-luminosity</factor-prop>
     <red>0.80</red>
     <green>0.40</green>
     <blue>0.30</blue>
@@ -22,7 +22,7 @@
     <blue>1</blue>
   </diffuse>
   <ambient>
-    <red>01</red>
+    <red>1</red>
     <green>1</green>
     <blue>1</blue>
   </ambient>

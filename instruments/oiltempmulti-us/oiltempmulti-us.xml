@@ -12,7 +12,7 @@
     <object-name>needle1</object-name> <!-- engine[1] left -->
     <object-name>needle2</object-name> <!-- engine[2] right -->
     <emission>
-      <factor-prop>/controls/light/instrument-norm</factor-prop>
+      <factor-prop>/sim/model/rendering/relative-instrument-luminosity</factor-prop>
       <red>   0.017</red>
       <green> 0.60 </green>
       <blue>  0.65 </blue>

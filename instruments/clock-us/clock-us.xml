@@ -8,7 +8,7 @@
     <object-name>HourHand</object-name>
     <object-name>SecondHand</object-name>
     <emission>
-      <factor-prop>/controls/light/instrument-norm</factor-prop>
+      <factor-prop>/sim/model/rendering/relative-instrument-luminosity</factor-prop>
       <red>   0.017</red>
       <green> 0.60 </green>
       <blue>  0.65 </blue>

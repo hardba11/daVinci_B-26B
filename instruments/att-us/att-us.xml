@@ -9,7 +9,7 @@
     <object-name>Circle.001</object-name>
     <object-name>Face</object-name>
     <emission>
-      <factor-prop>/controls/light/instrument-norm</factor-prop>
+      <factor-prop>/sim/model/rendering/relative-instrument-luminosity</factor-prop>
       <red>   0.017</red>
       <green> 0.70 </green>
       <blue>  0.65 </blue>

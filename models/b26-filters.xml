@@ -12,11 +12,61 @@
     <max>1</max>
   </filter>
 
+
   <filter>
     <type>gain</type>
     <gain>2</gain>
     <input>/sim/model/rendering/relative-navlight-luminosity</input>
     <output>/sim/model/rendering/relative-strobelight-luminosity</output>
+  </filter>
+
+
+  <filter>
+    <type>gain</type>
+    <gain>-1</gain>
+    <input>/rendering/scene/diffuse/green</input>
+    <reference>1</reference>
+    <output>/sim/model/rendering/relative-luminosity</output>
+    <min>.1</min>
+    <max>1</max>
+  </filter>
+
+  <filter>
+    <type>gain</type>
+    <input>
+      <expression>
+        <product>
+          <property>/controls/light/cabin-norm</property>
+          <property>/sim/model/rendering/relative-luminosity</property>
+        </product>
+      </expression>
+    </input>
+    <output>/sim/model/rendering/relative-cabin-luminosity</output>
+  </filter>
+  <filter>
+    <type>gain</type>
+    <gain>1.2</gain>
+    <input>
+      <expression>
+        <product>
+          <property>/controls/light/instrument-norm</property>
+          <property>/sim/model/rendering/relative-luminosity</property>
+        </product>
+      </expression>
+    </input>
+    <output>/sim/model/rendering/relative-instrument-luminosity</output>
+  </filter>
+  <filter>
+    <type>gain</type>
+    <input>
+      <expression>
+        <product>
+          <property>/controls/light/panel-norm</property>
+          <property>/sim/model/rendering/relative-luminosity</property>
+        </product>
+      </expression>
+    </input>
+    <output>/sim/model/rendering/relative-panel-luminosity</output>
   </filter>
 
   <filter>

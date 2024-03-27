@@ -122,19 +122,46 @@ ________________________________________________________________________________
     <object-name>Intercom2</object-name>
     <object-name>Radios2</object-name>
     <emission>
-      <factor-prop>/controls/light/panel-norm</factor-prop>
+      <factor-prop>/sim/model/rendering/relative-panel-luminosity</factor-prop>
       <red>.1</red>
       <green>.3</green>
       <blue>.3</blue>
     </emission>
   </animation>
+
   <animation>
     <type>material</type>
-    <object-name>cabines</object-name>
+    <object-name>MidFuselage</object-name>
+    <object-name>MidFuselage.001</object-name>
+    <object-name>MidFuselage.002</object-name>
+    <object-name>StarLowerBayDoorInside</object-name>
+    <object-name>StarUpperBayDoorInside</object-name>
+    <object-name>PortLowerBayDoorInside</object-name>
+    <object-name>PortUpperBayDoorInside</object-name>
+    <object-name>InsideMiddleDoor.soute</object-name>
+    <object-name>InsideFrontDoor.soute</object-name>
+    <object-name>echelle</object-name>
+    <object-name>velos</object-name>
+    <object-name>canoe</object-name>
+    <object-name>baggages</object-name>
+    <emission>
+      <factor-prop>/sim/model/rendering/relative-cabin-luminosity</factor-prop>
+      <red>.3</red>
+      <green>0</green>
+      <blue>0</blue>
+    </emission>
+  </animation>
+  <animation>
+    <type>material</type>
     <object-name>InsideRearFuselage</object-name>
+    <object-name>InsideRearFuselage.cloisons</object-name>
+    <object-name>InsideRearFuselage.poutre</object-name>
+    <object-name>InsideRearDoor</object-name>
+    <object-name>InsideMiddleDoor.chambre</object-name>
+    <object-name>cabines</object-name>
     <object-name>lits</object-name>
     <emission>
-      <factor-prop>/controls/light/panel-norm</factor-prop>
+      <factor-prop>/sim/model/rendering/relative-cabin-luminosity</factor-prop>
       <red>.5</red>
       <green>.5</green>
       <blue>.4</blue>
@@ -517,6 +544,133 @@ ________________________________________________________________________________
       <z>0</z>
     </axis>
   </animation>
+
+<!-- scale -->
+  <animation>
+    <type>pick</type>
+    <object-name>echelle</object-name>
+    <action>
+      <button>0</button>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/doors/scale</property>
+        <condition>
+          <equals>
+            <property>sim/model/door-positions/bay-position-norm</property>
+            <value>1</value>
+          </equals>
+        </condition>
+      </binding>
+    </action>
+  </animation>
+  <animation>
+    <type>rotate</type>
+    <object-name>echelle</object-name>
+    <property>/sim/model/door-positions/scale-position-norm</property>
+    <factor>70</factor>
+    <center>
+      <x-m>-0.047</x-m>
+      <y-m>0</y-m>
+      <z-m>-0.76</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+<!-- door1 -->
+  <animation>
+    <type>pick</type>
+    <object-name>InsideFrontDoor</object-name>
+    <object-name>InsideFrontDoor.soute</object-name>
+    <action>
+      <button>0</button>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/doors/door1</property>
+      </binding>
+    </action>
+  </animation>
+  <animation>
+    <type>rotate</type>
+    <object-name>InsideFrontDoor</object-name>
+    <object-name>InsideFrontDoor.soute</object-name>
+    <property>/sim/model/door-positions/door1-position-norm</property>
+    <factor>-90</factor>
+    <center>
+      <x-m>-0.4</x-m>
+      <y-m>0.234</y-m>
+      <z-m>0</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>0</y>
+      <z>1</z>
+    </axis>
+  </animation>
+<!-- door2 -->
+  <animation>
+    <type>pick</type>
+    <object-name>InsideMiddleDoor.chambre</object-name>
+    <object-name>InsideMiddleDoor.soute</object-name>
+    <action>
+      <button>0</button>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/doors/door2</property>
+      </binding>
+    </action>
+  </animation>
+  <animation>
+    <type>rotate</type>
+    <object-name>InsideMiddleDoor.chambre</object-name>
+    <object-name>InsideMiddleDoor.soute</object-name>
+    <property>/sim/model/door-positions/door2-position-norm</property>
+    <factor>90</factor>
+    <center>
+      <x-m>2.858</x-m>
+      <y-m>0.234</y-m>
+      <z-m>0</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>0</y>
+      <z>1</z>
+    </axis>
+  </animation>
+<!-- door3 -->
+  <animation>
+    <type>pick</type>
+    <object-name>InsideRearDoor</object-name>
+    <action>
+      <button>0</button>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/doors/door3</property>
+      </binding>
+    </action>
+  </animation>
+  <animation>
+    <type>rotate</type>
+    <object-name>InsideRearDoor</object-name>
+    <property>/sim/model/door-positions/door3-position-norm</property>
+    <factor>-90</factor>
+    <center>
+      <x-m>4.972</x-m>
+      <y-m>-0.2379</y-m>
+      <z-m>0</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>0</y>
+      <z>1</z>
+    </axis>
+  </animation>
+
+
+
 
 <!--
 ________________________________________________________________________________

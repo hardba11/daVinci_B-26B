@@ -36,9 +36,15 @@
     <taxi type="bool">1</taxi>
   </light>
 
-  <canopy>
-    <canopy-pos-norm type="float">1.0</canopy-pos-norm>
-  </canopy>
+  <doors>
+    <!--canopy-pos-norm type="float">1.0</canopy-pos-norm-->
+    <windows type="int">0</windows>
+    <bay type="int">0</bay>
+    <scale type="int">0</scale>
+    <door1 type="int">0</door1>
+    <door2 type="int">0</door2>
+    <door3 type="int">0</door3>
+  </doors>
 
   <smoke>0</smoke>
 

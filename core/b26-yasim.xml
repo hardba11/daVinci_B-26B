@@ -125,17 +125,41 @@
 ________________________________________________________________________________
                                                                         HACK !!!
   -->
-  <!-- ~~~~~~~~~~~~~~~~~~ window -->
-  <mstab x="0.1" y="0" z="0" length=".0001" chord=".0001" sweep=".0001" taper=".0001" dihedral="0" camber="0" incidence="0">
+  <!-- ~~~~~~~~~~~~~~~~~~ window + cockpit floor door -->
+  <mstab x="0.1" y="0" z="0" length=".00001" chord=".00001" sweep=".00001" taper=".00001" dihedral="0" camber="0" incidence="0">
     <control-input  control="FLAP0" axis="/controls/doors/windows" />
     <control-output control="FLAP0" prop="/sim/model/door-positions/windows-position-norm" /> <!-- alias for MP -->
     <control-speed  control="FLAP0" transition-time="3" />
   </mstab>
-  <!-- ~~~~~~~~~~~~~~~~~~ window -->
-  <mstab x="0.1" y="0" z="0" length=".0001" chord=".0001" sweep=".0001" taper=".0001" dihedral="0" camber="0" incidence="0">
+  <!-- ~~~~~~~~~~~~~~~~~~ bay -->
+  <mstab x="0.1" y="0" z="0" length=".00001" chord=".00001" sweep=".00001" taper=".00001" dihedral="0" camber="0" incidence="0">
     <control-input  control="FLAP0" axis="/controls/doors/bay" />
     <control-output control="FLAP0" prop="/sim/model/door-positions/bay-position-norm" /> <!-- alias for MP -->
     <control-speed  control="FLAP0" transition-time="18" />
+  </mstab>
+  <!-- ~~~~~~~~~~~~~~~~~~ scale -->
+  <mstab x="0.1" y="0" z="0" length=".00001" chord=".00001" sweep=".00001" taper=".00001" dihedral="0" camber="0" incidence="0">
+    <control-input  control="FLAP0" axis="/controls/doors/scale" />
+    <control-output control="FLAP0" prop="/sim/model/door-positions/scale-position-norm" />
+    <control-speed  control="FLAP0" transition-time="4" />
+  </mstab>
+  <!-- ~~~~~~~~~~~~~~~~~~ interior door 1 -->
+  <mstab x="0.1" y="0" z="0" length=".00001" chord=".00001" sweep=".00001" taper=".00001" dihedral="0" camber="0" incidence="0">
+    <control-input  control="FLAP0" axis="/controls/doors/door1" />
+    <control-output control="FLAP0" prop="/sim/model/door-positions/door1-position-norm" />
+    <control-speed  control="FLAP0" transition-time="2" />
+  </mstab>
+  <!-- ~~~~~~~~~~~~~~~~~~ interior door 2 -->
+  <mstab x="0.1" y="0" z="0" length=".00001" chord=".00001" sweep=".00001" taper=".00001" dihedral="0" camber="0" incidence="0">
+    <control-input  control="FLAP0" axis="/controls/doors/door2" />
+    <control-output control="FLAP0" prop="/sim/model/door-positions/door2-position-norm" />
+    <control-speed  control="FLAP0" transition-time="2" />
+  </mstab>
+  <!-- ~~~~~~~~~~~~~~~~~~ interior door 3 -->
+  <mstab x="0.1" y="0" z="0" length=".00001" chord=".00001" sweep=".00001" taper=".00001" dihedral="0" camber="0" incidence="0">
+    <control-input  control="FLAP0" axis="/controls/doors/door3" />
+    <control-output control="FLAP0" prop="/sim/model/door-positions/door3-position-norm" />
+    <control-speed  control="FLAP0" transition-time="2" />
   </mstab>
 
 
