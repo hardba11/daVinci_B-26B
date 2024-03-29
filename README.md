@@ -5,12 +5,11 @@ It is usable in [FLIGHTGEAR open source flight simulator](http://www.flightgear.
 Why this fork of daVinci_B-26B from fguk/voodoo ?
 -------------------------------------------------
 
+Just for fun, and I need to have a git repo.
 
-Just for fun, and need to have a git repo.
+This model will become a civilian-unarmed and modern version. It will be more cosy (Van Life !).
 
-This version is unarmed and will have futur changes on the model to be more cosy.
-
-If you want the original version, please go to fguk hangar !
+If you want the original version, please go to fguk hangar [DaVinci warbirds](https://sites.google.com/view/fgukhangar/flightgear-uk-home-page/hangar/davinci-aircraft/warbirds) !
 
 Installation
 ------------
@@ -20,12 +19,26 @@ Installation
 3. rename the directory `daVinci_B-26B-main` to `daVinci_B-26B`
 4. move the directory daVinci_B-26B in your addon aircraft directory (`/dir/of/my/hangars/daVinci_B-26B`)
 
+Screenshots
+-----------
+
+![Image](https://i.imgur.com/GxIpSqM.png)
+![Image](https://i.imgur.com/puO2uqR.png)
+![Image](https://i.imgur.com/RhyFsYf.png)
+![Image](https://i.imgur.com/zZRX407.png)
+![Image](https://i.imgur.com/s7AgN9D.png)
+![Image](https://i.imgur.com/qKAa5Un.png)
+
+
 Done
 ----
 
 **files**
 
 - remove livery files
+- remake directory tree
+- utf8
+- remove useless files
 
 **models**
 
@@ -37,6 +50,11 @@ Done
 - improve model
 - new gears
 - bugfix instrument
+- add effects
+    - exterior lights
+    - rain (runway)
+- fix missing textures
+- add interior furnitures, equipments and payloads
 
 **fdm**
 
@@ -47,17 +65,28 @@ Done
 
 - target position
 - hud
-- views
+- new views
 - floodlight
+- lights
+- clickable elements
+    - doors
+    - instruments
 
-todo
+Work In Progress
+----------------
+
+**UX**
+
+- menu gui
+    - views
+    - need assistance
+
+**models**
+
+- add ground equipments
+
+ToDo
 ----
-
-**files**
-
-- remake directory tree
-- utf8
-- remove useless files
 
 **fdm**
 
@@ -65,27 +94,22 @@ todo
 
 **models**
 
-- join objects
+- reduce texture size, remake uvmap
 - add effects
-    - exterior lights
     - flashlight
-    - rain
-- fix missing textures
-- add ground equipment
+    - rain (windshield)
 
 **UX**
 
-- lights
 - add instruments
     - tablet ?
     - other
-- clickable elements
-    - doors
-    - instruments ?
 - shortcuts
-- menu gui
-    - views
-    - need assistance
 - adjust sound volume if window open/close
 
+
+
+<!--
+https://imgur.com/a/D3uNXA3
+-->
 

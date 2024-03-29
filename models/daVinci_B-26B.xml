@@ -2036,9 +2036,9 @@ ________________________________________________________________________________
     <name>anticoll light</name>
     <path>Aircraft/daVinci_B-26B/models/lights/light_anticoll.xml</path>
     <offsets>
-      <x-m type="float">-1.08</x-m>
+      <x-m type="float">-0.55</x-m>
       <y-m type="float">0</y-m>
-      <z-m type="float">-1.38</z-m>
+      <z-m type="float">-1.16</z-m>
     </offsets>
   </model>
   <model>
