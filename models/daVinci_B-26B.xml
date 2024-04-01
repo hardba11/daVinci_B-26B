@@ -6,7 +6,7 @@
     <path>Aircraft/daVinci_B-26B/sounds/mp-sound.xml</path>
   </sound>
 
-  <!-- cockpit et Instruments -->
+  <!-- cockpit et instruments -->
   <model>
     <path>Aircraft/daVinci_B-26B/models/cockpit.xml</path>
     <offsets>
@@ -14,6 +14,10 @@
       <y-m>-0.340</y-m>
       <z-m>0.700</z-m>
     </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/daVinci_B-26B/models/ground_equipment/ground_equipment-model.xml</path>
   </model>
 
   <offsets>
@@ -132,12 +136,15 @@ ________________________________________________________________________________
   <animation>
     <type>material</type>
     <object-name>MidFuselage</object-name>
-    <object-name>MidFuselage.001</object-name>
-    <object-name>MidFuselage.002</object-name>
-    <object-name>StarLowerBayDoorInside</object-name>
-    <object-name>StarUpperBayDoorInside</object-name>
-    <object-name>PortLowerBayDoorInside</object-name>
-    <object-name>PortUpperBayDoorInside</object-name>
+    <object-name>MidFuselage.cloisons</object-name>
+    <object-name>MidFuselage.poutre</object-name>
+    <object-name>MidFuselage.walls</object-name>
+    <object-name>bielle.R</object-name>
+    <object-name>bielle.L</object-name>
+    <object-name>BayDoorInsideLower.R</object-name>
+    <object-name>BayDoorInsideUpper.R</object-name>
+    <object-name>BayDoorInsideLower.L</object-name>
+    <object-name>BayDoorInsideUpper.L</object-name>
     <object-name>InsideMiddleDoor.soute</object-name>
     <object-name>InsideFrontDoor.soute</object-name>
     <object-name>echelle</object-name>
@@ -310,7 +317,7 @@ ________________________________________________________________________________
   <animation>
     <type>translate</type>
     <object-name>PortOutsideWindowFrame</object-name>
-    <object-name>PortInsideWindowFrame</object-name>
+    <object-name>InsideWindowFrame.L</object-name>
     <object-name>PortWindowGlass</object-name>
     <property>sim/multiplay/generic/float[0]</property>
     <factor>0.510</factor>
@@ -323,7 +330,7 @@ ________________________________________________________________________________
   <animation>
     <type>translate</type>
     <object-name>PortOutsideWindowFrame</object-name>
-    <object-name>PortInsideWindowFrame</object-name>
+    <object-name>InsideWindowFrame.L</object-name>
     <object-name>PortWindowGlass</object-name>
     <property>sim/multiplay/generic/float[0]</property>
     <interpolation>
@@ -341,7 +348,7 @@ ________________________________________________________________________________
   <animation>
     <type>translate</type>
     <object-name>StarOutsideWindowFrame</object-name>
-    <object-name>StarInsideWindowFrame</object-name>
+    <object-name>InsideWindowFrame.R</object-name>
     <object-name>StarWindowGlass</object-name>
     <property>sim/multiplay/generic/float[0]</property>
     <factor>0.510</factor>
@@ -354,7 +361,7 @@ ________________________________________________________________________________
   <animation>
     <type>translate</type>
     <object-name>StarOutsideWindowFrame</object-name>
-    <object-name>StarInsideWindowFrame</object-name>
+    <object-name>InsideWindowFrame.R</object-name>
     <object-name>StarWindowGlass</object-name>
     <property>sim/multiplay/generic/float[0]</property>
     <interpolation>
@@ -372,7 +379,7 @@ ________________________________________________________________________________
 
   <animation>
     <type>rotate</type>
-    <object-name>PortFloorAccessDoor</object-name>
+    <object-name>FloorAccessDoor.L</object-name>
     <expression>
       <product>
         <value>-90</value>
@@ -393,7 +400,7 @@ ________________________________________________________________________________
   </animation>
   <animation>
     <type>rotate</type>
-    <object-name>StarFloorAccessDoor</object-name>
+    <object-name>FloorAccessDoor.R</object-name>
     <expression>
       <product>
         <value>90</value>
@@ -417,9 +424,9 @@ ________________________________________________________________________________
   <animation>
     <type>rotate</type>
     <object-name>PortUpperBayDoorOutside</object-name>
-    <object-name>PortUpperBayDoorInside</object-name>
+    <object-name>BayDoorInsideUpper.L</object-name>
     <object-name>PortLowerBayDoorOutside</object-name>
-    <object-name>PortLowerBayDoorInside</object-name>
+    <object-name>BayDoorInsideLower.L</object-name>
     <property>sim/multiplay/generic/float[1]</property>
     <factor>-118</factor>
     <center>
@@ -436,7 +443,7 @@ ________________________________________________________________________________
   <animation>
     <type>rotate</type>
     <object-name>PortLowerBayDoorOutside</object-name>
-    <object-name>PortLowerBayDoorInside</object-name>
+    <object-name>BayDoorInsideLower.L</object-name>
     <property>sim/multiplay/generic/float[1]</property>
     <interpolation>
       <entry><ind>0</ind><dep>0</dep></entry>
@@ -458,7 +465,7 @@ ________________________________________________________________________________
   </animation>
   <animation>
     <type>rotate</type>
-    <object-name>MidFuselage.002</object-name>
+    <object-name>bielle.L</object-name>
     <property>sim/multiplay/generic/float[1]</property>
     <interpolation>
       <entry><ind>0</ind><dep>0</dep></entry>
@@ -483,9 +490,9 @@ ________________________________________________________________________________
   <animation>
     <type>rotate</type>
     <object-name>StarUpperBayDoorOutside</object-name>
-    <object-name>StarUpperBayDoorInside</object-name>
+    <object-name>BayDoorInsideUpper.R</object-name>
     <object-name>StarLowerBayDoorOutside</object-name>
-    <object-name>StarLowerBayDoorInside</object-name>
+    <object-name>BayDoorInsideLower.R</object-name>
     <property>sim/multiplay/generic/float[1]</property>
     <factor>-118</factor>
     <center>
@@ -502,7 +509,7 @@ ________________________________________________________________________________
   <animation>
     <type>rotate</type>
     <object-name>StarLowerBayDoorOutside</object-name>
-    <object-name>StarLowerBayDoorInside</object-name>
+    <object-name>BayDoorInsideLower.R</object-name>
     <property>sim/multiplay/generic/float[1]</property>
     <interpolation>
       <entry><ind>0</ind><dep>0</dep></entry>
@@ -524,7 +531,7 @@ ________________________________________________________________________________
   </animation>
   <animation>
     <type>rotate</type>
-    <object-name>MidFuselage.001</object-name>
+    <object-name>bielle.R</object-name>
     <property>sim/multiplay/generic/float[1]</property>
     <interpolation>
       <entry><ind>0</ind><dep>0</dep></entry>
@@ -656,7 +663,7 @@ ________________________________________________________________________________
     <type>rotate</type>
     <object-name>InsideRearDoor</object-name>
     <property>/sim/model/door-positions/door3-position-norm</property>
-    <factor>-90</factor>
+    <factor>-170</factor>
     <center>
       <x-m>4.972</x-m>
       <y-m>-0.2379</y-m>
@@ -668,9 +675,6 @@ ________________________________________________________________________________
       <z>1</z>
     </axis>
   </animation>
-
-
-
 
 <!--
 ________________________________________________________________________________

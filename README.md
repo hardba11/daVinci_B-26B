@@ -55,6 +55,7 @@ Done
     - rain (runway)
 - fix missing textures
 - add interior furnitures, equipments and payloads
+- add ground equipments
 
 **fdm**
 
@@ -81,9 +82,6 @@ Work In Progress
     - views
     - need assistance
 
-**models**
-
-- add ground equipments
 
 ToDo
 ----

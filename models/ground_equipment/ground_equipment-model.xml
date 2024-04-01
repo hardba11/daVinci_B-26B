@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertyList>
+
+  <path>ground_equipment.ac</path>
+  <nopreview />
+
+  <animation>
+    <type>material</type>
+    <object-name>ground_equipment.gears</object-name>
+    <object-name>external-power-unit</object-name>
+    <object-name>fuel-truck.base</object-name>
+    <object-name>fuel-truck.tank</object-name>
+    <object-name>extincteur</object-name>
+    <object-name>cone</object-name>
+  </animation>
+
+  <!-- ~~~~~~~~~~~~~~~~~~ gears chocks -->
+  <animation>
+    <type>select</type>
+    <object-name>ground_equipment.gears</object-name>
+    <condition>
+      <property>sim/model/ground-equipment-g</property>
+      <less-than>
+        <property>velocities/groundspeed-kt</property>
+        <value>2</value>
+      </less-than>
+    </condition>
+  </animation>
+  <animation>
+    <type>pick</type>
+    <object-name>ground_equipment.gears</object-name>
+    <action>
+      <button>0</button>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/ground-equipment-g</property>
+      </binding>
+    </action>
+  </animation>
+
+  <!-- ~~~~~~~~~~~~~~~~~~ external-power-unit -->
+  <animation>
+    <type>select</type>
+    <object-name>external-power-unit</object-name>
+    <object-name>extincteur</object-name>
+    <condition>
+      <property>sim/model/ground-equipment-p</property>
+      <less-than>
+        <property>velocities/groundspeed-kt</property>
+        <value>2</value>
+      </less-than>
+    </condition>
+  </animation>
+  <animation>
+    <type>pick</type>
+    <object-name>external-power-unit</object-name>
+    <object-name>extincteur</object-name>
+    <action>
+      <button>0</button>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/ground-equipment-p</property>
+      </binding>
+    </action>
+  </animation>
+
+  <!-- ~~~~~~~~~~~~~~~~~~ fuel-truck -->
+  <animation>
+    <type>select</type>
+    <object-name>fuel-truck.base</object-name>
+    <object-name>fuel-truck.tank</object-name>
+    <object-name>cone</object-name>
+    <condition>
+      <property>sim/model/ground-equipment-f</property>
+      <less-than>
+        <property>velocities/groundspeed-kt</property>
+        <value>2</value>
+      </less-than>
+    </condition>
+  </animation>
+  <animation>
+    <type>pick</type>
+    <object-name>fuel-truck.base</object-name>
+    <object-name>fuel-truck.pipe</object-name>
+    <object-name>cone</object-name>
+    <action>
+      <button>0</button>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/ground-equipment-f</property>
+      </binding>
+    </action>
+  </animation>
+
+
+</PropertyList>
+

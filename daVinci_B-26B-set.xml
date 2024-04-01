@@ -71,6 +71,9 @@
         <windows-position-norm type="float">0</windows-position-norm>
         <bay-position-norm type="float">0</bay-position-norm>
       </door-positions>
+      <ground-equipment-g type="bool">true</ground-equipment-g>
+      <ground-equipment-f type="bool">true</ground-equipment-f>
+      <ground-equipment-p type="bool">true</ground-equipment-p>
     </model>
 
     <view n="0">
@@ -90,6 +93,9 @@
         <z-offset-m type="double">-5.74</z-offset-m>
         <!--pitch-offset-deg>-5</pitch-offset-deg-->
         <heading-offset-deg>0</heading-offset-deg>
+        <limits>
+          <enabled>false</enabled>
+        </limits>
       </config>
     </view>
     <view n="100">
@@ -171,7 +177,7 @@
     <view n="104">
       <name>Outside</name>
       <type>lookfrom</type>
-      <internal>true</internal>
+      <internal>false</internal>
       <config>
         <from-model type="bool">true</from-model>
         <from-model-idx type="int">0</from-model-idx>
