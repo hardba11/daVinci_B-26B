@@ -16,7 +16,7 @@
       <x-m>-0.107</x-m>
       <y-m>0.148</y-m>
       <z-m>-0.024</z-m>
-     </offsets>
+    </offsets>
   </model>
   <model>
     <path>Aircraft/daVinci_B-26B/instruments/rpmmulti45-us/rpmmulti45-us.xml</path>
@@ -57,7 +57,7 @@
       <x-m>-0.106</x-m>
       <y-m>0.267</y-m>
       <z-m>-0.146</z-m>
-     </offsets>
+    </offsets>
   </model>
   <model>
     <path>Aircraft/daVinci_B-26B/instruments/bezel/bezel2.xml</path>
@@ -283,7 +283,7 @@
       <x-m>-2.310</x-m>
       <y-m>0.340</y-m>
       <z-m>-0.700</z-m>
-     </offsets>
+    </offsets>
   </model>
   <model>
     <name>portyoke</name>
@@ -315,7 +315,7 @@
   <model>
     <name>throttleblock</name>
     <path>Aircraft/daVinci_B-26B/models/cockpit/throttleblock/throttleblock.xml</path>
-     <offsets>
+    <offsets>
       <x-m>-2.310</x-m>
       <y-m>0.340</y-m>
       <z-m>-0.700</z-m>

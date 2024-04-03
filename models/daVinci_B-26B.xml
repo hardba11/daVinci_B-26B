@@ -121,10 +121,8 @@ ________________________________________________________________________________
     <object-name>3DSMesh_12</object-name>
     <object-name>CockpitStuff</object-name>
     <object-name>Covers1</object-name>
-    <object-name>FrontPanels</object-name>
     <object-name>Intercom1</object-name>
     <object-name>Intercom2</object-name>
-    <object-name>Radios2</object-name>
     <emission>
       <factor-prop>/sim/model/rendering/relative-panel-luminosity</factor-prop>
       <red>.1</red>
@@ -827,7 +825,7 @@ ________________________________________________________________________________
   </animation>
   <model>
     <name>pdisk</name>
-    <nopreview/>
+    <nopreview />
     <path>Aircraft/daVinci_B-26B/models/pdisk-left.xml</path>
     <offsets>
       <x-m>-2.647</x-m>
@@ -877,7 +875,7 @@ ________________________________________________________________________________
   </animation>
   <model>
     <name>pdisk</name>
-    <nopreview/>
+    <nopreview />
     <path>Aircraft/daVinci_B-26B/models/pdisk-right.xml</path>
     <offsets>
       <x-m>-2.647</x-m>
@@ -1083,7 +1081,6 @@ ________________________________________________________________________________
   <animation>
     <type>select</type>
     <object-name>StarGearActuators</object-name>
-    <object-name>StarGearMounts</object-name>
     <object-name>StarUpperStrut</object-name>
     <condition>
       <greater-than>
@@ -1101,7 +1098,6 @@ ________________________________________________________________________________
     <object-name>PortLowerStrut</object-name>
     <object-name>PortLowerStrut.001</object-name>
     <object-name>PortGearActuators</object-name>
-    <object-name>PortGearMounts</object-name>
     <object-name>PortUpperSpring</object-name>
     <object-name>PortLowerSpring</object-name>
     <property>gear/gear[2]/position-norm</property>
@@ -1128,7 +1124,6 @@ ________________________________________________________________________________
     <object-name>StarLowerStrut</object-name>
     <object-name>StarLowerStrut.001</object-name>
     <object-name>StarGearActuators</object-name>
-    <object-name>StarGearMounts</object-name>
     <object-name>StarUpperSpring</object-name>
     <object-name>StarLowerSpring</object-name>
     <property>gear/gear[1]/position-norm</property>
@@ -1156,7 +1151,6 @@ ________________________________________________________________________________
     <object-name>NoseUpperSpringMount</object-name>
     <object-name>NoseUpperSpring2</object-name>
     <object-name>NoseLowerSpring2</object-name>
-    <object-name>NoseGearMount</object-name>
     <object-name>NoseWheel</object-name>
     <object-name>NoseUpperStrut</object-name>
     <object-name>lights.nose</object-name>
@@ -1186,7 +1180,6 @@ ________________________________________________________________________________
     <object-name>NoseUpperSpringMount</object-name>
     <object-name>NoseUpperSpring2</object-name>
     <object-name>NoseLowerSpring2</object-name>
-    <object-name>NoseGearMount</object-name>
     <object-name>NoseWheel</object-name>
     <object-name>NoseUpperStrut</object-name>
     <object-name>lights.nose</object-name>
@@ -1211,7 +1204,6 @@ ________________________________________________________________________________
   <animation>
     <type>select</type>
     <object-name>PortGearActuators</object-name>
-    <object-name>PortGearMounts</object-name>
     <object-name>PortUpperStrut</object-name>
     <condition>
       <greater-than>

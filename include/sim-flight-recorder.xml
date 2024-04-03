@@ -3,7 +3,7 @@
 
 <PropertyList>
 
- <replay-config type="int">0</replay-config>
+  <replay-config type="int">0</replay-config>
   <config n="0" include="/Aircraft/Generic/flightrecorder/generic-jet.xml">
     <name type="string">B-26B Flight Recorder</name>
     <signal>

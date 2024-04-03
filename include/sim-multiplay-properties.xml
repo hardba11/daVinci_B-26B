@@ -15,24 +15,24 @@
     <int n="8" alias="/systems/electrical/outputs/nav-lights">0</int>  <!-- 8 nav-lights -->
     <int n="9" alias="/sim/model/lights/beacon/state">false</int>      <!-- 9 strobe-lights -->
     <int n="10" alias="/controls/electric/key-pos">0</int>             <!-- 10 key position -->
-    <float n="0" alias="/sim/model/door-positions/windows-position-norm"/>
-    <float n="1" alias="/sim/model/door-positions/bay-position-norm"/>
+    <float n="0" alias="/sim/model/door-positions/windows-position-norm" />
+    <float n="1" alias="/sim/model/door-positions/bay-position-norm" />
     <float n="2" alias="/position/gear-agl-m">0</float>   <!-- altitude for MP shadow -->
     <float n="3" alias="/position/altitude-ft">0</float>  <!-- altitude for Smoke/Trail -->
-    <float n="4" alias="/engines/engine[0]/rpm"/>
-    <float n="5" alias="/engines/engine[0]/cranking"/>
-    <float n="6" alias="/gear/gear[0]/wow"/>
-    <float n="7" alias="/gear/gear[1]/wow"/>
-    <float n="8" alias="/gear/gear[2]/wow"/>
-    <float n="9" alias="/gear/gear[0]/rollspeed-ms"/>
-    <float n="10" alias="/gear/gear[1]/rollspeed-ms"/>
-    <float n="11" alias="/gear/gear[2]/rollspeed-ms"/>
-    <float n="12" alias="/velocities/airspeed-kt"/>
-    <float n="13" alias="/surface-positions/left-aileron-pos-norm"/>
-    <float n="14" alias="/gear/gear[1]/compression-norm"/> <!-- right (star) -->
-    <float n="15" alias="/gear/gear[2]/compression-norm"/> <!-- left (port) -->
-    <float n="16" alias="/gear/gear[0]/caster-angle-deg"/>
-    <float n="17" alias="/gear/gear[0]/compression-norm"/> <!-- nose -->
+    <float n="4" alias="/engines/engine[0]/rpm" />
+    <float n="5" alias="/engines/engine[0]/cranking" />
+    <float n="6" alias="/gear/gear[0]/wow" />
+    <float n="7" alias="/gear/gear[1]/wow" />
+    <float n="8" alias="/gear/gear[2]/wow" />
+    <float n="9" alias="/gear/gear[0]/rollspeed-ms" />
+    <float n="10" alias="/gear/gear[1]/rollspeed-ms" />
+    <float n="11" alias="/gear/gear[2]/rollspeed-ms" />
+    <float n="12" alias="/velocities/airspeed-kt" />
+    <float n="13" alias="/surface-positions/left-aileron-pos-norm" />
+    <float n="14" alias="/gear/gear[1]/compression-norm" /> <!-- right (star) -->
+    <float n="15" alias="/gear/gear[2]/compression-norm" /> <!-- left (port) -->
+    <float n="16" alias="/gear/gear[0]/caster-angle-deg" />
+    <float n="17" alias="/gear/gear[0]/compression-norm" /> <!-- nose -->
     <!-- For Bombable -->
     <int type="int" n="10" alias="controls/armament/trigger">0</int>
     <string n="9" type="string" />

@@ -5,7 +5,6 @@
   <path>ControlLeversAssy.ac</path>
 
   <animation>
-
     <object-name>PortThrottleLever</object-name>
     <object-name>PortThrottleKnob</object-name>
     <object-name>StarThrottleLever</object-name>
@@ -78,8 +77,8 @@
   </animation>
   <animation>
     <type>rotate</type>
-     <object-name>StarMixLever</object-name>
-     <object-name>StarMixKnob</object-name>
+    <object-name>StarMixLever</object-name>
+    <object-name>StarMixKnob</object-name>
     <property>controls/engines/engine[0]/mixture</property>
     <factor>-97</factor>
     <center>
