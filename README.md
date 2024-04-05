@@ -53,6 +53,7 @@ Done
 - add effects
     - exterior lights
     - rain (runway)
+    - rain (windshield)
 - fix missing textures
 - add interior furnitures, equipments and payloads
 - add ground equipments
@@ -95,7 +96,7 @@ ToDo
 - reduce texture size, remake uvmap
 - add effects
     - flashlight
-    - rain (windshield)
+    - night textures
 
 **UX**
 
