@@ -131,6 +131,23 @@ ________________________________________________________________________________
       <blue>.3</blue>
     </emission>
   </animation>
+  <animation>
+    <type>material</type>
+    <object-name>cockpit</object-name>
+    <object-name>cockpit.walls</object-name>
+    <object-name>FloorAccessDoor.L</object-name>
+    <object-name>FloorAccessDoor.R</object-name>
+    <object-name>FrontMidFuselage</object-name>
+    <object-name>FrontMidFuselage.walls</object-name>
+    <object-name>InsideFrontDoor</object-name>
+    <object-name>Navigation</object-name>
+    <emission>
+      <factor-prop>/sim/model/rendering/relative-panel-luminosity</factor-prop>
+      <red>.02</red>
+      <green>.07</green>
+      <blue>.07</blue>
+    </emission>
+  </animation>
 
   <animation>
     <type>material</type>
@@ -152,11 +169,12 @@ ________________________________________________________________________________
     <object-name>baggages</object-name>
     <emission>
       <factor-prop>/sim/model/rendering/relative-cabin-luminosity</factor-prop>
-      <red>.3</red>
+      <red>.2</red>
       <green>0</green>
       <blue>0</blue>
     </emission>
   </animation>
+
   <animation>
     <type>material</type>
     <object-name>InsideRearFuselage</object-name>

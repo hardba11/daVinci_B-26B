@@ -167,9 +167,9 @@
         <default-pitch-deg type="double">0</default-pitch-deg>
         <default-heading-deg type="double">0</default-heading-deg>
         <front-direction-deg type="double">0</front-direction-deg>
-        <x-offset-m type="double">-0.6</x-offset-m>
-        <y-offset-m type="double">-0.015</y-offset-m>
-        <z-offset-m type="double">3.25</z-offset-m>
+        <x-offset-m type="double">-0.5</x-offset-m>
+        <y-offset-m type="double">0.085</y-offset-m>
+        <z-offset-m type="double">3.95</z-offset-m>
         <pitch-offset-deg>-10</pitch-offset-deg>
         <heading-offset-deg>-140</heading-offset-deg>
       </config>
