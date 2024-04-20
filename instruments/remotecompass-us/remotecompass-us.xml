@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <PropertyList>
   <path>remotecompass-us.ac</path>
+
   <animation>
     <type>material</type>
     <object-name>Face</object-name>
@@ -12,7 +13,26 @@
       <green> 0.60 </green>
       <blue>  0.65 </blue>
     </emission>
+    <condition>
+      <property>/sim/model/rendering/relative-instrument-luminosity</property>
+    </condition>
   </animation>
+  <animation>
+    <type>material</type>
+    <object-name>Face</object-name>
+    <object-name>Needle1</object-name>
+    <object-name>Needle2</object-name>
+    <emission>
+      <factor-prop>/sim/model/rendering/relative-cabin-luminosity</factor-prop>
+      <red>.04</red>
+      <green>.14</green>
+      <blue>.14</blue>
+    </emission>
+    <condition>
+      <not><property>/sim/model/rendering/relative-instrument-luminosity</property></not>
+    </condition>
+  </animation>
+
   <animation>
     <type>rotate</type>
     <object-name>Needle1</object-name>

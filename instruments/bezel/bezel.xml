@@ -1,6 +1,18 @@
 <?xml version="1.0"?>
 <PropertyList>
   <path>bezel.ac</path>
+
+  <animation>
+    <type>material</type>
+    <object-name>bezel</object-name>
+    <emission>
+      <factor-prop>/sim/model/rendering/relative-cabin-luminosity</factor-prop>
+      <red>.04</red>
+      <green>.14</green>
+      <blue>.14</blue>
+    </emission>
+  </animation>
+
 </PropertyList>
 
 

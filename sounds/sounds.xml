@@ -3,67 +3,10 @@
 <PropertyList>
   <fx>
 
-    <!-- ~~~~~~~~~~~~~~~~~~ aerodynamic noises internal -->
-    <aero-int>
-      <name>aero int</name>
-      <path>rumble.wav</path>
-      <mode>looped</mode>
-      <condition>
-        <property>/sim/current-view/internal</property>
-      </condition>
-      <volume>
-        <property>/velocities/airspeed-kt</property>
-        <factor>0.0012</factor>
-        <min>0</min>
-        <max>0.9</max>
-      </volume>
-      <pitch>
-        <property>/velocities/airspeed-kt</property>
-        <factor>0.001</factor>
-        <min>0</min>
-        <max>2</max>
-      </pitch>
-    </aero-int>
+<!-- ============================================================= EXTERIEUR -->
 
-    <engine-int>
-      <name>engine idle rpm int</name>
-      <mode>looped</mode>
-      <path>Aircraft/daVinci_B-26B/sounds/b26_idle_rpm.wav</path>
-      <condition>
-        <property>/sim/current-view/internal</property>
-        <property>/engines/engine/running</property>
-        <less-than>
-          <property>/engines/engine/rpm</property>
-          <value>1500</value>
-        </less-than>
-        <greater-than>
-          <property>/engines/engine/rpm</property>
-          <value>100</value>
-        </greater-than>
-        <greater-than>
-          <property>/consumables/fuel/total-fuel-gals</property>
-          <value>2.0</value>
-        </greater-than>
-      </condition>
-      <volume>
-        <property>/engines/engine/torque-ftlb</property>
-        <factor>0.00035</factor>
-        <min>0.2</min>
-        <max>0.5</max>
-      </volume>
-      <pitch>
-        <property>/engines/engine/rpm</property>
-        <factor>0.001</factor>
-        <min>1</min>
-        <max>3</max>
-        <offset>0</offset>
-      </pitch>
-      <reference-dist>100</reference-dist>
-      <max-dist>1000</max-dist>
-    </engine-int>
-
-    <engine-ext>
-      <name>engine idle rpm</name>
+    <moteurs-reduits-ext>
+      <name>moteurs-reduits-ext</name>
       <mode>looped</mode>
       <path>Aircraft/daVinci_B-26B/sounds/b26_idle_rpm.wav</path>
       <condition>
@@ -97,39 +40,10 @@
       </pitch>
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
-    </engine-ext>
+    </moteurs-reduits-ext>
 
-    <engine-4-int>
-      <name>engine high rpm int</name>
-      <mode>looped</mode>
-      <path>Aircraft/daVinci_B-26B/sounds/b26_high_rpm.wav</path>
-      <condition>
-        <property>/sim/current-view/internal</property>
-        <property>/engines/engine/running</property>
-        <greater-than-equals>
-          <property>/engines/engine/rpm</property>
-          <value>1500</value>
-        </greater-than-equals>
-      </condition>
-      <volume>
-        <property>/engines/engine/torque-ftlb</property>
-        <factor>0.00035</factor>
-        <min>0.2</min>
-        <max>0.5</max>
-      </volume>
-      <pitch>
-        <property>/engines/engine/rpm</property>
-        <factor>0.000462</factor>
-        <min>0.7</min>
-        <max>3.0</max>
-        <offset>0</offset>
-      </pitch>
-      <reference-dist>100</reference-dist>
-      <max-dist>1000</max-dist>
-    </engine-4-int>
-
-    <engine-4-ext>
-      <name>engine high rpm</name>
+    <moteurs-ext>
+      <name>moteurs-ext</name>
       <mode>looped</mode>
       <path>Aircraft/daVinci_B-26B/sounds/b26_high_rpm.wav</path>
       <condition>
@@ -155,10 +69,10 @@
       </pitch>
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
-    </engine-4-ext>
+    </moteurs-ext>
 
     <crank>
-      <name>engstart</name>
+      <name>crank</name>
       <path>Aircraft/daVinci_B-26B/sounds/b26_engine_start.wav</path>
       <condition>
         <property>/engines/engine[0]/cranking</property>
@@ -179,7 +93,8 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </crank>
-    <crank>
+
+    <cough>
       <name>cough</name>
       <path>Aircraft/daVinci_B-26B/sounds/b26_engine_start.wav</path>
       <property>/engines/engine/running</property>
@@ -193,8 +108,9 @@
         <factor>1.2</factor>
         <max>1.0</max>
       </volume>
-    </crank>
-    <crank>
+    </cough>
+
+    <starter>
       <name>starter</name>
       <path>Aircraft/daVinci_B-26B/sounds/b26_engine_start.wav</path>
       <mode>looped</mode>
@@ -209,7 +125,7 @@
         <factor>1.2</factor>
         <max>1.0</max>
       </volume>
-    </crank>
+    </starter>
 
     <shutdown>
       <name>shutdown</name>
@@ -232,36 +148,6 @@
         </volume>
       </condition>
     </shutdown>
-
-    <rumble>
-      <name>rumble</name>
-      <mode>looped</mode>
-      <path>Sounds/rumble.wav</path>
-      <condition>
-        <or>
-          <property>/gear/gear[0]/wow</property>
-          <property>/gear/gear[1]/wow</property>
-          <property>/gear/gear[2]/wow</property>
-        </or>
-        <property>/sim/current-view/internal</property>
-      </condition>
-      <volume>
-        <property>/velocities/airspeed-kt</property>
-        <type>log</type>
-        <factor>0.10</factor>
-      </volume>
-      <reference-dist>100</reference-dist>
-      <max-dist>1000</max-dist>
-    </rumble>
-
-    <gear>
-      <name>gear</name>
-      <mode>in-transit</mode>
-      <path>Aircraft/daVinci_B-26B/sounds/b26_gear_down.wav</path>
-      <property>/gear/gear[0]/position-norm</property>
-      <reference-dist>100</reference-dist>
-      <max-dist>1000</max-dist>
-    </gear>
 
     <squeal>
       <name>squeal</name>
@@ -301,22 +187,334 @@
       <max-dist>1000</max-dist>
     </squeal>
 
+<!-- =================================================== MOTEURS ET SYSTEMES -->
+
+    <moteurs-reduits-int>
+      <name>moteurs-reduits-int</name>
+      <mode>looped</mode>
+      <path>Aircraft/daVinci_B-26B/sounds/b26_idle_rpm.wav</path>
+      <condition>
+        <property>/sim/current-view/internal</property>
+        <property>/engines/engine/running</property>
+        <less-than>
+          <property>/engines/engine/rpm</property>
+          <value>1500</value>
+        </less-than>
+        <greater-than>
+          <property>/engines/engine/rpm</property>
+          <value>100</value>
+        </greater-than>
+        <greater-than>
+          <property>/consumables/fuel/total-fuel-gals</property>
+          <value>2.0</value>
+        </greater-than>
+      </condition>
+      <volume>
+        <property>/engines/engine/torque-ftlb</property>
+        <factor>0.00035</factor>
+        <min>0.2</min>
+        <max>0.5</max>
+      </volume>
+      <pitch>
+        <property>/engines/engine/rpm</property>
+        <factor>0.001</factor>
+        <min>1</min>
+        <max>3</max>
+        <offset>0</offset>
+      </pitch>
+    </moteurs-reduits-int>
+
+    <moteurs-int>
+      <name>moteurs-int</name>
+      <mode>looped</mode>
+      <path>Aircraft/daVinci_B-26B/sounds/b26_high_rpm.wav</path>
+      <condition>
+        <property>/sim/current-view/internal</property>
+        <property>/engines/engine/running</property>
+        <greater-than-equals>
+          <property>/engines/engine/rpm</property>
+          <value>1500</value>
+        </greater-than-equals>
+      </condition>
+      <volume>
+        <property>/engines/engine/torque-ftlb</property>
+        <factor>0.00035</factor>
+        <min>0.2</min>
+        <max>0.5</max>
+      </volume>
+      <pitch>
+        <property>/engines/engine/rpm</property>
+        <factor>0.000462</factor>
+        <min>0.7</min>
+        <max>3.0</max>
+        <offset>0</offset>
+      </pitch>
+    </moteurs-int>
+
+    <gear>
+      <name>gear</name>
+      <mode>in-transit</mode>
+      <path>Aircraft/daVinci_B-26B/sounds/b26_gear_down.wav</path>
+      <condition>
+        <property>/sim/current-view/internal</property>
+        <greater-than>
+          <property>/gear/gear[0]/position-norm</property>
+          <value>0</value>
+        </greater-than>
+        <less-than>
+          <property>/gear/gear[0]/position-norm</property>
+          <value>1</value>
+        </less-than>
+      </condition>
+    </gear>
+
     <flap>
       <name>flaps</name>
       <mode>in-transit</mode>
       <path>Aircraft/daVinci_B-26B/sounds/b26_flaps.wav</path>
-      <property>/surface-positions/flap-pos-norm</property>
+      <condition>
+        <property>/sim/current-view/internal</property>
+        <greater-than>
+          <property>/surface-positions/flap-pos-norm</property>
+          <value>0</value>
+        </greater-than>
+        <less-than>
+          <property>/surface-positions/flap-pos-norm</property>
+          <value>1</value>
+        </less-than>
+      </condition>
       <volume>
         <factor>0.4</factor>
       </volume>
-      <reference-dist>10.0</reference-dist>
-      <max-dist>20.0</max-dist>
     </flap>
+
+<!-- ========================================================= ENVIRONNEMENT -->
+
+
+    <wind-doors-opened>
+      <name>wind</name>
+      <mode>looped</mode>
+      <path>Aircraft/daVinci_B-26B/sounds/flux.wav</path>
+      <condition>
+        <or>
+          <and>
+            <equals>
+              <property>/sim/current-view/view-number</property>
+              <value>15</value>
+            </equals>
+            <greater-than>
+              <property>/sim/model/door-positions/windows-position-norm</property>
+              <value>0</value>
+            </greater-than>
+          </and>
+          <and>
+            <equals>
+              <property>/sim/current-view/view-number</property>
+              <value>14</value>
+            </equals>
+            <greater-than>
+              <property>/sim/model/door-positions/windows-position-norm</property>
+              <value>0</value>
+            </greater-than>
+          </and>
+          <and>
+            <equals>
+              <property>/sim/current-view/view-number</property>
+              <value>14</value>
+            </equals>
+            <greater-than>
+              <property>/sim/model/door-positions/door1-position-norm</property>
+              <value>0</value>
+            </greater-than>
+            <greater-than>
+              <property>/sim/model/door-positions/bay-position-norm</property>
+              <value>0</value>
+            </greater-than>
+          </and>
+          <and>
+            <equals>
+              <property>/sim/current-view/view-number</property>
+              <value>13</value>
+            </equals>
+            <greater-than>
+              <property>/sim/model/door-positions/bay-position-norm</property>
+              <value>0</value>
+            </greater-than>
+          </and>
+          <and>
+            <equals>
+              <property>/sim/current-view/view-number</property>
+              <value>12</value>
+            </equals>
+          </and>
+          <and>
+            <equals>
+              <property>/sim/current-view/view-number</property>
+              <value>11</value>
+            </equals>
+            <greater-than>
+              <property>/sim/model/door-positions/door2-position-norm</property>
+              <value>0</value>
+            </greater-than>
+            <greater-than>
+              <property>/sim/model/door-positions/bay-position-norm</property>
+              <value>0</value>
+            </greater-than>
+          </and>
+          <and>
+            <equals>
+              <property>/sim/current-view/view-number</property>
+              <value>10</value>
+            </equals>
+            <greater-than>
+              <property>/sim/model/door-positions/door3-position-norm</property>
+              <value>0</value>
+            </greater-than>
+            <greater-than>
+              <property>/sim/model/door-positions/door2-position-norm</property>
+              <value>0</value>
+            </greater-than>
+            <greater-than>
+              <property>/sim/model/door-positions/bay-position-norm</property>
+              <value>0</value>
+            </greater-than>
+          </and>
+          <and>
+            <equals>
+              <property>/sim/current-view/view-number</property>
+              <value>9</value>
+            </equals>
+            <greater-than>
+              <property>/sim/model/door-positions/door3-position-norm</property>
+              <value>0</value>
+            </greater-than>
+            <greater-than>
+              <property>/sim/model/door-positions/door2-position-norm</property>
+              <value>0</value>
+            </greater-than>
+            <greater-than>
+              <property>/sim/model/door-positions/bay-position-norm</property>
+              <value>0</value>
+            </greater-than>
+          </and>
+        </or>
+      </condition>
+      <volume>
+        <property>/velocities/airspeed-kt</property>
+        <factor>0.004</factor>
+        <min>0.0</min>
+        <max>0.25</max>
+      </volume>
+    </wind-doors-opened>
+
+    <rumble>
+      <name>rumble</name>
+      <mode>looped</mode>
+      <path>Sounds/rumble.wav</path>
+      <condition>
+        <property>/sim/current-view/internal</property>
+        <or>
+          <property>/gear/gear[0]/wow</property>
+          <property>/gear/gear[1]/wow</property>
+          <property>/gear/gear[2]/wow</property>
+        </or>
+        <property>/sim/current-view/internal</property>
+      </condition>
+      <volume>
+        <property>/gear/gear[0]/rollspeed-ms</property>
+        <factor>0.015</factor>
+      </volume>
+    </rumble>
+
+    <bruits-aerodynamiques-int>
+      <name>bruits-aerodynamiques-int</name>
+      <path>Aircraft/daVinci_B-26B/sounds/rumble.wav</path>
+      <mode>looped</mode>
+      <condition>
+        <property>/sim/current-view/internal</property>
+      </condition>
+      <volume>
+        <property>/velocities/airspeed-kt</property>
+        <factor>0.0012</factor>
+        <min>0</min>
+        <max>0.9</max>
+      </volume>
+      <pitch>
+        <property>/velocities/airspeed-kt</property>
+        <factor>0.001</factor>
+        <min>0</min>
+        <max>2</max>
+      </pitch>
+    </bruits-aerodynamiques-int>
+
+    <rain_int>
+      <name>rain_int</name>
+      <path>Aircraft/daVinci_B-26B/sounds/rain-windshield.wav</path>
+      <mode>looped</mode>
+      <condition>
+        <greater-than>
+          <property>/environment/rain-norm</property>
+          <value>0.1</value>
+        </greater-than>
+      </condition>
+      <volume>
+        <property>/environment/rain-norm</property>
+        <factor>0.3</factor>
+        <min>0</min>
+        <max>2</max>
+      </volume>
+      <pitch>
+        <property>/velocities/mach</property>
+        <factor>0.6</factor>
+        <min>0</min>
+        <max>2</max>
+      </pitch>
+      <position>
+        <x>-4.0</x>
+        <y>0.0</y>
+        <z>0.0</z>
+      </position>
+      <orientation>
+        <x>-1.0</x>
+        <y>0.0</y>
+        <z>0.0</z>
+        <inner-angle>3.0</inner-angle>
+        <outer-angle>45.0</outer-angle>
+        <outer-gain>0.9</outer-gain>
+      </orientation>
+    </rain_int>
+    <rain_ext>
+      <name>rain_ext</name>
+      <path>Aircraft/daVinci_B-26B/sounds/rain.wav</path>
+      <mode>looped</mode>
+      <condition>
+        <and>
+          <greater-than>
+            <property>/environment/rain-norm</property>
+            <value>0.1</value>
+          </greater-than>
+          <or>
+            <not><property>/sim/current-view/internal</property></not>
+            <greater-than>
+              <property>/sim/model/canopy-pos-norm</property>
+              <value>0</value>
+            </greater-than>
+          </or>
+        </and>
+      </condition>
+      <volume>
+        <factor>0.2</factor>
+      </volume>
+    </rain_ext>
+
+
+<!-- ============================================ EQUIPEMENTS ET INSTRUMENTS -->
 
     <canopy-open>
       <name>canopy slide open</name>
       <path>Aircraft/daVinci_B-26B/sounds/b26_canopy.wav</path>
       <condition>
+        <property>/sim/current-view/internal</property>
         <greater-than>
           <property>/sim/model/door-positions/windows-position-norm</property>
           <value>0.1</value>
@@ -326,10 +524,12 @@
         <value>1</value>
       </volume>
     </canopy-open>
+
     <canopy-close>
       <name>canopy slide close</name>
       <path>Aircraft/daVinci_B-26B/sounds/b26_canopy.wav</path>
       <condition>
+        <property>/sim/current-view/internal</property>
         <less-than>
           <property>/sim/model/door-positions/windows-position-norm</property>
           <value>0.3</value>
@@ -340,72 +540,7 @@
       </volume>
     </canopy-close>
 
-    <wind-canopy-closed>
-      <name>wind</name>
-      <mode>looped</mode>
-      <path>Sounds/wind.wav</path>
-      <condition>
-        <equals>
-          <property>/instrumentation/doors/crew/position-norm</property>
-          <value>0</value>
-        </equals>
-      </condition>
-      <property>/velocities/airspeed-kt</property>
-      <volume>
-        <property>/position/altitude-ft</property>
-        <factor>-0.001</factor>
-        <offset>1.0</offset>
-        <min>0.01</min>
-        <max>0.7</max>
-      </volume>
-      <volume>
-        <property>/velocities/airspeed-kt</property>
-        <factor>0.004</factor>
-        <min>0.0</min>
-        <max>0.25</max>
-      </volume>
-      <pitch>
-        <property>/velocities/airspeed-kt</property>
-        <factor>0.01</factor>
-        <offset>1.25</offset>
-      </pitch>
-      <reference-dist>100</reference-dist>
-      <max-dist>1000</max-dist>
-    </wind-canopy-closed>
-
-    <wind-canopy-open>
-      <name>wind-loud</name>
-      <mode>looped</mode>
-      <path>Sounds/wind.wav</path>
-      <condition>
-        <greater-than>
-          <property>sim/multiplay/generic/float[0]</property>
-          <value>0.1</value>
-        </greater-than>
-      </condition>
-      <property>/velocities/airspeed-kt</property>
-      <volume>
-        <property>/position/altitude-ft</property>
-        <factor>-0.004</factor>
-        <offset>1.0</offset>
-        <min>0</min>
-        <max>0.5</max>
-      </volume>
-      <volume>
-        <property>/velocities/airspeed-kt</property>
-        <factor>0.001</factor>
-        <min>0</min>
-        <max>0.7</max>
-      </volume>
-      <pitch>
-        <property>/velocities/airspeed-kt</property>
-        <factor>0.003</factor>
-        <offset>1.25</offset>
-      </pitch>
-      <reference-dist>100</reference-dist>
-      <max-dist>1000</max-dist>
-    </wind-canopy-open>
-
+    <!--
     <stall>
       <name>gear up warn</name>
       <mode>looped</mode>
@@ -537,32 +672,20 @@
       </condition>
     </no-fuel>
 
-    <!-- flyby -->
-    <flyby>
-      <name>fly-by</name>
-      <mode>once</mode>
-      <path>Aircraft/daVinci_B-26B/sounds/b26_high_rpm.wav</path>
-      <condition>
-        <and>
-          <greater-than>
-            <property>velocities/airspeed-kt</property>
-            <value>50</value>
-          </greater-than>
-          <equals>
-            <property>sim/current-view/view-number</property>
-            <value>6</value>
-          </equals>
-        </and>
-        <not>
-          <property>/sim/current-view/internal</property>
-          <property>/engines/engine/out-of-fuel</property>
-        </not>
-      </condition>
-      <volume>
-      <property>velocities/airspeed-kt</property>
-      <factor>0.001</factor>
-      </volume>
-    </flyby>
+
+
+
+-->
+
+
+
+
+
+
+
+
+
+
 
 
 

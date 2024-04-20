@@ -2,6 +2,7 @@
 
 <PropertyList>
   <path>bing.ac</path>
+
   <animation>
     <type>material</type>
     <object-name>CadranF</object-name>
@@ -13,7 +14,26 @@
       <green> 0.60 </green>
       <blue>  0.65 </blue>
     </emission>
+    <condition>
+      <property>/sim/model/rendering/relative-instrument-luminosity</property>
+    </condition>
   </animation>
+  <animation>
+    <type>material</type>
+    <object-name>CadranF</object-name>
+    <object-name>Cadran</object-name>
+    <object-name>Aiguille</object-name>
+    <emission>
+      <factor-prop>/sim/model/rendering/relative-cabin-luminosity</factor-prop>
+      <red>.04</red>
+      <green>.14</green>
+      <blue>.14</blue>
+    </emission>
+    <condition>
+      <not><property>/sim/model/rendering/relative-instrument-luminosity</property></not>
+    </condition>
+  </animation>
+
   <animation>
     <type>select</type>
     <object-name>Masque</object-name>

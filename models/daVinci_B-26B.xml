@@ -64,7 +64,6 @@ ________________________________________________________________________________
     <object-name>StarAileron.001</object-name>
     <object-name>StarOutsideFlap</object-name>
     <object-name>StarInsideFlap</object-name>
-    <object-name>PortNacelle</object-name>
     <object-name>PortSpinner</object-name>
     <object-name>StarSpinner</object-name>
     <object-name>PortInnerGearDoorOutside</object-name>
@@ -109,6 +108,24 @@ ________________________________________________________________________________
     </condition>
   </animation>
 
+
+  <animation>
+    <type>select</type>
+    <object-name>PortWindowGlass.int</object-name>
+    <object-name>StarWindowGlass.int</object-name>
+    <condition>
+      <less-than>
+        <property>/sim/model/door-positions/windows-position-norm</property>
+        <value>0.5</value>
+      </less-than>
+      <greater-than>
+        <property>/environment/rain-norm</property>
+        <value>0.1</value>
+      </greater-than>
+    </condition>
+  </animation>
+
+
 <!--
 ________________________________________________________________________________
                                                                         EMISSION
@@ -125,12 +142,13 @@ ________________________________________________________________________________
     <object-name>Intercom1</object-name>
     <object-name>Intercom2</object-name>
     <emission>
-      <factor-prop>/sim/model/rendering/relative-panel-luminosity</factor-prop>
+      <factor-prop>/sim/model/rendering/relative-cabin-luminosity</factor-prop>
       <red>.1</red>
       <green>.3</green>
       <blue>.3</blue>
     </emission>
   </animation>
+
   <animation>
     <type>material</type>
     <object-name>cockpit</object-name>
@@ -141,8 +159,54 @@ ________________________________________________________________________________
     <object-name>FrontMidFuselage.walls</object-name>
     <object-name>InsideFrontDoor</object-name>
     <object-name>Navigation</object-name>
+    <object-name>3DSMesh_10</object-name>
+    <object-name>3DSMesh_100</object-name>
+    <object-name>3DSMesh_101</object-name>
+    <object-name>3DSMesh_102</object-name>
+    <object-name>3DSMesh_104</object-name>
+    <object-name>3DSMesh_105</object-name>
+    <object-name>3DSMesh_106</object-name>
+    <object-name>3DSMesh_107</object-name>
+    <object-name>3DSMesh_108</object-name>
+    <object-name>3DSMesh_109</object-name>
+    <object-name>3DSMesh_11</object-name>
+    <object-name>3DSMesh_110</object-name>
+    <object-name>3DSMesh_111</object-name>
+    <object-name>3DSMesh_112</object-name>
+    <object-name>3DSMesh_113</object-name>
+    <object-name>3DSMesh_114</object-name>
+    <object-name>3DSMesh_115</object-name>
+    <object-name>3DSMesh_12</object-name>
+    <object-name>3DSMesh_121</object-name>
+    <object-name>3DSMesh_122</object-name>
+    <object-name>3DSMesh_123</object-name>
+    <object-name>3DSMesh_124</object-name>
+    <object-name>3DSMesh_125</object-name>
+    <object-name>3DSMesh_67</object-name>
+    <object-name>3DSMesh_72</object-name>
+    <object-name>3DSMesh_73</object-name>
+    <object-name>3DSMesh_74</object-name>
+    <object-name>3DSMesh_75</object-name>
+    <object-name>3DSMesh_88</object-name>
+    <object-name>3DSMesh_89</object-name>
+    <object-name>3DSMesh_90</object-name>
+    <object-name>3DSMesh_91</object-name>
+    <object-name>3DSMesh_95</object-name>
+    <object-name>3DSMesh_96</object-name>
+    <object-name>3DSMesh_97</object-name>
+    <object-name>3DSMesh_98</object-name>
+    <object-name>3DSMesh_99</object-name>
+    <object-name>btn_cabin_light</object-name>
+    <object-name>btn_landing_light</object-name>
+    <object-name>btn_magneto_left</object-name>
+    <object-name>btn_magneto_right</object-name>
+    <object-name>btn_nav_light</object-name>
+    <object-name>btn_panel_light</object-name>
+    <object-name>btn_pos_light</object-name>
+    <object-name>btn_strobe</object-name>
+    <object-name>btn_taxi_light</object-name>
     <emission>
-      <factor-prop>/sim/model/rendering/relative-panel-luminosity</factor-prop>
+      <factor-prop>/sim/model/rendering/relative-cabin-luminosity</factor-prop>
       <red>.02</red>
       <green>.07</green>
       <blue>.07</blue>
@@ -155,8 +219,10 @@ ________________________________________________________________________________
     <object-name>MidFuselage.cloisons</object-name>
     <object-name>MidFuselage.poutre</object-name>
     <object-name>MidFuselage.walls</object-name>
-    <object-name>bielle.R</object-name>
-    <object-name>bielle.L</object-name>
+    <object-name>bielle.R.f</object-name>
+    <object-name>bielle.L.f</object-name>
+    <object-name>bielle.R.b</object-name>
+    <object-name>bielle.L.b</object-name>
     <object-name>BayDoorInsideLower.R</object-name>
     <object-name>BayDoorInsideUpper.R</object-name>
     <object-name>BayDoorInsideLower.L</object-name>
@@ -197,7 +263,6 @@ ________________________________________________________________________________
 <!--
 ________________________________________________________________________________
                                                                 LIVERY SELECTION
-  -->
   <animation>
     <type>material</type>
     <object-name>NoseFuselage</object-name>
@@ -277,6 +342,7 @@ ________________________________________________________________________________
     <texture-prop>Stabs</texture-prop>
     <texture>htails_t</texture>
   </animation>
+  -->
 
 <!--
 ________________________________________________________________________________
@@ -442,7 +508,7 @@ ________________________________________________________________________________
     </axis>
   </animation>
 
-<!-- Port Upper Bay Door -->
+<!-- LEFT Bay Door -->
   <animation>
     <type>rotate</type>
     <object-name>PortUpperBayDoorOutside</object-name>
@@ -470,9 +536,9 @@ ________________________________________________________________________________
     <interpolation>
       <entry><ind>0</ind><dep>0</dep></entry>
       <entry><ind>0.25</ind><dep>40</dep></entry>
-      <entry><ind>0.5</ind><dep>72</dep></entry>
-      <entry><ind>0.75</ind><dep>100</dep></entry>
-      <entry><ind>1</ind><dep>120</dep></entry>
+      <entry><ind>0.5</ind><dep>76</dep></entry>
+      <entry><ind>0.75</ind><dep>105</dep></entry>
+      <entry><ind>1</ind><dep>130</dep></entry>
     </interpolation>
     <center>
       <x-m>1.207</x-m>
@@ -487,19 +553,41 @@ ________________________________________________________________________________
   </animation>
   <animation>
     <type>rotate</type>
-    <object-name>bielle.L</object-name>
+    <object-name>bielle.L.f</object-name>
     <property>sim/multiplay/generic/float[1]</property>
     <interpolation>
       <entry><ind>0</ind><dep>0</dep></entry>
       <entry><ind>0.25</ind><dep>17</dep></entry>
-      <entry><ind>0.5</ind><dep>37</dep></entry>
-      <entry><ind>0.75</ind><dep>58</dep></entry>
-      <entry><ind>1</ind><dep>74</dep></entry>
+      <entry><ind>0.5</ind><dep>39</dep></entry>
+      <entry><ind>0.75</ind><dep>60</dep></entry>
+      <entry><ind>1</ind><dep>79</dep></entry>
     </interpolation>
     <center>
       <x-m>-6.2</x-m>
-      <y-m>-0.3768</y-m>
-      <z-m>-0.1661</z-m>
+      <y-m>-0.3653</y-m>
+      <z-m>-0.1638</z-m>
+    </center>
+    <axis>
+      <x>-1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  <animation>
+    <type>rotate</type>
+    <object-name>bielle.L.b</object-name>
+    <property>sim/multiplay/generic/float[1]</property>
+    <interpolation>
+      <entry><ind>0</ind><dep>0</dep></entry>
+      <entry><ind>0.25</ind><dep>18</dep></entry>
+      <entry><ind>0.5</ind><dep>40</dep></entry>
+      <entry><ind>0.75</ind><dep>61</dep></entry>
+      <entry><ind>1</ind><dep>81</dep></entry>
+    </interpolation>
+    <center>
+      <x-m>-6.2</x-m>
+      <y-m>-0.3653</y-m>
+      <z-m>-0.1638</z-m>
     </center>
     <axis>
       <x>-1</x>
@@ -508,7 +596,7 @@ ________________________________________________________________________________
     </axis>
   </animation>
 
-<!-- Star Upper Bay Door -->
+<!-- RIGHT Bay Door -->
   <animation>
     <type>rotate</type>
     <object-name>StarUpperBayDoorOutside</object-name>
@@ -536,9 +624,9 @@ ________________________________________________________________________________
     <interpolation>
       <entry><ind>0</ind><dep>0</dep></entry>
       <entry><ind>0.25</ind><dep>40</dep></entry>
-      <entry><ind>0.5</ind><dep>72</dep></entry>
-      <entry><ind>0.75</ind><dep>100</dep></entry>
-      <entry><ind>1</ind><dep>120</dep></entry>
+      <entry><ind>0.5</ind><dep>76</dep></entry>
+      <entry><ind>0.75</ind><dep>105</dep></entry>
+      <entry><ind>1</ind><dep>130</dep></entry>
     </interpolation>
     <center>
       <x-m>1.207</x-m>
@@ -553,19 +641,41 @@ ________________________________________________________________________________
   </animation>
   <animation>
     <type>rotate</type>
-    <object-name>bielle.R</object-name>
+    <object-name>bielle.R.f</object-name>
     <property>sim/multiplay/generic/float[1]</property>
     <interpolation>
       <entry><ind>0</ind><dep>0</dep></entry>
       <entry><ind>0.25</ind><dep>17</dep></entry>
-      <entry><ind>0.5</ind><dep>37</dep></entry>
-      <entry><ind>0.75</ind><dep>58</dep></entry>
-      <entry><ind>1</ind><dep>74</dep></entry>
+      <entry><ind>0.5</ind><dep>39</dep></entry>
+      <entry><ind>0.75</ind><dep>60</dep></entry>
+      <entry><ind>1</ind><dep>79</dep></entry>
     </interpolation>
     <center>
       <x-m>-6.2</x-m>
-      <y-m>0.3768</y-m>
-      <z-m>-0.1661</z-m>
+      <y-m>0.3653</y-m>
+      <z-m>-0.1638</z-m>
+    </center>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  <animation>
+    <type>rotate</type>
+    <object-name>bielle.R.b</object-name>
+    <property>sim/multiplay/generic/float[1]</property>
+    <interpolation>
+      <entry><ind>0</ind><dep>0</dep></entry>
+      <entry><ind>0.25</ind><dep>18</dep></entry>
+      <entry><ind>0.5</ind><dep>40</dep></entry>
+      <entry><ind>0.75</ind><dep>61</dep></entry>
+      <entry><ind>1</ind><dep>81</dep></entry>
+    </interpolation>
+    <center>
+      <x-m>-6.2</x-m>
+      <y-m>0.3653</y-m>
+      <z-m>-0.1638</z-m>
     </center>
     <axis>
       <x>1</x>

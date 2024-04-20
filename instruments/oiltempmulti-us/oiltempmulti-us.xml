@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <PropertyList>
   <path>oiltempmulti-us.ac</path>
+
   <!--
     -50C = -58F
       0C =  32F
@@ -17,7 +18,26 @@
       <green> 0.60 </green>
       <blue>  0.65 </blue>
     </emission>
+    <condition>
+      <property>/sim/model/rendering/relative-instrument-luminosity</property>
+    </condition>
   </animation>
+  <animation>
+    <type>material</type>
+    <object-name>Face</object-name>
+    <object-name>needle1</object-name> <!-- engine[1] left -->
+    <object-name>needle2</object-name> <!-- engine[2] right -->
+    <emission>
+      <factor-prop>/sim/model/rendering/relative-cabin-luminosity</factor-prop>
+      <red>.04</red>
+      <green>.14</green>
+      <blue>.14</blue>
+    </emission>
+    <condition>
+      <not><property>/sim/model/rendering/relative-instrument-luminosity</property></not>
+    </condition>
+  </animation>
+
   <animation>
     <type>rotate</type>
     <object-name>needle1</object-name>

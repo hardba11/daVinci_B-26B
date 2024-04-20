@@ -327,10 +327,10 @@
     <type>material</type>
     <object-name>throttleblock</object-name>
     <emission>
-      <factor-prop>/sim/model/rendering/relative-panel-luminosity</factor-prop>
-      <red>.1</red>
-      <green>.3</green>
-      <blue>.3</blue>
+      <factor-prop>/sim/model/rendering/relative-cabin-luminosity</factor-prop>
+      <red>.04</red>
+      <green>.14</green>
+      <blue>.14</blue>
     </emission>
   </animation>
 
