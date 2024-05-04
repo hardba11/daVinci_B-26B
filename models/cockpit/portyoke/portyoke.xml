@@ -8,7 +8,20 @@
     <object-name>Base</object-name>
     <object-name>Yoke</object-name>
   </animation>
-  
+
+  <!-- flood lights -->
+  <animation>
+    <type>material</type>
+    <object-name>Base</object-name>
+    <object-name>Yoke</object-name>
+    <emission>
+      <factor-prop>/sim/model/rendering/relative-cabin-luminosity</factor-prop>
+      <red>0.02</red>
+      <green>0.07</green>
+      <blue>0.07</blue>
+    </emission>
+  </animation>
+
   <animation>
     <type>rotate</type>
     <object-name>Yoke</object-name>

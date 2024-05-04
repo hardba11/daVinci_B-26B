@@ -268,21 +268,11 @@
       </condition>
     </gear>
 
-    <flap>
+    <flap>333 666
       <name>flaps</name>
       <mode>in-transit</mode>
       <path>Aircraft/daVinci_B-26B/sounds/b26_flaps.wav</path>
-      <condition>
-        <property>/sim/current-view/internal</property>
-        <greater-than>
-          <property>/surface-positions/flap-pos-norm</property>
-          <value>0</value>
-        </greater-than>
-        <less-than>
-          <property>/surface-positions/flap-pos-norm</property>
-          <value>1</value>
-        </less-than>
-      </condition>
+      <property>/surface-positions/flap-pos-norm</property>
       <volume>
         <factor>0.4</factor>
       </volume>
@@ -297,6 +287,16 @@
       <path>Aircraft/daVinci_B-26B/sounds/flux.wav</path>
       <condition>
         <or>
+          <and>
+            <equals>
+              <property>/sim/current-view/view-number</property>
+              <value>16</value>
+            </equals>
+            <greater-than>
+              <property>/sim/model/door-positions/windows-position-norm</property>
+              <value>0</value>
+            </greater-than>
+          </and>
           <and>
             <equals>
               <property>/sim/current-view/view-number</property>

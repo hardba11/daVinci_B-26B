@@ -110,11 +110,11 @@
         <default-pitch-deg type="double">0</default-pitch-deg>
         <default-heading-deg type="double">0</default-heading-deg>
         <front-direction-deg type="double">0</front-direction-deg>
-        <x-offset-m type="double">0.0</x-offset-m>
+        <x-offset-m type="double">0.2</x-offset-m>
         <y-offset-m type="double">0.57</y-offset-m>
-        <z-offset-m type="double">10.2</z-offset-m>
+        <z-offset-m type="double">9.8</z-offset-m>
         <pitch-offset-deg>0</pitch-offset-deg>
-        <heading-offset-deg>180</heading-offset-deg>
+        <heading-offset-deg>170</heading-offset-deg>
       </config>
     </view>
     <view n="101">
@@ -152,7 +152,7 @@
         <y-offset-m type="double">1.117</y-offset-m>
         <z-offset-m type="double">5.44</z-offset-m>
         <pitch-offset-deg>-12</pitch-offset-deg>
-        <heading-offset-deg>180</heading-offset-deg>
+        <heading-offset-deg>-160</heading-offset-deg>
       </config>
     </view>
     <view n="103">
@@ -171,13 +171,13 @@
         <y-offset-m type="double">0.085</y-offset-m>
         <z-offset-m type="double">3.95</z-offset-m>
         <pitch-offset-deg>-10</pitch-offset-deg>
-        <heading-offset-deg>-140</heading-offset-deg>
+        <heading-offset-deg>-130</heading-offset-deg>
       </config>
     </view>
     <view n="104">
       <name>Outside</name>
       <type>lookfrom</type>
-      <internal>false</internal>
+      <internal>true</internal>
       <config>
         <from-model type="bool">true</from-model>
         <from-model-idx type="int">0</from-model-idx>
@@ -213,7 +213,7 @@
       </config>
     </view>
     <view n="106">
-      <name>Navigation Deck</name>
+      <name>NavigationDeck</name>
       <type>lookfrom</type>
       <internal>true</internal>
       <config>
@@ -224,15 +224,15 @@
         <default-pitch-deg type="double">0</default-pitch-deg>
         <default-heading-deg type="double">45</default-heading-deg>
         <front-direction-deg type="double">0</front-direction-deg>
-        <x-offset-m type="double">-0.58</x-offset-m>
-        <y-offset-m type="double">0.423</y-offset-m>
-        <z-offset-m type="double">-1.07</z-offset-m>
+        <x-offset-m type="double">-0.23</x-offset-m><!--right-->
+        <y-offset-m type="double">0.45</y-offset-m><!--up-->
+        <z-offset-m type="double">-1.07</z-offset-m><!--back-->
         <pitch-offset-deg>-14</pitch-offset-deg>
-        <heading-offset-deg>-45</heading-offset-deg>
+        <heading-offset-deg>-10</heading-offset-deg>
       </config>
     </view>
     <view n="107">
-      <name>Cockpit</name>
+      <name>Pilot</name>
       <type>lookfrom</type>
       <internal>true</internal>
       <config>
@@ -243,11 +243,30 @@
         <default-pitch-deg type="double">0</default-pitch-deg>
         <default-heading-deg type="double">0</default-heading-deg>
         <front-direction-deg type="double">0</front-direction-deg>
-        <x-offset-m type="double">-0.390</x-offset-m><!--right-->
-        <y-offset-m type="double">0.910</y-offset-m><!--up-->
-        <z-offset-m type="double">-3.305</z-offset-m><!--back-->
-        <default-field-of-view-deg>120</default-field-of-view-deg>
+        <x-offset-m type="double">-0.34</x-offset-m><!--right-->
+        <y-offset-m type="double">0.92</y-offset-m><!--up-->
+        <z-offset-m type="double">-3.30</z-offset-m><!--back-->
         <pitch-offset-deg>-16.00</pitch-offset-deg>
+        <heading-offset-deg>0</heading-offset-deg>
+      </config>
+    </view>
+    <view n="108">
+      <name>CoPilot</name>
+      <type>lookfrom</type>
+      <internal>true</internal>
+      <config>
+        <from-model type="bool">true</from-model>
+        <from-model-idx type="int">0</from-model-idx>
+        <ground-level-nearplane-m type="double">0.01</ground-level-nearplane-m>
+        <default-field-of-view-deg type="double">80</default-field-of-view-deg>
+        <default-pitch-deg type="double">0</default-pitch-deg>
+        <default-heading-deg type="double">0</default-heading-deg>
+        <front-direction-deg type="double">0</front-direction-deg>
+        <x-offset-m type="double">0.48</x-offset-m><!--right-->
+        <y-offset-m type="double">0.89</y-offset-m><!--up-->
+        <z-offset-m type="double">-3.2</z-offset-m><!--back-->
+        <pitch-offset-deg>-22.00</pitch-offset-deg>
+        <heading-offset-deg>15</heading-offset-deg>
       </config>
     </view>
 
@@ -300,19 +319,24 @@
     <lights>
       <file type="string">Aircraft/daVinci_B-26B/models/lights/lights.nas</file>
     </lights>
-    <!--lights>
-      <file>Aircraft/daVinci_B-26B/core/lights.nas</file>
-    </lights>
-    <spit9>
-      <file>Aircraft/daVinci_B-26B/core/boost.nas</file>
-      <file>Aircraft/daVinci_B-26B/core/liveries.nas</file>
-    </spit9-->
     <b26>
       <file>Aircraft/daVinci_B-26B/core/b26.nas</file>
     </b26>
     <target_positions>
       <file type="string">Aircraft/daVinci_B-26B/instruments/target_positions/target_positions.nas</file>
     </target_positions>
+    <map>
+      <file type="string">Aircraft/daVinci_B-26B/instruments/panel-glass/map.nas</file>
+    </map>
+    <basic_pfd>
+      <file type="string">Aircraft/daVinci_B-26B/instruments/panel-glass/basic_pfd.nas</file>
+    </basic_pfd>
+    <basic_sfd>
+      <file type="string">Aircraft/daVinci_B-26B/instruments/panel-glass/basic_sfd.nas</file>
+    </basic_sfd>
+    <instrument_chrono>
+      <file type="string">Aircraft/daVinci_B-26B/instruments/panel-glass/chrono.nas</file>
+    </instrument_chrono>
   </nasal>
 
 </PropertyList>

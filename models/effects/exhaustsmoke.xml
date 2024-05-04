@@ -47,13 +47,12 @@
     <particles-per-sec>
       <property>engines/engine[0]/rpm</property>
       <interpolation>
-        <entry><ind>  800 </ind><dep>  4 </dep></entry>
-        <entry><ind> 1800 </ind><dep> 10 </dep></entry>
-        <entry><ind> 2150 </ind><dep> 18 </dep></entry>
-        <entry><ind> 2500 </ind><dep> 80 </dep></entry>
+        <entry><ind>  800</ind><dep>  4</dep></entry>
+        <entry><ind> 1800</ind><dep> 10</dep></entry>
+        <entry><ind> 2150</ind><dep> 18</dep></entry>
+        <entry><ind> 2500</ind><dep>100</dep></entry>
       </interpolation>
-      <!-- value>5</value -->
-      <spread>3</spread>
+      <spread>5</spread>
     </particles-per-sec>
   </counter>
       
@@ -62,31 +61,31 @@
   <particle>
     <start>
       <color>
-        <red><value>   0.8 </value></red>
-        <green><value> 0.8 </value></green>
-        <blue><value>  0.8 </value></blue>
-        <alpha><value> 0.4 </value></alpha>
+        <red><value>   0.8</value></red>
+        <green><value> 0.8</value></green>
+        <blue><value>  0.8</value></blue>
+        <alpha><value> 0.3</value></alpha>
       </color>
       <size>
-        <value>0.175</value>
+        <value>0.2</value>
       </size>
     </start>
     <end>
       <color>
-        <red><value>   0.8 </value></red>
-        <green><value> 0.8 </value></green>
-        <blue><value>  0.8 </value></blue>
+        <red><value>   0.8</value></red>
+        <green><value> 0.8</value></green>
+        <blue><value>  0.8</value></blue>
         <alpha><value>0.001</value></alpha>
       </color>
       <size>
-        <value>1</value>
+        <value>1.6</value>
       </size>
     </end>
     <life-sec>
-      <value>2</value>
+      <value>.4</value>
     </life-sec>
-    <mass-kg>0.04</mass-kg>
-    <radius-m>0.02</radius-m>
+    <mass-kg>0.02</mass-kg>
+    <radius-m>0.1</radius-m>
   </particle>
 
   <program>

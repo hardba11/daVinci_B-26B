@@ -11,7 +11,9 @@
     <object-name>fuel-truck.base</object-name>
     <object-name>fuel-truck.tank</object-name>
     <object-name>extincteur</object-name>
-    <object-name>cone</object-name>
+    <object-name>cones-avant</object-name>
+    <object-name>cones-arriere-gauche</object-name>
+    <object-name>cones-arriere-droit</object-name>
   </animation>
 
   <!-- ~~~~~~~~~~~~~~~~~~ gears chocks -->
@@ -43,6 +45,8 @@
     <type>select</type>
     <object-name>external-power-unit</object-name>
     <object-name>extincteur</object-name>
+    <object-name>cones-avant</object-name>
+    <object-name>cones-arriere-droit</object-name>
     <condition>
       <property>sim/model/ground-equipment-p</property>
       <less-than>
@@ -69,6 +73,7 @@
     <type>select</type>
     <object-name>fuel-truck.base</object-name>
     <object-name>fuel-truck.tank</object-name>
+    <object-name>cones-arriere-gauche</object-name>
     <object-name>cone</object-name>
     <condition>
       <property>sim/model/ground-equipment-f</property>
@@ -81,7 +86,6 @@
   <animation>
     <type>pick</type>
     <object-name>fuel-truck.base</object-name>
-    <object-name>fuel-truck.pipe</object-name>
     <object-name>cone</object-name>
     <action>
       <button>0</button>
