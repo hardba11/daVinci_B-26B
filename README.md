@@ -57,11 +57,13 @@ Done
 - fix missing textures
 - add interior furnitures, equipments and payloads
 - add ground equipments
+- reduce texture size, remake uvmap, join and rename objects
 
 **fdm**
 
 - new yasim
 - smooth gears
+- autopilot/fdm improvment
 
 **UX**
 
@@ -73,38 +75,43 @@ Done
 - clickable elements
     - doors
     - instruments
+- adjust sound volume if window open/close
 
 Work In Progress
 ----------------
 
-**UX**
-
-- menu gui
-    - views
-    - need assistance
 
 
 ToDo
 ----
 
-**fdm**
-
-- autopilot/fdm improvment
-
 **models**
 
-- reduce texture size, remake uvmap
-- add effects
-    - flashlight
-    - night textures
+- add effects cockpit
+    - red flashlight
+- add equipments and instruments in the living-room
+- add instruments
+    - transponder
+    - enable/disable AP
+    - other
 
 **UX**
 
-- add instruments
-    - tablet ?
-    - other
 - shortcuts
-- adjust sound volume if window open/close
+- menu gui
+    - views
+    - need assistance
+    - show/hide ground equipments
+    - pushback
+    - choose panel old-style/glass-cockpit
+    - flashlight
+- adjust sounds
+    - engine volume if interior
+- multiplay
+- new clickable instruments : avionic, battery, magneto, starters, cutoff, fuelpump
+
+
+
 
 
 
