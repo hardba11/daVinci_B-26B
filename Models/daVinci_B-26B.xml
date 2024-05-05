@@ -12,7 +12,7 @@
     <path>Aircraft/daVinci_B-26B/instruments/panel-glass/panel-glass.xml</path>
   </model>
   <model>
-    <path>Aircraft/daVinci_B-26B/models/panel-plus.xml</path>
+    <path>Aircraft/daVinci_B-26B/Models/panel-plus.xml</path>
     <offsets>
       <x-m>-3.89</x-m>
       <y-m>-0.340</y-m>
@@ -26,7 +26,7 @@
   </animation>
 <!-- OLD STYLE PANEL -->
   <!--model>
-    <path>Aircraft/daVinci_B-26B/models/panel.xml</path>
+    <path>Aircraft/daVinci_B-26B/Models/panel.xml</path>
     <offsets>
       <x-m>-3.89</x-m>
       <y-m>-0.340</y-m>
@@ -35,7 +35,7 @@
   </model-->
 
   <model>
-    <path>Aircraft/daVinci_B-26B/models/cockpit.xml</path>
+    <path>Aircraft/daVinci_B-26B/Models/cockpit.xml</path>
     <offsets>
       <x-m>-3.89</x-m>
       <y-m>-0.340</y-m>
@@ -44,7 +44,7 @@
   </model>
 
   <model>
-    <path>Aircraft/daVinci_B-26B/models/ground_equipment/ground_equipment-model.xml</path>
+    <path>Aircraft/daVinci_B-26B/Models/ground_equipment/ground_equipment-model.xml</path>
   </model>
 
   <offsets>
@@ -61,7 +61,7 @@ ________________________________________________________________________________
 
   <!-- chrome -->
   <effect>
-    <inherits-from>Aircraft/daVinci_B-26B/models/effects/piston</inherits-from>
+    <inherits-from>Aircraft/daVinci_B-26B/Models/effects/piston</inherits-from>
     <object-name>gear.L.verrin</object-name>
     <object-name>gear.R.verrin</object-name>
     <object-name>noseGear.verrin</object-name>
@@ -69,7 +69,7 @@ ________________________________________________________________________________
 
   <!-- exterieur opaque -->
   <effect>
-    <inherits-from>Aircraft/daVinci_B-26B/models/effects/aircraft</inherits-from>
+    <inherits-from>Aircraft/daVinci_B-26B/Models/effects/aircraft</inherits-from>
     <object-name>BayDoorLower.L</object-name>
     <object-name>BayDoorLower.R</object-name>
     <object-name>BayDoorUpper.L</object-name>
@@ -104,7 +104,7 @@ ________________________________________________________________________________
 
   <!-- vitres exterieures -->
   <effect>
-    <inherits-from>Aircraft/daVinci_B-26B/models/effects/glass/glass</inherits-from>
+    <inherits-from>Aircraft/daVinci_B-26B/Models/effects/glass/glass</inherits-from>
     <object-name>WindowGlass.L</object-name>
     <object-name>WindowGlass.R</object-name>
     <object-name>tourelle.vitre</object-name>
@@ -800,7 +800,7 @@ ________________________________________________________________________________
                                                                            SMOKE
   -->
   <model>
-    <path>Aircraft/daVinci_B-26B/models/effects/exhaustsmoke.xml</path>
+    <path>Aircraft/daVinci_B-26B/Models/effects/exhaustsmoke.xml</path>
     <offsets>
       <x-m>-0.071</x-m>
       <y-m>-4.179</y-m>
@@ -808,7 +808,7 @@ ________________________________________________________________________________
     </offsets>
   </model>
   <model>
-    <path>Aircraft/daVinci_B-26B/models/effects/exhaustsmoke.xml</path>
+    <path>Aircraft/daVinci_B-26B/Models/effects/exhaustsmoke.xml</path>
     <offsets>
       <x-m>-0.071</x-m>
       <y-m>-2.476</y-m>
@@ -816,7 +816,7 @@ ________________________________________________________________________________
     </offsets>
   </model>
   <model>
-    <path>Aircraft/daVinci_B-26B/models/effects/exhaustsmoke.xml</path>
+    <path>Aircraft/daVinci_B-26B/Models/effects/exhaustsmoke.xml</path>
     <offsets>
       <x-m>-0.071</x-m>
       <y-m>4.179</y-m>
@@ -824,7 +824,7 @@ ________________________________________________________________________________
     </offsets>
   </model>
   <model>
-    <path>Aircraft/daVinci_B-26B/models/effects/exhaustsmoke.xml</path>
+    <path>Aircraft/daVinci_B-26B/Models/effects/exhaustsmoke.xml</path>
     <offsets>
       <x-m>-0.071</x-m>
       <y-m>2.476</y-m>
@@ -834,7 +834,7 @@ ________________________________________________________________________________
 
   <!-- contrails -->
   <model>
-    <path>Aircraft/daVinci_B-26B/models/effects/contrail.xml</path>
+    <path>Aircraft/daVinci_B-26B/Models/effects/contrail.xml</path>
     <offsets>
       <x-m>5.386</x-m>
       <y-m> 3.360</y-m>
@@ -842,7 +842,7 @@ ________________________________________________________________________________
     </offsets>
   </model>
   <model>
-    <path>Aircraft/daVinci_B-26B/models/effects/contrail.xml</path>
+    <path>Aircraft/daVinci_B-26B/Models/effects/contrail.xml</path>
     <offsets>
       <x-m>5.386</x-m>
       <y-m> -3.360</y-m>
@@ -852,7 +852,7 @@ ________________________________________________________________________________
 
   <!-- cranking effects -->
   <model>
-    <path>Aircraft/daVinci_B-26B/models/effects/cranking.xml</path>
+    <path>Aircraft/daVinci_B-26B/Models/effects/cranking.xml</path>
     <offsets>
       <x-m>-0.071</x-m>
       <y-m>-4.179</y-m>
@@ -862,7 +862,7 @@ ________________________________________________________________________________
     </offsets>
   </model>
   <model>
-    <path>Aircraft/daVinci_B-26B/models/effects/cranking.xml</path>
+    <path>Aircraft/daVinci_B-26B/Models/effects/cranking.xml</path>
     <offsets>
       <x-m>-0.071</x-m>
       <y-m>-2.476</y-m>
@@ -872,7 +872,7 @@ ________________________________________________________________________________
     </offsets>
   </model>
   <model>
-    <path>Aircraft/daVinci_B-26B/models/effects/cranking.xml</path>
+    <path>Aircraft/daVinci_B-26B/Models/effects/cranking.xml</path>
     <offsets>
       <x-m>-0.071</x-m>
       <y-m>4.179</y-m>
@@ -882,7 +882,7 @@ ________________________________________________________________________________
     </offsets>
   </model>
   <model>
-    <path>Aircraft/daVinci_B-26B/models/effects/cranking.xml</path>
+    <path>Aircraft/daVinci_B-26B/Models/effects/cranking.xml</path>
     <offsets>
       <x-m>-0.071</x-m>
       <y-m>2.476</y-m>
@@ -947,7 +947,7 @@ ________________________________________________________________________________
   <model>
     <name>pdisk</name>
     <nopreview />
-    <path>Aircraft/daVinci_B-26B/models/pdisk-left.xml</path>
+    <path>Aircraft/daVinci_B-26B/Models/pdisk-left.xml</path>
     <offsets>
       <x-m>-2.647</x-m>
       <y-m>-3.320</y-m>
@@ -997,7 +997,7 @@ ________________________________________________________________________________
   <model>
     <name>pdisk</name>
     <nopreview />
-    <path>Aircraft/daVinci_B-26B/models/pdisk-right.xml</path>
+    <path>Aircraft/daVinci_B-26B/Models/pdisk-right.xml</path>
     <offsets>
       <x-m>-2.647</x-m>
       <y-m>3.320</y-m>
@@ -2099,7 +2099,7 @@ ________________________________________________________________________________
   <!-- ~~~~~~~~~~~~~~~~~~ als lights -->
   <model>
     <name>left light</name>
-    <path>Aircraft/daVinci_B-26B/models/lights/light_nav_left.xml</path>
+    <path>Aircraft/daVinci_B-26B/Models/lights/light_nav_left.xml</path>
     <offsets>
       <x-m type="float">0.6</x-m>
       <y-m type="float">-10.65</y-m>
@@ -2108,7 +2108,7 @@ ________________________________________________________________________________
   </model>
   <model>
     <name>right light</name>
-    <path>Aircraft/daVinci_B-26B/models/lights/light_nav_right.xml</path>
+    <path>Aircraft/daVinci_B-26B/Models/lights/light_nav_right.xml</path>
     <offsets>
       <x-m type="float">0.6</x-m>
       <y-m type="float">10.65</y-m>
@@ -2117,7 +2117,7 @@ ________________________________________________________________________________
   </model>
   <model>
     <name>tail light</name>
-    <path>Aircraft/daVinci_B-26B/models/lights/light_nav_tail.xml</path>
+    <path>Aircraft/daVinci_B-26B/Models/lights/light_nav_tail.xml</path>
     <offsets>
       <x-m type="float">8.9</x-m>
       <y-m type="float">0</y-m>
@@ -2126,7 +2126,7 @@ ________________________________________________________________________________
   </model>
   <model>
     <name>strobe light top</name>
-    <path>Aircraft/daVinci_B-26B/models/lights/light_strobe.xml</path>
+    <path>Aircraft/daVinci_B-26B/Models/lights/light_strobe.xml</path>
     <offsets>
       <x-m type="float">1.44</x-m>
       <y-m type="float">0</y-m>
@@ -2135,7 +2135,7 @@ ________________________________________________________________________________
   </model>
   <model>
     <name>strobe light bottom</name>
-    <path>Aircraft/daVinci_B-26B/models/lights/light_strobe.xml</path>
+    <path>Aircraft/daVinci_B-26B/Models/lights/light_strobe.xml</path>
     <offsets>
       <x-m type="float">3.19</x-m>
       <y-m type="float">0</y-m>
@@ -2144,7 +2144,7 @@ ________________________________________________________________________________
   </model>
   <model>
     <name>anticoll light</name>
-    <path>Aircraft/daVinci_B-26B/models/lights/light_anticoll.xml</path>
+    <path>Aircraft/daVinci_B-26B/Models/lights/light_anticoll.xml</path>
     <offsets>
       <x-m type="float">-0.55</x-m>
       <y-m type="float">0</y-m>
@@ -2153,7 +2153,7 @@ ________________________________________________________________________________
   </model>
   <model>
     <name>landing-light-nose-right</name>
-    <path>Aircraft/daVinci_B-26B/models/lights/light_taxi.xml</path>
+    <path>Aircraft/daVinci_B-26B/Models/lights/light_taxi.xml</path>
     <offsets>
       <x-m type="float">-4.5</x-m>
       <y-m type="float">0.1</y-m>
@@ -2162,7 +2162,7 @@ ________________________________________________________________________________
   </model>
   <model>
     <name>landing-light-wing-left</name>
-    <path>Aircraft/daVinci_B-26B/models/lights/light_landing.xml</path>
+    <path>Aircraft/daVinci_B-26B/Models/lights/light_landing.xml</path>
     <offsets>
       <x-m type="float">-0.08</x-m>
       <y-m type="float">-6.2</y-m>
@@ -2171,7 +2171,7 @@ ________________________________________________________________________________
   </model>
   <model>
     <name>landing-light-wing-right</name>
-    <path>Aircraft/daVinci_B-26B/models/lights/light_landing.xml</path>
+    <path>Aircraft/daVinci_B-26B/Models/lights/light_landing.xml</path>
     <offsets>
       <x-m type="float">-0.08</x-m>
       <y-m type="float">6.2</y-m>
@@ -2185,7 +2185,7 @@ ________________________________________________________________________________
                                                              RAIN GROUND EFFECTS
   -->
   <model>
-    <path>Aircraft/daVinci_B-26B/models/effects/rain/rain_gear0.xml</path>
+    <path>Aircraft/daVinci_B-26B/Models/effects/rain/rain_gear0.xml</path>
     <offsets>
       <x-m type="float">-4.2</x-m>
       <y-m type="float">0</y-m>
@@ -2193,7 +2193,7 @@ ________________________________________________________________________________
     </offsets>
   </model>
   <model>
-    <path>Aircraft/daVinci_B-26B/models/effects/rain/rain_gear1.xml</path>
+    <path>Aircraft/daVinci_B-26B/Models/effects/rain/rain_gear1.xml</path>
     <offsets>
       <x-m type="float">2.8</x-m>
       <y-m type="float">-3.3</y-m>
@@ -2201,7 +2201,7 @@ ________________________________________________________________________________
     </offsets>
   </model>
   <model>
-    <path>Aircraft/daVinci_B-26B/models/effects/rain/rain_gear2.xml</path>
+    <path>Aircraft/daVinci_B-26B/Models/effects/rain/rain_gear2.xml</path>
     <offsets>
       <x-m type="float">2.8</x-m>
       <y-m type="float">3.3</y-m>
@@ -2210,7 +2210,7 @@ ________________________________________________________________________________
   </model>
 
   <model>
-    <path>Aircraft/daVinci_B-26B/models/effects/rain/rain_engine0.xml</path>
+    <path>Aircraft/daVinci_B-26B/Models/effects/rain/rain_engine0.xml</path>
     <offsets>
       <x-m type="float">-1.7</x-m>
       <y-m type="float">-3.3</y-m>
@@ -2218,7 +2218,7 @@ ________________________________________________________________________________
     </offsets>
   </model>
   <model>
-    <path>Aircraft/daVinci_B-26B/models/effects/rain/rain_engine1.xml</path>
+    <path>Aircraft/daVinci_B-26B/Models/effects/rain/rain_engine1.xml</path>
     <offsets>
       <x-m type="float">-3.5</x-m>
       <y-m type="float">3.3</y-m>

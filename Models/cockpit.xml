@@ -27,7 +27,7 @@
   <!-- cockpit elements -->
   <model>
     <name>staryoke</name>
-    <path>Aircraft/daVinci_B-26B/models/cockpit/staryoke/staryoke.xml</path>
+    <path>Aircraft/daVinci_B-26B/Models/cockpit/staryoke/staryoke.xml</path>
     <offsets>
       <x-m>-2.310</x-m>
       <y-m>0.340</y-m>
@@ -36,7 +36,7 @@
   </model>
   <model>
     <name>portyoke</name>
-    <path>Aircraft/daVinci_B-26B/models/cockpit/portyoke/portyoke.xml</path>
+    <path>Aircraft/daVinci_B-26B/Models/cockpit/portyoke/portyoke.xml</path>
     <offsets>
       <x-m>-2.310</x-m>
       <y-m>0.340</y-m>
@@ -45,7 +45,7 @@
   </model>
   <model>
     <name>pedals</name>
-    <path>Aircraft/daVinci_B-26B/models/cockpit/pedals/pedals.xml</path>
+    <path>Aircraft/daVinci_B-26B/Models/cockpit/pedals/pedals.xml</path>
     <offsets>
       <x-m>-0.175</x-m>
       <y-m>-0.090</y-m>
@@ -54,7 +54,7 @@
   </model>
   <model>
     <name>starpedals</name>
-    <path>Aircraft/daVinci_B-26B/models/cockpit/starpedals/starpedals.xml</path>
+    <path>Aircraft/daVinci_B-26B/Models/cockpit/starpedals/starpedals.xml</path>
     <offsets>
       <x-m>-0.175</x-m>
       <y-m>0.900</y-m>
@@ -63,7 +63,7 @@
   </model>
   <model>
     <name>throttleblock</name>
-    <path>Aircraft/daVinci_B-26B/models/cockpit/throttleblock/throttleblock.xml</path>
+    <path>Aircraft/daVinci_B-26B/Models/cockpit/throttleblock/throttleblock.xml</path>
     <offsets>
       <x-m>-2.310</x-m>
       <y-m>0.340</y-m>
