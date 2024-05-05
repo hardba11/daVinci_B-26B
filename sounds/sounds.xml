@@ -268,7 +268,7 @@
       </condition>
     </gear>
 
-    <flap>333 666
+    <flap>
       <name>flaps</name>
       <mode>in-transit</mode>
       <path>Aircraft/daVinci_B-26B/sounds/b26_flaps.wav</path>

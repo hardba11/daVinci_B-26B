@@ -7,8 +7,7 @@
   </sound>
 
   <!-- cockpit et instruments -->
-
-<!-- GLASS PANEL -->
+  <!-- GLASS PANEL -->
   <model>
     <path>Aircraft/daVinci_B-26B/instruments/panel-glass/panel-glass.xml</path>
   </model>
@@ -302,6 +301,12 @@ center : has to be the coords for view n=0
       <y-m>0</y-m>
       <z-m>.29</z-m>
     </offsets>
+    <condition>
+      <equals>
+        <property>/sim/current-view/view-number</property>
+        <value>0</value>
+      </equals>
+    </condition>
   </model>
   <animation>
     <type>rotate</type> <!-- left/right -->

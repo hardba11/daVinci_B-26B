@@ -61,7 +61,8 @@
     </panel>
 
     <model>
-      <path>Aircraft/daVinci_B-26B/models/daVinci_B-26B.xml</path>
+      <!--path>Aircraft/daVinci_B-26B/models/daVinci_B-26B.xml</path-->
+      <path>Aircraft/daVinci_B-26B/Models/daVinci_B-26B.xml</path>
       <crew>
         <pilot>
           <visible>false</visible>
@@ -74,6 +75,28 @@
       <ground-equipment-g type="bool">true</ground-equipment-g>
       <ground-equipment-f type="bool">true</ground-equipment-f>
       <ground-equipment-p type="bool">true</ground-equipment-p>
+
+      <!-- pour la compatibilite avec le b26 de fguk -->
+      <livery>
+       <name type="string">JM43</name>
+         <FrontFuselage>Liveries/JM43/fusefront_t.png</FrontFuselage>
+         <RearFuselage>Liveries/JM43/fuserear_t.png</RearFuselage>
+         <PortWing>Liveries/JM43/wingleft_t.png</PortWing>
+         <StarWing>Liveries/JM43/wingright_t.png</StarWing>
+         <PortNacelle>Liveries/JM43/eng0_t.png</PortNacelle>
+         <StarNacelle>Liveries/JM43/eng1_t.png</StarNacelle>
+         <Stabs>Liveries/JM43/htails_t.png</Stabs>
+      </livery>
+      <bo105>
+        <doors>
+          <door n="0">
+            <position-norm alias="/sim/model/door-positions/windows-position-norm" />
+          </door>
+          <door n="1">
+            <position-norm alias="/sim/model/door-positions/bay-position-norm" />
+          </door>
+        </doors>
+      </bo105>
     </model>
 
     <view n="0">
