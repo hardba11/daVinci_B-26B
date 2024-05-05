@@ -340,7 +340,7 @@
 
   <nasal>
     <lights>
-      <file type="string">Aircraft/daVinci_B-26B/models/lights/lights.nas</file>
+      <file type="string">Aircraft/daVinci_B-26B/Models/lights/lights.nas</file>
     </lights>
     <b26>
       <file>Aircraft/daVinci_B-26B/core/b26.nas</file>
