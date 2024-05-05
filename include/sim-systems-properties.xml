@@ -12,7 +12,7 @@
 
   <property-rule n="100">
     <name>b26-filters</name>
-    <path>models/b26-filters.xml</path>
+    <path>Models/b26-filters.xml</path>
     <serviceable type="bool">1</serviceable>
   </property-rule>
 
