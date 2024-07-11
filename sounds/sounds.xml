@@ -110,11 +110,11 @@
       </volume>
     </cough>
 
-    <starter>
-      <name>starter</name>
+    <starter_left>
+      <name>starter_left</name>
       <path>Aircraft/daVinci_B-26B/sounds/b26_engine_start.wav</path>
       <mode>looped</mode>
-      <property>/engines/engine/cranking</property>
+      <property>/engines/engine[0]/cranking</property>
       <volume>
         <property>/orientation/alpha-deg</property>
         <type>log</type>
@@ -125,7 +125,23 @@
         <factor>1.2</factor>
         <max>1.0</max>
       </volume>
-    </starter>
+    </starter_left>
+    <starter_right>
+      <name>starter_right</name>
+      <path>Aircraft/daVinci_B-26B/sounds/b26_engine_start.wav</path>
+      <mode>looped</mode>
+      <property>/engines/engine[1]/cranking</property>
+      <volume>
+        <property>/orientation/alpha-deg</property>
+        <type>log</type>
+        <min>0.4</min>
+        <max>0.8</max>
+      </volume>
+      <volume>
+        <factor>1.2</factor>
+        <max>1.0</max>
+      </volume>
+    </starter_right>
 
     <shutdown>
       <name>shutdown</name>
@@ -268,7 +284,7 @@
       </condition>
     </gear>
 
-    <flap>
+    <flaps>
       <name>flaps</name>
       <mode>in-transit</mode>
       <path>Aircraft/daVinci_B-26B/sounds/b26_flaps.wav</path>
@@ -276,7 +292,7 @@
       <volume>
         <factor>0.4</factor>
       </volume>
-    </flap>
+    </flaps>
 
 <!-- ========================================================= ENVIRONNEMENT -->
 
@@ -418,7 +434,6 @@
           <property>/gear/gear[1]/wow</property>
           <property>/gear/gear[2]/wow</property>
         </or>
-        <property>/sim/current-view/internal</property>
       </condition>
       <volume>
         <property>/gear/gear[0]/rollspeed-ms</property>
@@ -539,6 +554,16 @@
         <value>1</value>
       </volume>
     </canopy-close>
+
+
+    <baydoors>
+      <name>baydoors</name>
+      <mode>in-transit</mode>
+      <path>Aircraft/daVinci_B-26B/sounds/b26_baydoors.wav</path>
+      <property>/sim/model/door-positions/bay-position-norm</property>
+    </baydoors>
+
+
 
     <!--
     <stall>

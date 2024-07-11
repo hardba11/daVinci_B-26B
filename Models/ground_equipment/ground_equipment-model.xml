@@ -59,6 +59,8 @@
     <type>pick</type>
     <object-name>external-power-unit</object-name>
     <object-name>extincteur</object-name>
+    <object-name>cones-avant</object-name>
+    <object-name>cones-arriere-droit</object-name>
     <action>
       <button>0</button>
       <binding>
@@ -74,7 +76,6 @@
     <object-name>fuel-truck.base</object-name>
     <object-name>fuel-truck.tank</object-name>
     <object-name>cones-arriere-gauche</object-name>
-    <object-name>cone</object-name>
     <condition>
       <property>sim/model/ground-equipment-f</property>
       <less-than>
@@ -86,12 +87,24 @@
   <animation>
     <type>pick</type>
     <object-name>fuel-truck.base</object-name>
-    <object-name>cone</object-name>
+    <object-name>cones-arriere-gauche</object-name>
     <action>
       <button>0</button>
       <binding>
         <command>property-toggle</command>
         <property>sim/model/ground-equipment-f</property>
+      </binding>
+    </action>
+  </animation>
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~ control fuel quantity -->
+  <animation>
+    <type>pick</type>
+    <object-name>fuel-truck.tank</object-name>
+    <action>
+      <button>0</button>
+      <binding>
+        <command>nasal</command>
+        <script>gui.showWeightDialog()</script>
       </binding>
     </action>
   </animation>

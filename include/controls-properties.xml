@@ -8,15 +8,19 @@
   </gear>
 
   <engines>
-    <engine n="0">
-      <magnetos>1</magnetos>
-      <boost type="double">0.45</boost>
+    <engine n="0"> <!-- RIGHT -->
+      <magnetos type="int">0</magnetos>
+      <!--boost type="double">0.45</boost-->
+      <boost type="double">1</boost>
       <blower type="int">0</blower>
+      <fuel-pump type="bool">1</fuel-pump>
     </engine>
-    <engine n="1">
-      <magnetos>1</magnetos>
-      <boost type="double">0.45</boost>
+    <engine n="1"> <!-- LEFT -->
+      <magnetos type="int">0</magnetos>
+      <!--boost type="double">0.45</boost-->
+      <boost type="double">1</boost>
       <blower type="int">0</blower>
+      <fuel-pump type="bool">1</fuel-pump>
     </engine>
   </engines>
 
@@ -29,11 +33,11 @@
     <instrument-norm type="float">1.0</instrument-norm>
     <panel-norm type="float">1.0</panel-norm>
     <cabin-norm type="float">1.0</cabin-norm>
-    <nav type="bool">1</nav>
-    <pos type="bool">1</pos>
-    <strobe type="bool">1</strobe>
-    <landing type="bool">1</landing>
-    <taxi type="bool">1</taxi>
+    <nav type="bool">0</nav>
+    <pos type="bool">0</pos>
+    <strobe type="bool">0</strobe>
+    <landing type="bool">0</landing>
+    <taxi type="bool">0</taxi>
   </light>
 
   <doors>

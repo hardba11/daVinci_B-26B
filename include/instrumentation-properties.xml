@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <PropertyList>
+
   <radar>
     <range type="int">160</range>
   </radar>
+
   <my_aircraft>
 
     <target_positions>
@@ -44,7 +46,7 @@
   </my_aircraft>
 
   <attitude-indicator>
-    <horizon-offset-deg type="float">0</horizon-offset-deg>
+    <horizon-offset-deg type="float">6</horizon-offset-deg>
   </attitude-indicator>
 
 </PropertyList>

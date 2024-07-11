@@ -13,10 +13,10 @@ var colors = {
 var rayon_static = 116;
 var rayon_gauge = 100;
 
-var x_rpm_engine = 420;
-var y_rpm_engine = 700;
-var x_torque_engine = 800;
-var y_torque_engine = y_rpm_engine;
+var x_rpm_engine_r = 420;
+var y_rpm_engine_r = 700;
+var x_torque_engine_r = 800;
+var y_torque_engine_r = y_rpm_engine_r;
 
 var x_tank0 = 1050;
 var y_tank0 = 590;
@@ -27,12 +27,12 @@ var y_tank2 = y_tank0;
 var x_tank3 = x_tank0 + 240;
 var y_tank3 = y_tank0;
 
-var x_egt_engine = 600;
-var y_egt_engine = 1000;
-var x_oil_temp_engine = x_egt_engine;
-var y_oil_temp_engine = y_egt_engine + 100;
-var x_ff_engine = x_egt_engine;
-var y_ff_engine = y_egt_engine + 200;
+var x_egt_engine_r = 600;
+var y_egt_engine_r = 1000;
+var x_oil_temp_engine_r = x_egt_engine_r;
+var y_oil_temp_engine_r = y_egt_engine_r + 100;
+var x_ff_engine_r = x_egt_engine_r;
+var y_ff_engine_r = y_egt_engine_r + 200;
 
 var x_text_gears = 250;
 var y_text_gears = 1350;
@@ -53,6 +53,81 @@ var y_text_temp = y_text_qnh + 50;
 var x_text_wind = x_text_qnh;
 var y_text_wind = y_text_qnh + 100;
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var x_rpm_engine_l = 410;
+var y_rpm_engine_l = 680;
+var x_torque_engine_l = x_rpm_engine_l;
+var y_torque_engine_l = y_rpm_engine_l + 270;
+
+var x_egt_engine_l = 600;
+var y_egt_engine_l = y_rpm_engine_l + 270 + 210;
+var x_oil_temp_engine_l = x_egt_engine_l;
+var y_oil_temp_engine_l = y_egt_engine_l + 100;
+var x_ff_engine_l = x_egt_engine_l;
+var y_ff_engine_l = y_egt_engine_l + 200;
+
+
+var x_tank0 = 900;
+var y_tank0 = 590;
+var x_tank1 = x_tank0 + 80;
+var y_tank1 = y_tank0;
+var x_tank2 = x_tank0 + 160;
+var y_tank2 = y_tank0;
+var x_tank3 = x_tank0 + 240;
+var y_tank3 = y_tank0;
+
+
+var x_text_qnh = x_tank0;
+var y_text_qnh = 1000;
+var x_text_temp = x_text_qnh;
+var y_text_temp = y_text_qnh + 50;
+var x_text_wind = x_text_qnh;
+var y_text_wind = y_text_qnh + 100;
+var x_text_datetime = 900;
+var y_text_datetime = y_text_qnh + 150;
+
+
+var x_text_gears = x_tank0;
+var y_text_gears = 1350;
+var x_text_flaps = x_text_gears;
+var y_text_flaps = y_text_gears + 50;
+var x_text_doors = x_text_gears;
+var y_text_doors = y_text_gears + 100;
+var x_text_parkbrake = x_text_gears;
+var y_text_parkbrake = y_text_gears + 150;
+
+
+var x_rpm_engine_r = 1500;
+var y_rpm_engine_r = 680;
+var x_torque_engine_r = x_rpm_engine_r;
+var y_torque_engine_r = y_rpm_engine_r + 270;
+
+var x_egt_engine_r = 1690;
+var y_egt_engine_r = y_rpm_engine_r + 270 + 210;
+var x_oil_temp_engine_r = x_egt_engine_r;
+var y_oil_temp_engine_r = y_egt_engine_r + 100;
+var x_ff_engine_r = x_egt_engine_r;
+var y_ff_engine_r = y_egt_engine_r + 200;
 
 
 #===============================================================================
@@ -300,26 +375,26 @@ var BASIC_SFD = {
 # display RPM
 
         # static arc
-        m.static_rpm_engine_circle_grey = m.my_group.createChild('path', 'static_rpm_engine_circle_grey');
-        draw_circular_static_gauge(m.static_rpm_engine_circle_grey, x_rpm_engine, y_rpm_engine, rayon_static, 0, 270, 'light_grey', 3);
-        m.static_rpm_engine_circle_green = m.my_group.createChild('path', 'static_rpm_engine_circle_green');
-        draw_circular_static_gauge(m.static_rpm_engine_circle_green, x_rpm_engine, y_rpm_engine, rayon_static + 6, 90, 190, 'green', 5);
-        m.static_rpm_engine_circle_orange = m.my_group.createChild('path', 'static_rpm_engine_circle_orange');
-        draw_circular_static_gauge(m.static_rpm_engine_circle_orange, x_rpm_engine, y_rpm_engine, rayon_static + 6, 190, 240, 'yellow', 5);
-        m.static_rpm_engine_circle_red = m.my_group.createChild('path', 'static_rpm_engine_circle_red');
-        draw_circular_static_gauge(m.static_rpm_engine_circle_red, x_rpm_engine, y_rpm_engine, rayon_static + 6, 240, 270, 'red', 5);
+        m.static_rpm_engine_r_circle_grey = m.my_group.createChild('path', 'static_rpm_engine_r_circle_grey');
+        draw_circular_static_gauge(m.static_rpm_engine_r_circle_grey, x_rpm_engine_r, y_rpm_engine_r, rayon_static, 0, 270, 'light_grey', 3);
+        m.static_rpm_engine_r_circle_green = m.my_group.createChild('path', 'static_rpm_engine_r_circle_green');
+        draw_circular_static_gauge(m.static_rpm_engine_r_circle_green, x_rpm_engine_r, y_rpm_engine_r, rayon_static + 6, 90, 190, 'green', 5);
+        m.static_rpm_engine_r_circle_orange = m.my_group.createChild('path', 'static_rpm_engine_r_circle_orange');
+        draw_circular_static_gauge(m.static_rpm_engine_r_circle_orange, x_rpm_engine_r, y_rpm_engine_r, rayon_static + 6, 190, 240, 'yellow', 5);
+        m.static_rpm_engine_r_circle_red = m.my_group.createChild('path', 'static_rpm_engine_r_circle_red');
+        draw_circular_static_gauge(m.static_rpm_engine_r_circle_red, x_rpm_engine_r, y_rpm_engine_r, rayon_static + 6, 240, 270, 'red', 5);
 
         # gauge (will be updated)
-        m.rpm_engine_circle = m.my_group.createChild('path', 'rpm_engine_circle');
-        draw_circular_gauge(m.rpm_engine_circle, x_rpm_engine, y_rpm_engine, rayon_gauge, 0, 'green', 23);
+        m.rpm_engine_r_circle = m.my_group.createChild('path', 'rpm_engine_r_circle');
+        draw_circular_gauge(m.rpm_engine_r_circle, x_rpm_engine_r, y_rpm_engine_r, rayon_gauge, 0, 'green', 23);
 
         # rectangle
-        m.rpm_engine_frame = m.my_group.createChild('path', 'rpm_engine_frame');
-        draw_rectangle(m.rpm_engine_frame, x_rpm_engine + 20, y_rpm_engine - 100, 'light_grey', 160, 80);
+        m.rpm_engine_r_frame = m.my_group.createChild('path', 'rpm_engine_r_frame');
+        draw_rectangle(m.rpm_engine_r_frame, x_rpm_engine_r + 20, y_rpm_engine_r - 100, 'light_grey', 160, 80);
 
         # value (will be updated)
-        m.rpm_engine_text = m.my_group.createChild('text', 'rpm_engine_text')
-            .setTranslation(x_rpm_engine + 170, y_rpm_engine - 60)
+        m.rpm_engine_r_text = m.my_group.createChild('text', 'rpm_engine_r_text')
+            .setTranslation(x_rpm_engine_r + 170, y_rpm_engine_r - 60)
             .setAlignment('right-center')
             .setFont('LiberationFonts/LiberationSansNarrow-Bold.ttf')
             .setFontSize(50)
@@ -328,39 +403,39 @@ var BASIC_SFD = {
 
         # label
         m.rpm_label = m.my_group.createChild('text', 'rpm_label')
-            .setTranslation(x_rpm_engine, y_rpm_engine + 200)
+            .setTranslation(x_rpm_engine_r, y_rpm_engine_r + 15)
             .setAlignment('center-center')
             .setFont('LiberationFonts/LiberationSansNarrow-Bold.ttf')
-            .setFontSize(50)
+            .setFontSize(40)
             .setColor(1, 1, 1, 1)
             .setText('RPM');
 
 # display TORQUE
 
         # static arc
-        #m.static_torque_engine_circle = m.my_group.createChild('path', 'static_torque_engine_circle');
-        #draw_circular_static_gauge(m.static_torque_engine_circle, x_torque_engine, y_torque_engine, rayon_static, 0, 270, 'light_grey', 2);
+        #m.static_torque_engine_r_circle = m.my_group.createChild('path', 'static_torque_engine_r_circle');
+        #draw_circular_static_gauge(m.static_torque_engine_r_circle, x_torque_engine_r, y_torque_engine_r, rayon_static, 0, 270, 'light_grey', 2);
 
-        m.static_torque_engine_circle_grey = m.my_group.createChild('path', 'static_torque_engine_circle_grey');
-        draw_circular_static_gauge(m.static_torque_engine_circle_grey, x_torque_engine, y_torque_engine, rayon_static, 0, 270, 'light_grey', 3);
-        m.static_torque_engine_circle_green = m.my_group.createChild('path', 'static_torque_engine_circle_green');
-        draw_circular_static_gauge(m.static_torque_engine_circle_green, x_torque_engine, y_torque_engine, rayon_static + 6, 90, 190, 'green', 5);
-        m.static_torque_engine_circle_orange = m.my_group.createChild('path', 'static_torque_engine_circle_orange');
-        draw_circular_static_gauge(m.static_torque_engine_circle_orange, x_torque_engine, y_torque_engine, rayon_static + 6, 190, 240, 'yellow', 5);
-        m.static_torque_engine_circle_red = m.my_group.createChild('path', 'static_torque_engine_circle_red');
-        draw_circular_static_gauge(m.static_torque_engine_circle_red, x_torque_engine, y_torque_engine, rayon_static + 6, 240, 270, 'red', 5);
+        m.static_torque_engine_r_circle_grey = m.my_group.createChild('path', 'static_torque_engine_r_circle_grey');
+        draw_circular_static_gauge(m.static_torque_engine_r_circle_grey, x_torque_engine_r, y_torque_engine_r, rayon_static, 0, 270, 'light_grey', 3);
+        m.static_torque_engine_r_circle_green = m.my_group.createChild('path', 'static_torque_engine_r_circle_green');
+        draw_circular_static_gauge(m.static_torque_engine_r_circle_green, x_torque_engine_r, y_torque_engine_r, rayon_static + 6, 90, 190, 'green', 5);
+        m.static_torque_engine_r_circle_orange = m.my_group.createChild('path', 'static_torque_engine_r_circle_orange');
+        draw_circular_static_gauge(m.static_torque_engine_r_circle_orange, x_torque_engine_r, y_torque_engine_r, rayon_static + 6, 190, 240, 'yellow', 5);
+        m.static_torque_engine_r_circle_red = m.my_group.createChild('path', 'static_torque_engine_r_circle_red');
+        draw_circular_static_gauge(m.static_torque_engine_r_circle_red, x_torque_engine_r, y_torque_engine_r, rayon_static + 6, 240, 270, 'red', 5);
 
         # gauge (will be updated)
-        m.torque_engine_circle = m.my_group.createChild('path', 'torque_engine_circle');
-        draw_circular_gauge(m.torque_engine_circle, x_torque_engine, y_torque_engine, rayon_gauge, 0, 'green', 23);
+        m.torque_engine_r_circle = m.my_group.createChild('path', 'torque_engine_r_circle');
+        draw_circular_gauge(m.torque_engine_r_circle, x_torque_engine_r, y_torque_engine_r, rayon_gauge, 0, 'green', 23);
 
         # rectangle
-        m.torque_engine_frame = m.my_group.createChild('path', 'torque_engine_frame');
-        draw_rectangle(m.torque_engine_frame, x_torque_engine + 20, y_torque_engine - 100, 'light_grey', 160, 80);
+        m.torque_engine_r_frame = m.my_group.createChild('path', 'torque_engine_r_frame');
+        draw_rectangle(m.torque_engine_r_frame, x_torque_engine_r + 20, y_torque_engine_r - 100, 'light_grey', 160, 80);
 
         # value (will be updated)
-        m.torque_engine_text = m.my_group.createChild('text', 'torque_engine_text')
-            .setTranslation(x_torque_engine + 170, y_torque_engine - 60)
+        m.torque_engine_r_text = m.my_group.createChild('text', 'torque_engine_r_text')
+            .setTranslation(x_torque_engine_r + 170, y_torque_engine_r - 60)
             .setAlignment('right-center')
             .setFont('LiberationFonts/LiberationSansNarrow-Bold.ttf')
             .setFontSize(50)
@@ -369,35 +444,35 @@ var BASIC_SFD = {
 
         # label
         m.torque_label = m.my_group.createChild('text', 'torque_label')
-            .setTranslation(x_torque_engine, y_torque_engine + 200)
+            .setTranslation(x_torque_engine_r, y_torque_engine_r + 15)
             .setAlignment('center-center')
             .setFont('LiberationFonts/LiberationSansNarrow-Bold.ttf')
-            .setFontSize(50)
+            .setFontSize(40)
             .setColor(1, 1, 1, 1)
             .setText('TORQUE');
 
 # display egt
-        m.egt_frame = m.my_group.createChild('path', 'egt_frame');
-        draw_rectangle(m.egt_frame, x_egt_engine, y_egt_engine, 'light_grey', 30, 358);
-        m.egt_frame.setCenter(x_egt_engine, y_egt_engine).setRotation(90 * D2R);
+        m.egt_r_frame = m.my_group.createChild('path', 'egt_r_frame');
+        draw_rectangle(m.egt_r_frame, x_egt_engine_r, y_egt_engine_r, 'light_grey', 30, 358);
+        m.egt_r_frame.setCenter(x_egt_engine_r, y_egt_engine_r).setRotation(90 * D2R);
 
-        m.static_egt_green = m.my_group.createChild('path', 'static_egt_green');
-        draw_line(m.static_egt_green, x_egt_engine + 30 + 5, y_egt_engine + 358 - 100, x_egt_engine + 30 + 5, y_egt_engine + 358 - 280, 'green', 5);
-        m.static_egt_green.setCenter(x_egt_engine, y_egt_engine).setRotation(90 * D2R);
+        m.static_egt_r_green = m.my_group.createChild('path', 'static_egt_r_green');
+        draw_line(m.static_egt_r_green, x_egt_engine_r + 30 + 5, y_egt_engine_r + 358 - 100, x_egt_engine_r + 30 + 5, y_egt_engine_r + 358 - 280, 'green', 5);
+        m.static_egt_r_green.setCenter(x_egt_engine_r, y_egt_engine_r).setRotation(90 * D2R);
 
-        m.static_egt_orange = m.my_group.createChild('path', 'static_egt_orange');
-        draw_line(m.static_egt_orange, x_egt_engine + 30 + 5, y_egt_engine + 358 - 280, x_egt_engine + 30 + 5, y_egt_engine + 358 - 320, 'yellow', 5);
-        m.static_egt_orange.setCenter(x_egt_engine, y_egt_engine).setRotation(90 * D2R);
+        m.static_egt_r_orange = m.my_group.createChild('path', 'static_egt_r_orange');
+        draw_line(m.static_egt_r_orange, x_egt_engine_r + 30 + 5, y_egt_engine_r + 358 - 280, x_egt_engine_r + 30 + 5, y_egt_engine_r + 358 - 320, 'yellow', 5);
+        m.static_egt_r_orange.setCenter(x_egt_engine_r, y_egt_engine_r).setRotation(90 * D2R);
 
-        m.static_egt_red = m.my_group.createChild('path', 'static_egt_red');
-        draw_line(m.static_egt_red, x_egt_engine + 30 + 5, y_egt_engine + 358 - 320, x_egt_engine + 30 + 5, y_egt_engine + 358 - 358, 'red', 5);
-        m.static_egt_red.setCenter(x_egt_engine, y_egt_engine).setRotation(90 * D2R);
+        m.static_egt_r_red = m.my_group.createChild('path', 'static_egt_r_red');
+        draw_line(m.static_egt_r_red, x_egt_engine_r + 30 + 5, y_egt_engine_r + 358 - 320, x_egt_engine_r + 30 + 5, y_egt_engine_r + 358 - 358, 'red', 5);
+        m.static_egt_r_red.setCenter(x_egt_engine_r, y_egt_engine_r).setRotation(90 * D2R);
 
-        m.egt_gauge = m.my_group.createChild('path', 'egt_gauge');
-        draw_vertical_gauge(m.egt_gauge, x_egt_engine + 15, y_egt_engine + 358, 0, -100, 'green', 20);
-        m.egt_gauge.setCenter(x_egt_engine, y_egt_engine).setRotation(90 * D2R);
-        m.egt_engine_text = m.my_group.createChild('text', 'egt_engine_text')
-            .setTranslation(x_egt_engine + 40, y_egt_engine - 15)
+        m.egt_r_gauge = m.my_group.createChild('path', 'egt_r_gauge');
+        draw_vertical_gauge(m.egt_r_gauge, x_egt_engine_r + 15, y_egt_engine_r + 358, 0, -100, 'green', 20);
+        m.egt_r_gauge.setCenter(x_egt_engine_r, y_egt_engine_r).setRotation(90 * D2R);
+        m.egt_engine_r_text = m.my_group.createChild('text', 'egt_engine_r_text')
+            .setTranslation(x_egt_engine_r + 40, y_egt_engine_r - 15)
             .setAlignment('left-center')
             .setFont('LiberationFonts/LiberationSansNarrow-Bold.ttf')
             .setFontSize(36)
@@ -405,8 +480,8 @@ var BASIC_SFD = {
             .setText('');
 
         # label
-        m.egt_label = m.my_group.createChild('text', 'egt_label')
-            .setTranslation(x_egt_engine + 40, y_egt_engine + 15)
+        m.egt_r_label = m.my_group.createChild('text', 'egt_r_label')
+            .setTranslation(x_egt_engine_r + 40, y_egt_engine_r + 15)
             .setAlignment('left-center')
             .setFont('LiberationFonts/LiberationSansNarrow-Bold.ttf')
             .setFontSize(36)
@@ -414,27 +489,27 @@ var BASIC_SFD = {
             .setText('EGT');
 
 # display oil temp
-        m.oil_temp_frame = m.my_group.createChild('path', 'oil_temp_frame');
-        draw_rectangle(m.oil_temp_frame, x_oil_temp_engine, y_oil_temp_engine, 'light_grey', 30, 358);
-        m.oil_temp_frame.setCenter(x_oil_temp_engine, y_oil_temp_engine).setRotation(90 * D2R);
+        m.oil_temp_r_frame = m.my_group.createChild('path', 'oil_temp_r_frame');
+        draw_rectangle(m.oil_temp_r_frame, x_oil_temp_engine_r, y_oil_temp_engine_r, 'light_grey', 30, 358);
+        m.oil_temp_r_frame.setCenter(x_oil_temp_engine_r, y_oil_temp_engine_r).setRotation(90 * D2R);
 
-        m.static_oil_temp_green = m.my_group.createChild('path', 'static_oil_temp_green');
-        draw_line(m.static_oil_temp_green, x_oil_temp_engine + 30 + 5, y_oil_temp_engine + 358 - 100, x_oil_temp_engine + 30 + 5, y_oil_temp_engine + 358 - 280, 'green', 5);
-        m.static_oil_temp_green.setCenter(x_oil_temp_engine, y_oil_temp_engine).setRotation(90 * D2R);
+        m.static_oil_temp_r_green = m.my_group.createChild('path', 'static_oil_temp_r_green');
+        draw_line(m.static_oil_temp_r_green, x_oil_temp_engine_r + 30 + 5, y_oil_temp_engine_r + 358 - 100, x_oil_temp_engine_r + 30 + 5, y_oil_temp_engine_r + 358 - 280, 'green', 5);
+        m.static_oil_temp_r_green.setCenter(x_oil_temp_engine_r, y_oil_temp_engine_r).setRotation(90 * D2R);
 
-        m.static_oil_temp_orange = m.my_group.createChild('path', 'static_oil_temp_orange');
-        draw_line(m.static_oil_temp_orange, x_oil_temp_engine + 30 + 5, y_oil_temp_engine + 358 - 280, x_oil_temp_engine + 30 + 5, y_oil_temp_engine + 358 - 320, 'yellow', 5);
-        m.static_oil_temp_orange.setCenter(x_oil_temp_engine, y_oil_temp_engine).setRotation(90 * D2R);
+        m.static_oil_temp_r_orange = m.my_group.createChild('path', 'static_oil_temp_r_orange');
+        draw_line(m.static_oil_temp_r_orange, x_oil_temp_engine_r + 30 + 5, y_oil_temp_engine_r + 358 - 280, x_oil_temp_engine_r + 30 + 5, y_oil_temp_engine_r + 358 - 320, 'yellow', 5);
+        m.static_oil_temp_r_orange.setCenter(x_oil_temp_engine_r, y_oil_temp_engine_r).setRotation(90 * D2R);
 
-        m.static_oil_temp_red = m.my_group.createChild('path', 'static_oil_temp_red');
-        draw_line(m.static_oil_temp_red, x_oil_temp_engine + 30 + 5, y_oil_temp_engine + 358 - 320, x_oil_temp_engine + 30 + 5, y_oil_temp_engine + 358 - 358, 'red', 5);
-        m.static_oil_temp_red.setCenter(x_oil_temp_engine, y_oil_temp_engine).setRotation(90 * D2R);
+        m.static_oil_temp_r_red = m.my_group.createChild('path', 'static_oil_temp_r_red');
+        draw_line(m.static_oil_temp_r_red, x_oil_temp_engine_r + 30 + 5, y_oil_temp_engine_r + 358 - 320, x_oil_temp_engine_r + 30 + 5, y_oil_temp_engine_r + 358 - 358, 'red', 5);
+        m.static_oil_temp_r_red.setCenter(x_oil_temp_engine_r, y_oil_temp_engine_r).setRotation(90 * D2R);
 
-        m.oil_temp_gauge = m.my_group.createChild('path', 'oil_temp_gauge');
-        draw_horizontal_gauge(m.oil_temp_gauge, x_oil_temp_engine + 15, y_oil_temp_engine + 358, 0, -100, 'green', 20);
-        m.oil_temp_gauge.setCenter(x_oil_temp_engine, y_oil_temp_engine).setRotation(90 * D2R);
-        m.oil_temp_engine_text = m.my_group.createChild('text', 'oil_temp_engine_text')
-            .setTranslation(x_oil_temp_engine + 40, y_oil_temp_engine - 15)
+        m.oil_temp_r_gauge = m.my_group.createChild('path', 'oil_temp_r_gauge');
+        draw_horizontal_gauge(m.oil_temp_r_gauge, x_oil_temp_engine_r + 15, y_oil_temp_engine_r + 358, 0, -100, 'green', 20);
+        m.oil_temp_r_gauge.setCenter(x_oil_temp_engine_r, y_oil_temp_engine_r).setRotation(90 * D2R);
+        m.oil_temp_engine_r_text = m.my_group.createChild('text', 'oil_temp_engine_r_text')
+            .setTranslation(x_oil_temp_engine_r + 40, y_oil_temp_engine_r - 15)
             .setAlignment('left-center')
             .setFont('LiberationFonts/LiberationSansNarrow-Bold.ttf')
             .setFontSize(36)
@@ -442,8 +517,8 @@ var BASIC_SFD = {
             .setText('');
 
         # label
-        m.oil_temp_label = m.my_group.createChild('text', 'oil_temp_label')
-            .setTranslation(x_oil_temp_engine + 40, y_oil_temp_engine + 15)
+        m.oil_temp_r_label = m.my_group.createChild('text', 'oil_temp_r_label')
+            .setTranslation(x_oil_temp_engine_r + 40, y_oil_temp_engine_r + 15)
             .setAlignment('left-center')
             .setFont('LiberationFonts/LiberationSansNarrow-Bold.ttf')
             .setFontSize(36)
@@ -451,28 +526,28 @@ var BASIC_SFD = {
             .setText('OIL TEMP');
 
 # display FUEL FLOW
-        m.ff_frame = m.my_group.createChild('path', 'ff_frame');
-        draw_rectangle(m.ff_frame, x_ff_engine, y_ff_engine, 'light_grey', 30, 358);
-        m.ff_frame.setCenter(x_ff_engine, y_ff_engine).setRotation(90 * D2R);
+        m.ff_r_frame = m.my_group.createChild('path', 'ff_r_frame');
+        draw_rectangle(m.ff_r_frame, x_ff_engine_r, y_ff_engine_r, 'light_grey', 30, 358);
+        m.ff_r_frame.setCenter(x_ff_engine_r, y_ff_engine_r).setRotation(90 * D2R);
 
 
-        m.static_ff_green = m.my_group.createChild('path', 'static_ff_green');
-        draw_line(m.static_ff_green, x_ff_engine + 30 + 5, y_ff_engine + 358 - 100, x_ff_engine + 30 + 5, y_ff_engine + 358 - 280, 'green', 5);
-        m.static_ff_green.setCenter(x_ff_engine, y_ff_engine).setRotation(90 * D2R);
+        m.static_ff_r_green = m.my_group.createChild('path', 'static_ff_r_green');
+        draw_line(m.static_ff_r_green, x_ff_engine_r + 30 + 5, y_ff_engine_r + 358 - 100, x_ff_engine_r + 30 + 5, y_ff_engine_r + 358 - 280, 'green', 5);
+        m.static_ff_r_green.setCenter(x_ff_engine_r, y_ff_engine_r).setRotation(90 * D2R);
 
-        m.static_ff_orange = m.my_group.createChild('path', 'static_ff_orange');
-        draw_line(m.static_ff_orange, x_ff_engine + 30 + 5, y_ff_engine + 358 - 280, x_ff_engine + 30 + 5, y_ff_engine + 358 - 320, 'yellow', 5);
-        m.static_ff_orange.setCenter(x_ff_engine, y_ff_engine).setRotation(90 * D2R);
+        m.static_ff_r_orange = m.my_group.createChild('path', 'static_ff_r_orange');
+        draw_line(m.static_ff_r_orange, x_ff_engine_r + 30 + 5, y_ff_engine_r + 358 - 280, x_ff_engine_r + 30 + 5, y_ff_engine_r + 358 - 320, 'yellow', 5);
+        m.static_ff_r_orange.setCenter(x_ff_engine_r, y_ff_engine_r).setRotation(90 * D2R);
 
-        m.static_ff_red = m.my_group.createChild('path', 'static_ff_red');
-        draw_line(m.static_ff_red, x_ff_engine + 30 + 5, y_ff_engine + 358 - 320, x_ff_engine + 30 + 5, y_ff_engine + 358 - 358, 'red', 5);
-        m.static_ff_red.setCenter(x_ff_engine, y_ff_engine).setRotation(90 * D2R);
+        m.static_ff_r_red = m.my_group.createChild('path', 'static_ff_r_red');
+        draw_line(m.static_ff_r_red, x_ff_engine_r + 30 + 5, y_ff_engine_r + 358 - 320, x_ff_engine_r + 30 + 5, y_ff_engine_r + 358 - 358, 'red', 5);
+        m.static_ff_r_red.setCenter(x_ff_engine_r, y_ff_engine_r).setRotation(90 * D2R);
 
-        m.ff_gauge = m.my_group.createChild('path', 'ff_gauge');
-        draw_horizontal_gauge(m.ff_gauge, x_ff_engine + 15, y_ff_engine + 358, 0, -100, 'green', 20);
-        m.ff_gauge.setCenter(x_ff_engine, y_ff_engine).setRotation(90 * D2R);
-        m.ff_engine_text = m.my_group.createChild('text', 'ff_engine_text')
-            .setTranslation(x_ff_engine + 40, y_ff_engine - 15)
+        m.ff_r_gauge = m.my_group.createChild('path', 'ff_r_gauge');
+        draw_horizontal_gauge(m.ff_r_gauge, x_ff_engine_r + 15, y_ff_engine_r + 358, 0, -100, 'green', 20);
+        m.ff_r_gauge.setCenter(x_ff_engine_r, y_ff_engine_r).setRotation(90 * D2R);
+        m.ff_engine_r_text = m.my_group.createChild('text', 'ff_engine_r_text')
+            .setTranslation(x_ff_engine_r + 40, y_ff_engine_r - 15)
             .setAlignment('left-center')
             .setFont('LiberationFonts/LiberationSansNarrow-Bold.ttf')
             .setFontSize(36)
@@ -480,13 +555,205 @@ var BASIC_SFD = {
             .setText('');
 
         # label
-        m.ff_label = m.my_group.createChild('text', 'ff_label')
-            .setTranslation(x_ff_engine + 40, y_ff_engine + 15)
+        m.ff_r_label = m.my_group.createChild('text', 'ff_r_label')
+            .setTranslation(x_ff_engine_r + 40, y_ff_engine_r + 15)
             .setAlignment('left-center')
             .setFont('LiberationFonts/LiberationSansNarrow-Bold.ttf')
             .setFontSize(36)
             .setColor(1, 1, 1, 1)
             .setText('FF');
+
+# display RPM
+
+        # static arc
+        m.static_rpm_engine_l_circle_grey = m.my_group.createChild('path', 'static_rpm_engine_l_circle_grey');
+        draw_circular_static_gauge(m.static_rpm_engine_l_circle_grey, x_rpm_engine_l, y_rpm_engine_l, rayon_static, 0, 270, 'light_grey', 3);
+        m.static_rpm_engine_l_circle_green = m.my_group.createChild('path', 'static_rpm_engine_l_circle_green');
+        draw_circular_static_gauge(m.static_rpm_engine_l_circle_green, x_rpm_engine_l, y_rpm_engine_l, rayon_static + 6, 90, 190, 'green', 5);
+        m.static_rpm_engine_l_circle_orange = m.my_group.createChild('path', 'static_rpm_engine_l_circle_orange');
+        draw_circular_static_gauge(m.static_rpm_engine_l_circle_orange, x_rpm_engine_l, y_rpm_engine_l, rayon_static + 6, 190, 240, 'yellow', 5);
+        m.static_rpm_engine_l_circle_red = m.my_group.createChild('path', 'static_rpm_engine_l_circle_red');
+        draw_circular_static_gauge(m.static_rpm_engine_l_circle_red, x_rpm_engine_l, y_rpm_engine_l, rayon_static + 6, 240, 270, 'red', 5);
+
+        # gauge (will be updated)
+        m.rpm_engine_l_circle = m.my_group.createChild('path', 'rpm_engine_l_circle');
+        draw_circular_gauge(m.rpm_engine_l_circle, x_rpm_engine_l, y_rpm_engine_l, rayon_gauge, 0, 'green', 23);
+
+        # rectangle
+        m.rpm_engine_l_frame = m.my_group.createChild('path', 'rpm_engine_l_frame');
+        draw_rectangle(m.rpm_engine_l_frame, x_rpm_engine_l + 20, y_rpm_engine_l - 100, 'light_grey', 160, 80);
+
+        # value (will be updated)
+        m.rpm_engine_l_text = m.my_group.createChild('text', 'rpm_engine_l_text')
+            .setTranslation(x_rpm_engine_l + 170, y_rpm_engine_l - 60)
+            .setAlignment('right-center')
+            .setFont('LiberationFonts/LiberationSansNarrow-Bold.ttf')
+            .setFontSize(50)
+            .setColor(1, 1, 1, 1)
+            .setText('');
+
+        # label
+        m.rpm_label = m.my_group.createChild('text', 'rpm_label')
+            .setTranslation(x_rpm_engine_l, y_rpm_engine_l + 15)
+            .setAlignment('center-center')
+            .setFont('LiberationFonts/LiberationSansNarrow-Bold.ttf')
+            .setFontSize(40)
+            .setColor(1, 1, 1, 1)
+            .setText('RPM');
+
+# display TORQUE
+
+        # static arc
+        #m.static_torque_engine_l_circle = m.my_group.createChild('path', 'static_torque_engine_l_circle');
+        #draw_circular_static_gauge(m.static_torque_engine_l_circle, x_torque_engine_l, y_torque_engine_l, rayon_static, 0, 270, 'light_grey', 2);
+
+        m.static_torque_engine_l_circle_grey = m.my_group.createChild('path', 'static_torque_engine_l_circle_grey');
+        draw_circular_static_gauge(m.static_torque_engine_l_circle_grey, x_torque_engine_l, y_torque_engine_l, rayon_static, 0, 270, 'light_grey', 3);
+        m.static_torque_engine_l_circle_green = m.my_group.createChild('path', 'static_torque_engine_l_circle_green');
+        draw_circular_static_gauge(m.static_torque_engine_l_circle_green, x_torque_engine_l, y_torque_engine_l, rayon_static + 6, 90, 190, 'green', 5);
+        m.static_torque_engine_l_circle_orange = m.my_group.createChild('path', 'static_torque_engine_l_circle_orange');
+        draw_circular_static_gauge(m.static_torque_engine_l_circle_orange, x_torque_engine_l, y_torque_engine_l, rayon_static + 6, 190, 240, 'yellow', 5);
+        m.static_torque_engine_l_circle_red = m.my_group.createChild('path', 'static_torque_engine_l_circle_red');
+        draw_circular_static_gauge(m.static_torque_engine_l_circle_red, x_torque_engine_l, y_torque_engine_l, rayon_static + 6, 240, 270, 'red', 5);
+
+        # gauge (will be updated)
+        m.torque_engine_l_circle = m.my_group.createChild('path', 'torque_engine_l_circle');
+        draw_circular_gauge(m.torque_engine_l_circle, x_torque_engine_l, y_torque_engine_l, rayon_gauge, 0, 'green', 23);
+
+        # rectangle
+        m.torque_engine_l_frame = m.my_group.createChild('path', 'torque_engine_l_frame');
+        draw_rectangle(m.torque_engine_l_frame, x_torque_engine_l + 20, y_torque_engine_l - 100, 'light_grey', 160, 80);
+
+        # value (will be updated)
+        m.torque_engine_l_text = m.my_group.createChild('text', 'torque_engine_l_text')
+            .setTranslation(x_torque_engine_l + 170, y_torque_engine_l - 60)
+            .setAlignment('right-center')
+            .setFont('LiberationFonts/LiberationSansNarrow-Bold.ttf')
+            .setFontSize(50)
+            .setColor(1, 1, 1, 1)
+            .setText('');
+
+        # label
+        m.torque_label = m.my_group.createChild('text', 'torque_label')
+            .setTranslation(x_torque_engine_l, y_torque_engine_l + 15)
+            .setAlignment('center-center')
+            .setFont('LiberationFonts/LiberationSansNarrow-Bold.ttf')
+            .setFontSize(40)
+            .setColor(1, 1, 1, 1)
+            .setText('TORQUE');
+
+# display egt
+        m.egt_l_frame = m.my_group.createChild('path', 'egt_l_frame');
+        draw_rectangle(m.egt_l_frame, x_egt_engine_l, y_egt_engine_l, 'light_grey', 30, 358);
+        m.egt_l_frame.setCenter(x_egt_engine_l, y_egt_engine_l).setRotation(90 * D2R);
+
+        m.static_egt_l_green = m.my_group.createChild('path', 'static_egt_l_green');
+        draw_line(m.static_egt_l_green, x_egt_engine_l + 30 + 5, y_egt_engine_l + 358 - 100, x_egt_engine_l + 30 + 5, y_egt_engine_l + 358 - 280, 'green', 5);
+        m.static_egt_l_green.setCenter(x_egt_engine_l, y_egt_engine_l).setRotation(90 * D2R);
+
+        m.static_egt_l_orange = m.my_group.createChild('path', 'static_egt_l_orange');
+        draw_line(m.static_egt_l_orange, x_egt_engine_l + 30 + 5, y_egt_engine_l + 358 - 280, x_egt_engine_l + 30 + 5, y_egt_engine_l + 358 - 320, 'yellow', 5);
+        m.static_egt_l_orange.setCenter(x_egt_engine_l, y_egt_engine_l).setRotation(90 * D2R);
+
+        m.static_egt_l_red = m.my_group.createChild('path', 'static_egt_l_red');
+        draw_line(m.static_egt_l_red, x_egt_engine_l + 30 + 5, y_egt_engine_l + 358 - 320, x_egt_engine_l + 30 + 5, y_egt_engine_l + 358 - 358, 'red', 5);
+        m.static_egt_l_red.setCenter(x_egt_engine_l, y_egt_engine_l).setRotation(90 * D2R);
+
+        m.egt_l_gauge = m.my_group.createChild('path', 'egt_l_gauge');
+        draw_vertical_gauge(m.egt_l_gauge, x_egt_engine_l + 15, y_egt_engine_l + 358, 0, -100, 'green', 20);
+        m.egt_l_gauge.setCenter(x_egt_engine_l, y_egt_engine_l).setRotation(90 * D2R);
+        m.egt_engine_l_text = m.my_group.createChild('text', 'egt_engine_l_text')
+            .setTranslation(x_egt_engine_l + 40, y_egt_engine_l - 15)
+            .setAlignment('left-center')
+            .setFont('LiberationFonts/LiberationSansNarrow-Bold.ttf')
+            .setFontSize(36)
+            .setColor(1, 1, 1, 1)
+            .setText('');
+
+        # label
+        m.egt_l_label = m.my_group.createChild('text', 'egt_l_label')
+            .setTranslation(x_egt_engine_l + 40, y_egt_engine_l + 15)
+            .setAlignment('left-center')
+            .setFont('LiberationFonts/LiberationSansNarrow-Bold.ttf')
+            .setFontSize(36)
+            .setColor(1, 1, 1, 1)
+            .setText('EGT');
+
+# display oil temp
+        m.oil_temp_l_frame = m.my_group.createChild('path', 'oil_temp_l_frame');
+        draw_rectangle(m.oil_temp_l_frame, x_oil_temp_engine_l, y_oil_temp_engine_l, 'light_grey', 30, 358);
+        m.oil_temp_l_frame.setCenter(x_oil_temp_engine_l, y_oil_temp_engine_l).setRotation(90 * D2R);
+
+        m.static_oil_temp_l_green = m.my_group.createChild('path', 'static_oil_temp_l_green');
+        draw_line(m.static_oil_temp_l_green, x_oil_temp_engine_l + 30 + 5, y_oil_temp_engine_l + 358 - 100, x_oil_temp_engine_l + 30 + 5, y_oil_temp_engine_l + 358 - 280, 'green', 5);
+        m.static_oil_temp_l_green.setCenter(x_oil_temp_engine_l, y_oil_temp_engine_l).setRotation(90 * D2R);
+
+        m.static_oil_temp_l_orange = m.my_group.createChild('path', 'static_oil_temp_l_orange');
+        draw_line(m.static_oil_temp_l_orange, x_oil_temp_engine_l + 30 + 5, y_oil_temp_engine_l + 358 - 280, x_oil_temp_engine_l + 30 + 5, y_oil_temp_engine_l + 358 - 320, 'yellow', 5);
+        m.static_oil_temp_l_orange.setCenter(x_oil_temp_engine_l, y_oil_temp_engine_l).setRotation(90 * D2R);
+
+        m.static_oil_temp_l_red = m.my_group.createChild('path', 'static_oil_temp_l_red');
+        draw_line(m.static_oil_temp_l_red, x_oil_temp_engine_l + 30 + 5, y_oil_temp_engine_l + 358 - 320, x_oil_temp_engine_l + 30 + 5, y_oil_temp_engine_l + 358 - 358, 'red', 5);
+        m.static_oil_temp_l_red.setCenter(x_oil_temp_engine_l, y_oil_temp_engine_l).setRotation(90 * D2R);
+
+        m.oil_temp_l_gauge = m.my_group.createChild('path', 'oil_temp_l_gauge');
+        draw_horizontal_gauge(m.oil_temp_l_gauge, x_oil_temp_engine_l + 15, y_oil_temp_engine_l + 358, 0, -100, 'green', 20);
+        m.oil_temp_l_gauge.setCenter(x_oil_temp_engine_l, y_oil_temp_engine_l).setRotation(90 * D2R);
+        m.oil_temp_engine_l_text = m.my_group.createChild('text', 'oil_temp_engine_l_text')
+            .setTranslation(x_oil_temp_engine_l + 40, y_oil_temp_engine_l - 15)
+            .setAlignment('left-center')
+            .setFont('LiberationFonts/LiberationSansNarrow-Bold.ttf')
+            .setFontSize(36)
+            .setColor(1, 1, 1, 1)
+            .setText('');
+
+        # label
+        m.oil_temp_l_label = m.my_group.createChild('text', 'oil_temp_l_label')
+            .setTranslation(x_oil_temp_engine_l + 40, y_oil_temp_engine_l + 15)
+            .setAlignment('left-center')
+            .setFont('LiberationFonts/LiberationSansNarrow-Bold.ttf')
+            .setFontSize(36)
+            .setColor(1, 1, 1, 1)
+            .setText('OIL TEMP');
+
+# display FUEL FLOW
+        m.ff_l_frame = m.my_group.createChild('path', 'ff_l_frame');
+        draw_rectangle(m.ff_l_frame, x_ff_engine_l, y_ff_engine_l, 'light_grey', 30, 358);
+        m.ff_l_frame.setCenter(x_ff_engine_l, y_ff_engine_l).setRotation(90 * D2R);
+
+
+        m.static_ff_l_green = m.my_group.createChild('path', 'static_ff_l_green');
+        draw_line(m.static_ff_l_green, x_ff_engine_l + 30 + 5, y_ff_engine_l + 358 - 100, x_ff_engine_l + 30 + 5, y_ff_engine_l + 358 - 280, 'green', 5);
+        m.static_ff_l_green.setCenter(x_ff_engine_l, y_ff_engine_l).setRotation(90 * D2R);
+
+        m.static_ff_l_orange = m.my_group.createChild('path', 'static_ff_l_orange');
+        draw_line(m.static_ff_l_orange, x_ff_engine_l + 30 + 5, y_ff_engine_l + 358 - 280, x_ff_engine_l + 30 + 5, y_ff_engine_l + 358 - 320, 'yellow', 5);
+        m.static_ff_l_orange.setCenter(x_ff_engine_l, y_ff_engine_l).setRotation(90 * D2R);
+
+        m.static_ff_l_red = m.my_group.createChild('path', 'static_ff_l_red');
+        draw_line(m.static_ff_l_red, x_ff_engine_l + 30 + 5, y_ff_engine_l + 358 - 320, x_ff_engine_l + 30 + 5, y_ff_engine_l + 358 - 358, 'red', 5);
+        m.static_ff_l_red.setCenter(x_ff_engine_l, y_ff_engine_l).setRotation(90 * D2R);
+
+        m.ff_l_gauge = m.my_group.createChild('path', 'ff_l_gauge');
+        draw_horizontal_gauge(m.ff_l_gauge, x_ff_engine_l + 15, y_ff_engine_l + 358, 0, -100, 'green', 20);
+        m.ff_l_gauge.setCenter(x_ff_engine_l, y_ff_engine_l).setRotation(90 * D2R);
+        m.ff_engine_l_text = m.my_group.createChild('text', 'ff_engine_l_text')
+            .setTranslation(x_ff_engine_l + 40, y_ff_engine_l - 15)
+            .setAlignment('left-center')
+            .setFont('LiberationFonts/LiberationSansNarrow-Bold.ttf')
+            .setFontSize(36)
+            .setColor(1, 1, 1, 1)
+            .setText('');
+
+        # label
+        m.ff_l_label = m.my_group.createChild('text', 'ff_l_label')
+            .setTranslation(x_ff_engine_l + 40, y_ff_engine_l + 15)
+            .setAlignment('left-center')
+            .setFont('LiberationFonts/LiberationSansNarrow-Bold.ttf')
+            .setFontSize(36)
+            .setColor(1, 1, 1, 1)
+            .setText('FF');
+
 
 # display FUEL TANK
 
@@ -512,10 +779,10 @@ var BASIC_SFD = {
 
         # label
         m.tank_label = m.my_group.createChild('text', 'tank_label')
-            .setTranslation(x_tank1 + 25, y_tank1 + 300)
+            .setTranslation(x_tank1 + 25, y_tank1 + 250)
             .setAlignment('center-center')
             .setFont('LiberationFonts/LiberationSansNarrow-Bold.ttf')
-            .setFontSize(50)
+            .setFontSize(40)
             .setColor(1, 1, 1, 1)
             .setText('FUEL TANK');
 
@@ -592,13 +859,21 @@ var BASIC_SFD = {
     },
     update: func()
     {
-        var rpm      = getprop("/engines/engine[0]/rpm") or 0;
-        var torque   = getprop("/engines/engine[0]/torque-ftlb") or 0;
-        var ff       = getprop("/engines/engine[0]/fuel-flow-gph") or 0;
-        var egt      = getprop("/engines/engine[0]/egt-degf") or 0;
-        var oil_temp = getprop("/engines/engine[0]/oil-temperature-degf") or 0;
+        var rpm_r      = getprop("/engines/engine[0]/rpm") or 0;
+        var torque_r   = getprop("/engines/engine[0]/torque-ftlb") or 0;
+        var ff_r       = getprop("/engines/engine[0]/fuel-flow-gph") or 0;
+        var egt_r      = getprop("/engines/engine[0]/egt-degf") or 0;
+        var oil_temp_r = getprop("/engines/engine[0]/oil-temperature-degf") or 0;
 
-        var prop_pitch = getprop("/controls/engines/engine[0]/propeller-pitch") or 0;
+        var prop_pitch_r = getprop("/controls/engines/engine[0]/propeller-pitch") or 0;
+
+        var rpm_l      = getprop("/engines/engine[1]/rpm") or 0;
+        var torque_l   = getprop("/engines/engine[1]/torque-ftlb") or 0;
+        var ff_l       = getprop("/engines/engine[1]/fuel-flow-gph") or 0;
+        var egt_l      = getprop("/engines/engine[1]/egt-degf") or 0;
+        var oil_temp_l = getprop("/engines/engine[1]/oil-temperature-degf") or 0;
+
+        var prop_pitch_l = getprop("/controls/engines/engine[1]/propeller-pitch") or 0;
 
         var tank0  = getprop("/consumables/fuel/tank[0]/level-lbs") or 0;
         var tank1  = getprop("/consumables/fuel/tank[1]/level-lbs") or 0;
@@ -623,25 +898,46 @@ var BASIC_SFD = {
         var windfrom   = getprop("/environment/wind-from-heading-deg") or 0;
 
         # gauge + value rpm
-        update_circular_gauge(me.rpm_engine_circle, x_rpm_engine, y_rpm_engine, rayon_gauge, (rpm * 270 / 3200), 'green');
-        me.rpm_engine_text.setText(sprintf('%.1f', rpm));
+        update_circular_gauge(me.rpm_engine_r_circle, x_rpm_engine_r, y_rpm_engine_r, rayon_gauge, (rpm_r * 270 / 3200), 'green');
+        me.rpm_engine_r_text.setText(sprintf('%.1f', rpm_r));
 
         # gauge + value torque
-        if(torque < 0) { torque = 0; }
-        update_circular_gauge(me.torque_engine_circle, x_torque_engine, y_torque_engine, rayon_gauge, (torque * 270 / 3200), 'green');
-        me.torque_engine_text.setText(sprintf('%.1f', torque));
+        if(torque_r < 0) { torque_r = 0; }
+        update_circular_gauge(me.torque_engine_r_circle, x_torque_engine_r, y_torque_engine_r, rayon_gauge, (torque_r * 270 / 3200), 'green');
+        me.torque_engine_r_text.setText(sprintf('%.1f', torque_r));
 
         # gauge + value egt
-        update_gauge(me.egt_gauge, 0, -egt * 350 / 100, 'green');
-        me.egt_engine_text.setText(sprintf('%.1f', egt));
+        update_gauge(me.egt_r_gauge, 0, -egt_r * 350 / 100, 'green');
+        me.egt_engine_r_text.setText(sprintf('%.1f', egt_r));
 
         # gauge + value oil temp
-        update_gauge(me.oil_temp_gauge, 0, -oil_temp * 350 / 300, 'green');
-        me.oil_temp_engine_text.setText(sprintf('%.1f', oil_temp));
+        update_gauge(me.oil_temp_r_gauge, 0, -oil_temp_r * 350 / 300, 'green');
+        me.oil_temp_engine_r_text.setText(sprintf('%.1f', oil_temp_r));
 
         # gauge + value fuel flow
-        update_gauge(me.ff_gauge, 0, -ff * 350 / 350, 'green');
-        me.ff_engine_text.setText(sprintf('%.1f', ff));
+        update_gauge(me.ff_r_gauge, 0, -ff_r * 350 / 350, 'green');
+        me.ff_engine_r_text.setText(sprintf('%.1f', ff_r));
+
+        # gauge + value rpm
+        update_circular_gauge(me.rpm_engine_l_circle, x_rpm_engine_l, y_rpm_engine_l, rayon_gauge, (rpm_l * 270 / 3200), 'green');
+        me.rpm_engine_l_text.setText(sprintf('%.1f', rpm_l));
+
+        # gauge + value torque
+        if(torque_l < 0) { torque_l = 0; }
+        update_circular_gauge(me.torque_engine_l_circle, x_torque_engine_l, y_torque_engine_l, rayon_gauge, (torque_l * 270 / 3200), 'green');
+        me.torque_engine_l_text.setText(sprintf('%.1f', torque_l));
+
+        # gauge + value egt
+        update_gauge(me.egt_l_gauge, 0, -egt_l * 350 / 100, 'green');
+        me.egt_engine_l_text.setText(sprintf('%.1f', egt_l));
+
+        # gauge + value oil temp
+        update_gauge(me.oil_temp_l_gauge, 0, -oil_temp_l * 350 / 300, 'green');
+        me.oil_temp_engine_l_text.setText(sprintf('%.1f', oil_temp_l));
+
+        # gauge + value fuel flow
+        update_gauge(me.ff_l_gauge, 0, -ff_l * 350 / 350, 'green');
+        me.ff_engine_l_text.setText(sprintf('%.1f', ff_l));
 
         # gauge + value tanks
         update_gauge(me.tank0_gauge, 0, -tank0 * 200 / 630, 'green');

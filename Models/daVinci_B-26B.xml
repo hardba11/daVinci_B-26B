@@ -91,6 +91,8 @@ ________________________________________________________________________________
     <object-name>flap.R.l</object-name>
     <object-name>flap.R.r</object-name>
     <object-name>fuselage</object-name>
+    <object-name>noseGearDoor.L</object-name>
+    <object-name>noseGearDoor.R</object-name>
     <object-name>gearDoor.L.l</object-name>
     <object-name>gearDoor.L.r</object-name>
     <object-name>gearDoor.R.l</object-name>
@@ -174,7 +176,8 @@ ________________________________________________________________________________
     <object-name>btn_cabin_light</object-name>
     <object-name>btn_cutoff</object-name>
     <object-name>btn_feather</object-name>
-    <object-name>btn_fuel-pumps</object-name>
+    <object-name>btn_fuel-pump_left</object-name>
+    <object-name>btn_fuel-pump_right</object-name>
     <object-name>btn_h-prop</object-name>
     <object-name>btn_inverter</object-name>
     <object-name>btn_landing_light</object-name>
@@ -186,7 +189,8 @@ ________________________________________________________________________________
     <object-name>btn_pitot-heat</object-name>
     <object-name>btn_pos_light</object-name>
     <object-name>btn_primers</object-name>
-    <object-name>btn_starters</object-name>
+    <object-name>btn_starter_left</object-name>
+    <object-name>btn_starter_right</object-name>
     <object-name>btn_strobe</object-name>
     <object-name>btn_taxi_light</object-name>
     <object-name>cockpit.panel</object-name>
@@ -1809,6 +1813,105 @@ ________________________________________________________________________________
 
   <animation>
     <type>rotate</type>
+    <object-name>btn_magneto_left</object-name>
+    <property>/controls/engines/engine[1]/magnetos</property>
+    <factor>-30</factor>
+    <center>
+      <x-m>-3.843</x-m>
+      <y-m>-0.018</y-m>
+      <z-m>0.382</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>0</y>
+      <z>1</z>
+    </axis>
+  </animation>
+  <animation>
+    <type>rotate</type>
+    <object-name>btn_magneto_right</object-name>
+    <property>/controls/engines/engine[0]/magnetos</property>
+    <factor>30</factor>
+    <center>
+      <x-m>-3.843</x-m>
+      <y-m>0.019</y-m>
+      <z-m>0.382</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>0</y>
+      <z>1</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <object-name>btn_fuel-pump_left</object-name>
+    <property>/controls/engines/engine[1]/fuel-pump</property>
+    <type>rotate</type>
+    <factor>-45</factor>
+    <center>
+      <x-m>-3.966</x-m>
+      <y-m>0</y-m>
+      <z-m>0.373</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  <animation>
+    <type>rotate</type>
+    <object-name>btn_fuel-pump_right</object-name>
+    <property>/controls/engines/engine[0]/fuel-pump</property>
+    <factor>-45</factor>
+    <center>
+      <x-m>-3.966</x-m>
+      <y-m>0</y-m>
+      <z-m>0.373</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <object-name>btn_starter_left</object-name>
+    <property>/controls/engines/engine[1]/starter</property>
+    <type>rotate</type>
+    <factor>-45</factor>
+    <center>
+      <x-m>-3.833</x-m>
+      <y-m>0</y-m>
+      <z-m>0.376</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  <animation>
+    <type>rotate</type>
+    <object-name>btn_starter_right</object-name>
+    <property>/controls/engines/engine[0]/starter</property>
+    <factor>-45</factor>
+    <center>
+      <x-m>-3.833</x-m>
+      <y-m>0</y-m>
+      <z-m>0.376</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
     <object-name>command.trim.pitch</object-name>
     <property>/controls/flight/elevator-trim</property>
     <factor>100</factor>
@@ -1951,6 +2054,166 @@ ________________________________________________________________________________
     </hovered>
   </animation>
 
+  <animation>
+    <type>pick</type>
+    <object-name>btn_magneto_left</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-cycle</command>
+        <wrap type="bool">0</wrap>
+        <property>/controls/engines/engine[1]/magnetos</property>
+        <value>0</value>
+        <value>1</value>
+        <value>2</value>
+        <value>3</value>
+      </binding>
+    </action>
+    <action>
+      <button>1</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-cycle</command>
+        <wrap type="bool">0</wrap>
+        <property>/controls/engines/engine[1]/magnetos</property>
+        <value>3</value>
+        <value>2</value>
+        <value>1</value>
+        <value>0</value>
+      </binding>
+    </action>
+    <hovered>
+      <binding>
+        <command>set-tooltip</command>
+        <tooltip-id>tooltip-btn_magneto_left</tooltip-id>
+        <label>Left engine magnetos</label>
+      </binding>
+    </hovered>
+  </animation>
+  <animation>
+    <type>pick</type>
+    <object-name>btn_magneto_right</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-cycle</command>
+        <wrap type="bool">0</wrap>
+        <property>/controls/engines/engine[0]/magnetos</property>
+        <value>0</value>
+        <value>1</value>
+        <value>2</value>
+        <value>3</value>
+      </binding>
+    </action>
+    <action>
+      <button>1</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-cycle</command>
+        <wrap type="bool">0</wrap>
+        <property>/controls/engines/engine[0]/magnetos</property>
+        <value>3</value>
+        <value>2</value>
+        <value>1</value>
+        <value>0</value>
+      </binding>
+    </action>
+    <hovered>
+      <binding>
+        <command>set-tooltip</command>
+        <tooltip-id>tooltip-btn_magneto_right</tooltip-id>
+        <label>Right engine magnetos</label>
+      </binding>
+    </hovered>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>btn_fuel-pump_left</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/engines/engine[1]/fuel-pump</property>
+      </binding>
+    </action>
+    <hovered>
+      <binding>
+        <command>set-tooltip</command>
+        <tooltip-id>tooltip-btn_fuel-pump_left</tooltip-id>
+        <label>Left engine fuel pump</label>
+      </binding>
+    </hovered>
+  </animation>
+  <animation>
+    <type>pick</type>
+    <object-name>btn_fuel-pump_right</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/engines/engine[0]/fuel-pump</property>
+      </binding>
+    </action>
+    <hovered>
+      <binding>
+        <command>set-tooltip</command>
+        <tooltip-id>tooltip-btn_fuel-pump_right</tooltip-id>
+        <label>Right engine fuel pump</label>
+      </binding>
+    </hovered>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>btn_starter_left</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-assign</command>
+        <property>/controls/engines/engine[1]/starter</property>
+        <value type="bool">1</value>
+      </binding>
+      <mod-up>
+        <binding>
+          <command>property-assign</command>
+          <property>/controls/engines/engine[1]/starter</property>
+          <value type="bool">0</value>
+        </binding>
+      </mod-up>
+    </action>
+    <hovered>
+      <binding>
+        <command>set-tooltip</command>
+        <tooltip-id>tooltip-btn_starter_left</tooltip-id>
+        <label>Left engine start</label>
+      </binding>
+    </hovered>
+  </animation>
+  <animation>
+    <type>pick</type>
+    <object-name>btn_starter_right</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/engines/engine[0]/starter</property>
+      </binding>
+    </action>
+    <hovered>
+      <binding>
+        <command>set-tooltip</command>
+        <tooltip-id>tooltip-btn_starter_right</tooltip-id>
+        <label>Right engine start</label>
+      </binding>
+    </hovered>
+  </animation>
 
 <!--
 ________________________________________________________________________________

@@ -53,64 +53,58 @@ controls.gearDown(-1);
 
     <key n="115">
       <name>s</name>
-      <desc>Fire Starter on Selected Engine(s)</desc>
+      <desc>Start Engines</desc>
       <binding>
         <command>property-assign</command>
-        <property>/controls/switches/starter</property>
+        <property>/controls/light/nav</property>
         <value type="int">1</value>
+      </binding>
+      <binding>
+        <command>property-assign</command>
+        <property>/controls/light/cabin-norm</property>
+        <value type="int">1</value>
+      </binding>
+      <binding>
+        <command>property-assign</command>
+        <property>/controls/light/panel-norm</property>
+        <value type="int">1</value>
+      </binding>
+      <binding>
+        <command>property-assign</command>
+        <property>/controls/light/instrument-norm</property>
+        <value type="int">1</value>
+      </binding>
+      <binding>
+        <command>property-assign</command>
+        <property>/controls/light/taxi</property>
+        <value type="int">1</value>
+      </binding>
+      <binding>
+        <command>property-assign</command>
+        <property>/controls/engines/engine[0]/magnetos</property>
+        <value type="int">3</value>
+      </binding>
+      <binding>
+        <command>property-assign</command>
+        <property>/controls/engines/engine[0]/fuel-pump</property>
+        <value type="bool">1</value>
+      </binding>
+      <binding>
+        <command>property-assign</command>
+        <property>/controls/engines/engine[1]/magnetos</property>
+        <value type="int">3</value>
+      </binding>
+      <binding>
+        <command>property-assign</command>
+        <property>/controls/engines/engine[1]/fuel-pump</property>
+        <value type="bool">1</value>
       </binding>
       <binding>
         <command>nasal</command>
         <script>controls.startEngine()</script>
       </binding>
-      <mod-up>
-        <binding>
-          <command>property-assign</command>
-          <property>/controls/switches/starter</property>
-          <value type="int">0</value>
-        </binding>
-        <binding>
-          <command>nasal</command>
-          <script>props.setAll("/controls/engines/engine", "starter", 0)</script>
-        </binding>
-      </mod-up>
-    </key>
-<!--
-    <key n="83">
-      <name>S</name>
-      <desc>Toggle smoke</desc>
-      <binding>
-        <command>property-toggle</command>
-        <property>/controls/smoke</property>
-      </binding>
     </key>
 
-    <key n="102">
-      <name>f</name>
-      <desc>shift Blower down</desc>
-      <binding n="0">
-        <command>nasal</command>
-        <script>b26.shift_blower0_dn()</script>
-      </binding>
-      <binding n="1">
-        <command>nasal</command>
-        <script>b26.shift_blower1_dn()</script>
-      </binding>
-    </key>
-
-    <key n="70">
-      <name>F</name>
-      <desc>shift Blower up</desc>
-      <binding n="0">
-        <command>nasal</command>
-        <script>b26.shift_blower0_up()</script>
-      </binding>
-      <binding n="1">
-        <command>nasal</command>
-        <script>b26.shift_blower1_up()</script>
-      </binding>
-    </key>
--->
   </keyboard>
 
 </PropertyList>

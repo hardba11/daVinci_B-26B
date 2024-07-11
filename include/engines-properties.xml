@@ -3,14 +3,14 @@
 <PropertyList>
   <engine n="0">
     <running>false</running>
-    <magnetos>1</magnetos>
+    <!--magnetos>1</magnetos-->
     <!-- fake unimplemented settings -->
     <fuel-pump-psi type="double">18</fuel-pump-psi>
     <oil-pressure-psi type="double">75</oil-pressure-psi>
   </engine>
   <engine n="1">
     <running>false</running>
-    <magnetos>1</magnetos>
+    <!--magnetos>1</magnetos-->
     <!-- fake unimplemented settings -->
     <fuel-pump-psi type="double">18</fuel-pump-psi>
     <oil-pressure-psi type="double">75</oil-pressure-psi>

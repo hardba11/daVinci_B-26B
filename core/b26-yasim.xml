@@ -65,12 +65,13 @@
 
 <!-- nose gear -->
   <gear x="5.02" y="0.0" z="-2.35" compression="0.65" dfric="0.6" sfric="0.7" retract-time="0" stiction="1">
+    <!--control-input axis="/controls/flight/rudder" control="STEER" src0="-1.0" src1="1.0" dst0="-0.500" dst1="0.500" /-->
+    <!--control-speed control="STEER" transition-time="0.00" /-->
+    <control-input axis="/controls/flight/rudder" control="STEER" square="true" />
     <control-input axis="/controls/gear/brake-parking" control="BRAKE" split="true" />
-    <control-input axis="/controls/flight/rudder" control="STEER" src0="-1.0" src1="1.0" dst0="-0.500" dst1="0.500" />
     <control-input axis="/controls/gear/gear-down" control="EXTEND" />
     <control-output control="EXTEND" prop="/gear/gear[0]/position-norm" />
     <control-speed control="EXTEND" transition-time="7" />
-    <control-speed control="STEER" transition-time="0.00" />
   </gear>
 <!-- left gear -->
   <gear x="-2" y="-3.284" z="-2.55" compression="0.6" spring="0.7" damp="3.0" dfric="0.9" sfric="0.9" stiction="1">

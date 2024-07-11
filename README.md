@@ -76,6 +76,8 @@ Done
     - doors
     - instruments
 - adjust sound volume if window open/close
+- clickable instruments : magneto, starters, fuelpump
+
 
 Work In Progress
 ----------------
@@ -105,10 +107,8 @@ ToDo
     - pushback
     - choose panel old-style/glass-cockpit
     - flashlight
-- adjust sounds
-    - engine volume if interior
 - multiplay
-- new clickable instruments : avionic, battery, magneto, starters, cutoff, fuelpump
+- new clickable instruments : avionic, battery, cutoff
 
 
 

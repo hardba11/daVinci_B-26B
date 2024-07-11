@@ -78,14 +78,14 @@
 
       <!-- pour la compatibilite avec le b26 de fguk -->
       <livery>
-       <name type="string">JM43</name>
-         <FrontFuselage>Liveries/JM43/fusefront_t.png</FrontFuselage>
-         <RearFuselage>Liveries/JM43/fuserear_t.png</RearFuselage>
-         <PortWing>Liveries/JM43/wingleft_t.png</PortWing>
-         <StarWing>Liveries/JM43/wingright_t.png</StarWing>
-         <PortNacelle>Liveries/JM43/eng0_t.png</PortNacelle>
-         <StarNacelle>Liveries/JM43/eng1_t.png</StarNacelle>
-         <Stabs>Liveries/JM43/htails_t.png</Stabs>
+        <name type="string">JM43</name>
+        <FrontFuselage>Liveries/JM43/fusefront_t.png</FrontFuselage>
+        <RearFuselage>Liveries/JM43/fuserear_t.png</RearFuselage>
+        <PortWing>Liveries/JM43/wingleft_t.png</PortWing>
+        <StarWing>Liveries/JM43/wingright_t.png</StarWing>
+        <PortNacelle>Liveries/JM43/eng0_t.png</PortNacelle>
+        <StarNacelle>Liveries/JM43/eng1_t.png</StarNacelle>
+        <Stabs>Liveries/JM43/htails_t.png</Stabs>
       </livery>
       <bo105>
         <doors>
