@@ -75,6 +75,7 @@
       <ground-equipment-g type="bool">true</ground-equipment-g>
       <ground-equipment-f type="bool">true</ground-equipment-f>
       <ground-equipment-p type="bool">true</ground-equipment-p>
+      <glass-cockpit type="bool">true</glass-cockpit>
 
       <!-- pour la compatibilite avec le b26 de fguk -->
       <livery>
@@ -309,21 +310,9 @@
       <relative-strobelight-luminosity type="float">0</relative-strobelight-luminosity>
     </rendering>
 
-    <!--menubar>
-      <default>
-        <menu n="10">
-          <label>daVinci_B-26B</label>
-          <enabled type="bool">true</enabled>
-          <item>
-            <label>Select Livery</label>
-            <binding>
-              <command>nasal</command>
-              <script>aircraft.livery.dialog.toggle()</script>
-            </binding>
-          </item>
-        </menu>
-      </default>
-    </menubar-->
+    <!-- ~~~~~~~~~~~~~~~~~~ specific menu -->
+    <gui n="0" include="gui/gui-theme.xml" />
+    <menubar include="gui/specific-menu.xml" />
 
   </sim>
 
@@ -360,6 +349,10 @@
     <instrument_chrono>
       <file type="string">Aircraft/daVinci_B-26B/instruments/panel-glass/chrono.nas</file>
     </instrument_chrono>
+    <tools-assistance>
+      <file type="string">tools/assistance_to_closest_airport/assistance-b26.nas</file>
+    </tools-assistance>
+
   </nasal>
 
 </PropertyList>

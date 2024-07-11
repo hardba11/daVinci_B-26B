@@ -120,6 +120,14 @@
   <ballast x="2.2" y="0" z="0.0" mass="240" />
   <ballast x="-8.046" y="0" z="-0.278" mass="1300" />
 
+  <!-- ~~~~~~~~~~~~~~~~~~ pushback -->
+  <thruster thrust="1500"
+      x="3" y="0" z="-.3"
+      vx="1" vy="0" vz="0">
+    <control-input control="THROTTLE" axis="/sim/model/pushback/target-speed-fps"
+        src0="-1" src1="1" dst0="-1" dst1="1" />
+  </thruster>
+
   <!--
 ________________________________________________________________________________
                                                                         HACK !!!

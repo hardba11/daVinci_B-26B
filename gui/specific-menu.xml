@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+# b26 specific aircraft menu
+-->
+
+<PropertyList>
+
+  <default>
+    <menu n="101">
+      <label>B-26</label>
+
+      <item n="0">
+        <label>Options ...</label>
+        <name>options</name>
+        <binding>
+          <command>dialog-show</command>
+          <dialog-name>b26-options</dialog-name>
+        </binding>
+      </item>
+
+      <item n="1">
+        <label>Fuel ...</label>
+        <name>fuel</name>
+        <binding>
+          <command>dialog-show</command>
+          <dialog-name>b26-fuel</dialog-name>
+        </binding>
+      </item>
+
+      <item n="2">
+        <label>Equipments ...</label>
+        <name>equipments</name>
+        <binding>
+          <command>dialog-show</command>
+          <dialog-name>b26-equipments</dialog-name>
+        </binding>
+      </item>
+
+      <item n="3">
+        <label>Commands ...</label>
+        <name>commands</name>
+        <binding>
+          <command>dialog-show</command>
+          <dialog-name>b26-commands</dialog-name>
+        </binding>
+      </item>
+
+      <item n="4">
+        <label>Set views ...</label>
+        <name>set-views</name>
+        <binding>
+          <command>dialog-show</command>
+          <dialog-name>b26-set-views</dialog-name>
+        </binding>
+      </item>
+
+    </menu>
+
+  </default>
+
+</PropertyList>
+
+
+
+

@@ -4,7 +4,9 @@
 
   <path>ControlLeversAssy.ac</path>
 
-  <animation>
+
+  <effect>
+    <inherits-from>Aircraft/daVinci_B-26B/Models/effects/interior-flashlight</inherits-from>
     <object-name>PortThrottleLever</object-name>
     <object-name>PortThrottleKnob</object-name>
     <object-name>StarThrottleLever</object-name>
@@ -19,7 +21,8 @@
     <object-name>StarPitchKnob</object-name>
     <object-name>FlapLever</object-name>
     <object-name>GearLever</object-name>
-  </animation>
+    <object-name>ParkingBrakeLever</object-name>
+  </effect>
 
   <!-- gaz -->
   <animation>

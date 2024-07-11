@@ -10,6 +10,9 @@
   <!-- GLASS PANEL -->
   <model>
     <path>Aircraft/daVinci_B-26B/instruments/panel-glass/panel-glass.xml</path>
+    <condition>
+      <property>/sim/model/glass-cockpit</property>
+    </condition>
   </model>
   <model>
     <path>Aircraft/daVinci_B-26B/Models/panel-plus.xml</path>
@@ -18,21 +21,33 @@
       <y-m>-0.340</y-m>
       <z-m>0.700</z-m>
     </offsets>
+    <condition>
+      <property>/sim/model/glass-cockpit</property>
+    </condition>
   </model>
+  <!-- OLD STYLE PANEL WITH GAUGES -->
   <animation>
     <type>select</type>
     <object-name>cockpit.panel</object-name>
-    <condition><false /></condition>
+    <condition>
+      <not>
+        <property>/sim/model/glass-cockpit</property>
+      </not>
+    </condition>
   </animation>
-<!-- OLD STYLE PANEL -->
-  <!--model>
+  <model>
     <path>Aircraft/daVinci_B-26B/Models/panel.xml</path>
     <offsets>
       <x-m>-3.89</x-m>
       <y-m>-0.340</y-m>
       <z-m>0.700</z-m>
     </offsets>
-  </model-->
+    <condition>
+      <not>
+        <property>/sim/model/glass-cockpit</property>
+      </not>
+    </condition>
+  </model>
 
   <model>
     <path>Aircraft/daVinci_B-26B/Models/cockpit.xml</path>
@@ -45,6 +60,17 @@
 
   <model>
     <path>Aircraft/daVinci_B-26B/Models/ground_equipment/ground_equipment-model.xml</path>
+  </model>
+
+  <!-- ~~~~~~~~~~~~~~~~~~ pushback -->
+  <model>
+    <name>Pushback</name>
+    <path>Models/Airport/Pushback/Military.xml</path>
+    <offsets>
+     <x-m>-4.3</x-m>
+     <y-m>0</y-m>
+     <z-m>-2.25</z-m>
+    </offsets>
   </model>
 
   <offsets>
@@ -151,6 +177,94 @@ ________________________________________________________________________________
       </not>
     </condition>
   </animation>
+
+  <!-- interieur -->
+  <effect>
+    <inherits-from>Aircraft/daVinci_B-26B/Models/effects/interior-flashlight</inherits-from>
+    <object-name>c1</object-name>
+    <object-name>c1.walls</object-name>
+    <object-name>c2</object-name>
+    <object-name>c2.walls</object-name>
+    <object-name>cockpit.equipments</object-name>
+    <object-name>cockpit.housings</object-name>
+    <object-name>cockpit.side-panel</object-name>
+    <object-name>FloorAccessDoor.L</object-name>
+    <object-name>FloorAccessDoor.R</object-name>
+    <object-name>InsideFrontDoor</object-name>
+    <object-name>InsideWindowFrame.L</object-name>
+    <object-name>InsideWindowFrame.R</object-name>
+
+    <object-name>btn_alarm</object-name>
+    <object-name>btn_avionic</object-name>
+    <object-name>btn_battery</object-name>
+    <object-name>btn_cabin_light</object-name>
+    <object-name>btn_cutoff</object-name>
+    <object-name>btn_feather</object-name>
+    <object-name>btn_fuel-pump_left</object-name>
+    <object-name>btn_fuel-pump_right</object-name>
+    <object-name>btn_h-prop</object-name>
+    <object-name>btn_inverter</object-name>
+    <object-name>btn_landing_light</object-name>
+    <object-name>btn_magneto_left</object-name>
+    <object-name>btn_magneto_right</object-name>
+    <object-name>btn_nav_light</object-name>
+    <object-name>btn_oil-dilute</object-name>
+    <object-name>btn_panel_light</object-name>
+    <object-name>btn_pitot-heat</object-name>
+    <object-name>btn_pos_light</object-name>
+    <object-name>btn_primers</object-name>
+    <object-name>btn_starter_left</object-name>
+    <object-name>btn_starter_right</object-name>
+    <object-name>btn_strobe</object-name>
+    <object-name>btn_taxi_light</object-name>
+    <object-name>cockpit.panel</object-name>
+    <object-name>cockpit.parts</object-name>
+    <object-name>command.blower</object-name>
+    <object-name>command.carbu</object-name>
+    <object-name>command.cowl-flaps</object-name>
+    <object-name>command.mixture</object-name>
+    <object-name>command.oil-cooler</object-name>
+    <object-name>command.trim.pitch</object-name>
+
+    <object-name>InsideMiddleDoor.soute</object-name>
+    <object-name>InsideFrontDoor.soute</object-name>
+    <object-name>BayDoorInsideLower.L</object-name>
+    <object-name>BayDoorInsideLower.R</object-name>
+    <object-name>BayDoorInsideUpper.L</object-name>
+    <object-name>BayDoorInsideUpper.R</object-name>
+    <object-name>bielle.L.b</object-name>
+    <object-name>bielle.L.f</object-name>
+    <object-name>bielle.R.b</object-name>
+    <object-name>bielle.R.f</object-name>
+    <object-name>c3</object-name>
+    <object-name>c3.baggages</object-name>
+    <object-name>c3.canoe</object-name>
+    <object-name>c3.cloisons</object-name>
+    <object-name>c3.echelle</object-name>
+    <object-name>c3.poutre</object-name>
+    <object-name>c3.velos</object-name>
+    <object-name>c3.walls</object-name>
+
+    <object-name>InsideRearDoor</object-name>
+    <object-name>InsideMiddleDoor.chambre</object-name>
+    <object-name>c4.cloisons</object-name>
+    <object-name>c4.lits</object-name>
+    <object-name>c4.parts</object-name>
+    <object-name>c4.poutre</object-name>
+    <object-name>c4.walls</object-name>
+    <object-name>c5.cloisons</object-name>
+    <object-name>c5.equipement</object-name>
+    <object-name>c5.parts</object-name>
+    <object-name>c5.portable.ecran</object-name>
+    <object-name>c5.walls</object-name>
+    <object-name>c6.cloisons</object-name>
+    <object-name>c6.equipement</object-name>
+    <object-name>c6.equipement.gourde</object-name>
+    <object-name>c6.parts</object-name>
+    <object-name>c6.walls</object-name>
+
+  </effect>
+
 
 
 <!--

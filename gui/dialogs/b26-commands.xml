@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+# b26 commands dialogbox
+-->
+
+<PropertyList>
+
+  <name>b26-commands</name>
+  <modal type="bool">false</modal>
+  <layout>vbox</layout>
+  <group>
+    <layout>hbox</layout><empty><stretch>1</stretch></empty>
+    <text><label>B-26's commands</label></text>
+    <empty><stretch>1</stretch></empty>
+    <button><pref-width>16</pref-width><pref-height>16</pref-height><legend />
+      <default>1</default><keynum>27</keynum><border>2</border>
+      <binding><command>dialog-close</command></binding>
+      <binding><command>dialog-apply</command></binding>
+    </button>
+  </group>
+
+  <!-- ~~~~~~~~~~~~~~~~~~ doors -->
+  <hrule />
+  <group>
+    <layout>table</layout>
+    <halign>left</halign>
+    <text>
+      <row>0</row><col>1</col>
+      <label>Doors</label>
+    </text>
+
+    <checkbox>
+      <row>1</row><col>0</col>
+      <x>50</x>
+      <y>200</y>
+      <width>12</width>
+      <height>12</height>
+      <property>/controls/doors/windows</property>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/doors/windows</property>
+      </binding>
+    </checkbox>
+    <text>
+      <row>1</row><col>1</col>
+      <halign>left</halign>
+      <label>Windows and floor's doors</label>
+    </text>
+
+    <checkbox>
+      <row>2</row><col>0</col>
+      <x>50</x>
+      <y>200</y>
+      <width>12</width>
+      <height>12</height>
+      <property>/controls/doors/bay</property>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/doors/bay</property>
+      </binding>
+    </checkbox>
+    <text>
+      <row>2</row><col>1</col>
+      <halign>left</halign>
+      <label>Bay doors</label>
+    </text>
+
+    <checkbox>
+      <row>3</row><col>0</col>
+      <x>50</x>
+      <y>200</y>
+      <width>12</width>
+      <height>12</height>
+      <property>/controls/doors/door1</property>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/doors/door1</property>
+      </binding>
+    </checkbox>
+    <text>
+      <row>3</row><col>1</col>
+      <halign>left</halign>
+      <label>Interior door #1</label>
+    </text>
+
+    <checkbox>
+      <row>4</row><col>0</col>
+      <x>50</x>
+      <y>200</y>
+      <width>12</width>
+      <height>12</height>
+      <property>/controls/doors/door2</property>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/doors/door2</property>
+      </binding>
+    </checkbox>
+    <text>
+      <row>4</row><col>1</col>
+      <halign>left</halign>
+      <label>Interior door #2</label>
+    </text>
+
+    <checkbox>
+      <row>5</row><col>0</col>
+      <x>50</x>
+      <y>200</y>
+      <width>12</width>
+      <height>12</height>
+      <property>/controls/doors/door3</property>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/doors/door3</property>
+      </binding>
+    </checkbox>
+    <text>
+      <row>5</row><col>1</col>
+      <halign>left</halign>
+      <label>Interior door #3</label>
+    </text>
+
+  </group>
+
+  <!-- ~~~~~~~~~~~~~~~~~~ flashlight / spotlight -->
+  <hrule />
+  <group>
+    <layout>table</layout>
+    <halign>left</halign>
+    <text>
+      <row>0</row><col>0</col>
+      <label>Flashlight</label>
+    </text>
+    <button>
+      <row>0</row><col>1</col>
+      <legend>Off</legend>
+      <binding>
+        <command>property-assign</command>
+        <property>/sim/rendering/als-secondary-lights/use-flashlight</property>
+        <value>0</value>
+      </binding>
+    </button>
+    <button>
+      <row>0</row><col>2</col>
+      <legend>White</legend>
+      <binding>
+        <command>property-assign</command>
+        <property>/sim/rendering/als-secondary-lights/use-flashlight</property>
+        <value>1</value>
+      </binding>
+    </button>
+    <button>
+      <row>0</row><col>3</col>
+      <legend>Red</legend>
+      <binding>
+        <command>property-assign</command>
+        <property>/sim/rendering/als-secondary-lights/use-flashlight</property>
+        <value>2</value>
+      </binding>
+    </button>
+  </group>
+  <group>
+    <layout>table</layout>
+    <halign>left</halign>
+    <text>
+      <row>0</row><col>0</col>
+      <label>Searchlight</label>
+    </text>
+    <button>
+      <row>0</row><col>1</col>
+      <legend>Off</legend>
+      <binding>
+        <command>property-assign</command>
+        <property>/sim/rendering/als-secondary-lights/use-searchlight</property>
+        <value>0</value>
+      </binding>
+    </button>
+    <button>
+      <row>0</row><col>2</col>
+      <legend>On</legend>
+      <binding>
+        <command>property-assign</command>
+        <property>/sim/rendering/als-secondary-lights/use-searchlight</property>
+        <value>1</value>
+      </binding>
+    </button>
+  </group>
+
+  <!-- ~~~~~~~~~~~~~~~~~~ assistance -->
+  <hrule />
+  <group>
+    <layout>table</layout>
+    <halign>left</halign>
+    <button>
+      <row>0</row><col>0</col>
+      <legend>Need assistance !</legend>
+      <binding>
+        <command>property-assign</command>
+        <property>/controls/assistance</property>
+        <value>1</value>
+      </binding>
+    </button>
+    <button>
+      <row>0</row><col>1</col>
+      <legend>It is ok</legend>
+      <binding>
+        <command>property-assign</command>
+        <property>/controls/assistance</property>
+        <value>0</value>
+      </binding>
+    </button>
+  </group>
+
+  <!-- ~~~~~~~~~~~~~~~~~~ copilot -->
+  <hrule />
+  <group>
+    <layout>table</layout>
+    <halign>left</halign>
+    <button>
+      <row>0</row><col>0</col>
+      <legend>copilot notifs</legend>
+      <binding>
+        <command>property-assign</command>
+        <property>/controls/copilot</property>
+        <value>1</value>
+      </binding>
+    </button>
+    <button>
+      <row>0</row><col>1</col>
+      <legend>mute</legend>
+      <binding>
+        <command>property-assign</command>
+        <property>/controls/copilot</property>
+        <value>0</value>
+      </binding>
+    </button>
+  </group>
+
+  <!-- ~~~~~~~~~~~~~~~~~~ pushback -->
+  <hrule />
+  <group>
+    <layout>table</layout>
+    <halign>left</halign>
+    <text>
+      <row>0</row><col>0</col>
+      <label>Pushback</label>
+    </text>
+    <button>
+      <row>0</row><col>1</col>
+      <legend>Use</legend>
+      <binding>
+        <command>dialog-show</command>
+        <dialog-name>pushback</dialog-name>
+      </binding>
+    </button>
+  </group>
+
+</PropertyList>
+

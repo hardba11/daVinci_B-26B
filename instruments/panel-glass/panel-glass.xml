@@ -2,6 +2,25 @@
 <PropertyList>
   <path>panel-glass.ac</path>
 
+  <!-- interieur -->
+  <effect>
+    <inherits-from>Aircraft/daVinci_B-26B/Models/effects/interior-flashlight</inherits-from>
+    <object-name>commandes</object-name>
+    <object-name>simple_panel</object-name>
+    <object-name>tableau</object-name>
+    <object-name>vis</object-name>
+    <object-name>center.top_screen</object-name>
+    <object-name>center.bottom_screen</object-name>
+    <object-name>left.screen</object-name>
+    <object-name>right.screen</object-name>
+    <object-name>instrument.ai.screen</object-name>
+    <object-name>center.top_screen</object-name>
+    <object-name>center.bottom_screen</object-name>
+    <object-name>left.screen</object-name>
+    <object-name>right.screen</object-name>
+  </effect>
+
+
   <animation>
     <type>material</type>
     <object-name>commandes</object-name>

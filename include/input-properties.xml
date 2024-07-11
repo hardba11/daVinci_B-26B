@@ -4,6 +4,51 @@
 
   <keyboard>
 
+    <key n="16">
+      <name>ctrl-p</name>
+      <desc>toggle autopilot</desc>
+      <binding>
+        <command>nasal</command>
+        <script>
+          <![CDATA[
+b26.event_click_hold_autopilot();
+          ]]>
+        </script>
+      </binding>
+      <mod-shift>
+        <binding>
+          <command>nasal</command>
+          <script>
+            <![CDATA[
+b26.event_click_disengage_autopilot();
+            ]]>
+          </script>
+        </binding>
+      </mod-shift>
+    </key>
+
+    <key n="76">
+      <name>L</name>
+      <desc>toggle lights</desc>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/light/taxi</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/light/nav</property>
+      </binding>
+    </key>
+
+    <key n="108">
+      <name>l</name>
+      <desc>toggle landing lights</desc>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/light/landing</property>
+      </binding>
+    </key>
+
     <key n="100">
       <name>d</name>
       <desc>Windows</desc>
@@ -105,6 +150,259 @@ controls.gearDown(-1);
       </binding>
     </key>
 
+    <key n="53">
+      <name>keypad 5</name>
+      <desc>center aileron, elevator, rudder</desc>
+      <binding>
+        <command>nasal</command>
+        <script>
+          <![CDATA[
+b26.center_flight_controls();
+          ]]>
+        </script>
+      </binding>
+      <mod-ctrl>
+        <desc>center all trim</desc>
+        <binding>
+          <command>nasal</command>
+          <script>
+            <![CDATA[
+b26.center_flight_controls_trim();
+            ]]>
+          </script>
+        </binding>
+      </mod-ctrl>
+    </key>
+
+    <key n="359">
+      <name>elevator up</name>
+      <desc>decrease elevator or autopilot altitude</desc>
+      <repeatable type="bool">true</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>
+          <![CDATA[
+b26.inc_elevator(-0.05, 1);
+          ]]>
+        </script>
+      </binding>
+      <mod-ctrl>
+        <desc>trim up</desc>
+        <binding>
+          <command>property-adjust</command>
+          <property>/controls/flight/elevator-trim</property>
+          <step type="double">-0.0005</step>
+        </binding>
+      </mod-ctrl>
+      <mod-shift>
+        <desc>look backwards</desc>
+        <binding>
+          <command>property-assign</command>
+          <property>/sim/current-view/goal-heading-offset-deg</property>
+          <property>/sim/view/config/back-direction-deg</property>
+        </binding>
+      </mod-shift>
+    </key>
+
+    <key n="357">
+      <name>elevator down</name>
+      <desc>increase elevator or autopilot altitude</desc>
+      <repeatable type="bool">true</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>
+          <![CDATA[
+b26.inc_elevator(0.05, -1);
+          ]]>
+        </script>
+      </binding>
+      <mod-ctrl>
+        <desc>trim down</desc>
+        <binding>
+          <command>property-adjust</command>
+          <property>/controls/flight/elevator-trim</property>
+          <step type="double">0.0005</step>
+        </binding>
+      </mod-ctrl>
+      <mod-shift>
+        <desc>look forward</desc>
+        <binding>
+          <command>property-assign</command>
+          <property>/sim/current-view/goal-heading-offset-deg</property>
+          <property>/sim/view/config/front-direction-deg</property>
+        </binding>
+      </mod-shift>
+    </key>
+
+    <key n="356">
+      <name>left arrow</name>
+      <desc>move aileron left</desc>
+      <repeatable type="bool">true</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>
+          <![CDATA[
+b26.inc_aileron(-0.05, -1);
+          ]]>
+        </script>
+      </binding>
+      <mod-ctrl>
+        <desc>trim left</desc>
+        <binding>
+          <command>property-adjust</command>
+          <property>/controls/flight/aileron-trim</property>
+          <step type="double">-0.001</step>
+        </binding>
+      </mod-ctrl>
+      <mod-shift>
+        <desc>look left</desc>
+        <binding>
+          <command>property-assign</command>
+          <property>/sim/current-view/goal-heading-offset-deg</property>
+          <property>/sim/view/config/left-direction-deg</property>
+        </binding>
+      </mod-shift>
+    </key>
+
+    <key n="358">
+      <name>right arrow</name>
+      <desc>move aileron right (or adjust AP heading.)</desc>
+      <repeatable type="bool">true</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>
+          <![CDATA[
+b26.inc_aileron(0.05, 1);
+          ]]>
+        </script>
+      </binding>
+      <mod-ctrl>
+        <desc>trim right</desc>
+        <binding>
+          <command>property-adjust</command>
+          <property>/controls/flight/aileron-trim</property>
+          <step type="double">0.001</step>
+        </binding>
+      </mod-ctrl>
+      <mod-shift>
+        <desc>look right</desc>
+        <binding>
+          <command>property-assign</command>
+          <property>/sim/current-view/goal-heading-offset-deg</property>
+          <property>/sim/view/config/right-direction-deg</property>
+        </binding>
+      </mod-shift>
+    </key>
+
+    <key n="363">
+      <name>Keypad 1</name>
+      <desc>rudder left</desc>
+      <repeatable type="bool">true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>/controls/flight/rudder</property>
+        <step type="double">-0.02</step>
+      </binding>
+      <mod-ctrl>
+        <desc>trim rudder left</desc>
+        <binding>
+          <command>property-adjust</command>
+          <property>/controls/flight/rudder-trim</property>
+          <step type="double">-0.001</step>
+        </binding>
+      </mod-ctrl>
+    </key>
+
+    <key n="361">
+      <name>Keypad 3</name>
+      <desc>rudder right</desc>
+      <repeatable type="bool">true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>/controls/flight/rudder</property>
+        <step type="double">0.02</step>
+      </binding>
+      <mod-ctrl>
+        <desc>trim rudder right</desc>
+        <binding>
+          <command>property-adjust</command>
+          <property>/controls/flight/rudder-trim</property>
+          <step type="double">0.001</step>
+        </binding>
+      </mod-ctrl>
+    </key>
+
+    <key n="43">
+      <name>Keypad +</name>
+      <desc>increase throttle or autopilot speed</desc>
+      <repeatable type="bool">true</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>
+          <![CDATA[
+b26.inc_throttle(0.01, 1);
+          ]]>
+        </script>
+      </binding>
+    </key>
+
+    <key n="364">
+      <name>Keypad 0</name>
+      <desc>decrease throttle or autopilot speed</desc>
+      <repeatable type="bool">true</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>
+          <![CDATA[
+b26.inc_throttle(-0.01, -1);
+          ]]>
+        </script>
+      </binding>
+    </key>
+
+
+
   </keyboard>
+  <mice>
+  <mouse n="0">
+
+  <!--
+________________________________________________________________________________
+                                                                         BUTTONS
+  -->
+    <mode n="1"> <!-- crosshair -->
+
+      <button n="3"> <!-- scroll up adjust throttle if AP disabled, adjust speed if AP enabled -->
+        <binding>
+          <command>nasal</command>
+          <script>
+            <![CDATA[
+b26.inc_throttle(0.01, 1);
+            ]]>
+          </script>
+          <offset>0</offset>
+          <property />
+          <step />
+        </binding>
+      </button>
+
+      <button n="4"> <!-- scroll down adjust throttle if AP disabled, adjust speed if AP enabled -->
+        <binding>
+          <command>nasal</command>
+          <script>
+            <![CDATA[
+b26.inc_throttle(-0.01, -1);
+            ]]>
+          </script>
+          <offset>0</offset>
+          <property />
+          <step />
+        </binding>
+      </button>
+
+    </mode>
+
+  </mouse>
+  </mice>
 
 </PropertyList>

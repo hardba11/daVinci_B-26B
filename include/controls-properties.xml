@@ -2,6 +2,8 @@
 
 <PropertyList>
 
+  <assistance type="bool">0</assistance>
+
   <gear>
     <brake-parking type="double">1.0</brake-parking>
     <tailwheel-lock>true</tailwheel-lock>

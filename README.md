@@ -58,6 +58,8 @@ Done
 - add interior furnitures, equipments and payloads
 - add ground equipments
 - reduce texture size, remake uvmap, join and rename objects
+- add effects cockpit
+    - red flashlight
 
 **fdm**
 
@@ -77,6 +79,14 @@ Done
     - instruments
 - adjust sound volume if window open/close
 - clickable instruments : magneto, starters, fuelpump
+- shortcuts
+- menu gui
+    - views
+    - need assistance
+    - show/hide ground equipments
+    - pushback
+    - choose panel old-style/glass-cockpit
+    - flashlight
 
 
 Work In Progress
@@ -89,8 +99,6 @@ ToDo
 
 **models**
 
-- add effects cockpit
-    - red flashlight
 - add equipments and instruments in the living-room
 - add instruments
     - transponder
@@ -99,14 +107,6 @@ ToDo
 
 **UX**
 
-- shortcuts
-- menu gui
-    - views
-    - need assistance
-    - show/hide ground equipments
-    - pushback
-    - choose panel old-style/glass-cockpit
-    - flashlight
 - multiplay
 - new clickable instruments : avionic, battery, cutoff
 
