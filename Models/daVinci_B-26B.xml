@@ -2343,6 +2343,13 @@ ________________________________________________________________________________
         <command>property-toggle</command>
         <property>/controls/engines/engine[0]/starter</property>
       </binding>
+      <mod-up>
+        <binding>
+          <command>property-assign</command>
+          <property>/controls/engines/engine[0]/starter</property>
+          <value type="bool">0</value>
+        </binding>
+      </mod-up>
     </action>
     <hovered>
       <binding>

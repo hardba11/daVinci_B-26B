@@ -1,25 +1,27 @@
 <airplane mass="13000" version="YASIM_VERSION_CURRENT">
 
   <approach speed="100" aoa="10">
-    <control-setting axis="/controls/engines/engine[0]/throttle" value="0.4" />
-    <control-setting axis="/controls/engines/engine[1]/throttle" value="0.4" />
-    <control-setting axis="/controls/engines/engine[0]/mixture" value="1.0" />
-    <control-setting axis="/controls/engines/engine[1]/mixture" value="1.0" />
-    <control-setting axis="/controls/engines/engine[0]/propeller-pitch" value="0.5" />
-    <control-setting axis="/controls/engines/engine[1]/propeller-pitch" value="0.5" />
-    <control-setting axis="/controls/flight/flaps" value="1.0" />
-    <control-setting axis="/controls/gear/gear-down" value="1" />
+    <control-setting axis="/controls/engines/engine[0]/throttle"        value=".4" />
+    <control-setting axis="/controls/engines/engine[1]/throttle"        value=".4" />
+    <control-setting axis="/controls/engines/engine[0]/mixture"         value="1.0" />
+    <control-setting axis="/controls/engines/engine[1]/mixture"         value="1.0" />
+    <control-setting axis="/controls/engines/engine[0]/propeller-pitch" value=".5" />
+    <control-setting axis="/controls/engines/engine[1]/propeller-pitch" value=".5" />
+    <control-setting axis="/controls/flight/flaps"                      value="1.0" />
+    <control-setting axis="/controls/flight/speedbrake"                 value="0" />
+    <control-setting axis="/controls/gear/gear-down"                    value="1" />
   </approach>
 
   <cruise speed="300" alt="10000">
-    <control-setting axis="/controls/engines/engine[0]/throttle" value=".4" />
-    <control-setting axis="/controls/engines/engine[1]/throttle" value=".4" />
-    <control-setting axis="/controls/engines/engine[0]/mixture" value="1.0" />
-    <control-setting axis="/controls/engines/engine[1]/mixture" value="1.0" />
+    <control-setting axis="/controls/engines/engine[0]/throttle"        value=".4" />
+    <control-setting axis="/controls/engines/engine[1]/throttle"        value=".4" />
+    <control-setting axis="/controls/engines/engine[0]/mixture"         value="1.0" />
+    <control-setting axis="/controls/engines/engine[1]/mixture"         value="1.0" />
     <control-setting axis="/controls/engines/engine[0]/propeller-pitch" value="1.0" />
     <control-setting axis="/controls/engines/engine[1]/propeller-pitch" value="1.0" />
-    <control-setting axis="/controls/flight/flaps" value="0.0" />
-    <control-setting axis="/controls/gear/gear-down" value="0" />
+    <control-setting axis="/controls/flight/flaps"                      value="0" />
+    <control-setting axis="/controls/flight/speedbrake"                 value="0" />
+    <control-setting axis="/controls/gear/gear-down"                    value="0" />
   </cruise>
 
   <cockpit x="-2.78" y="0.26" z="0.95" />
@@ -31,15 +33,21 @@
 
   <wing x="-0.84" y="0.62" z="-0.18" length ="7.8" chord ="3.8" sweep="-2" dihedral="5" taper="0.3" camber="0.1">
     <stall aoa="16" width="5.8" peak="1.5" />
-    <flap0 start="0.3" end=".75" lift="1.70" drag="4.2" />
-    <flap1 start=".5" end=".92" lift="1.47" drag="1.2" />
-    <control-input axis="/controls/flight/flaps" control="FLAP0" />
-    <control-speed control="FLAP0" transition-time="6" />
-    <control-output control="FLAP0" prop="/surface-positions/flap-pos-norm" />
-    <control-input axis="/controls/flight/fdm-aileron" control="FLAP1" split="true" />
-    <control-input axis="/controls/flight/aileron-trim" control="FLAP1" split="true" />
-    <control-output control="FLAP1" side="left" prop="/surface-positions/left-aileron-pos-norm" />
-    <control-output control="FLAP1" side="right" prop="/surface-positions/right-aileron-pos-norm" />
+    <flap0 start=".5" end=".92" lift="1.47" drag="1.2" />
+    <control-input axis="/controls/flight/fdm-aileron" control="FLAP0" split="true" />
+    <control-input axis="/controls/flight/aileron-trim" control="FLAP0" split="true" />
+    <control-output control="FLAP0" side="left" prop="/surface-positions/left-aileron-pos-norm" />
+    <control-output control="FLAP0" side="right" prop="/surface-positions/right-aileron-pos-norm" />
+
+    <flap1 start="0.3" end=".75" lift="1.70" drag="4.2" />
+    <control-input axis="/controls/flight/flaps" control="FLAP1" />
+    <control-output control="FLAP1" prop="/surface-positions/flap-pos-norm" />
+    <control-speed control="FLAP1" transition-time="6" />
+
+    <spoiler start="0" end=".35" lift="1.0" drag="300" />
+    <control-input  control="SPOILER" axis="/controls/flight/speedbrake" />
+    <control-output control="SPOILER" prop="/surface-positions/speedbrake-pos-norm" />
+    <control-speed  control="SPOILER" transition-time="1" />
   </wing>
 
   <hstab x="-8.116" y="0.22" z="1.07" length ="3.05" chord ="2.1" sweep="3" dihedral="0" taper="0.55">
@@ -65,8 +73,6 @@
 
 <!-- nose gear -->
   <gear x="5.02" y="0.0" z="-2.35" compression="0.65" dfric="0.6" sfric="0.7" retract-time="0" stiction="1">
-    <!--control-input axis="/controls/flight/rudder" control="STEER" src0="-1.0" src1="1.0" dst0="-0.500" dst1="0.500" /-->
-    <!--control-speed control="STEER" transition-time="0.00" /-->
     <control-input axis="/controls/flight/rudder" control="STEER" square="true" />
     <control-input axis="/controls/gear/brake-parking" control="BRAKE" split="true" />
     <control-input axis="/controls/gear/gear-down" control="EXTEND" />

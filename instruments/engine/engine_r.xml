@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+<PropertyList>
+  <path>engine.ac</path>
+
+  <effect>
+    <inherits-from>Aircraft/daVinci_B-26B/Models/effects/interior-flashlight</inherits-from>
+    <object-name>Face</object-name>
+    <object-name>NeedleOilTemp</object-name>
+    <object-name>NeedleOilPress</object-name>
+    <object-name>NeedleFuel</object-name>
+  </effect>
+
+  <animation>
+    <type>material</type>
+    <object-name>Face</object-name>
+    <object-name>NeedleOilTemp</object-name>
+    <object-name>NeedleOilPress</object-name>
+    <object-name>NeedleFuel</object-name>
+    <emission>
+      <factor-prop>/sim/model/rendering/relative-instrument-luminosity</factor-prop>
+      <red>   0.017</red>
+      <green> 0.60 </green>
+      <blue>  0.65 </blue>
+    </emission>
+    <condition>
+      <property>/sim/model/rendering/relative-instrument-luminosity</property>
+    </condition>
+  </animation>
+  <animation>
+    <type>material</type>
+    <object-name>Face</object-name>
+    <object-name>NeedleOilTemp</object-name>
+    <object-name>NeedleOilPress</object-name>
+    <object-name>NeedleFuel</object-name>
+    <emission>
+      <factor-prop>/sim/model/rendering/relative-cabin-luminosity</factor-prop>
+      <red>.04</red>
+      <green>.14</green>
+      <blue>.14</blue>
+    </emission>
+    <condition>
+      <not><property>/sim/model/rendering/relative-instrument-luminosity</property></not>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>NeedleOilTemp</object-name>
+    <property>/engines/engine[0]/egt-degf</property>
+    <min>0</min>
+    <max>100</max>
+    <interpolation>
+      <entry><ind>0</ind><dep>-30</dep></entry>
+      <entry><ind>100</ind><dep>123</dep></entry>
+    </interpolation>
+    <center>
+      <x-m>0</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.0</z-m>
+    </center>
+    <axis>
+      <x>-1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  <animation>
+    <type>rotate</type>
+    <object-name>NeedleOilPress</object-name>
+    <property>/engines/engine[0]/oil-pressure-psi</property>
+    <min>0</min>
+    <max>200</max>
+    <interpolation>
+      <entry><ind>0</ind><dep>0</dep></entry>
+      <entry><ind>200</ind><dep>190</dep></entry>
+    </interpolation>
+    <center>
+      <x-m>0</x-m>
+      <y-m>-0.0087</y-m>
+      <z-m>-0.0116</z-m>
+    </center>
+    <axis>
+      <x>-1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  <animation>
+    <type>rotate</type>
+    <object-name>NeedleFuel</object-name>
+    <property>/engines/engine[0]/fuel-pump-psi</property>
+    <min>0</min>
+    <max>25</max>
+    <interpolation>
+      <entry><ind>0</ind><dep>0</dep></entry>
+      <entry><ind>12</ind><dep>92</dep></entry>
+      <entry><ind>25</ind><dep>180</dep></entry>
+    </interpolation>
+    <center>
+      <x-m>0</x-m>
+      <y-m>0.0087</y-m>
+      <z-m>-0.0116</z-m>
+    </center>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+</PropertyList>
+
+
+
+

@@ -36,7 +36,7 @@
   </model>
 
   <model>
-    <path>Aircraft/daVinci_B-26B/instruments/engine/engine.xml</path>
+    <path>Aircraft/daVinci_B-26B/instruments/engine/engine_l.xml</path>
     <offsets>
       <x-m>-0.106</x-m>
       <y-m>0.150 </y-m>
@@ -52,7 +52,7 @@
     </offsets>
   </model>
   <model>
-    <path>Aircraft/daVinci_B-26B/instruments/engine/engine.xml</path>
+    <path>Aircraft/daVinci_B-26B/instruments/engine/engine_r.xml</path>
     <offsets>
       <x-m>-0.106</x-m>
       <y-m>0.267</y-m>

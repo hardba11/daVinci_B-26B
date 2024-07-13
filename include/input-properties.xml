@@ -96,6 +96,38 @@ controls.gearDown(-1);
       </binding>
     </key>
 
+    <key n="106">
+      <name>j</name>
+      <desc>Retract Speedbrakes</desc>
+      <binding>
+        <command>property-cycle</command>
+        <wrap type="bool">0</wrap>
+        <property>/controls/flight/speedbrake</property>
+        <value>1.0</value>
+        <value>0.8</value>
+        <value>0.5</value>
+        <value>0.3</value>
+        <value>0.1</value>
+        <value>0.0</value>
+      </binding>
+    </key>
+    <key n="107">
+      <name>k</name>
+      <desc>Extend Speedbrakes</desc>
+      <binding>
+        <command>property-cycle</command>
+        <wrap type="bool">0</wrap>
+        <property>/controls/flight/speedbrake</property>
+        <value>0.0</value>
+        <value>0.1</value>
+        <value>0.3</value>
+        <value>0.5</value>
+        <value>0.8</value>
+        <value>1.0</value>
+      </binding>
+    </key>
+
+
     <key n="115">
       <name>s</name>
       <desc>Start Engines</desc>
