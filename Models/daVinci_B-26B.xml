@@ -112,6 +112,12 @@ ________________________________________________________________________________
     <object-name>elevon.L</object-name>
     <object-name>elevon.R</object-name>
     <object-name>engines</object-name>
+    <object-name>propeller-spinner.L</object-name>
+    <object-name>propeller.L</object-name>
+    <object-name>propeller-hub.L</object-name>
+    <object-name>propeller-spinner.R</object-name>
+    <object-name>propeller.R</object-name>
+    <object-name>propeller-hub.R</object-name>
     <object-name>flap.L.l</object-name>
     <object-name>flap.L.r</object-name>
     <object-name>flap.R.l</object-name>
@@ -128,6 +134,23 @@ ________________________________________________________________________________
     <object-name>rudder</object-name>
     <object-name>tourelle.part</object-name>
     <object-name>tourelle</object-name>
+    <object-name>noseGear.haut</object-name>
+    <object-name>noseGear.compas.haut</object-name>
+    <object-name>noseGear.compas.bas</object-name>
+    <object-name>noseGear.bas</object-name>
+    <object-name>noseGear.roues</object-name>
+    <object-name>gear.L.parts</object-name>
+    <object-name>gear.L.haut</object-name>
+    <object-name>gear.L.compas.haut</object-name>
+    <object-name>gear.L.compas.bas</object-name>
+    <object-name>gear.L.bas</object-name>
+    <object-name>gear.L.roue</object-name>
+    <object-name>gear.R.parts</object-name>
+    <object-name>gear.R.haut</object-name>
+    <object-name>gear.R.compas.haut</object-name>
+    <object-name>gear.R.compas.bas</object-name>
+    <object-name>gear.R.bas</object-name>
+    <object-name>gear.R.roue</object-name>
   </effect>
 
   <!-- vitres exterieures -->
@@ -188,6 +211,7 @@ ________________________________________________________________________________
     <object-name>cockpit.equipments</object-name>
     <object-name>cockpit.housings</object-name>
     <object-name>cockpit.side-panel</object-name>
+    <object-name>trim</object-name>
     <object-name>FloorAccessDoor.L</object-name>
     <object-name>FloorAccessDoor.R</object-name>
     <object-name>InsideFrontDoor</object-name>

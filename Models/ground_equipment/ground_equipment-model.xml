@@ -4,6 +4,18 @@
   <path>ground_equipment.ac</path>
   <nopreview />
 
+  <effect>
+    <inherits-from>Aircraft/daVinci_B-26B/Models/effects/aircraft</inherits-from>
+    <object-name>ground_equipment.gears</object-name>
+    <object-name>external-power-unit</object-name>
+    <object-name>fuel-truck.base</object-name>
+    <object-name>fuel-truck.tank</object-name>
+    <object-name>extincteur</object-name>
+    <object-name>cones-avant</object-name>
+    <object-name>cones-arriere-gauche</object-name>
+    <object-name>cones-arriere-droit</object-name>
+  </effect>
+
   <animation>
     <type>material</type>
     <object-name>ground_equipment.gears</object-name>

@@ -350,9 +350,11 @@
       <file type="string">Aircraft/daVinci_B-26B/instruments/panel-glass/chrono.nas</file>
     </instrument_chrono>
     <tools-assistance>
-      <file type="string">tools/assistance_to_closest_airport/assistance-b26.nas</file>
+      <file type="string">Aircraft/daVinci_B-26B/tools/assistance_to_closest_airport/assistance-b26.nas</file>
     </tools-assistance>
-
+    <tools-copilot>
+      <file type="string">Aircraft/daVinci_B-26B/tools/copilot/copilot-b26.nas</file>
+    </tools-copilot>
   </nasal>
 
 </PropertyList>

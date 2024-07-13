@@ -3,6 +3,7 @@
 <PropertyList>
 
   <assistance type="bool">0</assistance>
+  <copilot type="bool">1</copilot>
 
   <gear>
     <brake-parking type="double">1.0</brake-parking>
