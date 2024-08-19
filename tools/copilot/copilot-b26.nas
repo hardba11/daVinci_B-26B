@@ -425,6 +425,8 @@ var detect_semicircular_fl = func()
         (aircraft['indicated_altitude'] >= 6000)
         and
         (math.abs(aircraft['vspd']) < 500)
+        and
+        (aircraft['elevation'] >= 3000)
     ) {
         var semicircular_status = get_semicircular_status(aircraft['heading'], aircraft['indicated_altitude']);
 
@@ -580,8 +582,8 @@ var set_messages = func()
             } elsif(size(events[event]['data']) == 2) {
                 message = sprintf(events[event]['message'], events[event]['data'][0], events[event]['data'][1]);
             }
-            setprop("/sim/messages/copilot", message);
-            debug.dump(message);
+            setprop("/sim/messages/copilot", '[copilot] '~ message);
+            debug.dump('[copilot] '~ message);
             events[event]['envoie_message'] = 0;
         }
     }
@@ -615,9 +617,14 @@ var copilot_loop = func()
 var go = 0;
 
 # message de presentation
-elapsed = elapsed + 15;
+elapsed = elapsed + 12;
 settimer(func() {
-    setprop("/sim/messages/copilot", 'Hello I am your copilot. I will help you and give you some feedbacks during your flight !');
+    var is_enabled = getprop("/controls/copilot") or 0;
+    if(is_enabled == 1) {
+        setprop("/sim/messages/copilot", '[copilot] Hello, I will help you and give you some feedbacks ! To disable me : menu B-26 - Commands');
+    } else {
+        setprop("/sim/messages/copilot", '[copilot] Hello, I am disabled. To enable me : menu B-26 - Commands');
+    }
     go = 1;
 }, elapsed);
 

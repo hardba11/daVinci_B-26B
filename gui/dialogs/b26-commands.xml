@@ -19,8 +19,9 @@
     </button>
   </group>
 
-  <!-- ~~~~~~~~~~~~~~~~~~ doors -->
   <hrule />
+
+  <!-- ~~~~~~~~~~~~~~~~~~ doors -->
   <group>
     <layout>table</layout>
     <halign>left</halign>
@@ -121,8 +122,9 @@
 
   </group>
 
-  <!-- ~~~~~~~~~~~~~~~~~~ flashlight / spotlight -->
   <hrule />
+
+  <!-- ~~~~~~~~~~~~~~~~~~ flashlight / spotlight -->
   <group>
     <layout>table</layout>
     <halign>left</halign>
@@ -185,13 +187,18 @@
     </button>
   </group>
 
-  <!-- ~~~~~~~~~~~~~~~~~~ assistance -->
   <hrule />
+
+  <!-- ~~~~~~~~~~~~~~~~~~ assistance -->
   <group>
     <layout>table</layout>
     <halign>left</halign>
-    <button>
+    <text>
       <row>0</row><col>0</col>
+      <label>ATC</label>
+    </text>
+    <button>
+      <row>0</row><col>1</col>
       <legend>Need assistance !</legend>
       <binding>
         <command>property-assign</command>
@@ -200,7 +207,7 @@
       </binding>
     </button>
     <button>
-      <row>0</row><col>1</col>
+      <row>0</row><col>2</col>
       <legend>It is ok</legend>
       <binding>
         <command>property-assign</command>
@@ -210,33 +217,55 @@
     </button>
   </group>
 
-  <!-- ~~~~~~~~~~~~~~~~~~ copilot -->
   <hrule />
+
+  <!-- ~~~~~~~~~~~~~~~~~~ copilot -->
   <group>
     <layout>table</layout>
     <halign>left</halign>
-    <button>
+    <text>
       <row>0</row><col>0</col>
-      <legend>copilot notifs</legend>
+      <label>Copilot</label>
+    </text>
+    <button>
+      <row>0</row><col>1</col>
+      <legend>Notify</legend>
       <binding>
         <command>property-assign</command>
         <property>/controls/copilot</property>
         <value>1</value>
       </binding>
+      <binding>
+        <command>nasal</command>
+        <script>
+          <![CDATA[
+setprop("/sim/messages/copilot", '[copilot] Ok, I will help you and give you some feedbacks during your flight !');
+          ]]>
+        </script>
+      </binding>
     </button>
     <button>
-      <row>0</row><col>1</col>
-      <legend>mute</legend>
+      <row>0</row><col>2</col>
+      <legend>Mute</legend>
       <binding>
         <command>property-assign</command>
         <property>/controls/copilot</property>
         <value>0</value>
       </binding>
+      <binding>
+        <command>nasal</command>
+        <script>
+          <![CDATA[
+setprop("/sim/messages/copilot", '[copilot] Ok, I wont disturb you !');
+          ]]>
+        </script>
+      </binding>
     </button>
   </group>
 
-  <!-- ~~~~~~~~~~~~~~~~~~ pushback -->
   <hrule />
+
+  <!-- ~~~~~~~~~~~~~~~~~~ pushback -->
   <group>
     <layout>table</layout>
     <halign>left</halign>

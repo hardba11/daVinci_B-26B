@@ -44,10 +44,10 @@
     <control-output control="FLAP1" prop="/surface-positions/flap-pos-norm" />
     <control-speed control="FLAP1" transition-time="6" />
 
-    <spoiler start="0" end=".35" lift="1.0" drag="300" />
+    <!--spoiler start="0" end=".35" lift="1.0" drag="300" />
     <control-input  control="SPOILER" axis="/controls/flight/speedbrake" />
     <control-output control="SPOILER" prop="/surface-positions/speedbrake-pos-norm" />
-    <control-speed  control="SPOILER" transition-time="1" />
+    <control-speed  control="SPOILER" transition-time="1" /-->
   </wing>
 
   <hstab x="-8.116" y="0.22" z="1.07" length ="3.05" chord ="2.1" sweep="3" dihedral="0" taper="0.55">

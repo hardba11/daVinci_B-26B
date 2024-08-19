@@ -338,7 +338,7 @@ yasim / fdm (aircraft behaviour)
     </output>
     <feedback-if-disabled>true</feedback-if-disabled>
     <config>
-      <Kp>-2</Kp>        <!-- -1 proportional gain -->
+      <Kp>-2</Kp>          <!-- -1 proportional gain -->
       <beta>1.0</beta>     <!-- input value weighing factor -->
       <alpha>0.1</alpha>   <!-- low pass filter weighing factor -->
       <gamma>0.0</gamma>   <!-- input value weighing factor for -->
@@ -470,9 +470,9 @@ yasim / fdm (aircraft behaviour)
       <prop>/autopilot/internal/target-climb-rate-fps</prop>
     </output>
     <config>
-      <Kp>0.3</Kp>          <!-- proportional gain -->
-      <Ki>0.0</Ki>          <!-- integral gain -->
-      <u_min>-16</u_min> <!-- minimum output clamp -->
+      <Kp>0.3</Kp>        <!-- proportional gain -->
+      <Ki>0.0</Ki>        <!-- integral gain -->
+      <u_min>-16</u_min>  <!-- minimum output clamp -->
       <u_max>12</u_max>   <!-- maximum output clamp -->
     </config>
   </pi-simple-controller>

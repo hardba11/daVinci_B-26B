@@ -7,7 +7,7 @@
     <target-speed-kt type="int">300</target-speed-kt>
     <target-speed-mach type="double">0</target-speed-mach>
     <target-altitude-ft type="int">5000</target-altitude-ft>
-    <vertical-speed-fpm type="int">800</vertical-speed-fpm>
+    <vertical-speed-fpm type="int">1200</vertical-speed-fpm>
     <target-roll-deg type="double">0</target-roll-deg>
     <target-pitch-deg type="double">0</target-pitch-deg>
     <nav-source type="string">NAV1</nav-source>
