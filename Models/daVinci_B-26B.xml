@@ -289,7 +289,34 @@ ________________________________________________________________________________
 
   </effect>
 
+<!--
+________________________________________________________________________________
+                                                                         OPTIONS
+  -->
 
+  <animation>
+    <type>select</type>
+    <object-name>c3.baggages</object-name>
+    <condition>
+      <property>sim/model/equipment-baggages</property>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>c3.canoe</object-name>
+    <condition>
+      <property>sim/model/equipment-canoe</property>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>c3.velos</object-name>
+    <condition>
+      <property>sim/model/equipment-velos</property>
+    </condition>
+  </animation>
 
 <!--
 ________________________________________________________________________________

@@ -19,8 +19,9 @@
     </button>
   </group>
 
-  <!-- ~~~~~~~~~~~~~~~~~~ Cockpit -->
   <hrule />
+
+  <!-- ~~~~~~~~~~~~~~~~~~ Cockpit -->
   <group>
     <layout>table</layout>
     <halign>left</halign>
@@ -42,13 +43,76 @@
     </checkbox>
     <text>
       <row>1</row><col>1</col>
-      <halign>left</halign>
       <label>Glass cockpit</label>
     </text>
   </group>
 
-  <!-- ~~~~~~~~~~~~~~~~~~ canvas hud helper -->
   <hrule />
+
+  <!-- ~~~~~~~~~~~~~~~~~~ fret -->
+  <group>
+    <layout>table</layout>
+    <halign>left</halign>
+    <text>
+      <row>0</row><col>0</col>
+      <label>Fret</label>
+    </text>
+    <checkbox>
+      <row>1</row><col>0</col>
+      <x>150</x>
+      <y>200</y>
+      <width>12</width>
+      <height>12</height>
+      <property>/sim/model/equipment-baggages</property>
+      <binding>
+        <command>property-toggle</command>
+        <property>/sim/model/equipment-baggages</property>
+      </binding>
+    </checkbox>
+    <text>
+      <row>1</row><col>1</col>
+      <halign>left</halign>
+      <label>Boxes</label>
+    </text>
+    <checkbox>
+      <row>2</row><col>0</col>
+      <x>150</x>
+      <y>200</y>
+      <width>12</width>
+      <height>12</height>
+      <property>/sim/model/equipment-canoe</property>
+      <binding>
+        <command>property-toggle</command>
+        <property>/sim/model/equipment-canoe</property>
+      </binding>
+    </checkbox>
+    <text>
+      <row>2</row><col>1</col>
+      <halign>left</halign>
+      <label>Canoe</label>
+    </text>
+    <checkbox>
+      <row>3</row><col>0</col>
+      <x>150</x>
+      <y>200</y>
+      <width>12</width>
+      <height>12</height>
+      <property>/sim/model/equipment-velos</property>
+      <binding>
+        <command>property-toggle</command>
+        <property>/sim/model/equipment-velos</property>
+      </binding>
+    </checkbox>
+    <text>
+      <row>3</row><col>1</col>
+      <halign>left</halign>
+      <label>Bicycles</label>
+    </text>
+  </group>
+
+  <hrule />
+
+  <!-- ~~~~~~~~~~~~~~~~~~ canvas hud helper -->
   <group>
     <layout>table</layout>
     <halign>left</halign>
@@ -91,6 +155,8 @@
       <label>Show multiplayers targets (AI if unchecked)</label>
     </text>
   </group>
+
+  <hrule />
 
 </PropertyList>
 

@@ -32,7 +32,7 @@ print("*** LOADING tools - assistance-b26.nas ... ***");
 #      |  zone1      ^                 |  ^  | zone2_2           |                       |
 #      |  ENTRANCE   |                 |  |  | CROSSWIND         |                       |
 #      |  200kt      |                 |  |  | 200kt             |                       |
-#      |  2500ft     |                 |  |  | 1500ft            |                       |
+#      |  2000ft     |                 |  |  | 1500ft            |                       |
 #      |                               |     | ---->             |                       |
 # -.08 |                               | z6  +-------------------+                       |
 #      |                               |  F  |                   |                       |

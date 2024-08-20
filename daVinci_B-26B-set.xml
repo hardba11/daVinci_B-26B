@@ -76,6 +76,9 @@
       <ground-equipment-f type="bool">true</ground-equipment-f>
       <ground-equipment-p type="bool">true</ground-equipment-p>
       <glass-cockpit type="bool">true</glass-cockpit>
+      <equipment-baggages type="bool">true</equipment-baggages>
+      <equipment-canoe type="bool">true</equipment-canoe>
+      <equipment-velos type="bool">true</equipment-velos>
 
       <!-- pour la compatibilite avec le b26 de fguk -->
       <livery>
@@ -99,6 +102,22 @@
         </doors>
       </bo105>
     </model>
+
+    <!-- ~~~~~~~~~~~~~~~~~~ properties to save between sessions -->
+    <aircraft-data>
+      <path>/sim/model/glass-cockpit</path>
+      <path>/instrumentation/my_aircraft/target_positions/controls/enabled</path>
+      <path>/instrumentation/my_aircraft/target_positions/controls/targets_are_mp</path>
+      <path>/controls/copilot</path>
+      <path>/sim/model/equipment-baggages</path>
+      <path>/sim/model/equipment-canoe</path>
+      <path>/sim/model/equipment-velos</path>
+      <path>/controls/doors/windows</path>
+      <path>/controls/doors/bay</path>
+      <path>/controls/doors/door1</path>
+      <path>/controls/doors/door2</path>
+      <path>/controls/doors/door3</path>
+    </aircraft-data>
 
     <view n="0">
       <name>Nose</name>
