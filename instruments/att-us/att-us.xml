@@ -3,7 +3,7 @@
   <path>att-us.ac</path>
 
   <effect>
-    <inherits-from>Aircraft/daVinci_B-26B/Models/effects/interior-flashlight</inherits-from>
+    <inherits-from>Aircraft/daVinci_B-26B/Models/effects/interior</inherits-from>
     <object-name>Horizon</object-name>
     <object-name>Pin</object-name>
     <object-name>Wings</object-name>

@@ -203,7 +203,7 @@ ________________________________________________________________________________
 
   <!-- interieur -->
   <effect>
-    <inherits-from>Aircraft/daVinci_B-26B/Models/effects/interior-flashlight</inherits-from>
+    <inherits-from>Aircraft/daVinci_B-26B/Models/effects/interior</inherits-from>
     <object-name>c1</object-name>
     <object-name>c1.walls</object-name>
     <object-name>c2</object-name>

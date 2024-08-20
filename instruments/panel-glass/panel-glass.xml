@@ -4,7 +4,7 @@
 
   <!-- interieur -->
   <effect>
-    <inherits-from>Aircraft/daVinci_B-26B/Models/effects/interior-flashlight</inherits-from>
+    <inherits-from>Aircraft/daVinci_B-26B/Models/effects/interior</inherits-from>
     <object-name>commandes</object-name>
     <object-name>simple_panel</object-name>
     <object-name>tableau</object-name>

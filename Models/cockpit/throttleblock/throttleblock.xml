@@ -6,7 +6,7 @@
 
 
   <effect>
-    <inherits-from>Aircraft/daVinci_B-26B/Models/effects/interior-flashlight</inherits-from>
+    <inherits-from>Aircraft/daVinci_B-26B/Models/effects/interior</inherits-from>
     <object-name>PortThrottleLever</object-name>
     <object-name>PortThrottleKnob</object-name>
     <object-name>StarThrottleLever</object-name>

@@ -21,6 +21,7 @@
 
     <map>
       <controls>
+        <brightness type="float">0.4</brightness> <!-- TODO -->
         <serviceable type="bool">1</serviceable>
         <zoom_primary type="int">12</zoom_primary>
         <zoom_secondary type="int">8</zoom_secondary>
