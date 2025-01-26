@@ -13,67 +13,6 @@ var colors = {
 var rayon_static = 116;
 var rayon_gauge = 100;
 
-var x_rpm_engine_r = 420;
-var y_rpm_engine_r = 700;
-var x_torque_engine_r = 800;
-var y_torque_engine_r = y_rpm_engine_r;
-
-var x_tank0 = 1050;
-var y_tank0 = 590;
-var x_tank1 = x_tank0 + 80;
-var y_tank1 = y_tank0;
-var x_tank2 = x_tank0 + 160;
-var y_tank2 = y_tank0;
-var x_tank3 = x_tank0 + 240;
-var y_tank3 = y_tank0;
-
-var x_egt_engine_r = 600;
-var y_egt_engine_r = 1000;
-var x_oil_temp_engine_r = x_egt_engine_r;
-var y_oil_temp_engine_r = y_egt_engine_r + 100;
-var x_ff_engine_r = x_egt_engine_r;
-var y_ff_engine_r = y_egt_engine_r + 200;
-
-var x_text_gears = 250;
-var y_text_gears = 1350;
-var x_text_flaps = x_text_gears;
-var y_text_flaps = y_text_gears + 50;
-var x_text_doors = x_text_gears;
-var y_text_doors = y_text_gears + 100;
-var x_text_parkbrake = x_text_gears;
-var y_text_parkbrake = y_text_gears + 150;
-
-var x_text_datetime = 1400;
-var y_text_datetime = 600;
-
-var x_text_qnh = 1400;
-var y_text_qnh = 700;
-var x_text_temp = x_text_qnh;
-var y_text_temp = y_text_qnh + 50;
-var x_text_wind = x_text_qnh;
-var y_text_wind = y_text_qnh + 100;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 var x_rpm_engine_l = 410;
 var y_rpm_engine_l = 680;
 var x_torque_engine_l = x_rpm_engine_l;
@@ -86,7 +25,6 @@ var y_oil_temp_engine_l = y_egt_engine_l + 100;
 var x_ff_engine_l = x_egt_engine_l;
 var y_ff_engine_l = y_egt_engine_l + 200;
 
-
 var x_tank0 = 900;
 var y_tank0 = 590;
 var x_tank1 = x_tank0 + 80;
@@ -95,7 +33,6 @@ var x_tank2 = x_tank0 + 160;
 var y_tank2 = y_tank0;
 var x_tank3 = x_tank0 + 240;
 var y_tank3 = y_tank0;
-
 
 var x_text_qnh = x_tank0;
 var y_text_qnh = 1000;
@@ -108,14 +45,15 @@ var y_text_datetime = y_text_qnh + 150;
 
 
 var x_text_gears = x_tank0;
-var y_text_gears = 1350;
+var y_text_gears = 1250;
 var x_text_flaps = x_text_gears;
 var y_text_flaps = y_text_gears + 50;
-var x_text_doors = x_text_gears;
-var y_text_doors = y_text_gears + 100;
+var x_text_spdbrk = x_text_gears;
+var y_text_spdbrk = y_text_gears + 100;
 var x_text_parkbrake = x_text_gears;
 var y_text_parkbrake = y_text_gears + 150;
-
+var x_text_doors = x_text_gears;
+var y_text_doors = y_text_gears + 200;
 
 var x_rpm_engine_r = 1500;
 var y_rpm_engine_r = 680;
@@ -411,10 +349,6 @@ var BASIC_SFD = {
             .setText('RPM');
 
 # display TORQUE
-
-        # static arc
-        #m.static_torque_engine_r_circle = m.my_group.createChild('path', 'static_torque_engine_r_circle');
-        #draw_circular_static_gauge(m.static_torque_engine_r_circle, x_torque_engine_r, y_torque_engine_r, rayon_static, 0, 270, 'light_grey', 2);
 
         m.static_torque_engine_r_circle_grey = m.my_group.createChild('path', 'static_torque_engine_r_circle_grey');
         draw_circular_static_gauge(m.static_torque_engine_r_circle_grey, x_torque_engine_r, y_torque_engine_r, rayon_static, 0, 270, 'light_grey', 3);
@@ -721,7 +655,6 @@ var BASIC_SFD = {
         draw_rectangle(m.ff_l_frame, x_ff_engine_l, y_ff_engine_l, 'light_grey', 30, 358);
         m.ff_l_frame.setCenter(x_ff_engine_l, y_ff_engine_l).setRotation(90 * D2R);
 
-
         m.static_ff_l_green = m.my_group.createChild('path', 'static_ff_l_green');
         draw_line(m.static_ff_l_green, x_ff_engine_l + 30 + 5, y_ff_engine_l + 358 - 100, x_ff_engine_l + 30 + 5, y_ff_engine_l + 358 - 280, 'green', 5);
         m.static_ff_l_green.setCenter(x_ff_engine_l, y_ff_engine_l).setRotation(90 * D2R);
@@ -804,6 +737,14 @@ var BASIC_SFD = {
             .setColor(0, 1, 0, 1)
             .setText('FLAPS : 0%');
 
+        # spdbrk
+        m.text_spdbrk = m.my_group.createChild('text', 'text_spdbrk')
+            .setTranslation(x_text_spdbrk, y_text_spdbrk)
+            .setFont('LiberationFonts/LiberationSansNarrow-Bold.ttf')
+            .setFontSize(36)
+            .setColor(0, 1, 0, 1)
+            .setText('SPDBRK : 0%');
+
         # doors
         m.text_doors = m.my_group.createChild('text', 'text_doors')
             .setTranslation(x_text_doors, y_text_doors)
@@ -882,6 +823,7 @@ var BASIC_SFD = {
 
         var gears      = getprop("/controls/gear/gear-down") or 0;
         var flaps      = getprop("/controls/flight/flaps") or 0;
+        var spdbrk      = getprop("/controls/flight/speedbrake") or 0;
         var door_bay  = getprop("/sim/model/door-positions/bay-position-norm") or 0;
         var door_1    = getprop("/sim/model/door-positions/door1-position-norm") or 0;
         var door_2    = getprop("/sim/model/door-positions/door2-position-norm") or 0;
@@ -907,7 +849,7 @@ var BASIC_SFD = {
         me.torque_engine_r_text.setText(sprintf('%.1f', torque_r));
 
         # gauge + value egt
-        update_gauge(me.egt_r_gauge, 0, -egt_r * 350 / 100, 'green');
+        update_gauge(me.egt_r_gauge, 0, -egt_r * 150 / 100, 'green');
         me.egt_engine_r_text.setText(sprintf('%.1f', egt_r));
 
         # gauge + value oil temp
@@ -928,7 +870,7 @@ var BASIC_SFD = {
         me.torque_engine_l_text.setText(sprintf('%.1f', torque_l));
 
         # gauge + value egt
-        update_gauge(me.egt_l_gauge, 0, -egt_l * 350 / 100, 'green');
+        update_gauge(me.egt_l_gauge, 0, -egt_l * 150 / 100, 'green');
         me.egt_engine_l_text.setText(sprintf('%.1f', egt_l));
 
         # gauge + value oil temp
@@ -954,7 +896,7 @@ var BASIC_SFD = {
             me.text_gears.setText('GEARS : up').setColor(0, 1, 0, 1);
         }
 
-        if(flaps > 0.1)
+        if(flaps > 0.01)
         {
             me.text_flaps.setText(sprintf('FLAPS : %d%%', flaps * 100)).setColor(1, 1, 0, 1);
         }
@@ -963,13 +905,22 @@ var BASIC_SFD = {
             me.text_flaps.setText('FLAPS : retracted').setColor(0, 1, 0, 1);
         }
 
+        if(spdbrk > 0.01)
+        {
+            me.text_spdbrk.setText(sprintf('SPDBRK : %d%%', spdbrk * 100)).setColor(1, 1, 0, 1);
+        }
+        else
+        {
+            me.text_spdbrk.setText('SPDBRK : retracted').setColor(0, 1, 0, 1);
+        }
+
         if((door_bay + door_1 + door_2 + door_3) > 0.1)
         {
             var txt_tmp = 'open';
             txt_tmp = (door_bay > 0) ? txt_tmp ~' bay' : txt_tmp;
             txt_tmp = (door_1 > 0) ? txt_tmp ~' door1' : txt_tmp;
             txt_tmp = (door_2 > 0) ? txt_tmp ~' door2' : txt_tmp;
-            txt_tmp = (door_3 > 0) ? txt_tmp ~' dorr3' : txt_tmp;
+            txt_tmp = (door_3 > 0) ? txt_tmp ~' door3' : txt_tmp;
             me.text_doors.setText(sprintf('DOORS : %s', txt_tmp)).setColor(1, 1, 0, 1);
         }
         else

@@ -180,7 +180,7 @@
       </config>
     </view>
     <view n="102">
-      <name>Top Turret</name>
+      <name>TopTurret</name>
       <type>lookfrom</type>
       <internal>true</internal>
       <config>
