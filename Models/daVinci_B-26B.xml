@@ -2400,6 +2400,162 @@ ________________________________________________________________________________
                                                                           LIGHTS
   -->
 
+  <!-- taxi light -->
+  <light>
+    <name>taxi-light-spot</name>
+    <type>spot</type>
+    <position>
+      <x-m type="float">-5.2</x-m>
+      <y-m type="float">0</y-m>
+      <z-m type="float">-1.5</z-m>
+    </position>
+    <direction>
+      <lookat-x-m>-8</lookat-x-m>
+      <lookat-y-m>0</lookat-y-m>
+      <lookat-z-m>-1.3</lookat-z-m>
+    </direction>
+    <ambient>
+<!--
+      <r>1</r>
+      <g>0</g>
+      <b>0</b>
+      <a>1</a>
+-->
+      <r>/sim/model/rendering/relative-taxilight-luminosity</r>
+      <g>/sim/model/rendering/relative-taxilight-luminosity</g>
+      <b>/sim/model/rendering/relative-taxilight-luminosity</b>
+      <a>/sim/model/rendering/relative-taxilight-luminosity</a>
+    </ambient>
+    <diffuse>
+      <r>/sim/model/rendering/relative-taxilight-luminosity</r>
+      <g>/sim/model/rendering/relative-taxilight-luminosity</g>
+      <b>/sim/model/rendering/relative-taxilight-luminosity</b>
+      <a>/sim/model/rendering/relative-taxilight-luminosity</a>
+    </diffuse>
+    <specular>
+      <r>/sim/model/rendering/relative-taxilight-luminosity</r>
+      <g>/sim/model/rendering/relative-taxilight-luminosity</g>
+      <b>/sim/model/rendering/relative-taxilight-luminosity</b>
+      <a>/sim/model/rendering/relative-taxilight-luminosity</a>
+    </specular>
+    <attenuation>
+      <c>.004</c>
+      <l>.02</l>
+      <q>.0002</q>
+    </attenuation>
+    <spot-exponent>10</spot-exponent>
+    <spot-cutoff>80</spot-cutoff>
+    <range-m>500</range-m>
+    <debug-color><r>1</r><g>1</g><b>1</b><a>1</a></debug-color>
+  </light>
+  <animation>
+    <type>select</type>
+    <object-name>taxi-light-spot</object-name>
+    <nopreview/>
+    <condition>
+      <equals><property>gear/gear[0]/position-norm</property><value>1</value></equals>
+      <equals><property>/controls/light/taxi</property><value>1</value></equals>
+    </condition>
+  </animation>
+
+
+  <!-- left landing light -->
+  <light>
+    <name>landing-light-left-spot</name>
+    <type>spot</type>
+    <position>
+      <x-m type="float">-0.3</x-m>
+      <y-m type="float">-6.2</y-m>
+      <z-m type="float">0.87</z-m>
+    </position>
+    <direction>
+      <lookat-x-m>-100</lookat-x-m>
+      <lookat-y-m>-5</lookat-y-m>
+      <lookat-z-m>-10</lookat-z-m>
+    </direction>
+    <ambient>
+      <r>/sim/model/rendering/relative-taxilight-luminosity</r>
+      <g>/sim/model/rendering/relative-taxilight-luminosity</g>
+      <b>/sim/model/rendering/relative-taxilight-luminosity</b>
+      <a>/sim/model/rendering/relative-taxilight-luminosity</a>
+    </ambient>
+    <diffuse>
+      <r>/sim/model/rendering/relative-taxilight-luminosity</r>
+      <g>/sim/model/rendering/relative-taxilight-luminosity</g>
+      <b>/sim/model/rendering/relative-taxilight-luminosity</b>
+      <a>/sim/model/rendering/relative-taxilight-luminosity</a>
+    </diffuse>
+    <specular>
+      <r>/sim/model/rendering/relative-taxilight-luminosity</r>
+      <g>/sim/model/rendering/relative-taxilight-luminosity</g>
+      <b>/sim/model/rendering/relative-taxilight-luminosity</b>
+      <a>/sim/model/rendering/relative-taxilight-luminosity</a>
+    </specular>
+    <attenuation>
+      <c>.2</c>
+      <l>.0001</l>
+      <q>.00002</q>
+    </attenuation>
+    <spot-exponent>80</spot-exponent>
+    <spot-cutoff>20</spot-cutoff>
+    <range-m>500</range-m>
+    <debug-color><r>1</r><g>1</g><b>1</b><a>1</a></debug-color>
+  </light>
+  <!-- right landing light -->
+  <light>
+    <name>landing-light-right-spot</name>
+    <type>spot</type>
+    <position>
+      <x-m type="float">-0.3</x-m>
+      <y-m type="float">6.2</y-m>
+      <z-m type="float">0.87</z-m>
+    </position>
+    <direction>
+      <lookat-x-m>-100</lookat-x-m>
+      <lookat-y-m>5</lookat-y-m>
+      <lookat-z-m>-10</lookat-z-m>
+    </direction>
+    <ambient>
+      <r>/sim/model/rendering/relative-taxilight-luminosity</r>
+      <g>/sim/model/rendering/relative-taxilight-luminosity</g>
+      <b>/sim/model/rendering/relative-taxilight-luminosity</b>
+      <a>/sim/model/rendering/relative-taxilight-luminosity</a>
+    </ambient>
+    <diffuse>
+      <r>/sim/model/rendering/relative-taxilight-luminosity</r>
+      <g>/sim/model/rendering/relative-taxilight-luminosity</g>
+      <b>/sim/model/rendering/relative-taxilight-luminosity</b>
+      <a>/sim/model/rendering/relative-taxilight-luminosity</a>
+    </diffuse>
+    <specular>
+      <r>/sim/model/rendering/relative-taxilight-luminosity</r>
+      <g>/sim/model/rendering/relative-taxilight-luminosity</g>
+      <b>/sim/model/rendering/relative-taxilight-luminosity</b>
+      <a>/sim/model/rendering/relative-taxilight-luminosity</a>
+    </specular>
+    <attenuation>
+      <c>.2</c>
+      <l>.0001</l>
+      <q>.00002</q>
+    </attenuation>
+    <spot-exponent>80</spot-exponent>
+    <spot-cutoff>20</spot-cutoff>
+    <range-m>500</range-m>
+    <debug-color><r>1</r><g>1</g><b>1</b><a>1</a></debug-color>
+  </light>
+
+
+  <animation>
+    <type>select</type>
+    <object-name>landing-light-left-spot</object-name>
+    <object-name>landing-light-right-spot</object-name>
+    <nopreview/>
+    <condition>
+      <equals><property>/controls/light/landing</property><value>1</value></equals>
+    </condition>
+  </animation>
+
+
   <animation>
     <type>material</type>
     <object-name>light_nav_green</object-name>
@@ -2541,7 +2697,7 @@ ________________________________________________________________________________
 
   <!-- ~~~~~~~~~~~~~~~~~~ als lights -->
   <model>
-    <name>left light</name>
+    <name>left-light</name>
     <path>Aircraft/daVinci_B-26B/Models/lights/light_nav_left.xml</path>
     <offsets>
       <x-m type="float">0.6</x-m>
@@ -2550,7 +2706,7 @@ ________________________________________________________________________________
     </offsets>
   </model>
   <model>
-    <name>right light</name>
+    <name>right-light</name>
     <path>Aircraft/daVinci_B-26B/Models/lights/light_nav_right.xml</path>
     <offsets>
       <x-m type="float">0.6</x-m>
@@ -2559,7 +2715,7 @@ ________________________________________________________________________________
     </offsets>
   </model>
   <model>
-    <name>tail light</name>
+    <name>tail-light</name>
     <path>Aircraft/daVinci_B-26B/Models/lights/light_nav_tail.xml</path>
     <offsets>
       <x-m type="float">8.9</x-m>
@@ -2568,7 +2724,7 @@ ________________________________________________________________________________
     </offsets>
   </model>
   <model>
-    <name>strobe light top</name>
+    <name>strobe-light-top</name>
     <path>Aircraft/daVinci_B-26B/Models/lights/light_strobe.xml</path>
     <offsets>
       <x-m type="float">1.44</x-m>
@@ -2577,7 +2733,7 @@ ________________________________________________________________________________
     </offsets>
   </model>
   <model>
-    <name>strobe light bottom</name>
+    <name>strobe-light-bottom</name>
     <path>Aircraft/daVinci_B-26B/Models/lights/light_strobe.xml</path>
     <offsets>
       <x-m type="float">3.19</x-m>
@@ -2586,7 +2742,7 @@ ________________________________________________________________________________
     </offsets>
   </model>
   <model>
-    <name>anticoll light</name>
+    <name>anticoll-light</name>
     <path>Aircraft/daVinci_B-26B/Models/lights/light_anticoll.xml</path>
     <offsets>
       <x-m type="float">-0.55</x-m>
@@ -2595,7 +2751,7 @@ ________________________________________________________________________________
     </offsets>
   </model>
   <model>
-    <name>landing-light-nose-right</name>
+    <name>taxi-light-nose-right</name>
     <path>Aircraft/daVinci_B-26B/Models/lights/light_taxi.xml</path>
     <offsets>
       <x-m type="float">-4.5</x-m>
@@ -2624,13 +2780,13 @@ ________________________________________________________________________________
 
   <animation>
     <type>noshadow</type>
-    <object-name>left light</object-name>
-    <object-name>right light</object-name>
-    <object-name>tail light</object-name>
-    <object-name>strobe light top</object-name>
-    <object-name>strobe light bottom</object-name>
-    <object-name>anticoll light</object-name>
-    <object-name>landing-light-nose-right</object-name>
+    <object-name>left-light</object-name>
+    <object-name>right-light</object-name>
+    <object-name>tail-light</object-name>
+    <object-name>strobe-light-top</object-name>
+    <object-name>strobe-light-bottom</object-name>
+    <object-name>anticoll-light</object-name>
+    <object-name>taxi-light-nose-right</object-name>
     <object-name>landing-light-wing-left</object-name>
     <object-name>landing-light-wing-right</object-name>
   </animation>

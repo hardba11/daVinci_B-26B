@@ -103,5 +103,5 @@ var light = func()
 
 
 setlistener("sim/signals/fdm-initialized", lights);
-setlistener("sim/signals/fdm-initialized", light);
+#setlistener("sim/signals/fdm-initialized", light);
 
