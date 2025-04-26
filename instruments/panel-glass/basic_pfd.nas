@@ -875,23 +875,25 @@ var BASIC_PFD = {
         var roll_deg    = getprop("/orientation/roll-deg");
         var speed       = getprop("/instrumentation/airspeed-indicator/true-speed-kt");
         var alt         = getprop("/instrumentation/altimeter/indicated-altitude-ft");
-        var hdg         = getprop("/orientation/heading-magnetic-deg");
-        var hdgbug      = getprop("/autopilot/settings/heading-bug-deg") or 0;
+        var hdg         = getprop("/orientation/heading-magnetic-deg");                     # MAG
+        var hdgbug      = getprop("/autopilot/settings/heading-bug-deg") or 0;              # MAG
         var hdgbugerr   = getprop("/autopilot/internal/heading-bug-error-deg") or 0;
         var ap_alt      = getprop("/autopilot/settings/target-altitude-ft") or 0;
         var ap_speed    = getprop("/autopilot/settings/target-speed-kt") or 0;
         var vspeed      = getprop("/autopilot/internal/vert-speed-fpm") or 0;
 
+        var deflection  = getprop("/environment/magnetic-variation-deg") or 0;
+
         var crs1        = getprop("/instrumentation/nav[0]/radials/selected-deg") or 0;
         var nav1_active = getprop("/instrumentation/nav[0]/frequencies/selected-mhz") or '';
         var nav1_stdby  = getprop("/instrumentation/nav[0]/frequencies/standby-mhz") or '';
-        var nav1_hdg    = getprop("/instrumentation/nav[0]/heading-deg") or 0;
+        var nav1_hdg    = getprop("/instrumentation/nav[0]/heading-deg") or 0;              # TRU
         var nav1_defl   = getprop("/instrumentation/nav[0]/heading-needle-deflection-norm") or 0;
 
         var crs2        = getprop("/instrumentation/nav[1]/radials/selected-deg") or 0;
         var nav2_active = getprop("/instrumentation/nav[1]/frequencies/selected-mhz") or '';
         var nav2_stdby  = getprop("/instrumentation/nav[1]/frequencies/standby-mhz") or '';
-        var nav2_hdg    = getprop("/instrumentation/nav[1]/heading-deg") or 0;
+        var nav2_hdg    = getprop("/instrumentation/nav[1]/heading-deg") or 0;              # TRU
         var nav2_defl   = getprop("/instrumentation/nav[1]/heading-needle-deflection-norm") or 0;
 
         var com1_active = getprop("/instrumentation/comm[0]/frequencies/selected-mhz") or '';
@@ -1019,11 +1021,11 @@ var BASIC_PFD = {
         me.t_hsi_container.setRotation(-(hdg * D2R), 512, 512 + 150);
         me.t_hsi_hdgbug_container.setRotation((hdgbugerr * D2R), 512, 512 + 150);
 
-        me.t_hsi_nav1_needle_container.setRotation(-((hdg - nav1_hdg) * D2R), 512, 512 + 150);
+        me.t_hsi_nav1_needle_container.setRotation(-((hdg - nav1_hdg + deflection) * D2R), 512, 512 + 150);
         me.t_hsi_nav1_crs_container.setRotation(-((hdg - crs1) * D2R), 512, 512 + 150);
         me.t_hsi_nav1_deflection_container.setTranslation(nav1_defl * 50, 0);
 
-        me.t_hsi_nav2_needle_container.setRotation(-((hdg - nav2_hdg) * D2R), 512, 512 + 150);
+        me.t_hsi_nav2_needle_container.setRotation(-((hdg - nav2_hdg + deflection) * D2R), 512, 512 + 150);
         me.t_hsi_nav2_crs_container.setRotation(-((hdg - crs2) * D2R), 512, 512 + 150);
         me.t_hsi_nav2_deflection_container.setTranslation(nav2_defl * 50, 0);
 

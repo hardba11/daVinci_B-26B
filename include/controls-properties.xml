@@ -10,6 +10,14 @@
     <tailwheel-lock>true</tailwheel-lock>
   </gear>
 
+  <electric>
+    <battery-switch type="bool">0</battery-switch>
+  </electric>
+
+  <switches>
+    <master-avionics type="bool">0</master-avionics>
+  </switches>
+
   <engines>
     <engine n="0"> <!-- RIGHT -->
       <magnetos type="int">0</magnetos>

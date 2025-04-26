@@ -18,14 +18,25 @@
     <object-name>center.bottom_screen</object-name>
     <object-name>left.screen</object-name>
     <object-name>right.screen</object-name>
+    <object-name>screen_off</object-name>
   </effect>
 
+  <animation>
+    <type>select</type>
+    <object-name>screen_off</object-name>
+    <condition>
+      <not>
+        <property>/controls/switches/master-avionics</property>
+      </not>
+    </condition>
+  </animation>
 
   <animation>
     <type>material</type>
     <object-name>commandes</object-name>
     <object-name>simple_panel</object-name>
     <object-name>tableau</object-name>
+    <object-name>screen_off</object-name>
     <object-name>vis</object-name>
     <emission>
       <factor-prop>/sim/model/rendering/relative-cabin-luminosity</factor-prop>

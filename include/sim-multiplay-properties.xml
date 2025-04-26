@@ -14,7 +14,11 @@
     <int n="7" alias="/sim/crashed" />
     <int n="8" alias="/systems/electrical/outputs/nav-lights">0</int>  <!-- 8 nav-lights -->
     <int n="9" alias="/sim/model/lights/beacon/state">false</int>      <!-- 9 strobe-lights -->
-    <int n="10" alias="/controls/electric/key-pos">0</int>             <!-- 10 key position -->
+    <int n="10" alias="/controls/electric/battery-switch">0</int>      <!-- 10  -->
+
+    <int n="14" type="int">12500</int>  <!-- loyal wingman: alt -->
+    <int n="15" type="int">220</int>    <!-- loyal wingman: speed -->
+
     <float n="0" alias="/sim/model/door-positions/windows-position-norm" />
     <float n="1" alias="/sim/model/door-positions/bay-position-norm" />
     <float n="2" alias="/position/gear-agl-m">0</float>   <!-- altitude for MP shadow -->
@@ -33,8 +37,9 @@
     <float n="15" alias="/gear/gear[2]/compression-norm" /> <!-- left (port) -->
     <float n="16" alias="/gear/gear[0]/caster-angle-deg" />
     <float n="17" alias="/gear/gear[0]/compression-norm" /> <!-- nose -->
-    <!-- For Bombable -->
-    <int type="int" n="10" alias="controls/armament/trigger">0</int>
+
+    <string n="1"  type="string"></string> <!-- loyal wingman: callsign to follow -->
+    <string n="2"  type="string"></string> <!-- loyal wingman: fix -->
     <string n="9" type="string" />
   </generic>
 

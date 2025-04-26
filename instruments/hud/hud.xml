@@ -90,7 +90,8 @@ see :
     <width>18</width>
     <height>10</height>
     <input>
-      <property>/orientation/heading-magnetic-deg</property>
+      <!--property>/orientation/heading-magnetic-deg</property-->
+      <property>/orientation/heading-deg</property>
     </input>
     <format>%3.0f</format>
     <halign>center</halign>

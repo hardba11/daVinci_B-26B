@@ -133,6 +133,16 @@ controls.gearDown(-1);
       <desc>Start Engines</desc>
       <binding>
         <command>property-assign</command>
+        <property>/controls/electric/battery-switch</property>
+        <value type="int">1</value>
+      </binding>
+      <binding>
+        <command>property-assign</command>
+        <property>/controls/switches/master-avionics</property>
+        <value type="int">1</value>
+      </binding>
+      <binding>
+        <command>property-assign</command>
         <property>/controls/light/nav</property>
         <value type="int">1</value>
       </binding>

@@ -2050,6 +2050,52 @@ ________________________________________________________________________________
     </axis>
   </animation>
 
+
+
+
+
+
+
+
+  <animation>
+    <object-name>btn_avionic</object-name>
+    <property>/controls/switches/master-avionics</property>
+    <type>rotate</type>
+    <factor>-45</factor>
+    <center>
+      <x-m>-3.883</x-m>
+      <y-m>0</y-m>
+      <z-m>0.375</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  <animation>
+    <type>rotate</type>
+    <object-name>btn_battery</object-name>
+    <property>/controls/electric/battery-switch</property>
+    <factor>-45</factor>
+    <center>
+      <x-m>-3.883</x-m>
+      <y-m>0</y-m>
+      <z-m>0.375</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+
+
+
+
+
+
   <animation>
     <object-name>btn_starter_left</object-name>
     <property>/controls/engines/engine[1]/starter</property>
@@ -2337,6 +2383,45 @@ ________________________________________________________________________________
         <command>set-tooltip</command>
         <tooltip-id>tooltip-btn_fuel-pump_right</tooltip-id>
         <label>Right engine fuel pump</label>
+      </binding>
+    </hovered>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>btn_avionic</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/switches/master-avionics</property>
+      </binding>
+    </action>
+    <hovered>
+      <binding>
+        <command>set-tooltip</command>
+        <tooltip-id>tooltip-btn_avionic</tooltip-id>
+        <label>Avionics</label>
+      </binding>
+    </hovered>
+  </animation>
+  <animation>
+    <type>pick</type>
+    <object-name>btn_battery</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/electric/battery-switch</property>
+      </binding>
+    </action>
+    <hovered>
+      <binding>
+        <command>set-tooltip</command>
+        <tooltip-id>tooltip-btn_battery</tooltip-id>
+        <label>Battery</label>
       </binding>
     </hovered>
   </animation>
