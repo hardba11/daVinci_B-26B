@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
 
-  <_debug>
-    <int1 type="int">1</int1>
-    <float1 type="float">1.0</float1>
-    <float2 type="float">1.0</float2>
-  </_debug>
-
   <sim>
     <description>daVinci_B-26B</description>
+    <aircraft-version type="string">20250501</aircraft-version>
     <author> Vodoun da Vinci, Detlef Faber, The FGUK Dev. Dream Team using Alphasim Freeware 3D Model, hardball</author>
     <status>Beta</status>
     <minimum-fg-version type="string">2020.3.16</minimum-fg-version>
@@ -348,6 +343,12 @@
   <environment>
     <pressure-sea-level-hpa type="float">0</pressure-sea-level-hpa>
   </environment>
+
+  <_debug>
+    <int1 type="int">1</int1>
+    <float1 type="float">1.0</float1>
+    <float2 type="float">1.0</float2>
+  </_debug>
 
   <nasal>
     <lights>

@@ -1,4 +1,5 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="utf-8"?>
+
 <PropertyList>
   <path>panel-glass.ac</path>
 
@@ -497,9 +498,6 @@ instrument_chrono.event_reset();
       </binding>
     </hovered>
 
-
-
-
     <action>
       <button>0</button>
       <repeatable>true</repeatable>
@@ -591,9 +589,6 @@ instrument_chrono.event_reset();
       </binding>
 
     </action>
-
-
-
 
     <action>
       <button>3</button>
