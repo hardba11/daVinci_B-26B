@@ -551,6 +551,144 @@ see :
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ~~~~~~~~~~~~~~~~~~ nav1 data if nav1 master and selected and not slaved to gps and adf1 not selected -->
+  <label>
+    <name>nav_data_nav1_id</name>
+    <x>40</x>
+    <y>-95</y>
+    <width>20</width>
+    <height>6</height>
+    <condition>
+      <greater-than>
+        <property>/instrumentation/nav[0]/signal-quality-norm</property>
+        <value>0.4</value>
+      </greater-than>
+      <property>/instrumentation/nav[0]/serviceable</property>
+      <not><property>/instrumentation/nav[0]/slaved-to-gps</property></not>
+    </condition>
+    <format>NAV1 %s</format>
+    <input>
+      <property>/instrumentation/nav[0]/nav-id</property>
+    </input>
+    <halign>left</halign>
+  </label>
+  <label>
+    <name>nav_data_nav1_bearing</name>
+    <x>40</x>
+    <y>-105</y>
+    <width>20</width>
+    <height>6</height>
+    <condition>
+      <greater-than>
+        <property>/instrumentation/nav[0]/signal-quality-norm</property>
+        <value>0.4</value>
+      </greater-than>
+      <property>/instrumentation/nav[0]/serviceable</property>
+      <not><property>/instrumentation/nav[0]/slaved-to-gps</property></not>
+    </condition>
+    <format>%.0f deg</format>
+    <input>
+      <property>/instrumentation/nav[0]/heading-deg</property>
+    </input>
+    <halign>left</halign>
+  </label>
+  <label>
+    <name>nav_data_nav1_eta</name>
+    <x>40</x>
+    <y>-115</y>
+    <width>20</width>
+    <height>6</height>
+    <condition>
+      <greater-than>
+        <property>/instrumentation/nav[0]/signal-quality-norm</property>
+        <value>0.4</value>
+      </greater-than>
+      <property>/instrumentation/nav[0]/serviceable</property>
+      <not><property>/instrumentation/nav[0]/slaved-to-gps</property></not>
+    </condition>
+    <format>eta %.0f min</format>
+    <input>
+      <property>/instrumentation/dme[0]/indicated-time-min</property>
+    </input>
+    <halign>left</halign>
+  </label>
+  <label>
+    <name>nav_data_nav1_dist</name>
+    <x>40</x>
+    <y>-125</y>
+    <width>20</width>
+    <height>6</height>
+    <condition>
+      <greater-than>
+        <property>/instrumentation/nav[0]/signal-quality-norm</property>
+        <value>0.4</value>
+      </greater-than>
+      <property>/instrumentation/nav[0]/serviceable</property>
+      <not><property>/instrumentation/nav[0]/slaved-to-gps</property></not>
+    </condition>
+    <format>%.1f NM</format>
+    <input>
+      <property>/instrumentation/dme[0]/indicated-distance-nm</property>
+    </input>
+    <halign>left</halign>
+  </label>
+  <label>
+    <name>nav_data_nav1_kt</name>
+    <x>40</x>
+    <y>-135</y>
+    <width>20</width>
+    <height>6</height>
+    <condition>
+      <greater-than>
+        <property>/instrumentation/nav[0]/signal-quality-norm</property>
+        <value>0.4</value>
+      </greater-than>
+      <property>/instrumentation/nav[0]/serviceable</property>
+      <not><property>/instrumentation/nav[0]/slaved-to-gps</property></not>
+    </condition>
+    <format>%.0f kt</format>
+    <input>
+      <property>/instrumentation/dme[0]/indicated-ground-speed-kt</property>
+    </input>
+    <halign>left</halign>
+  </label>
+
+
+
+
+
+
 </PropertyList>
 
 

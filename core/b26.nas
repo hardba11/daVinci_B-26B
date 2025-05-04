@@ -102,6 +102,8 @@ var event_click_disengage_autopilot = func()
     event_click_lock_alt(0);
     event_click_lock_speed(0);
     setprop("/autopilot/locks/heading",  '');
+    center_flight_controls();
+    center_flight_controls_trim();
 }
 
 var event_click_lock_speed = func(do_enable)
@@ -131,6 +133,8 @@ var event_click_lock_alt = func(do_enable)
         setprop("/autopilot/locks/altitude", 'altitude-hold');
     } else {
         setprop("/autopilot/locks/altitude", '');
+        center_flight_controls();
+        center_flight_controls_trim();
     }
     setprop("/autopilot/internal/target-climb-rate-fps", 0);
 }
