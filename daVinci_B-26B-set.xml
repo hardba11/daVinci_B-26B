@@ -333,6 +333,19 @@
 
   </sim>
 
+  <!-- air/air refuelling ability -->
+  <systems>
+    <refuel>
+      <type type="string">probe</type>
+      <serviceable type="bool">0</serviceable> <!-- true if probe equipped -->
+      <contact type="bool">0</contact>
+      <max-fuel-transfer-lbs-min>3000</max-fuel-transfer-lbs-min>
+      <offset-x-m>-5.9</offset-x-m>
+      <offset-y-m>.4</offset-y-m>
+      <offset-z-m>1</offset-z-m>
+    </refuel>
+  </systems>
+
   <autopilot        include="include/autopilot-properties.xml" />
   <consumables      include="include/consumables-properties.xml" />
   <engines          include="include/engines-properties.xml" />

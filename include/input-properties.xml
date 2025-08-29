@@ -187,6 +187,21 @@ controls.gearDown(-1);
         <value type="bool">1</value>
       </binding>
       <binding>
+        <command>property-assign</command>
+        <property>/sim/model/ground-equipment-f</property>
+        <value type="bool">0</value>
+      </binding>
+      <binding>
+        <command>property-assign</command>
+        <property>/sim/model/ground-equipment-p</property>
+        <value type="bool">0</value>
+      </binding>
+      <binding>
+        <command>property-assign</command>
+        <property>/sim/model/ground-equipment-g</property>
+        <value type="bool">0</value>
+      </binding>
+      <binding>
         <command>nasal</command>
         <script>controls.startEngine()</script>
       </binding>
