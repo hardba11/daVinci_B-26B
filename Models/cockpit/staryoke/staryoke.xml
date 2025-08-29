@@ -1,4 +1,6 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- RIGHT YOKE -->
 
 <PropertyList>
 
@@ -29,23 +31,6 @@
   </animation>
 
   <animation>
-    <type>rotate</type>
-    <object-name>Yoke</object-name>
-    <property>controls/flight/aileron</property>
-    <factor> -65</factor>
-    <center>
-      <x-m>2.671</x-m>
-      <y-m>0.432</y-m>
-      <z-m>  0.619 </z-m>
-    </center>
-    <axis>
-      <x> 1 </x>
-      <y> 0 </y>
-      <z> 0 </z>
-    </axis>
-  </animation>
-  
-  <animation>
     <name>AllYoke</name>
     <object-name>Base</object-name>
     <object-name>Yoke</object-name>
@@ -67,5 +52,22 @@
       <z> 0 </z>
     </axis>
   </animation>
-  
+
+  <animation>
+    <type>rotate</type>
+    <object-name>Yoke</object-name>
+    <property>controls/flight/aileron</property>
+    <factor> -65</factor>
+    <center>
+      <x-m>2.583</x-m>
+      <y-m>0.4316</y-m>
+      <z-m>0.6049</z-m>
+    </center>
+    <axis>
+      <x>11</x>
+      <y>0</y>
+      <z>1</z>
+    </axis>
+  </animation>
+
 </PropertyList>
