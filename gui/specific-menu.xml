@@ -45,24 +45,6 @@
         </binding>
       </item>
 
-      <item n="4">
-        <label>Set views ...</label>
-        <name>set-views</name>
-        <binding>
-          <command>dialog-show</command>
-          <dialog-name>b26-set-views</dialog-name>
-        </binding>
-      </item>
-
-      <item n="5">
-        <label>Loyal wingman ...</label>
-        <name>synapse-autopilot</name>
-        <binding>
-          <command>dialog-show</command>
-          <dialog-name>synapse-autopilot</dialog-name>
-        </binding>
-      </item>
-
     </menu>
 
   </default>
