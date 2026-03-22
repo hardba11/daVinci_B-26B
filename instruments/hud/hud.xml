@@ -327,7 +327,7 @@ see :
     <option>vertical</option>
     <option>left</option>
     <option>notext</option>
-    <major-divisions>90</major-divisions>
+    <major-divisions>100</major-divisions>
     <input>
       <property>/controls/engines/engine[0]/throttle</property>
       <factor>100</factor>
@@ -344,7 +344,7 @@ see :
     <option>vertical</option>
     <option>right</option>
     <option>notext</option>
-    <major-divisions>90</major-divisions>
+    <major-divisions>100</major-divisions>
     <input>
       <property>/controls/engines/engine[1]/throttle</property>
       <factor>100</factor>

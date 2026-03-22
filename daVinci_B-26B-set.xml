@@ -337,12 +337,12 @@
   <systems>
     <refuel>
       <type type="string">probe</type>
-      <serviceable type="bool">0</serviceable> <!-- true if probe equipped -->
+      <serviceable type="bool">1</serviceable>
       <contact type="bool">0</contact>
-      <max-fuel-transfer-lbs-min>3000</max-fuel-transfer-lbs-min>
-      <offset-x-m>-5.9</offset-x-m>
-      <offset-y-m>.4</offset-y-m>
-      <offset-z-m>1</offset-z-m>
+      <max-fuel-transfer-lbs-min>1000</max-fuel-transfer-lbs-min>
+      <offset-x-m>-6.3</offset-x-m>
+      <offset-y-m>0</offset-y-m>
+      <offset-z-m>0</offset-z-m>
     </refuel>
   </systems>
 
@@ -373,6 +373,9 @@
     <target_positions>
       <file type="string">Aircraft/daVinci_B-26B/instruments/target_positions/target_positions.nas</file>
     </target_positions>
+    <aar>
+      <file>Aircraft/Generic/aar.nas</file>
+    </aar>
     <map>
       <file type="string">Aircraft/daVinci_B-26B/instruments/panel-glass/map.nas</file>
     </map>

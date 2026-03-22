@@ -173,25 +173,8 @@
     <type>select</type>
     <object-name>needle5</object-name>
     <condition>
-      <equals>
-        <property>controls/fuel/indicator/tank-selected</property>
-        <value>4</value>
-      </equals>
+      <false />
     </condition>
-  </animation>
-  <animation>
-    <type>rotate</type>
-    <object-name>needle5</object-name>
-    <property>consumables/fuel/tank[4]/level-gal_us</property>
-    <interpolation>
-      <entry><ind>0</ind><dep>54</dep></entry>
-      <entry><ind>200</ind><dep>-54</dep></entry>
-    </interpolation>
-    <axis>
-      <x>1</x>
-      <y>0</y>
-      <z>0</z>
-    </axis>
   </animation>
   <animation>
     <type>select</type>

@@ -66,10 +66,10 @@
     <control-output control="FLAP0" prop="/surface-positions/rudder-pos-norm" />
   </vstab>
   
-  <tank x="-0.140"  y="1.02"   z="0.229" capacity="630" />
-  <tank x="-0.140" y="-1.02"   z="0.229" capacity="630" />
-  <tank x="-1.360"  y="0.321" z="-0.149" capacity="320" />
-  <tank x="-1.360" y="-0.321" z="-0.149" capacity="320" />
+  <tank x="-0.140"  y="1.02"   z="0.229" capacity="800" />
+  <tank x="-0.140" y="-1.02"   z="0.229" capacity="800" />
+  <tank x="-1.360"  y="0.321" z="-0.149" capacity="800" />
+  <tank x="-1.360" y="-0.321" z="-0.149" capacity="800" />
 
 <!-- nose gear -->
   <gear x="5.02" y="0.0" z="-2.35" compression=".65" dfric=".6" sfric=".7" retract-time="0" stiction="1">

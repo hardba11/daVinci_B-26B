@@ -712,12 +712,20 @@ var BASIC_SFD = {
 
         # label
         m.tank_label = m.my_group.createChild('text', 'tank_label')
-            .setTranslation(x_tank1 + 25, y_tank1 + 250)
-            .setAlignment('center-center')
+            .setTranslation(x_tank0, y_tank0 + 250)
+            .setAlignment('left-center')
             .setFont('LiberationFonts/LiberationSansNarrow-Bold.ttf')
             .setFontSize(40)
             .setColor(1, 1, 1, 1)
             .setText('FUEL TANK');
+        # value
+        m.tank_value = m.my_group.createChild('text', 'tank_value')
+            .setTranslation(x_tank0, y_tank0 + 280)
+            .setAlignment('left-center')
+            .setFont('LiberationFonts/LiberationSansNarrow-Bold.ttf')
+            .setFontSize(40)
+            .setColor(1, 1, 1, 1)
+            .setText('0 lbs');
 
 # display INFOS
 
@@ -820,6 +828,8 @@ var BASIC_SFD = {
         var tank1  = getprop("/consumables/fuel/tank[1]/level-lbs") or 0;
         var tank2  = getprop("/consumables/fuel/tank[2]/level-lbs") or 0;
         var tank3  = getprop("/consumables/fuel/tank[3]/level-lbs") or 0;
+        var tank_total = tank0 + tank1 + tank2 + tank3;
+        var color_tank = 'green';
 
         var gears      = getprop("/controls/gear/gear-down") or 0;
         var flaps      = getprop("/controls/flight/flaps") or 0;
@@ -882,10 +892,20 @@ var BASIC_SFD = {
         me.ff_engine_l_text.setText(sprintf('%.1f', ff_l));
 
         # gauge + value tanks
-        update_gauge(me.tank0_gauge, 0, -tank0 * 200 / 630, 'green');
-        update_gauge(me.tank1_gauge, 0, -tank1 * 200 / 630, 'green');
-        update_gauge(me.tank2_gauge, 0, -tank2 * 200 / 320, 'green');
-        update_gauge(me.tank3_gauge, 0, -tank3 * 200 / 320, 'green');
+        
+        if(tank_total < 400)
+        {
+            color_tank = 'red';
+        }
+        elsif(tank_total < 700)
+        {
+            color_tank = 'yellow';
+        }
+        update_gauge(me.tank0_gauge, 0, -tank0 * 200 / 800, color_tank);
+        update_gauge(me.tank1_gauge, 0, -tank1 * 200 / 800, color_tank);
+        update_gauge(me.tank2_gauge, 0, -tank2 * 200 / 800, color_tank);
+        update_gauge(me.tank3_gauge, 0, -tank3 * 200 / 800, color_tank);
+        me.tank_value.setText(sprintf('%.1f lbs', tank_total));
 
         if(gears > 0)
         {

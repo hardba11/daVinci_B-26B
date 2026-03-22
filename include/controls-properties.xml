@@ -67,8 +67,8 @@
     <indicator>
       <tank-selected>0</tank-selected>
     </indicator>
-    <switch-position-port>1</switch-position-port>
-    <switch-position-starb>1</switch-position-starb>
+    <switch-position-right>1</switch-position-right>
+    <switch-position-left>1</switch-position-left>
   </fuel>
 
 </PropertyList>
