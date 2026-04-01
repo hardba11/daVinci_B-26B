@@ -47,7 +47,7 @@
   </my_aircraft>
 
   <attitude-indicator>
-    <horizon-offset-deg type="float">6</horizon-offset-deg>
+    <horizon-offset-deg type="float">2</horizon-offset-deg>
   </attitude-indicator>
 
 </PropertyList>

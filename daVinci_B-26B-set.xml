@@ -101,8 +101,26 @@
     <!-- ~~~~~~~~~~~~~~~~~~ properties to save between sessions -->
     <aircraft-data>
       <path>/sim/model/glass-cockpit</path>
+      <path>/sim/freeze/fuel</path>
+      <path>/sim/fuel-fraction</path>
       <path>/instrumentation/my_aircraft/target_positions/controls/enabled</path>
       <path>/instrumentation/my_aircraft/target_positions/controls/targets_are_mp</path>
+      <path>/instrumentation/adf[0]/mode</path>
+      <path>/instrumentation/adf[0]/frequencies/standby-khz</path>
+      <path>/instrumentation/adf[0]/frequencies/selected-khz</path>
+      <path>/instrumentation/comm[0]/volume</path>
+      <path>/instrumentation/comm[0]/frequencies/standby-mhz</path>
+      <path>/instrumentation/comm[0]/frequencies/selected-mhz</path>
+      <path>/instrumentation/comm[1]/volume</path>
+      <path>/instrumentation/comm[1]/frequencies/standby-mhz</path>
+      <path>/instrumentation/comm[1]/frequencies/selected-mhz</path>
+      <path>/instrumentation/nav[0]/volume</path>
+      <path>/instrumentation/nav[0]/frequencies/standby-mhz</path>
+      <path>/instrumentation/nav[0]/frequencies/selected-mhz</path>
+      <path>/instrumentation/nav[0]/radials/selected-deg</path>
+      <path>/instrumentation/nav[1]/volume</path>
+      <path>/instrumentation/nav[1]/frequencies/standby-mhz</path>
+      <path>/instrumentation/nav[1]/frequencies/selected-mhz</path>
       <path>/controls/copilot</path>
       <path>/sim/model/equipment-baggages</path>
       <path>/sim/model/equipment-canoe</path>
@@ -339,10 +357,10 @@
       <type type="string">probe</type>
       <serviceable type="bool">1</serviceable>
       <contact type="bool">0</contact>
-      <max-fuel-transfer-lbs-min>1000</max-fuel-transfer-lbs-min>
-      <offset-x-m>-6.3</offset-x-m>
+      <max-fuel-transfer-lbs-min>300</max-fuel-transfer-lbs-min>
+      <offset-x-m>7</offset-x-m>
       <offset-y-m>0</offset-y-m>
-      <offset-z-m>0</offset-z-m>
+      <offset-z-m>-2</offset-z-m>
     </refuel>
   </systems>
 

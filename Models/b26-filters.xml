@@ -50,7 +50,7 @@
   </filter>
   <filter>
     <type>gain</type>
-    <gain>1.2</gain>
+    <gain>.9</gain>
     <input>
       <expression>
         <product>

@@ -516,6 +516,22 @@ ________________________________________________________________________________
                                                                 DOORS ANIMATIONS
   -->
 
+  <animation>
+    <type>pick</type>
+    <object-name>InsideWindowFrame.L</object-name>
+    <object-name>InsideWindowFrame.R</object-name>
+    <object-name>FloorAccessDoor.L</object-name>
+    <object-name>FloorAccessDoor.R</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/doors/windows</property>
+      </binding>
+    </action>
+  </animation>
+
 <!-- windows -->
   <animation>
     <type>translate</type>
@@ -2053,13 +2069,6 @@ ________________________________________________________________________________
     </axis>
   </animation>
 
-
-
-
-
-
-
-
   <animation>
     <object-name>btn_avionic</object-name>
     <property>/controls/switches/master-avionics</property>
@@ -2092,12 +2101,6 @@ ________________________________________________________________________________
       <z>0</z>
     </axis>
   </animation>
-
-
-
-
-
-
 
   <animation>
     <object-name>btn_starter_left</object-name>
@@ -2770,6 +2773,15 @@ ________________________________________________________________________________
   <animation>
     <type>material</type>
     <object-name>lights.nose</object-name>
+    <condition>
+      <and>
+        <property>controls/light/taxi</property>
+        <equals>
+          <property>gear/gear[0]/position-norm</property>
+          <value>1</value>
+        </equals>
+      </and>
+    </condition>
     <ambient>
       <red>1</red>
       <green>1</green>
@@ -2813,7 +2825,7 @@ ________________________________________________________________________________
   </model>
   <model>
     <name>strobe-light-top</name>
-    <path>Aircraft/daVinci_B-26B/Models/lights/light_strobe.xml</path>
+    <path>Aircraft/daVinci_B-26B/Models/lights/light_strobe-top.xml</path>
     <offsets>
       <x-m type="float">1.44</x-m>
       <y-m type="float">0</y-m>
@@ -2822,7 +2834,7 @@ ________________________________________________________________________________
   </model>
   <model>
     <name>strobe-light-bottom</name>
-    <path>Aircraft/daVinci_B-26B/Models/lights/light_strobe.xml</path>
+    <path>Aircraft/daVinci_B-26B/Models/lights/light_strobe-down.xml</path>
     <offsets>
       <x-m type="float">3.19</x-m>
       <y-m type="float">0</y-m>

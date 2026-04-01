@@ -39,12 +39,12 @@
     <control-output control="FLAP0" side="left" prop="/surface-positions/left-aileron-pos-norm" />
     <control-output control="FLAP0" side="right" prop="/surface-positions/right-aileron-pos-norm" />
 
-    <flap1 start=".3" end=".75" lift="1.70" drag="4.2" />
+    <flap1 start=".3" end=".75" lift="1.80" drag="2.2" />
     <control-input axis="/controls/flight/flaps" control="FLAP1" />
     <control-output control="FLAP1" prop="/surface-positions/flap-pos-norm" />
-    <control-speed control="FLAP1" transition-time="6" />
+    <control-speed control="FLAP1" transition-time="8" />
 
-    <spoiler start="0" end=".35" lift="1.0" drag="300" />
+    <spoiler start="0" end=".3" lift="0.5" drag="260" />
     <control-input  control="SPOILER" axis="/controls/flight/speedbrake" />
     <control-output control="SPOILER" prop="/surface-positions/speedbrake-pos-norm" />
     <control-speed  control="SPOILER" transition-time="1" />
@@ -74,7 +74,7 @@
 <!-- nose gear -->
   <gear x="5.02" y="0.0" z="-2.35" compression=".65" dfric=".6" sfric=".7" retract-time="0" stiction="1">
     <control-input axis="/controls/flight/rudder" control="STEER" square="true" />
-    <control-input axis="/controls/gear/brake-parking" control="BRAKE" split="true" />
+    <control-input axis="/controls/gear/brake-parking" control="BRAKE" />
     <control-input axis="/controls/gear/gear-down" control="EXTEND" />
     <control-output control="EXTEND" prop="/gear/gear[0]/position-norm" />
     <control-speed control="EXTEND" transition-time="7" />

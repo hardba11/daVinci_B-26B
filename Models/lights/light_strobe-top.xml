@@ -5,7 +5,7 @@
   <nopreview />
 
   <effect>
-    <inherits-from>procedural-light-strobe</inherits-from>
+    <inherits-from>procedural-light-strobe-top</inherits-from>
     <object-name>als_light</object-name>
   </effect>
 

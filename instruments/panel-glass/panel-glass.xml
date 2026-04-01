@@ -14,11 +14,6 @@
     <object-name>center.bottom_screen</object-name>
     <object-name>left.screen</object-name>
     <object-name>right.screen</object-name>
-    <object-name>instrument.ai.screen</object-name>
-    <object-name>center.top_screen</object-name>
-    <object-name>center.bottom_screen</object-name>
-    <object-name>left.screen</object-name>
-    <object-name>right.screen</object-name>
     <object-name>screen_off</object-name>
   </effect>
 
@@ -49,10 +44,43 @@
 
   <animation>
     <type>material</type>
-    <object-name>center.top_screen</object-name>
-    <object-name>center.bottom_screen</object-name>
     <object-name>left.screen</object-name>
     <object-name>right.screen</object-name>
+    <condition>
+      <equals>
+        <property>/controls/light/instrument-norm</property>
+        <value>0</value>
+      </equals>
+    </condition>
+    <emission>
+      <factor>1</factor>
+      <red>1</red>
+      <green>1</green>
+      <blue>1</blue>
+    </emission>
+  </animation>
+  <animation>
+    <type>material</type>
+    <object-name>left.screen</object-name>
+    <object-name>right.screen</object-name>
+    <condition>
+      <equals>
+        <property>/controls/light/instrument-norm</property>
+        <value>1</value>
+      </equals>
+    </condition>
+    <emission>
+      <factor-prop>/sim/model/rendering/relative-instrument-luminosity</factor-prop>
+      <red>.5</red>
+      <green>.5</green>
+      <blue>.5</blue>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>center.top_screen</object-name>
+    <object-name>center.bottom_screen</object-name>
     <condition>
       <equals>
         <property>/controls/light/instrument-norm</property>
@@ -68,11 +96,8 @@
   </animation>
   <animation>
     <type>material</type>
-    <object-name>instrument.ai.screen</object-name>
     <object-name>center.top_screen</object-name>
     <object-name>center.bottom_screen</object-name>
-    <object-name>left.screen</object-name>
-    <object-name>right.screen</object-name>
     <condition>
       <equals>
         <property>/controls/light/instrument-norm</property>
@@ -80,10 +105,10 @@
       </equals>
     </condition>
     <emission>
-      <factor>.3</factor>
-      <red>1</red>
-      <green>1</green>
-      <blue>1</blue>
+      <factor-prop>/sim/model/rendering/relative-instrument-luminosity</factor-prop>
+      <red>.3</red>
+      <green>.3</green>
+      <blue>.3</blue>
     </emission>
   </animation>
 

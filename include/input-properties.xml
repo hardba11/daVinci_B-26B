@@ -132,6 +132,19 @@ controls.gearDown(-1);
       <name>s</name>
       <desc>Start Engines</desc>
       <binding>
+        <command>nasal</command>
+        <script>
+          <![CDATA[
+if (getprop("/rendering/scene/diffuse/green") < .5) {
+    setprop("/controls/light/cabin-norm", 1);
+    setprop("/controls/light/panel-norm", 1);
+    setprop("/controls/light/instrument-norm", 1);
+    setprop("/controls/light/landing", 1);
+}
+          ]]>
+        </script>
+      </binding>
+      <binding>
         <command>property-assign</command>
         <property>/controls/electric/battery-switch</property>
         <value type="int">1</value>
@@ -144,21 +157,6 @@ controls.gearDown(-1);
       <binding>
         <command>property-assign</command>
         <property>/controls/light/nav</property>
-        <value type="int">1</value>
-      </binding>
-      <binding>
-        <command>property-assign</command>
-        <property>/controls/light/cabin-norm</property>
-        <value type="int">1</value>
-      </binding>
-      <binding>
-        <command>property-assign</command>
-        <property>/controls/light/panel-norm</property>
-        <value type="int">1</value>
-      </binding>
-      <binding>
-        <command>property-assign</command>
-        <property>/controls/light/instrument-norm</property>
         <value type="int">1</value>
       </binding>
       <binding>

@@ -23,8 +23,8 @@
   <animation>
     <type>material</type>
     <object-name>Face</object-name>
-    <object-name>needle1</object-name> <!-- engine[1] left -->
-    <object-name>needle2</object-name> <!-- engine[2] right -->
+    <object-name>needle1</object-name> <!-- left -->
+    <object-name>needle2</object-name> <!-- right -->
     <emission>
       <factor-prop>/sim/model/rendering/relative-instrument-luminosity</factor-prop>
       <red>   0.017</red>
@@ -38,8 +38,8 @@
   <animation>
     <type>material</type>
     <object-name>Face</object-name>
-    <object-name>needle1</object-name> <!-- engine[1] left -->
-    <object-name>needle2</object-name> <!-- engine[2] right -->
+    <object-name>needle1</object-name> <!-- left -->
+    <object-name>needle2</object-name> <!-- right -->
     <emission>
       <factor-prop>/sim/model/rendering/relative-cabin-luminosity</factor-prop>
       <red>.04</red>

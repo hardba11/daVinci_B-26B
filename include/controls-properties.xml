@@ -41,9 +41,9 @@
   </flight>
 
   <light>
-    <instrument-norm type="float">1.0</instrument-norm>
-    <panel-norm type="float">1.0</panel-norm>
-    <cabin-norm type="float">1.0</cabin-norm>
+    <instrument-norm type="float">0</instrument-norm>
+    <panel-norm type="float">0</panel-norm>
+    <cabin-norm type="float">0</cabin-norm>
     <nav type="bool">0</nav>
     <pos type="bool">0</pos>
     <strobe type="bool">0</strobe>

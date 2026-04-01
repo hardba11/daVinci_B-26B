@@ -625,7 +625,7 @@
         </or>
       </condition>
       <volume>
-        <property>/gear/gear[0]/rollspeed-ms</property>
+        <property>/gear/gear[1]/rollspeed-ms</property>
         <factor>0.015</factor>
       </volume>
     </rumble>

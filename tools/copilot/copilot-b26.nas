@@ -357,7 +357,7 @@ var detect_takeoff_v1 = func()
 
     # reinit
     if(
-        (aircraft['speed'] < 70)
+        (aircraft['speed'] < 75)
         and
         (aircraft['is_wow'])
         and
@@ -366,9 +366,9 @@ var detect_takeoff_v1 = func()
         events[e]['trigger'] = 1;
     }
 
-    # declenchement si on passe 70kt au decollage
+    # declenchement si on passe 80kt au decollage
     if(
-        (aircraft['speed'] > 70)
+        (aircraft['speed'] > 75)
         and
         (aircraft['is_wow'])
         and
@@ -388,7 +388,7 @@ var detect_takeoff_v2 = func()
 
     # reinit
     if(
-        (aircraft['speed'] < 130)
+        (aircraft['speed'] < 150)
         and
         (aircraft['is_wow'])
         and
@@ -397,9 +397,9 @@ var detect_takeoff_v2 = func()
         events[e]['trigger'] = 1;
     }
 
-    # declenchement si on passe 130kt au decollage
+    # declenchement si on passe 150kt au decollage
     if(
-        (aircraft['speed'] > 130)
+        (aircraft['speed'] > 150)
         and
         (aircraft['is_wow'])
         and
