@@ -854,7 +854,7 @@ var BASIC_SFD = {
 
         # gauge + value torque
         if(torque_r < 0) { torque_r = 0; }
-        update_circular_gauge(me.torque_engine_r_circle, x_torque_engine_r, y_torque_engine_r, rayon_gauge, (torque_r * 270 / 3200), 'green');
+        update_circular_gauge(me.torque_engine_r_circle, x_torque_engine_r, y_torque_engine_r, rayon_gauge, (torque_r * 270 / 4400), 'green');
         me.torque_engine_r_text.setText(sprintf('%.1f', torque_r));
 
         # gauge + value egt
@@ -875,7 +875,7 @@ var BASIC_SFD = {
 
         # gauge + value torque
         if(torque_l < 0) { torque_l = 0; }
-        update_circular_gauge(me.torque_engine_l_circle, x_torque_engine_l, y_torque_engine_l, rayon_gauge, (torque_l * 270 / 3200), 'green');
+        update_circular_gauge(me.torque_engine_l_circle, x_torque_engine_l, y_torque_engine_l, rayon_gauge, (torque_l * 270 / 4400), 'green');
         me.torque_engine_l_text.setText(sprintf('%.1f', torque_l));
 
         # gauge + value egt

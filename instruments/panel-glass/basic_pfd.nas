@@ -1031,7 +1031,9 @@ var BASIC_PFD = {
         me.t_hsi_nav2_deflection_container.setTranslation(nav2_defl * 50, 0);
 
         # update gauges
-        update_gauge(me.vspeed_gauge, 0, vspeed / -75);
+        var lvspeed = vspeed / -75;
+        if (lvspeed > 100) { lvspeed = 100; } elsif (lvspeed < -100) { lvspeed = -100; }
+        update_gauge(me.vspeed_gauge, 0, lvspeed);
         if (vspeed > 0)
         {
             me.vspeed_gauge.set('stroke', 'rgba(0, 250, 0, 1)');

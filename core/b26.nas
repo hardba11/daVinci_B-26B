@@ -4,9 +4,16 @@ var sin = func(a) { math.sin(a * math.pi / 180.0) }
 var cos = func(a) { math.cos(a * math.pi / 180.0) }
 
 init = func {
-  var engines_started = getprop("/sim/presets/engines_started") or 0;
-
   #print("=================== INIT ==========================");
+
+  var engines_started = getprop("/sim/presets/engines_started") or 0;
+  var is_onground = getprop("/sim/presets/onground") or 0;
+
+  # starting airborn : start engines
+  if (is_onground == 0)
+  {
+    engines_started = 1;
+  }
 
   if(engines_started == 1)
   {
@@ -33,13 +40,17 @@ init = func {
     setprop("/sim/model/ground-equipment-p", 0);
     setprop("/sim/model/ground-equipment-g", 0);
 
-    # IF IN AIR :
-      #setprop("/autopilot/settings/target-speed-kt", 250);
-      #setprop("/autopilot/settings/target-altitude-ft", 10000);
-      #setprop("/autopilot/settings/heading-bug-deg", getprop("/orientation/heading-deg"));
-      #setprop("/autopilot/locks/speed", "speed-with-throttle");
-      #setprop("/autopilot/locks/heading", "dg-heading-hold");
-      #setprop("/autopilot/locks/altitude", "altitude-hold");
+    if (is_onground == 0)
+    {
+      # IF IN AIR :
+      setprop("/controls/gear/brake-parking", 0);
+      setprop("/autopilot/settings/target-speed-kt", getprop("/sim/presets/airspeed-kt"));
+      setprop("/autopilot/settings/target-altitude-ft", getprop("/sim/presets/altitude-ft"));
+      setprop("/autopilot/settings/heading-bug-deg", getprop("/sim/presets/heading-deg"));
+      setprop("/autopilot/locks/speed", "speed-with-throttle");
+      setprop("/autopilot/locks/heading", "dg-heading-hold");
+      setprop("/autopilot/locks/altitude", "altitude-hold");
+    }
   }
   else
   {
@@ -52,11 +63,23 @@ init = func {
 
 main_loop = func {
   #print("=================== LOOP ==========================");
+
+  # on retire les ground equipments si on bouge
+  var groundspeed = getprop("/velocities/groundspeed-kt") or 0;
+  if (groundspeed > 0.2)
+  {
+    setprop("/sim/model/ground-equipment-g", 0);
+    setprop("/sim/model/ground-equipment-p", 0);
+    setprop("/sim/model/ground-equipment-f", 0);
+  }
+
+  # on regarde si on a du courant
   var engine0_running = getprop("/engines/engine[0]/running") or 0;
   var engine1_running = getprop("/engines/engine[1]/running") or 0;
   var battery_on = getprop("/controls/electric/battery-switch") or 0;
+  var epu_on = getprop("/sim/model/ground-equipment-p") or 0;
   var systems_electrical_on = 0;
-  if (engine0_running or engine1_running or battery_on)
+  if (engine0_running or engine1_running or battery_on or epu_on)
   {
     systems_electrical_on = 1;
   }
@@ -64,8 +87,9 @@ main_loop = func {
   {
     systems_electrical_on = 0;
   }
-  setprop ("/systems/electrical/on", systems_electrical_on);
+  setprop("/systems/electrical/on", systems_electrical_on);
 
+  # on permet le demarrage si on a du courant
   if (systems_electrical_on)
   {
     var engine0_do_start = getprop("/controls/engines/engine[0]/do_start") or 0;
