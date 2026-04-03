@@ -25,6 +25,7 @@
       <boost type="double">1</boost>
       <blower type="int">0</blower>
       <fuel-pump type="bool">1</fuel-pump>
+      <do_start type="bool">0</do_start>
     </engine>
     <engine n="1"> <!-- LEFT -->
       <magnetos type="int">0</magnetos>
@@ -32,6 +33,7 @@
       <boost type="double">1</boost>
       <blower type="int">0</blower>
       <fuel-pump type="bool">1</fuel-pump>
+      <do_start type="bool">0</do_start>
     </engine>
   </engines>
 

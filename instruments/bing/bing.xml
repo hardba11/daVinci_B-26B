@@ -3,6 +3,14 @@
 <PropertyList>
   <path>bing.ac</path>
 
+  <animation>
+    <type>select</type>
+    <object-name>Masque</object-name>
+    <condition>
+      <false />
+    </condition>
+  </animation>
+
   <effect>
     <inherits-from>Aircraft/daVinci_B-26B/Models/effects/interior</inherits-from>
     <object-name>CadranF</object-name>
@@ -23,6 +31,7 @@
     </emission>
     <condition>
       <property>/sim/model/rendering/relative-instrument-luminosity</property>
+      <equals><property>/systems/electrical/on</property><value>1</value></equals>
     </condition>
   </animation>
   <animation>
@@ -38,66 +47,11 @@
     </emission>
     <condition>
       <not><property>/sim/model/rendering/relative-instrument-luminosity</property></not>
+      <equals><property>/systems/electrical/on</property><value>1</value></equals>
     </condition>
   </animation>
 
-  <animation>
-    <type>select</type>
-    <object-name>Masque</object-name>
-    <condition>
-      <less-than>
-        <property>/systems/electrical/outputs/instr-ignition-switch</property>
-        <value>27</value>
-      </less-than>
-    </condition>
-  </animation>
-  <animation>
-    <type>select</type>
-    <object-name>Temoin-Train</object-name>
-    <object-name>TemoinMTrain</object-name>
-    <condition>
-      <greater-than>
-        <property>/systems/electrical/outputs/instr-ignition-switch</property>
-        <value>27</value>
-      </greater-than>
-    </condition>
-  </animation>
-  <animation>
-    <type>select</type>
-    <object-name>Temoin-Train</object-name>
-    <condition>
-      <equals>
-        <property>/gear/gear/position-norm[0]</property>
-        <value>1.0</value>
-      </equals>
-    </condition>
-  </animation>
-  <animation>
-    <type>select</type>
-    <object-name>TemoinMTrain</object-name>
-    <condition>
-      <and>
-        <not-equals>
-          <property>/gear/gear/position-norm[0]</property>
-          <value>1.0</value>
-        </not-equals>
-        <not-equals>
-          <property>/gear/gear/position-norm[0]</property>
-          <value>0</value>
-        </not-equals>
-      </and>
-    </condition>
-  </animation>
-  <animation>
-    <type>select</type>
-    <object-name>Temoin-Actif</object-name>
-    <condition>
-      <greater-than>
-        <property>/controls/gear/brake-parking</property>
-        <value>0.99</value>
-      </greater-than>
-    </condition>
-  </animation>
+  <!-- position des flaps -->
   <animation>
     <type>rotate</type>
     <object-name>Aiguille</object-name>
@@ -120,6 +74,106 @@
       <z>0</z>
     </axis>
   </animation>
+
+  <!-- temoin de trains sortis -->
+  <animation>
+    <type>select</type>
+    <object-name>Temoin-Train</object-name>
+    <condition>
+      <equals><property>/gear/gear/position-norm[0]</property><value>1.0</value></equals>
+    </condition>
+  </animation>
+  <animation>
+    <type>material</type>
+    <object-name>Temoin-Train</object-name>
+    <emission>
+      <red>0</red>
+      <green>.8</green>
+      <blue>0</blue>
+    </emission>
+    <condition>
+      <equals><property>/systems/electrical/on</property><value>1</value></equals>
+    </condition>
+  </animation>
+
+  <!-- temoin de trains en mouvement -->
+  <animation>
+    <type>select</type>
+    <object-name>TemoinMTrain</object-name>
+    <condition>
+      <not-equals><property>/gear/gear/position-norm[0]</property><value>1.0</value></not-equals>
+      <not-equals><property>/gear/gear/position-norm[0]</property><value>0</value></not-equals>
+    </condition>
+  </animation>
+  <animation>
+    <type>material</type>
+    <object-name>TemoinMTrain</object-name>
+    <emission>
+      <red>.6</red>
+      <green>.5</green>
+      <blue>.3</blue>
+    </emission>
+    <condition>
+      <equals><property>/systems/electrical/on</property><value>1</value></equals>
+    </condition>
+  </animation>
+
+  <!-- temoin de trains rentres -->
+  <animation>
+    <type>material</type>
+    <object-name>LampeTrain</object-name>
+    <emission>
+      <factor-prop>/sim/model/rendering/relative-instrument-luminosity</factor-prop>
+      <red>   0.017</red>
+      <green> 0.60 </green>
+      <blue>  0.65 </blue>
+    </emission>
+    <condition>
+      <property>/sim/model/rendering/relative-instrument-luminosity</property>
+      <equals><property>/systems/electrical/on</property><value>1</value></equals>
+    </condition>
+  </animation>
+  <animation>
+    <type>material</type>
+    <object-name>LampeTrain</object-name>
+    <emission>
+      <factor-prop>/sim/model/rendering/relative-cabin-luminosity</factor-prop>
+      <red>.04</red>
+      <green>.14</green>
+      <blue>.14</blue>
+    </emission>
+    <condition>
+      <not><property>/sim/model/rendering/relative-instrument-luminosity</property></not>
+      <equals><property>/systems/electrical/on</property><value>1</value></equals>
+    </condition>
+  </animation>
+
+  <!-- parkbrake -->
+  <animation>
+    <type>material</type>
+    <object-name>Temoin-Actif</object-name>
+    <emission>
+      <red>.9</red>
+      <green>.1</green>
+      <blue>.1</blue>
+    </emission>
+    <condition>
+      <greater-than>
+        <property>/controls/gear/brake-parking</property>
+        <value>0.99</value>
+      </greater-than>
+      <equals><property>/systems/electrical/on</property><value>1</value></equals>
+    </condition>
+  </animation>
+
+
+
+
+
+
+
+
+
 
 </PropertyList>
 

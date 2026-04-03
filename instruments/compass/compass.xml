@@ -18,6 +18,7 @@
     </emission>
     <condition>
       <property>/sim/model/rendering/relative-instrument-luminosity</property>
+      <equals><property>/systems/electrical/on</property><value>1</value></equals>
     </condition>
   </animation>
   <animation>
@@ -31,6 +32,7 @@
     </emission>
     <condition>
       <not><property>/sim/model/rendering/relative-instrument-luminosity</property></not>
+      <equals><property>/systems/electrical/on</property><value>1</value></equals>
     </condition>
   </animation>
 
@@ -50,10 +52,8 @@
     </axis>
   </animation>
   <animation>
-
     <type>pick</type>
     <object-name>Compass</object-name>
-
     <hovered>
       <binding>
         <command>set-tooltip</command>

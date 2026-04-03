@@ -16,6 +16,9 @@
       <green>.14</green>
       <blue>.14</blue>
     </emission>
+    <condition>
+      <equals><property>/systems/electrical/on</property><value>1</value></equals>
+    </condition>
   </animation>
 
 </PropertyList>

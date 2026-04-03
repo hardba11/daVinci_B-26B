@@ -345,14 +345,19 @@
       <relative-strobelight-luminosity type="float">1</relative-strobelight-luminosity>
     </rendering>
 
+    <presets>
+      <engines_started type="int">0</engines_started>
+    </presets>
+
     <!-- ~~~~~~~~~~~~~~~~~~ specific menu -->
     <gui n="0" include="gui/gui-theme.xml" />
     <menubar include="gui/specific-menu.xml" />
 
   </sim>
 
-  <!-- air/air refuelling ability -->
   <systems>
+
+    <!-- air/air refuelling ability -->
     <refuel>
       <type type="string">probe</type>
       <serviceable type="bool">1</serviceable>
@@ -362,6 +367,11 @@
       <offset-y-m>0</offset-y-m>
       <offset-z-m>-2</offset-z-m>
     </refuel>
+
+    <electrical>
+      <on type="bool">0</on>
+    </electrical>
+
   </systems>
 
   <autopilot        include="include/autopilot-properties.xml" />

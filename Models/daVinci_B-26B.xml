@@ -372,6 +372,9 @@ ________________________________________________________________________________
       <green>.3</green>
       <blue>.3</blue>
     </emission>
+    <condition>
+      <equals><property>/systems/electrical/on</property><value>1</value></equals>
+    </condition>
   </animation>
 
   <animation>
@@ -394,6 +397,9 @@ ________________________________________________________________________________
       <green>.07</green>
       <blue>.07</blue>
     </emission>
+    <condition>
+      <equals><property>/systems/electrical/on</property><value>1</value></equals>
+    </condition>
   </animation>
 
   <!-- eclairage soute en rouge -->
@@ -423,6 +429,9 @@ ________________________________________________________________________________
       <green>0</green>
       <blue>0</blue>
     </emission>
+    <condition>
+      <equals><property>/systems/electrical/on</property><value>1</value></equals>
+    </condition>
   </animation>
 
   <!-- eclairage zone vie -->
@@ -451,6 +460,9 @@ ________________________________________________________________________________
       <green>.5</green>
       <blue>.4</blue>
     </emission>
+    <condition>
+      <equals><property>/systems/electrical/on</property><value>1</value></equals>
+    </condition>
   </animation>
 
 
@@ -2035,7 +2047,22 @@ ________________________________________________________________________________
       <z>1</z>
     </axis>
   </animation>
-
+  <animation>
+    <object-name>btn_pitot-heat</object-name>
+    <property>/controls/switches/pitot-heat</property>
+    <type>rotate</type>
+    <factor>-45</factor>
+    <center>
+      <x-m>-3.966</x-m>
+      <y-m>0</y-m>
+      <z-m>0.373</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
   <animation>
     <object-name>btn_fuel-pump_left</object-name>
     <property>/controls/engines/engine[1]/fuel-pump</property>
@@ -2104,7 +2131,7 @@ ________________________________________________________________________________
 
   <animation>
     <object-name>btn_starter_left</object-name>
-    <property>/controls/engines/engine[1]/starter</property>
+    <property>/controls/engines/engine[1]/do_start</property>
     <type>rotate</type>
     <factor>-45</factor>
     <center>
@@ -2121,7 +2148,7 @@ ________________________________________________________________________________
   <animation>
     <type>rotate</type>
     <object-name>btn_starter_right</object-name>
-    <property>/controls/engines/engine[0]/starter</property>
+    <property>/controls/engines/engine[0]/do_start</property>
     <factor>-45</factor>
     <center>
       <x-m>-3.833</x-m>
@@ -2353,7 +2380,25 @@ ________________________________________________________________________________
       </binding>
     </hovered>
   </animation>
-
+  <animation>
+    <type>pick</type>
+    <object-name>btn_pitot-heat</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/switches/pitot-heat</property>
+      </binding>
+    </action>
+    <hovered>
+      <binding>
+        <command>set-tooltip</command>
+        <tooltip-id>tooltip-btn_pitot-heat</tooltip-id>
+        <label>Pitot heat</label>
+      </binding>
+    </hovered>
+  </animation>
   <animation>
     <type>pick</type>
     <object-name>btn_fuel-pump_left</object-name>
@@ -2440,13 +2485,13 @@ ________________________________________________________________________________
       <repeatable>false</repeatable>
       <binding>
         <command>property-assign</command>
-        <property>/controls/engines/engine[1]/starter</property>
+        <property>/controls/engines/engine[1]/do_start</property>
         <value type="bool">1</value>
       </binding>
       <mod-up>
         <binding>
           <command>property-assign</command>
-          <property>/controls/engines/engine[1]/starter</property>
+          <property>/controls/engines/engine[1]/do_start</property>
           <value type="bool">0</value>
         </binding>
       </mod-up>
@@ -2467,12 +2512,12 @@ ________________________________________________________________________________
       <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
-        <property>/controls/engines/engine[0]/starter</property>
+        <property>/controls/engines/engine[0]/do_start</property>
       </binding>
       <mod-up>
         <binding>
           <command>property-assign</command>
-          <property>/controls/engines/engine[0]/starter</property>
+          <property>/controls/engines/engine[0]/do_start</property>
           <value type="bool">0</value>
         </binding>
       </mod-up>
@@ -2546,6 +2591,7 @@ ________________________________________________________________________________
     <condition>
       <equals><property>gear/gear[0]/position-norm</property><value>1</value></equals>
       <equals><property>/controls/light/taxi</property><value>1</value></equals>
+      <equals><property>/systems/electrical/on</property><value>1</value></equals>
     </condition>
   </animation>
 
@@ -2634,8 +2680,6 @@ ________________________________________________________________________________
     <range-m>500</range-m>
     <debug-color><r>1</r><g>1</g><b>1</b><a>1</a></debug-color>
   </light>
-
-
   <animation>
     <type>select</type>
     <object-name>landing-light-left-spot</object-name>
@@ -2643,9 +2687,9 @@ ________________________________________________________________________________
     <nopreview/>
     <condition>
       <equals><property>/controls/light/landing</property><value>1</value></equals>
+      <equals><property>/systems/electrical/on</property><value>1</value></equals>
     </condition>
   </animation>
-
 
   <animation>
     <type>material</type>
@@ -2662,9 +2706,8 @@ ________________________________________________________________________________
       <blue>0</blue>
     </emission>
     <condition>
-      <and>
-        <property>/controls/light/nav</property>
-      </and>
+      <property>/controls/light/nav</property>
+      <equals><property>/systems/electrical/on</property><value>1</value></equals>
     </condition>
   </animation>
   <animation>
@@ -2682,9 +2725,8 @@ ________________________________________________________________________________
       <blue>0</blue>
     </emission>
     <condition>
-      <and>
-        <property>/controls/light/nav</property>
-      </and>
+      <property>/controls/light/nav</property>
+      <equals><property>/systems/electrical/on</property><value>1</value></equals>
     </condition>
   </animation>
   <animation>
@@ -2702,9 +2744,8 @@ ________________________________________________________________________________
       <blue>10</blue>
     </emission>
     <condition>
-      <and>
-        <property>/controls/light/nav</property>
-      </and>
+      <property>/controls/light/nav</property>
+      <equals><property>/systems/electrical/on</property><value>1</value></equals>
     </condition>
   </animation>
 
@@ -2723,9 +2764,8 @@ ________________________________________________________________________________
       <blue>10</blue>
     </emission>
     <condition>
-      <and>
-        <property>/controls/light/nav</property>
-      </and>
+      <property>/controls/light/nav</property>
+      <equals><property>/systems/electrical/on</property><value>1</value></equals>
     </condition>
   </animation>
   <animation>
@@ -2749,15 +2789,18 @@ ________________________________________________________________________________
       <blue>0</blue>
     </emission>
     <condition>
-      <and>
-        <property>/controls/light/nav</property>
-      </and>
+      <property>/controls/light/nav</property>
+      <equals><property>/systems/electrical/on</property><value>1</value></equals>
     </condition>
   </animation>
 
   <animation>
     <type>material</type>
     <object-name>lights</object-name>
+    <condition>
+      <property>controls/light/landing</property>
+      <equals><property>/systems/electrical/on</property><value>1</value></equals>
+    </condition>
     <ambient>
       <red>1</red>
       <green>1</green>
@@ -2774,13 +2817,9 @@ ________________________________________________________________________________
     <type>material</type>
     <object-name>lights.nose</object-name>
     <condition>
-      <and>
-        <property>controls/light/taxi</property>
-        <equals>
-          <property>gear/gear[0]/position-norm</property>
-          <value>1</value>
-        </equals>
-      </and>
+      <property>controls/light/taxi</property>
+      <equals><property>gear/gear[0]/position-norm</property><value>1</value></equals>
+      <equals><property>/systems/electrical/on</property><value>1</value></equals>
     </condition>
     <ambient>
       <red>1</red>

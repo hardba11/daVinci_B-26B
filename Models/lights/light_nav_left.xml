@@ -13,9 +13,8 @@
     <type>select</type>
     <object-name>als_light</object-name>
     <condition>
-      <and>
-        <property>/controls/light/nav</property>
-      </and>
+      <property>/controls/light/nav</property>
+      <equals><property>/systems/electrical/on</property><value>1</value></equals>
     </condition>
   </animation>
 

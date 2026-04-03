@@ -11,6 +11,9 @@
       <green> 0.60 </green>
       <blue>  0.65 </blue>
     </emission>
+    <condition>
+      <equals><property>/systems/electrical/on</property><value>1</value></equals>
+    </condition>
   </animation>
   <animation>
     <type>rotate</type>

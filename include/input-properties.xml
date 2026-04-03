@@ -65,11 +65,13 @@ b26.event_click_disengage_autopilot();
         <command>nasal</command>
         <script>
           <![CDATA[
-if (getprop("/controls/doors/bay") == 1) {
-    setprop("/controls/doors/bay", 0);
-    setprop("/controls/doors/scale", 0);
-} else {
-    setprop("/controls/doors/bay", 1);
+if (getprop("/systems/electrical/on") == 1) {
+  if (getprop("/controls/doors/bay") == 1) {
+      setprop("/controls/doors/bay", 0);
+      setprop("/controls/doors/scale", 0);
+  } else {
+      setprop("/controls/doors/bay", 1);
+  }
 }
           ]]>
         </script>
@@ -93,6 +95,41 @@ controls.gearDown(-1);
             <property>/gear/gear[2]/wow</property>
           </not>
         </condition>
+      </binding>
+    </key>
+
+    <key n="91">
+      <name>[</name>
+      <desc>Extend Flaps</desc>
+      <binding>
+        <command>property-cycle</command>
+        <wrap type="bool">0</wrap>
+        <condition>
+          <equals><property>/systems/electrical/on</property><value>1</value></equals>
+        </condition>
+        <property>/controls/flight/flaps</property>
+        <value>1</value>
+        <value>0.7</value>
+        <value>0.4</value>
+        <value>0.2</value>
+        <value>0</value>
+      </binding>
+    </key>
+    <key n="93">
+      <name>]</name>
+      <desc>Retract Flaps</desc>
+      <binding>
+        <command>property-cycle</command>
+        <wrap type="bool">0</wrap>
+        <condition>
+          <equals><property>/systems/electrical/on</property><value>1</value></equals>
+        </condition>
+        <property>/controls/flight/flaps</property>
+        <value>0</value>
+        <value>0.2</value>
+        <value>0.4</value>
+        <value>0.7</value>
+        <value>1</value>
       </binding>
     </key>
 
@@ -126,7 +163,6 @@ controls.gearDown(-1);
         <value>1.0</value>
       </binding>
     </key>
-
 
     <key n="115">
       <name>s</name>
@@ -201,7 +237,12 @@ if (getprop("/rendering/scene/diffuse/green") < .5) {
       </binding>
       <binding>
         <command>nasal</command>
-        <script>controls.startEngine()</script>
+        <!--script>controls.startEngine()</script-->
+        <script>
+          <![CDATA[
+b26.event_start_engine();
+          ]]>
+        </script>
       </binding>
     </key>
 

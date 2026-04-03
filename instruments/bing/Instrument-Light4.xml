@@ -32,4 +32,7 @@
     <blue>1</blue>
   </specular>
   <shininess> 20</shininess>
+  <condition>
+    <equals><property>/systems/electrical/on</property><value>1</value></equals>
+  </condition>
 </PropertyList>

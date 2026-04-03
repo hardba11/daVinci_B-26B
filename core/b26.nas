@@ -1,56 +1,95 @@
+print("*** LOADING b26.nas ... ***");
+
 var sin = func(a) { math.sin(a * math.pi / 180.0) }
 var cos = func(a) { math.cos(a * math.pi / 180.0) }
-var blower0 = props.globals.getNode("controls/engines/engine[0]/boost");
-var blower1 = props.globals.getNode("controls/engines/engine[1]/boost");
 
 init = func {
-  setprop ("/autopilot/locks/heading" , "none" );
-  setprop ("/autopilot/locks/altitude" , "none" );
+  var engines_started = getprop("/sim/presets/engines_started") or 0;
 
-  if (getprop("/controls/engines/engine[0]/on-startup-running") == 1) {
-    setprop("/consumables/fuel/tank[1]/selected",1);
-    setprop("/controls/engines/engine[0]/magnetos",3);
-    setprop("/controls/engines/engine[0]/coolflap-auto",1);
-#    setprop("/controls/engines/engine[0]/radlever",1);
-    setprop("/engines/engine[0]/oil-visc",1);
-    setprop("/engines/engine[0]/rpm",800);
-    setprop("/engines/engine[0]/engine-running",1);
+  #print("=================== INIT ==========================");
+
+  if(engines_started == 1)
+  {
+    setprop("/controls/engines/engine[0]/magnetos", 3);
+    setprop("/engines/engine[0]/rpm", 800);
+    setprop("/engines/engine[0]/running", 1);
+    setprop("/controls/engines/engine[1]/magnetos", 3);
+    setprop("/engines/engine[1]/rpm", 800);
+    setprop("/engines/engine[1]/running", 1);
+
+    if (getprop("/rendering/scene/diffuse/green") < .5) {
+        setprop("/controls/light/cabin-norm", 1);
+        setprop("/controls/light/panel-norm", 1);
+        setprop("/controls/light/instrument-norm", 1);
+        setprop("/controls/light/landing", 1);
+    }
+    setprop("/controls/electric/battery-switch", 1);
+    setprop("/controls/switches/master-avionics", 1);
+    setprop("/controls/light/nav", 1);
+    setprop("/controls/light/taxi", 1);
+    setprop("/controls/engines/engine[0]/fuel-pump", 1);
+    setprop("/controls/engines/engine[1]/fuel-pump", 1);
+    setprop("/sim/model/ground-equipment-f", 0);
+    setprop("/sim/model/ground-equipment-p", 0);
+    setprop("/sim/model/ground-equipment-g", 0);
+
+    # IF IN AIR :
+      #setprop("/autopilot/settings/target-speed-kt", 250);
+      #setprop("/autopilot/settings/target-altitude-ft", 10000);
+      #setprop("/autopilot/settings/heading-bug-deg", getprop("/orientation/heading-deg"));
+      #setprop("/autopilot/locks/speed", "speed-with-throttle");
+      #setprop("/autopilot/locks/heading", "dg-heading-hold");
+      #setprop("/autopilot/locks/altitude", "altitude-hold");
   }
-  if (getprop("/controls/engines/engine[1]/on-startup-running") == 1) {
-    setprop("/consumables/fuel/tank[3]/selected",1);
-    setprop("/controls/engines/engine[1]/magnetos",3);
-    setprop("/controls/engines/engine[1]/coolflap-auto",1);
-#    setprop("/controls/engines/engine[1]/radlever",1);
-    setprop("/engines/engine[1]/oil-visc",1);
-    setprop("/engines/engine[1]/rpm",800);
-    setprop("/engines/engine[1]/engine-running",1);
+  else
+  {
+    setprop("/autopilot/locks/heading" , "none");
+    setprop("/autopilot/locks/altitude" , "none");
   }
- main_loop();
+
+  main_loop();
 }
 
 main_loop = func {
-  settimer(main_loop, 0.01);
+  #print("=================== LOOP ==========================");
+  var engine0_running = getprop("/engines/engine[0]/running") or 0;
+  var engine1_running = getprop("/engines/engine[1]/running") or 0;
+  var battery_on = getprop("/controls/electric/battery-switch") or 0;
+  var systems_electrical_on = 0;
+  if (engine0_running or engine1_running or battery_on)
+  {
+    systems_electrical_on = 1;
+  }
+  else
+  {
+    systems_electrical_on = 0;
+  }
+  setprop ("/systems/electrical/on", systems_electrical_on);
+
+  if (systems_electrical_on)
+  {
+    var engine0_do_start = getprop("/controls/engines/engine[0]/do_start") or 0;
+    setprop("/controls/engines/engine[0]/starter", engine0_do_start);
+    var engine1_do_start = getprop("/controls/engines/engine[1]/do_start") or 0;
+    setprop("/controls/engines/engine[1]/starter", engine1_do_start);
+  }
+
+  settimer(main_loop, 0.05);
 }
 
-var shift_blower0_up = func {
-  if (blower0.getValue() <= 0.46) {
-    interpolate("controls/engines/engine[0]/boost", 1, 30);
-  }
-}
-var shift_blower0_dn = func {
-  if (blower0.getValue() >= 1.0) {
-    interpolate("controls/engines/engine[0]/boost", 0.46, 30);
-  }
-}
-var shift_blower1_up = func {
-  if (blower0.getValue() <= 0.46) {
-    interpolate("controls/engines/engine[1]/boost", 1, 30);
-  }
-}
-var shift_blower1_dn = func {
-  if (blower0.getValue() >= 1.0) {
-    interpolate("controls/engines/engine[1]/boost", 0.46, 30);
-  }
+var event_start_engine = func {
+  setprop("/controls/engines/engine[0]/do_start" , 1);
+  setprop("/controls/engines/engine[1]/do_start" , 1);
+  setprop("/controls/engines/engine[0]/starter" , 1);
+  setprop("/controls/engines/engine[1]/starter" , 1);
+
+  settimer(func() {
+    setprop("/controls/engines/engine[0]/do_start" , 0);
+    setprop("/controls/engines/engine[1]/do_start" , 0);
+    setprop("/controls/engines/engine[0]/starter" , 0);
+    setprop("/controls/engines/engine[1]/starter" , 0);
+  }, 1);
+
 }
 
 
@@ -225,7 +264,7 @@ var center_flight_controls_trim = func() {
 }
 
 
-# setlistener("/sim/signals/fdm-initialized",init);
+setlistener("/sim/signals/fdm-initialized", init);
 
 
 

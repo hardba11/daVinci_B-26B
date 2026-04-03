@@ -1,3 +1,5 @@
+print("*** LOADING lights.nas ... ***");
+
 #Universal light systems by Tomaskom
 
 var lightsPath = "lightpack/"; #path to the property node, where all internal values are placed

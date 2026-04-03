@@ -336,17 +336,13 @@ yasim / fdm (aircraft behaviour)
     <output>
       <prop>/autopilot/internal/target-roll-deg</prop>
     </output>
-    <feedback-if-disabled>true</feedback-if-disabled>
+    <feedback-if-disabled>false</feedback-if-disabled>
     <config>
       <Kp>-2</Kp>          <!-- -1 proportional gain -->
-      <beta>1.0</beta>     <!-- input value weighing factor -->
-      <alpha>0.1</alpha>   <!-- low pass filter weighing factor -->
-      <gamma>0.0</gamma>   <!-- input value weighing factor for -->
-                           <!-- unfiltered derivative error -->
-      <Ti>35.0</Ti>        <!-- 10 integrator time -->
-      <Td>0.000001</Td>     <!-- 0.00001 derivator time -->
-      <u_min>-20.0</u_min> <!-- minimum output clamp -->
-      <u_max>20.0</u_max>  <!-- maximum output clamp -->
+      <Ti>40</Ti>          <!-- 10 integrator time -->
+      <Td>0.000001</Td>    <!-- 0.00001 derivator time -->
+      <u_min>-30.0</u_min> <!-- minimum output clamp -->
+      <u_max>30.0</u_max>  <!-- maximum output clamp -->
     </config>
   </pid-controller>
 
@@ -368,12 +364,8 @@ yasim / fdm (aircraft behaviour)
       <prop>/controls/flight/aileron</prop>
     </output>
     <config>
-      <Kp>0.1</Kp>        <!-- 0.1 proportional gain /_debug/Kp TEST1=6 -->
-      <beta>1.0</beta>    <!-- input value weighing factor -->
-      <alpha>0.1</alpha>  <!-- low pass filter weighing factor -->
-      <gamma>0.0</gamma>  <!-- input value weighing factor for -->
-                          <!-- unfiltered derivative error -->
-      <Ti>10.0</Ti>       <!-- 10 integrator time /_debug/Ti TEST1=1 -->
+      <Kp>0.05</Kp>        <!-- 0.1 proportional gain /_debug/Kp TEST1=6 -->
+      <Ti>5.0</Ti>       <!-- 10 integrator time /_debug/Ti TEST1=1 -->
       <Td>0.00001</Td>    <!-- 0.00001 derivator time /_debug/Td TEST1=0.0007 -->
       <u_min>-1.0</u_min> <!-- minimum output clamp -->
       <u_max>1.0</u_max>  <!-- maximum output clamp -->

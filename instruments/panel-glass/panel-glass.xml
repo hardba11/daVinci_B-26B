@@ -22,7 +22,10 @@
     <object-name>screen_off</object-name>
     <condition>
       <not>
-        <property>/controls/switches/master-avionics</property>
+        <and>
+          <property>/controls/switches/master-avionics</property>
+          <property>/systems/electrical/on</property>
+        </and>
       </not>
     </condition>
   </animation>
