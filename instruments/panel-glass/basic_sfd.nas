@@ -67,6 +67,10 @@ var y_oil_temp_engine_r = y_egt_engine_r + 100;
 var x_ff_engine_r = x_egt_engine_r;
 var y_ff_engine_r = y_egt_engine_r + 200;
 
+var max_rpm = 2600;
+var max_torque = 11000;
+var max_ff = 570;
+
 
 #===============================================================================
 #                                                                      FUNCTIONS
@@ -849,16 +853,16 @@ var BASIC_SFD = {
         var windfrom   = getprop("/environment/wind-from-heading-deg") or 0;
 
         # gauge + value rpm
-        update_circular_gauge(me.rpm_engine_r_circle, x_rpm_engine_r, y_rpm_engine_r, rayon_gauge, (rpm_r * 270 / 3200), 'green');
+        update_circular_gauge(me.rpm_engine_r_circle, x_rpm_engine_r, y_rpm_engine_r, rayon_gauge, (rpm_r * 270 / max_rpm), 'green');
         me.rpm_engine_r_text.setText(sprintf('%.1f', rpm_r));
 
         # gauge + value torque
         if(torque_r < 0) { torque_r = 0; }
-        update_circular_gauge(me.torque_engine_r_circle, x_torque_engine_r, y_torque_engine_r, rayon_gauge, (torque_r * 270 / 4400), 'green');
+        update_circular_gauge(me.torque_engine_r_circle, x_torque_engine_r, y_torque_engine_r, rayon_gauge, (torque_r * 270 / max_torque), 'green');
         me.torque_engine_r_text.setText(sprintf('%.1f', torque_r));
 
         # gauge + value egt
-        update_gauge(me.egt_r_gauge, 0, -egt_r * 150 / 100, 'green');
+        update_gauge(me.egt_r_gauge, 0, -egt_r * 350 / 250, 'green');
         me.egt_engine_r_text.setText(sprintf('%.1f', egt_r));
 
         # gauge + value oil temp
@@ -866,20 +870,20 @@ var BASIC_SFD = {
         me.oil_temp_engine_r_text.setText(sprintf('%.1f', oil_temp_r));
 
         # gauge + value fuel flow
-        update_gauge(me.ff_r_gauge, 0, -ff_r * 350 / 350, 'green');
+        update_gauge(me.ff_r_gauge, 0, -ff_r * 350 / max_ff, 'green');
         me.ff_engine_r_text.setText(sprintf('%.1f', ff_r));
 
         # gauge + value rpm
-        update_circular_gauge(me.rpm_engine_l_circle, x_rpm_engine_l, y_rpm_engine_l, rayon_gauge, (rpm_l * 270 / 3200), 'green');
+        update_circular_gauge(me.rpm_engine_l_circle, x_rpm_engine_l, y_rpm_engine_l, rayon_gauge, (rpm_l * 270 / max_rpm), 'green');
         me.rpm_engine_l_text.setText(sprintf('%.1f', rpm_l));
 
         # gauge + value torque
         if(torque_l < 0) { torque_l = 0; }
-        update_circular_gauge(me.torque_engine_l_circle, x_torque_engine_l, y_torque_engine_l, rayon_gauge, (torque_l * 270 / 4400), 'green');
+        update_circular_gauge(me.torque_engine_l_circle, x_torque_engine_l, y_torque_engine_l, rayon_gauge, (torque_l * 270 / max_torque), 'green');
         me.torque_engine_l_text.setText(sprintf('%.1f', torque_l));
 
         # gauge + value egt
-        update_gauge(me.egt_l_gauge, 0, -egt_l * 150 / 100, 'green');
+        update_gauge(me.egt_l_gauge, 0, -egt_l * 350 / 250, 'green');
         me.egt_engine_l_text.setText(sprintf('%.1f', egt_l));
 
         # gauge + value oil temp
@@ -887,7 +891,7 @@ var BASIC_SFD = {
         me.oil_temp_engine_l_text.setText(sprintf('%.1f', oil_temp_l));
 
         # gauge + value fuel flow
-        update_gauge(me.ff_l_gauge, 0, -ff_l * 350 / 350, 'green');
+        update_gauge(me.ff_l_gauge, 0, -ff_l * 350 / max_ff, 'green');
         me.ff_engine_l_text.setText(sprintf('%.1f', ff_l));
 
         # gauge + value tanks

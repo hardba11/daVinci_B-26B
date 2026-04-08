@@ -240,10 +240,20 @@ if (getprop("/rendering/scene/diffuse/green") < .5) {
         <!--script>controls.startEngine()</script-->
         <script>
           <![CDATA[
-b26.event_start_engine();
+b26.event_start_engine(1);
           ]]>
         </script>
       </binding>
+      <mod-up>
+        <binding>
+          <command>nasal</command>
+          <script>
+            <![CDATA[
+b26.event_start_engine(0);
+            ]]>
+          </script>
+        </binding>
+      </mod-up>
     </key>
 
     <key n="53">

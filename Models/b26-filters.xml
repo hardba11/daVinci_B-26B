@@ -138,6 +138,136 @@
     </output>
   </filter>
 
+  <logic>
+    <name>volume_as_external</name>
+    <input>
+      <or>
+        <and>
+          <!-- Nose and window opened -->
+          <equals>
+            <property>/sim/current-view/view-number-raw</property>
+            <value>0</value>
+          </equals>
+          <greater-than>
+            <property>/sim/model/door-positions/windows-position-norm</property>
+            <value>0</value>
+          </greater-than>
+        </and>
+        <and>
+          <!-- CoPilot and window opened -->
+          <equals>
+            <property>/sim/current-view/view-number-raw</property>
+            <value>108</value>
+          </equals>
+          <greater-than>
+            <property>/sim/model/door-positions/windows-position-norm</property>
+            <value>0</value>
+          </greater-than>
+        </and>
+        <and>
+          <!-- Pilot and window opened -->
+          <equals>
+            <property>/sim/current-view/view-number-raw</property>
+            <value>107</value>
+          </equals>
+          <greater-than>
+            <property>/sim/model/door-positions/windows-position-norm</property>
+            <value>0</value>
+          </greater-than>
+        </and>
+        <and>
+          <!-- NavigationDeck and door1 and bay opened -->
+          <equals>
+            <property>/sim/current-view/view-number-raw</property>
+            <value>106</value>
+          </equals>
+          <greater-than>
+            <property>/sim/model/door-positions/door1-position-norm</property>
+            <value>0</value>
+          </greater-than>
+          <greater-than>
+            <property>/sim/model/door-positions/bay-position-norm</property>
+            <value>0</value>
+          </greater-than>
+        </and>
+        <and>
+          <!-- Bay and bay opened -->
+          <equals>
+            <property>/sim/current-view/view-number-raw</property>
+            <value>105</value>
+          </equals>
+          <greater-than>
+            <property>/sim/model/door-positions/bay-position-norm</property>
+            <value>0</value>
+          </greater-than>
+        </and>
+        <and>
+          <!-- Outside -->
+          <equals>
+            <property>/sim/current-view/view-number-raw</property>
+            <value>104</value>
+          </equals>
+        </and>
+        <and>
+          <!-- Bedroom and door2 and bay opened -->
+          <equals>
+            <property>/sim/current-view/view-number-raw</property>
+            <value>103</value>
+          </equals>
+          <greater-than>
+            <property>/sim/model/door-positions/door2-position-norm</property>
+            <value>0</value>
+          </greater-than>
+          <greater-than>
+            <property>/sim/model/door-positions/bay-position-norm</property>
+            <value>0</value>
+          </greater-than>
+        </and>
+        <and>
+          <!-- TopTurret and door2 and door3 and bay opened -->
+          <equals>
+            <property>/sim/current-view/view-number-raw</property>
+            <value>102</value>
+          </equals>
+          <greater-than>
+            <property>/sim/model/door-positions/door3-position-norm</property>
+            <value>0</value>
+          </greater-than>
+          <greater-than>
+            <property>/sim/model/door-positions/door2-position-norm</property>
+            <value>0</value>
+          </greater-than>
+          <greater-than>
+            <property>/sim/model/door-positions/bay-position-norm</property>
+            <value>0</value>
+          </greater-than>
+        </and>
+        <and>
+          <!-- Livingroom and door2 and door3 and bay opened -->
+          <equals>
+            <property>/sim/current-view/view-number-raw</property>
+            <value>101</value>
+          </equals>
+          <greater-than>
+            <property>/sim/model/door-positions/door3-position-norm</property>
+            <value>0</value>
+          </greater-than>
+          <greater-than>
+            <property>/sim/model/door-positions/door2-position-norm</property>
+            <value>0</value>
+          </greater-than>
+          <greater-than>
+            <property>/sim/model/door-positions/bay-position-norm</property>
+            <value>0</value>
+          </greater-than>
+        </and>
+        <not><property>/sim/current-view/internal</property></not>
+      </or>
+    </input>
+    <output>/sim/sound/volume_as_external</output>
+  </logic>
+
+
 
 </PropertyList>
 

@@ -24,12 +24,6 @@ init = func {
     setprop("/engines/engine[1]/rpm", 800);
     setprop("/engines/engine[1]/running", 1);
 
-    if (getprop("/rendering/scene/diffuse/green") < .5) {
-        setprop("/controls/light/cabin-norm", 1);
-        setprop("/controls/light/panel-norm", 1);
-        setprop("/controls/light/instrument-norm", 1);
-        setprop("/controls/light/landing", 1);
-    }
     setprop("/controls/electric/battery-switch", 1);
     setprop("/controls/switches/master-avionics", 1);
     setprop("/controls/light/nav", 1);
@@ -44,13 +38,21 @@ init = func {
     {
       # IF IN AIR :
       setprop("/controls/gear/brake-parking", 0);
-      setprop("/autopilot/settings/target-speed-kt", getprop("/sim/presets/airspeed-kt"));
-      setprop("/autopilot/settings/target-altitude-ft", getprop("/sim/presets/altitude-ft"));
-      setprop("/autopilot/settings/heading-bug-deg", getprop("/sim/presets/heading-deg"));
-      setprop("/autopilot/locks/speed", "speed-with-throttle");
-      setprop("/autopilot/locks/heading", "dg-heading-hold");
-      setprop("/autopilot/locks/altitude", "altitude-hold");
+      #setprop("/autopilot/settings/target-speed-kt", getprop("/sim/presets/airspeed-kt"));
+      #setprop("/autopilot/settings/target-altitude-ft", getprop("/sim/presets/altitude-ft"));
+      #setprop("/autopilot/settings/heading-bug-deg", getprop("/sim/presets/heading-deg"));
+      #setprop("/autopilot/locks/speed", "speed-with-throttle");
+      #setprop("/autopilot/locks/heading", "dg-heading-hold");
+      #setprop("/autopilot/locks/altitude", "altitude-hold");
+
+      settimer(func() {
+        event_click_hold_autopilot();
+      }, 1);
+
     }
+    settimer(func() {
+      check_if_lights_needed();
+    }, 10);
   }
   else
   {
@@ -59,6 +61,16 @@ init = func {
   }
 
   main_loop();
+}
+
+check_if_lights_needed = func {
+      var luminosity = getprop("/rendering/scene/diffuse/green");
+      if (luminosity < .5) {
+          setprop("/controls/light/cabin-norm", 1);
+          setprop("/controls/light/panel-norm", 1);
+          setprop("/controls/light/instrument-norm", 1);
+          setprop("/controls/light/landing", 1);
+      }
 }
 
 main_loop = func {
@@ -98,21 +110,59 @@ main_loop = func {
     setprop("/controls/engines/engine[1]/starter", engine1_do_start);
   }
 
+  # permet de jouer le son de shutdown
+  var engine0_stopped = getprop("/engines/engine[0]/stopped") or 0;
+  var engine0_shutdown = getprop("/engines/engine[0]/shutdown") or 0;
+  if ((engine0_running == 0) and (engine0_stopped == 0))
+  {
+    setprop("/engines/engine[0]/shutdown", 1);
+    setprop("/engines/engine[0]/stopped", 1);
+    settimer(func() {
+      setprop("/engines/engine[0]/shutdown", 0);
+    }, 8);
+  }
+  if ((engine0_running == 1) and (engine0_stopped == 1))
+  {
+    setprop("/engines/engine[0]/stopped", 0);
+  }
+  var engine1_stopped = getprop("/engines/engine[1]/stopped") or 0;
+  var engine1_shutdown = getprop("/engines/engine[1]/shutdown") or 0;
+  if ((engine1_running == 0) and (engine1_stopped == 0))
+  {
+    setprop("/engines/engine[1]/shutdown", 1);
+    setprop("/engines/engine[1]/stopped", 1);
+    settimer(func() {
+      setprop("/engines/engine[1]/shutdown", 0);
+    }, 8);
+  }
+  if ((engine1_running == 1) and (engine1_stopped == 1))
+  {
+    setprop("/engines/engine[1]/stopped", 0);
+  }
+
+
   settimer(main_loop, 0.05);
 }
 
-var event_start_engine = func {
-  setprop("/controls/engines/engine[0]/do_start" , 1);
-  setprop("/controls/engines/engine[1]/do_start" , 1);
-  setprop("/controls/engines/engine[0]/starter" , 1);
-  setprop("/controls/engines/engine[1]/starter" , 1);
-
-  settimer(func() {
+var event_start_engine = func(held)
+{
+  if (held == 1)
+  {
+    setprop("/controls/engines/engine[0]/do_start" , 1);
+    setprop("/controls/engines/engine[1]/do_start" , 1);
+    setprop("/controls/engines/engine[0]/starter" , 1);
+    setprop("/controls/engines/engine[1]/starter" , 1);
+  }
+  elsif (held == 0)
+  {
     setprop("/controls/engines/engine[0]/do_start" , 0);
     setprop("/controls/engines/engine[1]/do_start" , 0);
+  }
+
+  settimer(func() {
     setprop("/controls/engines/engine[0]/starter" , 0);
     setprop("/controls/engines/engine[1]/starter" , 0);
-  }, 1);
+  }, 2);
 
 }
 

@@ -47,6 +47,7 @@
     <allow-toggle-cockpit>false</allow-toggle-cockpit>
 
     <sound>
+      <volume_as_external type="bool">0</volume_as_external>
       <path>Aircraft/daVinci_B-26B/sounds/sounds.xml</path>
     </sound>
 
@@ -56,7 +57,6 @@
     </panel>
 
     <model>
-      <!--path>Aircraft/daVinci_B-26B/models/daVinci_B-26B.xml</path-->
       <path>Aircraft/daVinci_B-26B/Models/daVinci_B-26B.xml</path>
       <crew>
         <pilot>
@@ -132,203 +132,17 @@
       <path>/controls/doors/door3</path>
     </aircraft-data>
 
-    <view n="0">
-      <name>Nose</name>
-      <type>lookfrom</type>
-      <internal>true</internal>
-      <config>
-        <!-- 
-        x,y,z used for hud target position, 
-        @see Models/daVinci_B-26B.xml
-        -->
-        <x-offset-m type="double">0.0</x-offset-m>
-        <y-offset-m type="double">0.29</y-offset-m>
-        <z-offset-m type="double">-5.74</z-offset-m>
-        <default-field-of-view-deg type="double">70.0</default-field-of-view-deg>
-        <!--pitch-offset-deg>-5</pitch-offset-deg-->
-        <heading-offset-deg>0</heading-offset-deg>
-        <from-model type="bool">true</from-model>
-        <from-model-idx type="int">0</from-model-idx>
-        <ground-level-nearplane-m type="double">0.01</ground-level-nearplane-m>
-        <default-pitch-deg type="double">0</default-pitch-deg>
-        <default-heading-deg type="double">0</default-heading-deg>
-        <front-direction-deg type="double">0</front-direction-deg>
-        <limits>
-          <enabled>false</enabled>
-        </limits>
-      </config>
-    </view>
-    <view n="100">
-      <name>Tail</name>
-      <type>lookfrom</type>
-      <internal>true</internal>
-      <config>
-        <from-model type="bool">true</from-model>
-        <from-model-idx type="int">0</from-model-idx>
-        <ground-level-nearplane-m type="double">0.01</ground-level-nearplane-m>
-        <default-field-of-view-deg type="double">80</default-field-of-view-deg>
-        <default-pitch-deg type="double">0</default-pitch-deg>
-        <default-heading-deg type="double">0</default-heading-deg>
-        <front-direction-deg type="double">0</front-direction-deg>
-        <x-offset-m type="double">0.2</x-offset-m>
-        <y-offset-m type="double">0.57</y-offset-m>
-        <z-offset-m type="double">9.8</z-offset-m>
-        <pitch-offset-deg>0</pitch-offset-deg>
-        <heading-offset-deg>170</heading-offset-deg>
-      </config>
-    </view>
-    <view n="101">
-      <name>Livingroom</name>
-      <type>lookfrom</type>
-      <internal>true</internal>
-      <config>
-        <from-model type="bool">true</from-model>
-        <from-model-idx type="int">0</from-model-idx>
-        <ground-level-nearplane-m type="double">0.01</ground-level-nearplane-m>
-        <default-field-of-view-deg type="double">80</default-field-of-view-deg>
-        <default-pitch-deg type="double">0</default-pitch-deg>
-        <default-heading-deg type="double">0</default-heading-deg>
-        <front-direction-deg type="double">0</front-direction-deg>
-        <x-offset-m type="double">0.27</x-offset-m>
-        <y-offset-m type="double">.42</y-offset-m>
-        <z-offset-m type="double">7.95</z-offset-m>
-        <pitch-offset-deg>-5</pitch-offset-deg>
-        <heading-offset-deg>30</heading-offset-deg>
-      </config>
-    </view>
-    <view n="102">
-      <name>TopTurret</name>
-      <type>lookfrom</type>
-      <internal>true</internal>
-      <config>
-        <from-model type="bool">true</from-model>
-        <from-model-idx type="int">0</from-model-idx>
-        <ground-level-nearplane-m type="double">0.01</ground-level-nearplane-m>
-        <default-field-of-view-deg type="double">100</default-field-of-view-deg>
-        <default-pitch-deg type="double">0</default-pitch-deg>
-        <default-heading-deg type="double">0</default-heading-deg>
-        <front-direction-deg type="double">0</front-direction-deg>
-        <x-offset-m type="double">0.0</x-offset-m>
-        <y-offset-m type="double">1.117</y-offset-m>
-        <z-offset-m type="double">5.44</z-offset-m>
-        <pitch-offset-deg>-12</pitch-offset-deg>
-        <heading-offset-deg>-160</heading-offset-deg>
-      </config>
-    </view>
-    <view n="103">
-      <name>Bedroom</name>
-      <type>lookfrom</type>
-      <internal>true</internal>
-      <config>
-        <from-model type="bool">true</from-model>
-        <from-model-idx type="int">0</from-model-idx>
-        <ground-level-nearplane-m type="double">0.01</ground-level-nearplane-m>
-        <default-field-of-view-deg type="double">70</default-field-of-view-deg>
-        <default-pitch-deg type="double">0</default-pitch-deg>
-        <default-heading-deg type="double">0</default-heading-deg>
-        <front-direction-deg type="double">0</front-direction-deg>
-        <x-offset-m type="double">-0.5</x-offset-m>
-        <y-offset-m type="double">0.085</y-offset-m>
-        <z-offset-m type="double">3.95</z-offset-m>
-        <pitch-offset-deg>-10</pitch-offset-deg>
-        <heading-offset-deg>-130</heading-offset-deg>
-      </config>
-    </view>
-    <view n="104">
-      <name>Outside</name>
-      <type>lookfrom</type>
-      <internal>true</internal>
-      <config>
-        <from-model type="bool">true</from-model>
-        <from-model-idx type="int">0</from-model-idx>
-        <ground-level-nearplane-m type="double">0.01</ground-level-nearplane-m>
-        <default-field-of-view-deg type="double">106</default-field-of-view-deg>
-        <default-pitch-deg type="double">0</default-pitch-deg>
-        <default-heading-deg type="double">0</default-heading-deg>
-        <front-direction-deg type="double">0</front-direction-deg>
-        <x-offset-m type="double">0.65</x-offset-m>
-        <y-offset-m type="double">-1.2</y-offset-m>
-        <z-offset-m type="double">0.5</z-offset-m>
-        <pitch-offset-deg>-5</pitch-offset-deg>
-        <heading-offset-deg>-20</heading-offset-deg>
-      </config>
-    </view>
-    <view n="105">
-      <name>Bay</name>
-      <type>lookfrom</type>
-      <internal>true</internal>
-      <config>
-        <from-model type="bool">true</from-model>
-        <from-model-idx type="int">0</from-model-idx>
-        <ground-level-nearplane-m type="double">0.01</ground-level-nearplane-m>
-        <default-field-of-view-deg type="double">70</default-field-of-view-deg>
-        <default-pitch-deg type="double">0</default-pitch-deg>
-        <default-heading-deg type="double">0</default-heading-deg>
-        <front-direction-deg type="double">0</front-direction-deg>
-        <x-offset-m type="double">0.0</x-offset-m>
-        <y-offset-m type="double">0.24</y-offset-m>
-        <z-offset-m type="double">.05</z-offset-m>
-        <pitch-offset-deg>-18</pitch-offset-deg>
-        <heading-offset-deg>180</heading-offset-deg>
-      </config>
-    </view>
-    <view n="106">
-      <name>NavigationDeck</name>
-      <type>lookfrom</type>
-      <internal>true</internal>
-      <config>
-        <from-model type="bool">true</from-model>
-        <from-model-idx type="int">0</from-model-idx>
-        <ground-level-nearplane-m type="double">0.01</ground-level-nearplane-m>
-        <default-field-of-view-deg type="double">100</default-field-of-view-deg>
-        <default-pitch-deg type="double">0</default-pitch-deg>
-        <default-heading-deg type="double">45</default-heading-deg>
-        <front-direction-deg type="double">0</front-direction-deg>
-        <x-offset-m type="double">-0.23</x-offset-m><!--right-->
-        <y-offset-m type="double">0.45</y-offset-m><!--up-->
-        <z-offset-m type="double">-1.07</z-offset-m><!--back-->
-        <pitch-offset-deg>-14</pitch-offset-deg>
-        <heading-offset-deg>-10</heading-offset-deg>
-      </config>
-    </view>
-    <view n="107">
-      <name>Pilot</name>
-      <type>lookfrom</type>
-      <internal>true</internal>
-      <config>
-        <from-model type="bool">true</from-model>
-        <from-model-idx type="int">0</from-model-idx>
-        <ground-level-nearplane-m type="double">0.01</ground-level-nearplane-m>
-        <default-field-of-view-deg type="double">70</default-field-of-view-deg>
-        <default-pitch-deg type="double">0</default-pitch-deg>
-        <default-heading-deg type="double">0</default-heading-deg>
-        <front-direction-deg type="double">0</front-direction-deg>
-        <x-offset-m type="double">-0.34</x-offset-m><!--right-->
-        <y-offset-m type="double">0.92</y-offset-m><!--up-->
-        <z-offset-m type="double">-3.30</z-offset-m><!--back-->
-        <pitch-offset-deg>-16.00</pitch-offset-deg>
-        <heading-offset-deg>0</heading-offset-deg>
-      </config>
-    </view>
-    <view n="108">
-      <name>CoPilot</name>
-      <type>lookfrom</type>
-      <internal>true</internal>
-      <config>
-        <from-model type="bool">true</from-model>
-        <from-model-idx type="int">0</from-model-idx>
-        <ground-level-nearplane-m type="double">0.01</ground-level-nearplane-m>
-        <default-field-of-view-deg type="double">80</default-field-of-view-deg>
-        <default-pitch-deg type="double">0</default-pitch-deg>
-        <default-heading-deg type="double">0</default-heading-deg>
-        <front-direction-deg type="double">0</front-direction-deg>
-        <x-offset-m type="double">0.48</x-offset-m><!--right-->
-        <y-offset-m type="double">0.89</y-offset-m><!--up-->
-        <z-offset-m type="double">-3.2</z-offset-m><!--back-->
-        <pitch-offset-deg>-22.00</pitch-offset-deg>
-        <heading-offset-deg>15</heading-offset-deg>
-      </config>
-    </view>
+    <view n="0"     include="include/sim-view0-properties.xml" />
+    <view n="100"   include="include/sim-view100-properties.xml" />
+    <view n="101"   include="include/sim-view101-properties.xml" />
+    <view n="102"   include="include/sim-view102-properties.xml" />
+    <view n="103"   include="include/sim-view103-properties.xml" />
+    <view n="104"   include="include/sim-view104-properties.xml" />
+    <view n="105"   include="include/sim-view105-properties.xml" />
+    <view n="106"   include="include/sim-view106-properties.xml" />
+    <view n="107"   include="include/sim-view107-properties.xml" />
+    <view n="108"   include="include/sim-view108-properties.xml" />
+
 
     <help            include="include/sim-help-properties.xml" />
     <multiplay       include="include/sim-multiplay-properties.xml" />

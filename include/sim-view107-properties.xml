@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertyList>
+  <name>Pilot</name>
+  <type>lookfrom</type>
+  <internal>true</internal>
+  <config>
+    <from-model type="bool">true</from-model>
+    <from-model-idx type="int">0</from-model-idx>
+    <ground-level-nearplane-m type="double">0.01</ground-level-nearplane-m>
+    <default-field-of-view-deg type="double">70</default-field-of-view-deg>
+    <default-pitch-deg type="double">0</default-pitch-deg>
+    <default-heading-deg type="double">0</default-heading-deg>
+    <front-direction-deg type="double">0</front-direction-deg>
+    <x-offset-m type="double">-0.34</x-offset-m><!--right-->
+    <y-offset-m type="double">0.92</y-offset-m><!--up-->
+    <z-offset-m type="double">-3.30</z-offset-m><!--back-->
+    <pitch-offset-deg>-16.00</pitch-offset-deg>
+    <heading-offset-deg>0</heading-offset-deg>
+  </config>
+</PropertyList>
+
+
