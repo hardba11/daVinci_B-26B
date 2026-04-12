@@ -599,7 +599,7 @@ ________________________________________________________________________________
 
   <animation>
     <type>translate</type>
-    <object-name>StarOutsideWindowFrame</object-name>
+    <object-name>WindowFrame.R</object-name>
     <object-name>InsideWindowFrame.R</object-name>
     <object-name>WindowGlass.R</object-name>
     <object-name>WindowGlass.R.int</object-name>
@@ -613,7 +613,7 @@ ________________________________________________________________________________
   </animation>
   <animation>
     <type>translate</type>
-    <object-name>StarOutsideWindowFrame</object-name>
+    <object-name>WindowFrame.R</object-name>
     <object-name>InsideWindowFrame.R</object-name>
     <object-name>WindowGlass.R</object-name>
     <object-name>WindowGlass.R.int</object-name>
@@ -632,7 +632,7 @@ ________________________________________________________________________________
   </animation>
   <animation>
     <type>translate</type>
-    <object-name>StarOutsideWindowFrame</object-name>
+    <object-name>WindowFrame.R</object-name>
     <object-name>InsideWindowFrame.R</object-name>
     <object-name>WindowGlass.R</object-name>
     <object-name>WindowGlass.R.int</object-name>

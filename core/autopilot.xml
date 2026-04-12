@@ -112,11 +112,12 @@ yasim / fdm (aircraft behaviour)
           <or>
             <equals><property>/gear/gear[1]/wow</property><value>1</value></equals>
             <equals><property>/gear/gear[2]/wow</property><value>1</value></equals>
+            <property>/autopilot/locks/altitude</property><value>altitude-hold</value>
           </or>
         </not>
       </condition>
     </enable>
-    <feedback-if-disabled>true</feedback-if-disabled>
+    <feedback-if-disabled>false</feedback-if-disabled>
     <input>
       <expression>
         <table>
@@ -189,6 +190,7 @@ yasim / fdm (aircraft behaviour)
           <or>
             <equals><property>/gear/gear[1]/wow</property><value>1</value></equals>
             <equals><property>/gear/gear[2]/wow</property><value>1</value></equals>
+            <property>/autopilot/locks/altitude</property><value>altitude-hold</value>
           </or>
         </not>
       </condition>

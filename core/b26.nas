@@ -76,15 +76,6 @@ check_if_lights_needed = func {
 main_loop = func {
   #print("=================== LOOP ==========================");
 
-  # on retire les ground equipments si on bouge
-  var groundspeed = getprop("/velocities/groundspeed-kt") or 0;
-  if (groundspeed > 0.2)
-  {
-    setprop("/sim/model/ground-equipment-g", 0);
-    setprop("/sim/model/ground-equipment-p", 0);
-    setprop("/sim/model/ground-equipment-f", 0);
-  }
-
   # on regarde si on a du courant
   var engine0_running = getprop("/engines/engine[0]/running") or 0;
   var engine1_running = getprop("/engines/engine[1]/running") or 0;
@@ -109,6 +100,16 @@ main_loop = func {
     var engine1_do_start = getprop("/controls/engines/engine[1]/do_start") or 0;
     setprop("/controls/engines/engine[1]/starter", engine1_do_start);
   }
+
+  # on retire les ground equipments si on bouge
+  var groundspeed = getprop("/velocities/groundspeed-kt") or 0;
+  if ((engine0_running or engine1_running) and groundspeed > 0.1)
+  {
+    setprop("/sim/model/ground-equipment-g", 0);
+    setprop("/sim/model/ground-equipment-p", 0);
+    setprop("/sim/model/ground-equipment-f", 0);
+  }
+
 
   # permet de jouer le son de shutdown
   var engine0_stopped = getprop("/engines/engine[0]/stopped") or 0;

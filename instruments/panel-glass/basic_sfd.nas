@@ -68,8 +68,8 @@ var x_ff_engine_r = x_egt_engine_r;
 var y_ff_engine_r = y_egt_engine_r + 200;
 
 var max_rpm = 2600;
-var max_torque = 11000;
-var max_ff = 570;
+var max_torque = 9800;
+var max_ff = 580;
 
 
 #===============================================================================

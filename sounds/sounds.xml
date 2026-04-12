@@ -101,7 +101,7 @@
       <max-dist>1200</max-dist>
     </shutdownL-ext>
 
-<!-- ============================================= MOTEURS REDUITS EXTERIEUR -->
+<!-- ===================================================== MOTEURS EXTERIEUR -->
 
     <moteurR-reduits-ext>
       <name>moteurR-reduits-ext</name>
@@ -169,7 +169,7 @@
       <max-dist>1200</max-dist>
     </moteurL-reduits-ext>
 
-<!-- ===================================================== MOTEURS EXTERIEUR -->
+<!-- ===================================================== HELICES EXTERIEUR -->
 
     <moteurR-ext>
       <name>moteurR-ext</name>
@@ -350,7 +350,7 @@
       </volume>
     </shutdownL-int>
 
-<!-- ============================================= MOTEURS REDUITS INTERIEUR -->
+<!-- ===================================================== MOTEURS INTERIEUR -->
 
     <moteurR-reduits-int>
       <name>moteurR-reduits-int</name>
@@ -366,8 +366,8 @@
       </condition>
       <volume>
         <property>/engines/engine[0]/rpm</property>
-        <min>0.2</min>
-        <max>0.8</max>
+        <min>0.1</min>
+        <max>0.2</max>
         <factor>0.0003</factor>
       </volume>
       <pitch>
@@ -393,8 +393,8 @@
       </condition>
       <volume>
         <property>/engines/engine[1]/rpm</property>
-        <min>0.2</min>
-        <max>0.8</max>
+        <min>0.1</min>
+        <max>0.2</max>
         <factor>0.0003</factor>
       </volume>
       <pitch>
@@ -406,7 +406,7 @@
       </pitch>
     </moteurL-reduits-int>
 
-<!-- ===================================================== MOTEURS INTERIEUR -->
+<!-- ===================================================== HELICES INTERIEUR -->
 
     <moteurR-int>
       <name>moteurR-int</name>
@@ -420,8 +420,8 @@
         <property>/engines/engine[0]/rpm</property>
         <min>0</min>
         <max>1</max>
-        <offset>-0.1</offset>
-        <factor>0.0002</factor>
+        <offset>-0.2</offset>
+        <factor>0.0003</factor>
       </volume>
       <pitch>
         <property>/engines/engine[0]/rpm</property>
@@ -444,8 +444,8 @@
         <property>/engines/engine[1]/rpm</property>
         <min>0</min>
         <max>1</max>
-        <offset>-0.1</offset>
-        <factor>0.0002</factor>
+        <offset>-0.2</offset>
+        <factor>0.0003</factor>
       </volume>
       <pitch>
         <property>/engines/engine[1]/rpm</property>
@@ -492,15 +492,11 @@
     <speedbrakes>
       <name>speedbrakes</name>
       <mode>in-transit</mode>
-      <path>Aircraft/daVinci_B-26B/sounds/b26_flaps.wav</path>
+      <path>Aircraft/daVinci_B-26B/sounds/b26_speedbrakes.wav</path>
       <property>/surface-positions/speedbrake-pos-norm</property>
       <volume>
         <factor>0.3</factor>
       </volume>
-      <pitch>
-        <min>2</min>
-        <max>2</max>
-      </pitch>
     </speedbrakes>
 
     <canopy-open>
@@ -589,9 +585,9 @@
       </condition>
       <volume>
         <property>/velocities/airspeed-kt</property>
-        <factor>0.001</factor>
+        <factor>0.0012</factor>
         <min>0</min>
-        <max>0.75</max>
+        <max>0.8</max>
       </volume>
       <pitch>
         <property>/velocities/airspeed-kt</property>
@@ -601,8 +597,8 @@
       </pitch>
     </bruits-aerodynamiques-int>
 
-    <rain_int>
-      <name>rain_int</name>
+    <rain-int>
+      <name>rain-int</name>
       <path>Aircraft/daVinci_B-26B/sounds/rain-windshield.wav</path>
       <mode>looped</mode>
       <condition>
@@ -636,10 +632,10 @@
         <outer-angle>45.0</outer-angle>
         <outer-gain>0.9</outer-gain>
       </orientation>
-    </rain_int>
+    </rain-int>
 
-    <rain_ext>
-      <name>rain_ext</name>
+    <rain-ext>
+      <name>rain-ext</name>
       <path>Aircraft/daVinci_B-26B/sounds/rain.wav</path>
       <mode>looped</mode>
       <condition>
@@ -653,7 +649,7 @@
         <min>0.2</min>
         <max>0.4</max>
       </volume>
-    </rain_ext>
+    </rain-ext>
 
 <!-- =========================================================== INSTRUMENTS -->
 

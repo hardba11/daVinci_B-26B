@@ -23,9 +23,9 @@ see :
     <name>Pitch Ladder</name>
     <type>pitch</type>
     <x>-40</x>
-    <y>-15</y>
+    <y>-10</y>
     <width>80</width>
-    <height>25</height>
+    <height>20</height>
     <roll-input>
       <property>/orientation/roll-deg</property>
     </roll-input>
@@ -37,7 +37,7 @@ see :
     <divisions>5</divisions>
     <screen-hole>6</screen-hole>
     <tick-length>2</tick-length>
-    <zero-bar-overlength>30</zero-bar-overlength>
+    <zero-bar-overlength>100</zero-bar-overlength>
     <enable-dive-bar-angle>true</enable-dive-bar-angle>
     <enable-dynamic-origin>false</enable-dynamic-origin>
     <enable-fuselage-ref-line>true</enable-fuselage-ref-line>
@@ -65,9 +65,9 @@ see :
   <turn-bank-indicator>
     <name>Turn Indicator</name>
     <x>-80</x>
-    <y>-50</y>
+    <y>-140</y>
     <width>160</width>
-    <height>50</height>
+    <height>160</height>
     <bank-input>
       <property>/orientation/roll-deg</property>
     </bank-input>
@@ -84,18 +84,33 @@ see :
 ================================================================================
 -->
   <label>
-    <name>Heading Label top</name>
+    <name>Heading Label</name>
     <x>-9</x>
     <y>80</y>
     <width>18</width>
     <height>10</height>
     <input>
-      <!--property>/orientation/heading-magnetic-deg</property-->
       <property>/orientation/heading-deg</property>
     </input>
     <format>%3.0f</format>
     <halign>center</halign>
     <box>true</box>
+  </label>
+
+  <label>
+    <name>Heading AP</name>
+    <x>10</x>
+    <y>80</y>
+    <width>18</width>
+    <height>10</height>
+    <format>*</format>
+    <halign>left</halign>
+    <condition>
+      <equals>
+        <property>/autopilot/locks/heading</property>
+        <value>dg-heading-hold</value>
+      </equals>
+    </condition>
   </label>
 
   <!--
@@ -107,7 +122,7 @@ see :
   <label>
     <name>KIAS</name>
     <x>-139</x>
-    <y>-26</y>
+    <y>30</y>
     <width>38</width>
     <height>10</height>
     <input>
@@ -118,15 +133,46 @@ see :
     <box>true</box>
   </label>
 
+  <label>
+    <name>KIAS AP</name>
+    <x>-100</x>
+    <y>30</y>
+    <width>38</width>
+    <height>10</height>
+    <format>*</format>
+    <halign>left</halign>
+    <condition>
+      <equals>
+        <property>/autopilot/locks/speed</property>
+        <value>speed-with-throttle</value>
+      </equals>
+    </condition>
+  </label>
+
   <!--
 ================================================================================
                                                                         ALTITUDE
 ================================================================================
 -->
+
+  <label>
+    <name>vspeed</name>
+    <x>109</x>
+    <y>50</y>
+    <width>36</width>
+    <height>8</height>
+    <input>
+      <property>/autopilot/internal/vert-speed-fpm</property>
+    </input>
+    <format>VS %d fpm</format>
+    <halign>right</halign>
+    <box>false</box>
+  </label>
+
   <label>
     <name>Altitude</name>
     <x>109</x>
-    <y>-26</y>
+    <y>30</y>
     <width>36</width>
     <height>10</height>
     <input>
@@ -136,10 +182,27 @@ see :
     <halign>right</halign>
     <box>true</box>
   </label>
+
+  <label>
+    <name>Altitude AP</name>
+    <x>146</x>
+    <y>30</y>
+    <width>38</width>
+    <height>10</height>
+    <format>*</format>
+    <halign>left</halign>
+    <condition>
+      <equals>
+        <property>/autopilot/locks/altitude</property>
+        <value>altitude-hold</value>
+      </equals>
+    </condition>
+  </label>
+
   <label>
     <name>flight level</name>
     <x>109</x>
-    <y>-8</y>
+    <y>18</y>
     <width>36</width>
     <height>8</height>
     <input>
@@ -149,6 +212,12 @@ see :
     <format>FL %3.0f</format>
     <halign>right</halign>
     <box>false</box>
+    <condition>
+      <greater-than>
+        <property>/instrumentation/altimeter/indicated-altitude-ft</property>
+        <value>5000</value>
+      </greater-than>
+    </condition>
   </label>
 
   <label>
@@ -176,19 +245,6 @@ see :
     </condition>
   </label>
 
-  <label>
-    <name>vspeed</name>
-    <x>130</x>
-    <y>5</y>
-    <width>36</width>
-    <height>8</height>
-    <input>
-      <property>/autopilot/internal/vert-speed-fpm</property>
-    </input>
-    <format>VS %d fpm</format>
-    <halign>right</halign>
-    <box>false</box>
-  </label>
 
   <!--
 ================================================================================
@@ -198,9 +254,9 @@ see :
   <!-- ~~~~~~~~~~~~~~~~~~ commands positions -->
   <gauge>
     <name>roll gauge</name>
-    <x>110</x>
-    <y>38</y>
-    <width>25</width>
+    <x>-135</x>
+    <y>-105</y>
+    <width>35</width>
     <height>5</height>
     <option>top</option>
     <option>horizontal</option>
@@ -213,12 +269,13 @@ see :
       <min>-1.0</min>
     </input>
   </gauge>
+
   <gauge>
     <name>pitch gauge</name>
-    <x>110</x>
-    <y>26</y>
+    <x>-135</x>
+    <y>-125</y>
     <width>10</width>
-    <height>24</height>
+    <height>40</height>
     <option>vertical</option>
     <option>right</option>
     <option>notext</option>
@@ -232,22 +289,43 @@ see :
     </input>
   </gauge>
 
+  <gauge>
+    <name>yaw gauge</name>
+    <x>-135</x>
+    <y>-108</y>
+    <width>35</width>
+    <height>3</height>
+    <option>horizontal</option>
+    <option>bottom</option>
+    <option>notext</option>
+    <major-divisions>1</major-divisions>
+    <minor-divisions>0</minor-divisions>
+    <input>
+      <property>/controls/flight/rudder</property>
+      <max>1.0</max>
+      <min>-1.0</min>
+    </input>
+  </gauge>
+
+  <!-- ~~~~~~~~~~~~~~~~~~ trim -->
+
   <label>
     <name>pitch trim value</name>
     <input>
       <property>/controls/flight/elevator-trim</property>
     </input>
-    <x>100</x>
-    <y>50</y>
+    <x>-160</x>
+    <y>-110</y>
     <width>10</width>
     <height>8</height>
     <halign>middle</halign>
     <format>%.3f</format>
   </label>
+
   <gauge>
     <name>pitch trim gauge</name>
-    <x>104</x>
-    <y>30</y>
+    <x>-141</x>
+    <y>-113</y>
     <width>5</width>
     <height>16</height>
     <option>vertical</option>
@@ -262,31 +340,15 @@ see :
       <min>-1.0</min>
     </input>
   </gauge>
-  <gauge>
-    <name>yaw gauge</name>
-    <x>110</x>
-    <y>35</y>
-    <width>25</width>
-    <height>3</height>
-    <option>horizontal</option>
-    <option>bottom</option>
-    <option>notext</option>
-    <major-divisions>1</major-divisions>
-    <minor-divisions>0</minor-divisions>
-    <input>
-      <property>/controls/flight/rudder</property>
-      <max>1.0</max>
-      <min>-1.0</min>
-    </input>
-  </gauge>
 
   <!-- ~~~~~~~~~~~~~~~~~~ throttles -->
+
   <gauge>
     <name>throttle0</name>
-    <x>-120</x>
-    <y>-135</y>
-    <width>10</width>
-    <height>30</height>
+    <x>-95</x>
+    <y>-125</y>
+    <width>8</width>
+    <height>40</height>
     <option>vertical</option>
     <option>left</option>
     <option>notext</option>
@@ -300,10 +362,10 @@ see :
   </gauge>
   <gauge>
     <name>throttle1</name>
-    <x>-120</x>
-    <y>-135</y>
-    <width>10</width>
-    <height>30</height>
+    <x>-95</x>
+    <y>-125</y>
+    <width>8</width>
+    <height>40</height>
     <option>vertical</option>
     <option>right</option>
     <option>notext</option>
@@ -315,6 +377,7 @@ see :
       <min>0.0</min>
     </input>
   </gauge>
+
   <!--
 ================================================================================
                                                                   AVIONICS INFOS
@@ -369,13 +432,13 @@ see :
       <or>
         <greater-than>
           <property>/orientation/alpha-deg</property>
-          <value>2.0</value>
+          <value>2.5</value>
         </greater-than>
         <and>
           <property>/controls/gear/gear-down</property>
           <greater-than>
             <property>/orientation/alpha-deg</property>
-            <value>-1.0</value>
+            <value>-1.2</value>
           </greater-than>
         </and>
       </or>
@@ -455,7 +518,7 @@ see :
   <label>
     <name>G Load</name>
     <x>-120</x>
-    <y>-5</y>
+    <y>-80</y>
     <width>1.5</width>
     <height>1.5</height>
     <input>
@@ -464,6 +527,34 @@ see :
     <format>%2.1fg</format>
     <halign>left</halign>
   </label>
+
+  <!-- ~~~~~~~~~~~~~~~~~~ gear agl for landing -->
+  <gauge>
+    <name>touchdown</name>
+    <x>-40</x>
+    <y>-90</y>
+    <width>12</width>
+    <height>100</height>
+    <option>vertical</option>
+    <option>right</option>
+    <option>notext</option>
+    <major-divisions>15</major-divisions>
+    <minor-divisions>5</minor-divisions>
+    <input>
+      <property>/position/gear-agl-ft</property>
+      <factor>1</factor>
+      <max>50.0</max>
+      <min>0.0</min>
+    </input>
+    <condition>
+      <property>/controls/gear/gear-down</property>
+      <less-than>
+        <property>/position/gear-agl-ft</property>
+        <value>60</value>
+      </less-than>
+      <not><property>/gear/gear[0]/wow</property></not>
+    </condition>
+  </gauge>
 
   <!--
 ================================================================================
@@ -475,7 +566,7 @@ see :
   <label>
     <name>elevationWarn</name>
     <x>0</x>
-    <y>-50</y>
+    <y>40</y>
     <condition>
       <equals>
         <property>/controls/gear/gear-down</property>
@@ -500,7 +591,75 @@ see :
     </blinking>
   </label>
 
-<!-- ~~~~~~~~~~~~~~~~~~ nav1 data if nav1 master and selected and not slaved to gps and adf1 not selected -->
+  <!--
+================================================================================
+                                                                        NAV DATA
+================================================================================
+-->
+
+<!-- ~~~~~~~~~~~~~~~~~~ GPS data if nav1 master and slaved to gps -->
+  <label>
+    <name>nav_data_gps_id</name>
+    <x>40</x>
+    <y>-95</y>
+    <width>20</width>
+    <height>6</height>
+    <condition>
+      <property>/instrumentation/nav[0]/slaved-to-gps</property>
+    </condition>
+    <format>GPS %s</format>
+    <input>
+      <property>/instrumentation/gps/wp/wp[1]/ID</property>
+    </input>
+    <halign>left</halign>
+  </label>
+  <label>
+    <name>nav_data_gps_bearing</name>
+    <x>40</x>
+    <y>-105</y>
+    <width>20</width>
+    <height>6</height>
+    <condition>
+      <property>/instrumentation/nav[0]/slaved-to-gps</property>
+    </condition>
+    <format>%.0f deg</format>
+    <input>
+      <property>/instrumentation/gps/wp/wp[1]/bearing-true-deg</property>
+    </input>
+    <halign>left</halign>
+  </label>
+  <label>
+    <name>nav_data_gps_eta</name>
+    <x>40</x>
+    <y>-115</y>
+    <width>20</width>
+    <height>6</height>
+    <condition>
+      <property>/instrumentation/nav[0]/slaved-to-gps</property>
+    </condition>
+    <format>eta %s</format>
+    <input>
+      <property>/instrumentation/gps/wp/wp[1]/TTW</property>
+    </input>
+    <halign>left</halign>
+  </label>
+  <label>
+    <name>nav_data_gps_dist</name>
+    <x>40</x>
+    <y>-125</y>
+    <width>20</width>
+    <height>6</height>
+    <condition>
+      <property>/instrumentation/nav[0]/slaved-to-gps</property>
+    </condition>
+    <format>%.1f NM</format>
+    <input>
+      <property>/instrumentation/gps/wp/wp[1]/distance-nm</property>
+    </input>
+    <halign>left</halign>
+  </label>
+
+<!-- ~~~~~~~~~~~~~~~~~~ nav1 data if not slaved to gps -->
   <label>
     <name>nav_data_nav1_id</name>
     <x>40</x>

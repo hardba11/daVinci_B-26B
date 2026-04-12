@@ -177,69 +177,19 @@ if (getprop("/rendering/scene/diffuse/green") < .5) {
     setprop("/controls/light/instrument-norm", 1);
     setprop("/controls/light/landing", 1);
 }
-          ]]>
-        </script>
-      </binding>
-      <binding>
-        <command>property-assign</command>
-        <property>/controls/electric/battery-switch</property>
-        <value type="int">1</value>
-      </binding>
-      <binding>
-        <command>property-assign</command>
-        <property>/controls/switches/master-avionics</property>
-        <value type="int">1</value>
-      </binding>
-      <binding>
-        <command>property-assign</command>
-        <property>/controls/light/nav</property>
-        <value type="int">1</value>
-      </binding>
-      <binding>
-        <command>property-assign</command>
-        <property>/controls/light/taxi</property>
-        <value type="int">1</value>
-      </binding>
-      <binding>
-        <command>property-assign</command>
-        <property>/controls/engines/engine[0]/magnetos</property>
-        <value type="int">3</value>
-      </binding>
-      <binding>
-        <command>property-assign</command>
-        <property>/controls/engines/engine[0]/fuel-pump</property>
-        <value type="bool">1</value>
-      </binding>
-      <binding>
-        <command>property-assign</command>
-        <property>/controls/engines/engine[1]/magnetos</property>
-        <value type="int">3</value>
-      </binding>
-      <binding>
-        <command>property-assign</command>
-        <property>/controls/engines/engine[1]/fuel-pump</property>
-        <value type="bool">1</value>
-      </binding>
-      <binding>
-        <command>property-assign</command>
-        <property>/sim/model/ground-equipment-f</property>
-        <value type="bool">0</value>
-      </binding>
-      <binding>
-        <command>property-assign</command>
-        <property>/sim/model/ground-equipment-p</property>
-        <value type="bool">0</value>
-      </binding>
-      <binding>
-        <command>property-assign</command>
-        <property>/sim/model/ground-equipment-g</property>
-        <value type="bool">0</value>
-      </binding>
-      <binding>
-        <command>nasal</command>
-        <!--script>controls.startEngine()</script-->
-        <script>
-          <![CDATA[
+setprop("/controls/electric/battery-switch", 1);
+setprop("/controls/switches/master-avionics", 1);
+setprop("/controls/light/nav", 1);
+setprop("/controls/light/taxi", 1);
+setprop("/controls/engines/engine[0]/magnetos", 3);
+setprop("/controls/engines/engine[0]/fuel-pump", 1);
+setprop("/controls/engines/engine[0]/mixture", 1);
+setprop("/controls/engines/engine[1]/magnetos", 3);
+setprop("/controls/engines/engine[1]/fuel-pump", 1);
+setprop("/controls/engines/engine[1]/mixture", 1);
+setprop("/sim/model/ground-equipment-f", 0);
+setprop("/sim/model/ground-equipment-p", 0);
+setprop("/sim/model/ground-equipment-g", 0);
 b26.event_start_engine(1);
           ]]>
         </script>
