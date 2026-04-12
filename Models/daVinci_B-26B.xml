@@ -1396,7 +1396,6 @@ ________________________________________________________________________________
     </axis>
   </animation>
 
-
 <!-- Gear Animations -->
   <animation>
     <type>select</type>
@@ -2197,6 +2196,10 @@ ________________________________________________________________________________
         <value>0</value>
         <value>1</value>
       </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/click</property>
+      </binding>
     </action>
     <hovered>
       <binding>
@@ -2220,7 +2223,10 @@ ________________________________________________________________________________
         <value>0</value>
         <value>1</value>
       </binding>
-    </action>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/click</property>
+      </binding>    </action>
     <hovered>
       <binding>
         <command>set-tooltip</command>
@@ -2250,7 +2256,10 @@ ________________________________________________________________________________
         <value>0</value>
         <value>1</value>
       </binding>
-    </action>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/click</property>
+      </binding>    </action>
     <hovered>
       <binding>
         <command>set-tooltip</command>
@@ -2273,7 +2282,10 @@ ________________________________________________________________________________
         <value>0</value>
         <value>1</value>
       </binding>
-    </action>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/click</property>
+      </binding>    </action>
     <hovered>
       <binding>
         <command>set-tooltip</command>
@@ -2296,7 +2308,10 @@ ________________________________________________________________________________
         <value>0</value>
         <value>1</value>
       </binding>
-    </action>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/click</property>
+      </binding>    </action>
     <hovered>
       <binding>
         <command>set-tooltip</command>
@@ -2321,7 +2336,10 @@ ________________________________________________________________________________
         <value>2</value>
         <value>3</value>
       </binding>
-    </action>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/click</property>
+      </binding>    </action>
     <action>
       <button>1</button>
       <repeatable>false</repeatable>
@@ -2334,7 +2352,10 @@ ________________________________________________________________________________
         <value>1</value>
         <value>0</value>
       </binding>
-    </action>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/click</property>
+      </binding>    </action>
     <hovered>
       <binding>
         <command>set-tooltip</command>
@@ -2358,7 +2379,10 @@ ________________________________________________________________________________
         <value>2</value>
         <value>3</value>
       </binding>
-    </action>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/click</property>
+      </binding>    </action>
     <action>
       <button>1</button>
       <repeatable>false</repeatable>
@@ -2371,7 +2395,10 @@ ________________________________________________________________________________
         <value>1</value>
         <value>0</value>
       </binding>
-    </action>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/click</property>
+      </binding>    </action>
     <hovered>
       <binding>
         <command>set-tooltip</command>
@@ -2390,7 +2417,10 @@ ________________________________________________________________________________
         <command>property-toggle</command>
         <property>/controls/switches/pitot-heat</property>
       </binding>
-    </action>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/click</property>
+      </binding>    </action>
     <hovered>
       <binding>
         <command>set-tooltip</command>
@@ -2409,7 +2439,10 @@ ________________________________________________________________________________
         <command>property-toggle</command>
         <property>/controls/engines/engine[1]/fuel-pump</property>
       </binding>
-    </action>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/click</property>
+      </binding>    </action>
     <hovered>
       <binding>
         <command>set-tooltip</command>
@@ -2428,7 +2461,10 @@ ________________________________________________________________________________
         <command>property-toggle</command>
         <property>/controls/engines/engine[0]/fuel-pump</property>
       </binding>
-    </action>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/click</property>
+      </binding>    </action>
     <hovered>
       <binding>
         <command>set-tooltip</command>
@@ -2448,7 +2484,10 @@ ________________________________________________________________________________
         <command>property-toggle</command>
         <property>/controls/switches/master-avionics</property>
       </binding>
-    </action>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/click</property>
+      </binding>    </action>
     <hovered>
       <binding>
         <command>set-tooltip</command>
@@ -2467,7 +2506,10 @@ ________________________________________________________________________________
         <command>property-toggle</command>
         <property>/controls/electric/battery-switch</property>
       </binding>
-    </action>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/click</property>
+      </binding>    </action>
     <hovered>
       <binding>
         <command>set-tooltip</command>
@@ -2551,12 +2593,7 @@ ________________________________________________________________________________
       <lookat-z-m>-1.3</lookat-z-m>
     </direction>
     <ambient>
-<!--
-      <r>1</r>
-      <g>0</g>
-      <b>0</b>
-      <a>1</a>
--->
+      <!--<r>1</r><g>0</g><b>0</b><a>1</a>-->
       <r>/sim/model/rendering/relative-taxilight-luminosity</r>
       <g>/sim/model/rendering/relative-taxilight-luminosity</g>
       <b>/sim/model/rendering/relative-taxilight-luminosity</b>

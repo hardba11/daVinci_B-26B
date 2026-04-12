@@ -10,57 +10,57 @@
     <flight-model>yasim</flight-model>
     <aero>core/b26-yasim</aero>
 
-    <fuel-fraction>0.2</fuel-fraction>
+    <fuel-fraction type="float">0.2</fuel-fraction>
     <freeze>
-      <fuel>true</fuel>
+      <fuel type="bool">true</fuel>
     </freeze>
 
     <previews>
       <preview>
         <type>exterior</type>
         <splash type="bool">true</splash>
-        <path>public/1.jpg</path>
+        <path type="string">public/1.jpg</path>
       </preview>
       <preview>
         <type>exterior</type>
         <splash type="bool">true</splash>
-        <path>public/2.jpg</path>
+        <path type="string">public/2.jpg</path>
       </preview>
       <preview>
         <type>exterior</type>
         <splash type="bool">true</splash>
-        <path>public/3.jpg</path>
+        <path type="string">public/3.jpg</path>
       </preview>
       <preview>
         <type>exterior</type>
         <splash type="bool">true</splash>
-        <path>public/5.jpg</path>
+        <path type="string">public/5.jpg</path>
       </preview>
       <preview>
         <type>exterior</type>
         <splash type="bool">true</splash>
-        <path>public/6.jpg</path>
+        <path type="string">public/6.jpg</path>
       </preview>
     </previews>
 
-    <virtual-cockpit>false</virtual-cockpit>
-    <allow-toggle-cockpit>false</allow-toggle-cockpit>
+    <virtual-cockpit type="bool">false</virtual-cockpit>
+    <allow-toggle-cockpit type="bool">false</allow-toggle-cockpit>
 
     <sound>
       <volume_as_external type="bool">0</volume_as_external>
-      <path>Aircraft/daVinci_B-26B/sounds/sounds.xml</path>
+      <path type="string">Aircraft/daVinci_B-26B/sounds/sounds.xml</path>
     </sound>
 
     <panel>
       <path>Aircraft/Generic/Panels/generic-vfr-panel.xml</path>
-      <visibility>false</visibility>
+      <visibility type="bool">false</visibility>
     </panel>
 
     <model>
       <path>Aircraft/daVinci_B-26B/Models/daVinci_B-26B.xml</path>
       <crew>
         <pilot>
-          <visible>false</visible>
+          <visible type="bool">false</visible>
         </pilot>
       </crew>
       <door-positions>
@@ -74,6 +74,10 @@
       <equipment-baggages type="bool">true</equipment-baggages>
       <equipment-canoe type="bool">true</equipment-canoe>
       <equipment-velos type="bool">true</equipment-velos>
+
+      <!-- for sounds -->
+      <click type="bool">1</click>
+      <click-sound type="float">1</click-sound>
 
       <!-- pour la compatibilite avec le b26 de fguk -->
       <livery>
@@ -142,7 +146,6 @@
     <view n="106"   include="include/sim-view106-properties.xml" />
     <view n="107"   include="include/sim-view107-properties.xml" />
     <view n="108"   include="include/sim-view108-properties.xml" />
-
 
     <help            include="include/sim-help-properties.xml" />
     <multiplay       include="include/sim-multiplay-properties.xml" />

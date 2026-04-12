@@ -81,6 +81,16 @@
     <output>/environment/pressure-sea-level-hpa</output>
   </filter>
 
+  <!-- quand on a declenche un clic, ce filtre fait varier click-sound (float)
+  entre 0 et 1, cela permet d'avoir un etat transitoire pour declencher le son
+  -->
+  <filter>
+    <name>click</name>
+    <type>noise-spike</type>
+    <max-rate-of-change>7</max-rate-of-change>
+    <input>sim/model/click</input>
+    <output>sim/model/click-sound</output>
+  </filter>
 
   <filter>
     <name>splash-x</name>
@@ -267,7 +277,16 @@
     <output>/sim/sound/volume_as_external</output>
   </logic>
 
-
+  <logic>
+    <name>view-from-scale</name>
+    <input>
+      <equals>
+        <property>/controls/doors/scale</property>
+        <value>1</value>
+      </equals>
+    </input>
+    <output>/sim/view[104]/enabled</output>
+  </logic>
 
 </PropertyList>
 

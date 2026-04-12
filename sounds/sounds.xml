@@ -39,6 +39,7 @@
 
     <crankR-ext>
       <name>crankR-ext</name>
+      <mode>once</mode>
       <path>Aircraft/daVinci_B-26B/sounds/b26_engine_start.wav</path>
       <condition>
         <not><property>/engines/engine[0]/running</property></not>
@@ -55,6 +56,7 @@
 
     <crankL-ext>
       <name>crankL-ext</name>
+      <mode>once</mode>
       <path>Aircraft/daVinci_B-26B/sounds/b26_engine_start.wav</path>
       <condition>
         <not><property>/engines/engine[1]/running</property></not>
@@ -73,10 +75,15 @@
 
     <shutdownR-ext>
       <name>shutdownR-ext</name>
+      <mode>once</mode>
       <path>Aircraft/daVinci_B-26B/sounds/b26_shutdown.wav</path>
       <condition>
-        <property>/engines/engine[0]/shutdown</property>
+        <!--property>/engines/engine[0]/shutdown</property-->
         <property>/sim/sound/volume_as_external</property>
+        <less-than>
+          <property>/engines/engine[0]/rpm</property>
+          <value>200</value>
+        </less-than>
       </condition>
       <volume>
         <min>1.8</min>
@@ -88,10 +95,15 @@
 
     <shutdownL-ext>
       <name>shutdownL-ext</name>
+      <mode>once</mode>
       <path>Aircraft/daVinci_B-26B/sounds/b26_shutdown.wav</path>
       <condition>
-        <property>/engines/engine[1]/shutdown</property>
+        <!--property>/engines/engine[1]/shutdown</property-->
         <property>/sim/sound/volume_as_external</property>
+        <less-than>
+          <property>/engines/engine[1]/rpm</property>
+          <value>200</value>
+        </less-than>
       </condition>
       <volume>
         <min>1.8</min>
@@ -103,8 +115,8 @@
 
 <!-- ===================================================== MOTEURS EXTERIEUR -->
 
-    <moteurR-reduits-ext>
-      <name>moteurR-reduits-ext</name>
+    <engineR-ext>
+      <name>engineR-ext</name>
       <mode>looped</mode>
       <path>Aircraft/daVinci_B-26B/sounds/b26_idle_rpm.wav</path>
       <condition>
@@ -116,7 +128,7 @@
         </less-than>
         <greater-than>
           <property>/engines/engine[0]/rpm</property>
-          <value>100</value>
+          <value>200</value>
         </greater-than>
       </condition>
       <volume>
@@ -134,10 +146,10 @@
       </pitch>
       <reference-dist>50</reference-dist>
       <max-dist>1200</max-dist>
-    </moteurR-reduits-ext>
+    </engineR-ext>
 
-    <moteurL-reduits-ext>
-      <name>moteurL-reduits-ext</name>
+    <engineL-ext>
+      <name>engineL-ext</name>
       <mode>looped</mode>
       <path>Aircraft/daVinci_B-26B/sounds/b26_idle_rpm.wav</path>
       <condition>
@@ -149,7 +161,7 @@
         </less-than>
         <greater-than>
           <property>/engines/engine[1]/rpm</property>
-          <value>100</value>
+          <value>200</value>
         </greater-than>
       </condition>
       <volume>
@@ -167,23 +179,27 @@
       </pitch>
       <reference-dist>50</reference-dist>
       <max-dist>1200</max-dist>
-    </moteurL-reduits-ext>
+    </engineL-ext>
 
 <!-- ===================================================== HELICES EXTERIEUR -->
 
-    <moteurR-ext>
-      <name>moteurR-ext</name>
+    <propellerR-ext>
+      <name>propellerR-ext</name>
       <mode>looped</mode>
       <path>Aircraft/daVinci_B-26B/sounds/b26_high_rpm.wav</path>
       <condition>
         <property>/sim/sound/volume_as_external</property>
         <property>/engines/engine[0]/running</property>
+        <greater-than>
+          <property>/engines/engine[0]/rpm</property>
+          <value>500</value>
+        </greater-than>
       </condition>
       <volume>
         <property>/engines/engine[0]/rpm</property>
         <min>1</min>
         <max>2</max>
-        <offset>-0.1</offset>
+        <offset>-0.2</offset>
         <factor>0.0002</factor>
       </volume>
       <pitch>
@@ -195,21 +211,25 @@
       </pitch>
       <reference-dist>50</reference-dist>
       <max-dist>1200</max-dist>
-    </moteurR-ext>
+    </propellerR-ext>
 
-    <moteurL-ext>
-      <name>moteurL-ext</name>
+    <propellerL-ext>
+      <name>propellerL-ext</name>
       <mode>looped</mode>
       <path>Aircraft/daVinci_B-26B/sounds/b26_high_rpm.wav</path>
       <condition>
         <property>/sim/sound/volume_as_external</property>
         <property>/engines/engine[1]/running</property>
+        <greater-than>
+          <property>/engines/engine[1]/rpm</property>
+          <value>500</value>
+        </greater-than>
       </condition>
       <volume>
         <property>/engines/engine[1]/rpm</property>
         <min>1</min>
         <max>2</max>
-        <offset>-0.1</offset>
+        <offset>-0.2</offset>
         <factor>0.0002</factor>
       </volume>
       <pitch>
@@ -221,7 +241,7 @@
       </pitch>
       <reference-dist>50</reference-dist>
       <max-dist>1200</max-dist>
-    </moteurL-ext>
+    </propellerL-ext>
 
 <!-- =========================================== CRISSEMENTS PNEUS EXTERIEUR -->
 
@@ -329,7 +349,11 @@
       <path>Aircraft/daVinci_B-26B/sounds/b26_shutdown.wav</path>
       <condition>
         <property>/sim/current-view/internal</property>
-        <property>/engines/engine[0]/shutdown</property>
+        <!--property>/engines/engine[0]/shutdown</property-->
+        <less-than>
+          <property>/engines/engine[0]/rpm</property>
+          <value>200</value>
+        </less-than>
       </condition>
       <volume>
         <min>0.3</min>
@@ -342,7 +366,11 @@
       <path>Aircraft/daVinci_B-26B/sounds/b26_shutdown.wav</path>
       <condition>
         <property>/sim/current-view/internal</property>
-        <property>/engines/engine[1]/shutdown</property>
+        <!--property>/engines/engine[1]/shutdown</property-->
+        <less-than>
+          <property>/engines/engine[1]/rpm</property>
+          <value>200</value>
+        </less-than>
       </condition>
       <volume>
         <min>0.3</min>
@@ -352,8 +380,8 @@
 
 <!-- ===================================================== MOTEURS INTERIEUR -->
 
-    <moteurR-reduits-int>
-      <name>moteurR-reduits-int</name>
+    <engineR-int>
+      <name>engineR-int</name>
       <mode>looped</mode>
       <path>Aircraft/daVinci_B-26B/sounds/b26_idle_rpm.wav</path>
       <condition>
@@ -361,7 +389,7 @@
         <property>/engines/engine[0]/running</property>
         <greater-than>
           <property>/engines/engine[0]/rpm</property>
-          <value>100</value>
+          <value>200</value>
         </greater-than>
       </condition>
       <volume>
@@ -377,10 +405,10 @@
         <offset>0.2</offset>
         <factor>0.0009</factor>
       </pitch>
-    </moteurR-reduits-int>
+    </engineR-int>
 
-    <moteurL-reduits-int>
-      <name>moteurL-reduits-int</name>
+    <engineL-int>
+      <name>engineL-int</name>
       <mode>looped</mode>
       <path>Aircraft/daVinci_B-26B/sounds/b26_idle_rpm.wav</path>
       <condition>
@@ -388,7 +416,7 @@
         <property>/engines/engine[1]/running</property>
         <greater-than>
           <property>/engines/engine[1]/rpm</property>
-          <value>100</value>
+          <value>200</value>
         </greater-than>
       </condition>
       <volume>
@@ -404,17 +432,21 @@
         <offset>0.2</offset>
         <factor>0.0009</factor>
       </pitch>
-    </moteurL-reduits-int>
+    </engineL-int>
 
 <!-- ===================================================== HELICES INTERIEUR -->
 
-    <moteurR-int>
-      <name>moteurR-int</name>
+    <propellerR-int>
+      <name>propellerR-int</name>
       <mode>looped</mode>
       <path>Aircraft/daVinci_B-26B/sounds/b26_high_rpm.wav</path>
       <condition>
         <property>/sim/current-view/internal</property>
         <property>/engines/engine[0]/running</property>
+        <greater-than>
+          <property>/engines/engine[0]/rpm</property>
+          <value>600</value>
+        </greater-than>
       </condition>
       <volume>
         <property>/engines/engine[0]/rpm</property>
@@ -430,15 +462,19 @@
         <offset>0.5</offset>
         <factor>0.0006</factor>
       </pitch>
-    </moteurR-int>
+    </propellerR-int>
 
-    <moteurL-int>
-      <name>moteurL-int</name>
+    <propellerL-int>
+      <name>propellerL-int</name>
       <mode>looped</mode>
       <path>Aircraft/daVinci_B-26B/sounds/b26_high_rpm.wav</path>
       <condition>
         <property>/sim/current-view/internal</property>
         <property>/engines/engine[1]/running</property>
+        <greater-than>
+          <property>/engines/engine[1]/rpm</property>
+          <value>600</value>
+        </greater-than>
       </condition>
       <volume>
         <property>/engines/engine[1]/rpm</property>
@@ -454,7 +490,7 @@
         <offset>0.5</offset>
         <factor>0.0006</factor>
       </pitch>
-    </moteurL-int>
+    </propellerL-int>
 
 <!-- ================================================= EQUIPEMENTS INTERIEUR -->
 
@@ -538,6 +574,26 @@
         <factor>0.4</factor>
       </volume>
     </baydoors>
+
+    <click>
+      <name>clic</name>
+      <path>Sounds/click.wav</path>
+      <mode>once</mode>
+      <condition>
+        <property>/sim/current-view/internal</property>
+        <greater-than>
+          <property>/sim/model/click-sound</property>
+          <value type="float">.1</value>
+        </greater-than>
+        <less-than>
+          <property>/sim/model/click-sound</property>
+          <value type="float">.9</value>
+        </less-than>
+      </condition>
+      <volume>
+        <factor>0.2</factor>
+      </volume>
+    </click>
 
 <!-- ========================================================= ENVIRONNEMENT -->
 
@@ -684,16 +740,6 @@
       <max-dist>20.0</max-dist>
     </stall>
 
-    <click>
-      <name>mag left click down</name>
-      <path>Sounds/click.wav</path>
-      <condition>
-        <property>controls/engines/engine/mag-switch-left</property>
-      </condition>
-      <volume>
-        <factor>1.0</factor>
-      </volume>
-    </click>
     
     <low-fuel>
       <name>low-fuel</name>
