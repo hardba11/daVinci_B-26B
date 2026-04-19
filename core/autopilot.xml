@@ -35,6 +35,7 @@ yasim / fdm (aircraft behaviour)
   D   No effect   Decrease    Decrease    No effect
 
       <Kp>/_debug/Kp</Kp><Ti>/_debug/Ti</Ti><Td>/_debug/Td</Td>
+      <Kp>1</Kp><Ti>10000000000</Ti><Td>0</Td>
 
 
   -->
@@ -62,11 +63,11 @@ yasim / fdm (aircraft behaviour)
         <table>
           <property>/orientation/roll-rate-degps</property>
           <entry><ind>-1000</ind><dep>-1.000</dep></entry>
-          <entry><ind>-200</ind><dep>-1.000</dep></entry>
-          <entry><ind>-180</ind><dep>-0.999</dep></entry>
+          <entry><ind>-250</ind><dep>-1.000</dep></entry>
+          <entry><ind>-220</ind><dep>-0.999</dep></entry>
           <entry><ind>0.0</ind><dep>0.000</dep></entry>
-          <entry><ind>180</ind><dep>0.999</dep></entry>
-          <entry><ind>200</ind><dep>1.000</dep></entry>
+          <entry><ind>220</ind><dep>0.999</dep></entry>
+          <entry><ind>250</ind><dep>1.000</dep></entry>
           <entry><ind>1000</ind><dep>1.000</dep></entry>
         </table>
       </expression>
@@ -121,11 +122,101 @@ yasim / fdm (aircraft behaviour)
     <input>
       <expression>
         <table>
+          <property>/orientation/alpha-deg</property>
+          <entry><ind>-20</ind><dep>1.00</dep></entry>
+          <entry><ind>-12.0</ind><dep>1.00</dep></entry>
+          <entry><ind>0.0</ind><dep>0.00</dep></entry>
+          <entry><ind>12.0</ind><dep>-1.00</dep></entry>
+          <entry><ind>20.0</ind><dep>-1.00</dep></entry>
+        </table>
+      </expression>
+    </input>
+    <reference>
+      <expression>
+        <table>
+          <property>/controls/flight/elevator</property>
+          <entry><ind>-1.000</ind><dep>-0.999</dep></entry>
+          <entry><ind>-0.007</ind><dep>0.000</dep></entry>
+          <entry><ind>0.000</ind><dep>0.000</dep></entry>
+          <entry><ind>0.007</ind><dep>0.000</dep></entry>
+          <entry><ind>1.000</ind><dep>0.999</dep></entry>
+        </table>
+      </expression>
+    </reference>
+    <output>/controls/flight/flimo-elevator</output>
+    <config>
+      <Kp>0.4</Kp><Ti>1</Ti><Td>0.06</Td>
+      <u_min>-1.0</u_min><u_max>1.0</u_max>
+    </config>
+  </pid-controller>
+  <!--pid-controller>
+    <name>flimo-elevator</name>
+    <debug>false</debug>
+    <enable>
+      <condition>
+        <not>
+          <or>
+            <equals><property>/gear/gear[1]/wow</property><value>1</value></equals>
+            <equals><property>/gear/gear[2]/wow</property><value>1</value></equals>
+            <property>/autopilot/locks/altitude</property><value>altitude-hold</value>
+          </or>
+        </not>
+      </condition>
+    </enable>
+    <feedback-if-disabled>false</feedback-if-disabled>
+    <input>
+      <expression>
+        <table>
           <property>/accelerations/pilot-g</property>
           <entry><ind>-18</ind><dep>1.00</dep></entry>
           <entry><ind>-4.5</ind><dep>1.00</dep></entry>
           <entry><ind>1.0</ind><dep>0.00</dep></entry>
-          <entry><ind>7</ind><dep>-1.00</dep></entry>
+          <entry><ind>5.5</ind><dep>-1.00</dep></entry>
+          <entry><ind>20.0</ind><dep>-1.00</dep></entry>
+        </table>
+      </expression>
+    </input>
+    <reference>
+      <expression>
+        <table>
+          <property>/controls/flight/elevator</property>
+          <entry><ind>-1.000</ind><dep>-0.999</dep></entry>
+          <entry><ind>-0.007</ind><dep>0.000</dep></entry>
+          <entry><ind>0.000</ind><dep>0.000</dep></entry>
+          <entry><ind>0.007</ind><dep>0.000</dep></entry>
+          <entry><ind>1.000</ind><dep>0.999</dep></entry>
+        </table>
+      </expression>
+    </reference>
+    <output>/controls/flight/flimo-elevator</output>
+    <config>
+      <Kp>0.4</Kp><Ti>1</Ti><Td>0.06</Td>
+      <u_min>-1.0</u_min><u_max>1.0</u_max>
+    </config>
+  </pid-controller-->
+  <!--pid-controller>
+    <name>flimo-elevator</name>
+    <debug>false</debug>
+    <enable>
+      <condition>
+        <not>
+          <or>
+            <equals><property>/gear/gear[1]/wow</property><value>1</value></equals>
+            <equals><property>/gear/gear[2]/wow</property><value>1</value></equals>
+            <property>/autopilot/locks/altitude</property><value>altitude-hold</value>
+          </or>
+        </not>
+      </condition>
+    </enable>
+    <feedback-if-disabled>false</feedback-if-disabled>
+    <input>
+      <expression>
+        <table>
+          <property>/accelerations/pilot-g</property>
+          <entry><ind>-18</ind><dep>1.00</dep></entry>
+          <entry><ind>-4.5</ind><dep>1.00</dep></entry>
+          <entry><ind>1.0</ind><dep>0.00</dep></entry>
+          <entry><ind>5.5</ind><dep>-1.00</dep></entry>
           <entry><ind>20.0</ind><dep>-1.00</dep></entry>
         </table>
       </expression>
@@ -148,10 +239,10 @@ yasim / fdm (aircraft behaviour)
         <expression>
           <table>
             <property>/velocities/airspeed-kt</property>
-            <entry><ind>0</ind><dep>.5</dep></entry>
-            <entry><ind>100</ind><dep>.5</dep></entry>
-            <entry><ind>300</ind><dep>.5</dep></entry>
-            <entry><ind>600</ind><dep>.5</dep></entry>
+            <entry><ind>0</ind><dep>.4</dep></entry>
+            <entry><ind>100</ind><dep>.3</dep></entry>
+            <entry><ind>300</ind><dep>.3</dep></entry>
+            <entry><ind>600</ind><dep>.2</dep></entry>
           </table>
         </expression>
       </Kp>
@@ -159,10 +250,10 @@ yasim / fdm (aircraft behaviour)
         <expression>
           <table>
             <property>/velocities/airspeed-kt</property>
-            <entry><ind>0</ind><dep>50</dep></entry>
-            <entry><ind>100</ind><dep>50</dep></entry>
-            <entry><ind>300</ind><dep>50</dep></entry>
-            <entry><ind>600</ind><dep>50</dep></entry>
+            <entry><ind>0</ind><dep>.2</dep></entry>
+            <entry><ind>100</ind><dep>.3</dep></entry>
+            <entry><ind>300</ind><dep>.3</dep></entry>
+            <entry><ind>600</ind><dep>.4</dep></entry>
           </table>
         </expression>
       </Ti>
@@ -170,16 +261,16 @@ yasim / fdm (aircraft behaviour)
         <expression>
           <table>
             <property>/velocities/airspeed-kt</property>
-            <entry><ind>0</ind><dep>.00008</dep></entry>
-            <entry><ind>100</ind><dep>.00008</dep></entry>
-            <entry><ind>300</ind><dep>.00008</dep></entry>
-            <entry><ind>600</ind><dep>.00008</dep></entry>
+            <entry><ind>0</ind><dep>.0001</dep></entry>
+            <entry><ind>100</ind><dep>.0001</dep></entry>
+            <entry><ind>300</ind><dep>.0001</dep></entry>
+            <entry><ind>600</ind><dep>.0001</dep></entry>
           </table>
         </expression>
       </Td>
       <u_min>-1.0</u_min><u_max>1.0</u_max>
     </config>
-  </pid-controller>
+  </pid-controller-->
   <filter>
     <name>fcm-elevator</name>
     <type>gain</type>
@@ -423,6 +514,23 @@ yasim / fdm (aircraft behaviour)
     </input>
     <output>/controls/flight/fdm-elevator</output>
   </filter>
+
+
+  <!-- direct connect
+  <filter>
+    <name>fdm-aileron</name>
+    <type>gain</type>
+    <gain>1.0</gain>
+    <input>/controls/flight/aileron</input>
+    <output>/controls/flight/fdm-aileron</output>
+  </filter>
+  <filter>
+    <name>fdm-elevator</name>
+    <type>gain</type>
+    <gain>1.0</gain>
+    <input>/controls/flight/elevator</input>
+    <output>/controls/flight/fdm-elevator</output>
+  </filter> -->
 
 </PropertyList>
 

@@ -40,7 +40,7 @@ http://wiki.flightgear.org/YASim
 
   <wing x="-0.84" y="0.62" z="-0.18" length ="7.8" chord ="3.8" sweep="-2" dihedral="5" taper="0.3" camber="0.1" incidence="-2" >
     <stall aoa="16" width="5.8" peak="1.5" />
-    <flap0 start=".5" end=".92" lift="1.47" drag="1.2" />
+    <flap0 start=".5" end=".92" lift="2" drag="1.1" />
     <control-input axis="/controls/flight/fdm-aileron" control="FLAP0" split="true" />
     <control-input axis="/controls/flight/aileron-trim" control="FLAP0" split="true" />
     <control-output control="FLAP0" side="left" prop="/surface-positions/left-aileron-pos-norm" />

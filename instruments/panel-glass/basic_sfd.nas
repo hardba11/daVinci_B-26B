@@ -469,15 +469,15 @@ var BASIC_SFD = {
         m.ff_r_frame.setCenter(x_ff_engine_r, y_ff_engine_r).setRotation(90 * D2R);
 
         m.static_ff_r_green = m.my_group.createChild('path', 'static_ff_r_green');
-        draw_line(m.static_ff_r_green, x_ff_engine_r + 30 + 5, y_ff_engine_r + 358 - 100, x_ff_engine_r + 30 + 5, y_ff_engine_r + 358 - 180, 'green', 5);
+        draw_line(m.static_ff_r_green, x_ff_engine_r + 30 + 5, y_ff_engine_r + 358 - 50, x_ff_engine_r + 30 + 5, y_ff_engine_r + 358 - 150, 'green', 5);
         m.static_ff_r_green.setCenter(x_ff_engine_r, y_ff_engine_r).setRotation(90 * D2R);
 
         m.static_ff_r_orange = m.my_group.createChild('path', 'static_ff_r_orange');
-        draw_line(m.static_ff_r_orange, x_ff_engine_r + 30 + 5, y_ff_engine_r + 358 - 180, x_ff_engine_r + 30 + 5, y_ff_engine_r + 358 - 250, 'yellow', 5);
+        draw_line(m.static_ff_r_orange, x_ff_engine_r + 30 + 5, y_ff_engine_r + 358 - 150, x_ff_engine_r + 30 + 5, y_ff_engine_r + 358 - 230, 'yellow', 5);
         m.static_ff_r_orange.setCenter(x_ff_engine_r, y_ff_engine_r).setRotation(90 * D2R);
 
         m.static_ff_r_red = m.my_group.createChild('path', 'static_ff_r_red');
-        draw_line(m.static_ff_r_red, x_ff_engine_r + 30 + 5, y_ff_engine_r + 358 - 250, x_ff_engine_r + 30 + 5, y_ff_engine_r + 358 - 358, 'red', 5);
+        draw_line(m.static_ff_r_red, x_ff_engine_r + 30 + 5, y_ff_engine_r + 358 - 230, x_ff_engine_r + 30 + 5, y_ff_engine_r + 358 - 358, 'red', 5);
         m.static_ff_r_red.setCenter(x_ff_engine_r, y_ff_engine_r).setRotation(90 * D2R);
 
         m.ff_r_gauge = m.my_group.createChild('path', 'ff_r_gauge');
@@ -659,15 +659,15 @@ var BASIC_SFD = {
         m.ff_l_frame.setCenter(x_ff_engine_l, y_ff_engine_l).setRotation(90 * D2R);
 
         m.static_ff_l_green = m.my_group.createChild('path', 'static_ff_l_green');
-        draw_line(m.static_ff_l_green, x_ff_engine_l + 30 + 5, y_ff_engine_l + 358 - 100, x_ff_engine_l + 30 + 5, y_ff_engine_l + 358 - 180, 'green', 5);
+        draw_line(m.static_ff_l_green, x_ff_engine_l + 30 + 5, y_ff_engine_l + 358 - 50, x_ff_engine_l + 30 + 5, y_ff_engine_l + 358 - 150, 'green', 5);
         m.static_ff_l_green.setCenter(x_ff_engine_l, y_ff_engine_l).setRotation(90 * D2R);
 
         m.static_ff_l_orange = m.my_group.createChild('path', 'static_ff_l_orange');
-        draw_line(m.static_ff_l_orange, x_ff_engine_l + 30 + 5, y_ff_engine_l + 358 - 180, x_ff_engine_l + 30 + 5, y_ff_engine_l + 358 - 250, 'yellow', 5);
+        draw_line(m.static_ff_l_orange, x_ff_engine_l + 30 + 5, y_ff_engine_l + 358 - 150, x_ff_engine_l + 30 + 5, y_ff_engine_l + 358 - 230, 'yellow', 5);
         m.static_ff_l_orange.setCenter(x_ff_engine_l, y_ff_engine_l).setRotation(90 * D2R);
 
         m.static_ff_l_red = m.my_group.createChild('path', 'static_ff_l_red');
-        draw_line(m.static_ff_l_red, x_ff_engine_l + 30 + 5, y_ff_engine_l + 358 - 250, x_ff_engine_l + 30 + 5, y_ff_engine_l + 358 - 358, 'red', 5);
+        draw_line(m.static_ff_l_red, x_ff_engine_l + 30 + 5, y_ff_engine_l + 358 - 230, x_ff_engine_l + 30 + 5, y_ff_engine_l + 358 - 358, 'red', 5);
         m.static_ff_l_red.setCenter(x_ff_engine_l, y_ff_engine_l).setRotation(90 * D2R);
 
         m.ff_l_gauge = m.my_group.createChild('path', 'ff_l_gauge');

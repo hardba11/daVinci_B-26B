@@ -389,8 +389,8 @@ see :
     <input>
       <property>/orientation/alpha-deg</property>
     </input>
-    <x>75</x>
-    <y>-5</y>
+    <x>-120</x>
+    <y>-15</y>
     <width>30</width>
     <height>8</height>
     <halign>right</halign>
@@ -399,8 +399,8 @@ see :
 
   <tape>
     <name>aoa gauge</name>
-    <x>65</x>
-    <y>-65</y>
+    <x>-85</x>
+    <y>-40</y>
     <width>10</width>
     <height>60</height>
     <option>right</option>
@@ -555,6 +555,19 @@ see :
       <not><property>/gear/gear[0]/wow</property></not>
     </condition>
   </gauge>
+
+  <!-- ~~~~~~~~~~~~~~~~~~ air to air refuelling -->
+  <label>
+    <name>aar</name>
+    <x>0</x>
+    <y>-40</y>
+    <halign>center</halign>
+    <format>AAR</format>
+    <condition>
+      <property>/systems/refuel/contact</property>
+    </condition>
+  </label>
+
 
   <!--
 ================================================================================
@@ -764,6 +777,178 @@ see :
 
 
 
+<!--
+================================================================================
+                                                                       DEV TOOLS
+================================================================================
+-->
+
+  <gauge>
+    <name>debug elevator</name>
+    <x>70</x>
+    <y>-135</y>
+    <width>10</width>
+    <height>80</height>
+    <option>vertical</option>
+    <option>right</option>
+    <option>notext</option>
+    <input>
+      <property>/controls/flight/elevator</property>
+      <factor>-1</factor>
+      <max>1.0</max>
+      <min>-1.0</min>
+    </input>
+    <condition>
+      <property>/_debug/show_devtools</property>
+    </condition>
+  </gauge>
+  <gauge>
+    <name>debug fcm-elevator</name>
+    <x>80</x>
+    <y>-135</y>
+    <width>10</width>
+    <height>80</height>
+    <option>vertical</option>
+    <option>right</option>
+    <option>notext</option>
+    <major-divisions>1</major-divisions>
+    <minor-divisions>1</minor-divisions>
+    <input>
+      <property>/controls/flight/fdm-elevator</property>
+      <factor>-1</factor>
+      <max>1.0</max>
+      <min>-1.0</min>
+    </input>
+    <condition>
+      <property>/_debug/show_devtools</property>
+    </condition>
+  </gauge>
+
+  <gauge>
+    <name>debug elevator pos</name>
+    <x>90</x>
+    <y>-135</y>
+    <width>10</width>
+    <height>80</height>
+    <option>vertical</option>
+    <option>right</option>
+    <option>notext</option>
+    <major-divisions>1</major-divisions>
+    <minor-divisions>1</minor-divisions>
+    <input>
+      <property>/surface-positions/elevator-pos-norm</property>
+      <factor>-1</factor>
+      <max>1.0</max>
+      <min>-1.0</min>
+    </input>
+    <condition>
+      <property>/_debug/show_devtools</property>
+    </condition>
+  </gauge>
+
+
+  <label>
+    <name>g</name>
+    <x>40</x>
+    <y>-105</y>
+    <width>1.5</width>
+    <height>1.5</height>
+    <halign>left</halign>
+    <input>
+      <property>/accelerations/pilot-g</property>
+    </input>
+    <format>%2.03fg</format>
+    <condition>
+      <property>/_debug/show_devtools</property>
+    </condition>
+  </label>
+  <label>
+    <name>fcm</name>
+    <x>90</x>
+    <y>-105</y>
+    <width>1.5</width>
+    <height>1.5</height>
+    <halign>left</halign>
+    <input>
+      <property>/controls/flight/fcm-elevator</property>
+    </input>
+    <format>%2.4f</format>
+    <condition>
+      <property>/_debug/show_devtools</property>
+    </condition>
+  </label>
+
+  <gauge>
+    <name>debug fcm-aileron</name>
+    <x>74</x>
+    <y>-45</y>
+    <width>50</width>
+    <height>10</height>
+    <option>top</option>
+    <option>horizontal</option>
+    <option>notext</option>
+    <major-divisions>1</major-divisions>
+    <minor-divisions>0</minor-divisions>
+    <input>
+      <property>/controls/flight/fcm-aileron</property>
+      <max>1.0</max>
+      <min>-1.0</min>
+    </input>
+    <condition>
+      <property>/_debug/show_devtools</property>
+    </condition>
+  </gauge>
+  <gauge>
+    <name>debug roll</name>
+    <x>74</x>
+    <y>-55</y>
+    <width>50</width>
+    <height>10</height>
+    <option>bottom</option>
+    <option>horizontal</option>
+    <option>notext</option>
+    <major-divisions>1</major-divisions>
+    <minor-divisions>1</minor-divisions>
+    <input>
+      <property>/controls/flight/aileron</property>
+      <max>1.0</max>
+      <min>-1.0</min>
+    </input>
+    <condition>
+      <property>/_debug/show_devtools</property>
+    </condition>
+  </gauge>
+
+  <label>
+    <name>debug rolldegs</name>
+    <x>80</x>
+    <y>-48</y>
+    <width>20</width>
+    <height>6</height>
+    <format>roll %.02f</format>
+    <input>
+      <property>/orientation/roll-rate-degps</property>
+    </input>
+    <halign>left</halign>
+    <condition>
+      <property>/_debug/show_devtools</property>
+    </condition>
+  </label>
+  <label>
+    <name>debug airspeed</name>
+    <x>55</x>
+    <y>-144</y>
+    <width>20</width>
+    <height>6</height>
+    <format>airspeed %.03f</format>
+    <input>
+      <property>/velocities/airspeed-kt</property>
+    </input>
+    <halign>left</halign>
+    <condition>
+      <property>/_debug/show_devtools</property>
+    </condition>
+  </label>
 
 
 </PropertyList>

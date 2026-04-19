@@ -4,20 +4,29 @@
 
   <effect>
     <inherits-from>Aircraft/daVinci_B-26B/Models/effects/interior</inherits-from>
+    <object-name>Background</object-name>
+    <object-name>Black</object-name>
+    <object-name>CageFlag</object-name>
+    <object-name>CageKnob</object-name>
+    <object-name>Circle.001</object-name>
+    <object-name>Face</object-name>
+    <object-name>HorizKnob</object-name>
     <object-name>Horizon</object-name>
     <object-name>Pin</object-name>
     <object-name>Wings</object-name>
-    <object-name>Circle.001</object-name>
-    <object-name>Face</object-name>
   </effect>
 
   <animation>
     <type>material</type>
+    <object-name>Background</object-name>
+    <object-name>Black</object-name>
     <object-name>Horizon</object-name>
     <object-name>Pin</object-name>
     <object-name>Wings</object-name>
     <object-name>Circle.001</object-name>
     <object-name>Face</object-name>
+    <object-name>CageKnob</object-name>
+    <object-name>HorizKnob</object-name>
     <emission>
       <factor-prop>/sim/model/rendering/relative-instrument-luminosity</factor-prop>
       <red>   0.017</red>

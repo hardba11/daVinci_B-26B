@@ -3,7 +3,7 @@
 <PropertyList>
 
   <model>
-    <path>Aircraft/daVinci_B-26B/instruments/asi300-us/asi300-us.xml</path>
+    <path>Aircraft/daVinci_B-26B/instruments/asi700kt/asi700kt.xml</path>
     <offsets>
       <x-m>-0.088</x-m>
       <y-m>0.02</y-m>

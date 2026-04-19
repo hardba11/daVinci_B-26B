@@ -10,6 +10,7 @@
     <object-name>needle2</object-name>
     <object-name>needle3</object-name>
     <object-name>PressureDial</object-name>
+    <object-name>knob</object-name>
   </effect>
 
   <animation>
@@ -19,6 +20,7 @@
     <object-name>needle2</object-name>
     <object-name>needle3</object-name>
     <object-name>PressureDial</object-name>
+    <object-name>knob</object-name>
     <emission>
       <factor-prop>/sim/model/rendering/relative-instrument-luminosity</factor-prop>
       <red>   0.017</red>
@@ -48,7 +50,6 @@
       <equals><property>/systems/electrical/on</property><value>1</value></equals>
     </condition>
   </animation>
-
 
   <animation>
     <type>range</type>
