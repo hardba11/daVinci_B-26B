@@ -1879,7 +1879,7 @@ ________________________________________________________________________________
     <type>spin</type>
     <object-name>noseGear.roues</object-name>
     <property>sim/multiplay/generic/float[9]</property>
-    <factor>40</factor>
+    <factor>39</factor>
     <center>
       <x-m>-4.234</x-m>
       <y-m>0.000</y-m>
@@ -1895,7 +1895,7 @@ ________________________________________________________________________________
     <type>spin</type>
     <object-name>gear.L.roue</object-name>
     <property>sim/multiplay/generic/float[11]</property>
-    <factor>-40</factor>
+    <factor>-30</factor>
     <center>
       <x-m>2.012</x-m>
       <y-m>0</y-m>
@@ -1911,7 +1911,7 @@ ________________________________________________________________________________
     <type>spin</type>
     <object-name>gear.R.roue</object-name>
     <property>sim/multiplay/generic/float[10]</property>
-    <factor>-40</factor>
+    <factor>-30</factor>
     <center>
       <x-m>2.012</x-m>
       <y-m>0</y-m>

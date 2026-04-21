@@ -22,13 +22,38 @@ Installation
 Screenshots
 -----------
 
+![Image](https://i.imgur.com/SzVcEuc.png)
+exterior view, pushback
+![Image](https://i.imgur.com/7OYeICU.png)
+legacy panel
+![Image](https://i.imgur.com/u9S5wPC.png)
+glass-cockpit panel
+![Image](https://i.imgur.com/uqOLpR1.png)
+ground equipments : fuel, EPU
+![Image](https://i.imgur.com/QQcMPdy.png)
+rain effects
+![Image](https://i.imgur.com/BbvDABQ.png)
+night interior view
 ![Image](https://i.imgur.com/GxIpSqM.png)
+night exterior view, lights
 ![Image](https://i.imgur.com/puO2uqR.png)
+cockpit view, legacy panel
+![Image](https://i.imgur.com/fHAwwhl.png)
+van-life interior view, living room
 ![Image](https://i.imgur.com/RhyFsYf.png)
+van-life interior view, living room
 ![Image](https://i.imgur.com/zZRX407.png)
+van-life interior view, living room
 ![Image](https://i.imgur.com/s7AgN9D.png)
+van-life interior view, living room
 ![Image](https://i.imgur.com/qKAa5Un.png)
-
+bay view
+![Image](https://i.imgur.com/3pz7YWa.png)
+air to air refuelling capability
+![Image](https://i.imgur.com/PBdbeoy.png)
+air to air refuelling capability
+![Image](https://i.imgur.com/H7W0fGb.png)
+brsq and synapse wingmen AI scenario
 
 Done
 ----
@@ -76,9 +101,9 @@ Done
 - lights
 - clickable elements
     - doors
-    - instruments
+    - ground equipments
 - adjust sound volume if window open/close
-- clickable instruments : magneto, starters, fuelpump
+- clickable instruments : magneto, starters, fuelpump, avionic, battery, pitot head
 - shortcuts
 - menu gui
     - views
@@ -88,34 +113,36 @@ Done
     - choose panel old-style/glass-cockpit
     - flashlight
 
-
-Work In Progress
-----------------
-
-
-
 ToDo
 ----
 
 **models**
 
-- add equipments and instruments in the living-room
+- add air-to-air refuelling probe
 - add instruments
     - transponder
-    - enable/disable AP
+    - GPS
+    - TACAN
     - other
+- add equipments and instruments in the living-room
+    - thermometer
+    - map
+    - soundbar
+    - cups
+    - electrical wall outlet
+    - screen and game console
 
 **UX**
 
 - multiplay
-- new clickable instruments : avionic, battery, cutoff
+- clickable instruments : cutoff, enable/disable AP
 
+**Core**
 
-
-
-
+- improve nasal, add filters
 
 <!--
 https://imgur.com/a/D3uNXA3
+https://imgur.com/a/nERNXAM
 -->
 
