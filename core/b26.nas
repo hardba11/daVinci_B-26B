@@ -339,6 +339,57 @@ var center_flight_controls_trim = func() {
 }
 
 
+var event_toggle_launchbar = func(do_enable)
+{
+    var is_launchbar_enabled = getprop("/controls/gear/launchbar") or 0;
+    if(do_enable == -1)
+    {
+        # do_enable == -1 : toggle
+        do_enable = (is_launchbar_enabled == 0) ? 1 : 0;
+    }
+
+    if(do_enable == 1)
+    {
+        # lower launchbar
+        setprop("/controls/gear/launchbar", 1);
+
+        # raise launchbar if could not have engaged
+        settimer(func() {
+            var state_launchbar = getprop("/gear/launchbar/state") or ''; # Disengaged, Engaged, Launching, Completed
+            if(state_launchbar != 'Engaged')
+            {
+                setprop("/controls/gear/catapult-launch-cmd", 0);
+                setprop("/controls/gear/launchbar", 0);
+            }
+        }, 1);
+    }
+    else
+    {
+        # raise launchbar unless engaged
+        var state_launchbar = getprop("/gear/launchbar/state") or ''; # Disengaged, Engaged, Launching, Completed
+        if(state_launchbar != 'Engaged')
+        {
+            setprop("/controls/gear/catapult-launch-cmd", 0);
+            setprop("/controls/gear/launchbar", 0);
+        }
+    }
+}
+
+var event_launch = func()
+{
+    var state_launchbar = getprop("/gear/launchbar/state") or ''; # Disengaged, Engaged, Launching, Completed
+    if(state_launchbar == 'Engaged')
+    {
+        # catapult launching command
+        setprop("/controls/gear/catapult-launch-cmd", 1);
+        # reinit some values after launch (~2 seconds)
+        settimer(func() {
+            setprop("/controls/gear/launchbar", 0);
+            setprop("/controls/gear/catapult-launch-cmd", 0);
+        }, 2);
+    }
+}
+
 setlistener("/sim/signals/fdm-initialized", init);
 
 

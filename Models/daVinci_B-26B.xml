@@ -151,6 +151,12 @@ ________________________________________________________________________________
     <object-name>gear.R.compas.bas</object-name>
     <object-name>gear.R.bas</object-name>
     <object-name>gear.R.roue</object-name>
+    <object-name>noseGear.catapulte.barre</object-name>
+    <object-name>noseGear.catapulte.sabot</object-name>
+    <object-name>noseGear.catapulte.socle</object-name>
+    <object-name>perche</object-name>
+    <object-name>hook</object-name>
+    <object-name>hook.base</object-name>
   </effect>
 
   <!-- vitres exterieures -->
@@ -315,6 +321,24 @@ ________________________________________________________________________________
     <object-name>c3.velos</object-name>
     <condition>
       <property>sim/model/equipment-velos</property>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>noseGear.catapulte.barre</object-name>
+    <object-name>noseGear.catapulte.socle</object-name>
+    <object-name>hook</object-name>
+    <object-name>hook.base</object-name>
+    <condition>
+      <property>sim/model/carrier-equipment</property>
+    </condition>
+  </animation>
+  <animation>
+    <type>select</type>
+    <object-name>perche</object-name>
+    <condition>
+      <property>sim/model/aar-equipment</property>
     </condition>
   </animation>
 
@@ -1373,7 +1397,7 @@ ________________________________________________________________________________
 ________________________________________________________________________________
                                                                 GEARS ANIMATIONS
   -->
-  <!-- roue avant -->
+  <!-- steering roue avant -->
   <animation>
     <type>rotate</type>
     <object-name>noseGear.verrin</object-name>
@@ -1381,6 +1405,8 @@ ________________________________________________________________________________
     <object-name>noseGear.compas.haut</object-name>
     <object-name>noseGear.compas.bas</object-name>
     <object-name>noseGear.roues</object-name>
+    <object-name>noseGear.catapulte.barre</object-name>
+    <object-name>noseGear.catapulte.socle</object-name>
     <property>sim/multiplay/generic/float[16]</property>
     <offset-deg>0</offset-deg>
     <factor>-1.2</factor>
@@ -1396,30 +1422,7 @@ ________________________________________________________________________________
     </axis>
   </animation>
 
-<!-- Gear Animations -->
-  <animation>
-    <type>select</type>
-    <object-name>gear.R.roue</object-name>
-    <condition>
-      <greater-than>
-        <property>gear/gear[1]/position-norm</property>
-        <value>0.02</value>
-      </greater-than>
-    </condition>
-  </animation>
-  <animation>
-    <type>select</type>
-    <object-name>gear.R.parts</object-name>
-    <object-name>gear.R.haut</object-name>
-    <condition>
-      <greater-than>
-        <property>gear/gear[1]/position-norm</property>
-        <value>0.800</value>
-      </greater-than>
-    </condition>
-  </animation>
-
-  <!-- bascule lors de la retractation -->
+  <!-- retractation trains principaux -->
   <animation>
     <type>rotate</type>
     <object-name>gear.L.roue</object-name>
@@ -1445,7 +1448,6 @@ ________________________________________________________________________________
       <z>0</z>
     </axis>
   </animation>
-
   <animation>
     <type>rotate</type>
     <object-name>gear.R.roue</object-name>
@@ -1472,7 +1474,7 @@ ________________________________________________________________________________
     </axis>
   </animation>
 
-<!-- Nose Gear -->
+  <!-- retractation train avant -->
   <animation>
     <type>rotate</type>
     <object-name>noseGear.compas.bas</object-name>
@@ -1483,6 +1485,8 @@ ________________________________________________________________________________
     <object-name>noseGear.roues</object-name>
     <object-name>lights.nose</object-name>
     <object-name>landing-light-nose-right</object-name>
+    <object-name>noseGear.catapulte.barre</object-name>
+    <object-name>noseGear.catapulte.socle</object-name>
     <property>gear/gear[0]/position-norm</property>
     <interpolation>
       <entry><ind>0</ind><dep>88</dep></entry>
@@ -1511,6 +1515,8 @@ ________________________________________________________________________________
     <object-name>noseGear.haut</object-name>
     <object-name>lights.nose</object-name>
     <object-name>landing-light-nose-right</object-name>
+    <object-name>noseGear.catapulte.barre</object-name>
+    <object-name>noseGear.catapulte.socle</object-name>
     <condition>
       <greater-than>
         <property>gear/gear[0]/position-norm</property>
@@ -1518,6 +1524,7 @@ ________________________________________________________________________________
       </greater-than>
     </condition>
   </animation>
+
   <animation>
     <type>select</type>
     <object-name>gear.L.roue</object-name>
@@ -1530,6 +1537,17 @@ ________________________________________________________________________________
   </animation>
   <animation>
     <type>select</type>
+    <object-name>gear.R.roue</object-name>
+    <condition>
+      <greater-than>
+        <property>gear/gear[1]/position-norm</property>
+        <value>0.02</value>
+      </greater-than>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
     <object-name>gear.L.parts</object-name>
     <object-name>gear.L.haut</object-name>
     <condition>
@@ -1539,7 +1557,17 @@ ________________________________________________________________________________
       </greater-than>
     </condition>
   </animation>
-
+  <animation>
+    <type>select</type>
+    <object-name>gear.R.parts</object-name>
+    <object-name>gear.R.haut</object-name>
+    <condition>
+      <greater-than>
+        <property>gear/gear[1]/position-norm</property>
+        <value>0.800</value>
+      </greater-than>
+    </condition>
+  </animation>
 
 <!--
 ________________________________________________________________________________
@@ -1677,6 +1705,9 @@ ________________________________________________________________________________
     <object-name>noseGear.verrin</object-name>
     <object-name>noseGear.bas</object-name>
     <object-name>noseGear.compas.bas</object-name>
+    <object-name>noseGear.catapulte.barre</object-name>
+    <object-name>noseGear.catapulte.socle</object-name>
+    <object-name>noseGear.catapulte.sabot</object-name>
   </animation>
   <animation>
     <type>translate</type>
@@ -1686,8 +1717,9 @@ ________________________________________________________________________________
       <entry><ind>0</ind><dep>0</dep></entry>
       <entry><ind>.1</ind><dep>.03</dep></entry>
       <entry><ind>.2</ind><dep>.11</dep></entry>
-      <!--entry><ind>.6</ind><dep>.25</dep></entry-->
-      <entry><ind>1</ind><dep>.2</dep></entry>
+      <entry><ind>.25</ind><dep>.15</dep></entry>
+      <entry><ind>.36</ind><dep>.20</dep></entry>
+      <entry><ind>1</ind><dep>.3</dep></entry>
     </interpolation>
     <axis>
       <x>0</x>
@@ -1703,6 +1735,8 @@ ________________________________________________________________________________
       <entry><ind>0</ind><dep>0</dep></entry>
       <entry><ind>.1</ind><dep>5</dep></entry>
       <entry><ind>.2</ind><dep>15</dep></entry>
+      <entry><ind>.25</ind><dep>20</dep></entry>
+      <entry><ind>.36</ind><dep>25</dep></entry>
       <entry><ind>1</ind><dep>35</dep></entry>
     </interpolation>
     <center>
@@ -1724,6 +1758,8 @@ ________________________________________________________________________________
       <entry><ind>0</ind><dep>0</dep></entry>
       <entry><ind>.1</ind><dep>-5</dep></entry>
       <entry><ind>.2</ind><dep>-15</dep></entry>
+      <entry><ind>.25</ind><dep>-20</dep></entry>
+      <entry><ind>.36</ind><dep>-25</dep></entry>
       <entry><ind>1</ind><dep>-35</dep></entry>
     </interpolation>
     <center>
@@ -1866,6 +1902,92 @@ ________________________________________________________________________________
     <axis>
       <x>0</x>
       <y>-1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+
+<!--
+________________________________________________________________________________
+                                                                         CARRIER
+  -->
+
+
+  <!-- retractation barre de catapulte -->
+  <animation>
+    <type>rotate</type>
+    <object-name>noseGear.catapulte.barre</object-name>
+    <property>gear/gear[0]/position-norm</property>
+    <interpolation>
+      <entry><ind>0</ind><dep>-68</dep></entry>
+      <entry><ind>.9</ind><dep>-60</dep></entry>
+      <entry><ind>1</ind><dep>0</dep></entry>
+    </interpolation>
+    <center>
+      <x-m>-4.413</x-m>
+      <y-m>0</y-m>
+      <z-m>-1.741</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>-1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+
+  <!-- tentative d accrochage barre de catapulte -->
+  <animation>
+    <type>rotate</type>
+    <object-name>noseGear.catapulte.barre</object-name>
+    <property>gear/gear[0]/launchbar-position-norm</property>
+    <interpolation>
+      <entry><ind>0</ind><dep>0</dep></entry>
+      <entry><ind>1</ind><dep>-60</dep></entry>
+    </interpolation>
+    <center>
+      <x-m>-4.413</x-m>
+      <y-m>0</y-m>
+      <z-m>-1.741</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>noseGear.catapulte.sabot</object-name>
+    <condition>
+      <not-equals>
+        <property>/gear/launchbar/state</property>
+        <value>Disengaged</value>
+      </not-equals>
+      <greater-than>
+        <property>gear/gear[0]/launchbar-position-norm</property>
+        <value>0.95</value>
+      </greater-than>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>hook</object-name>
+    <property>gear/tailhook/position-norm</property>
+    <interpolation>
+      <entry><ind>0.0</ind><dep>0</dep></entry>
+      <entry><ind>1.0</ind><dep>90</dep></entry>
+    </interpolation>
+    <center>
+      <x-m>7.554</x-m>
+      <y-m>0</y-m>
+      <z-m>-0.832</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
       <z>0</z>
     </axis>
   </animation>

@@ -74,6 +74,8 @@
       <equipment-baggages type="bool">true</equipment-baggages>
       <equipment-canoe type="bool">true</equipment-canoe>
       <equipment-velos type="bool">true</equipment-velos>
+      <carrier-equipment type="bool">false</carrier-equipment>
+      <aar-equipment type="bool">false</aar-equipment>
 
       <!-- for sounds -->
       <click type="bool">1</click>
@@ -129,6 +131,8 @@
       <path>/sim/model/equipment-baggages</path>
       <path>/sim/model/equipment-canoe</path>
       <path>/sim/model/equipment-velos</path>
+      <path>/sim/model/carrier-equipment</path>
+      <path>/sim/model/aar-equipment</path>
       <path>/controls/doors/windows</path>
       <path>/controls/doors/bay</path>
       <path>/controls/doors/door1</path>

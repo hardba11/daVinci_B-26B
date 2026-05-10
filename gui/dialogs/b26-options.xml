@@ -49,6 +49,50 @@
 
   <hrule />
 
+  <!-- ~~~~~~~~~~~~~~~~~~ Equipments -->
+  <group>
+    <layout>table</layout>
+    <halign>left</halign>
+    <text>
+      <row>0</row><col>0</col>
+      <label>Equipments</label>
+    </text>
+    <checkbox>
+      <row>1</row><col>0</col>
+      <x>150</x>
+      <y>200</y>
+      <width>12</width>
+      <height>12</height>
+      <property>/sim/model/carrier-equipment</property>
+      <binding>
+        <command>property-toggle</command>
+        <property>/sim/model/carrier-equipment</property>
+      </binding>
+    </checkbox>
+    <text>
+      <row>1</row><col>1</col>
+      <label>Launchbar and carrier hook</label>
+    </text>
+    <checkbox>
+      <row>2</row><col>0</col>
+      <x>150</x>
+      <y>200</y>
+      <width>12</width>
+      <height>12</height>
+      <property>/sim/model/aar-equipment</property>
+      <binding>
+        <command>property-toggle</command>
+        <property>/sim/model/aar-equipment</property>
+      </binding>
+    </checkbox>
+    <text>
+      <row>2</row><col>1</col>
+      <label>AirToAir refueling probe</label>
+    </text>
+  </group>
+
+  <hrule />
+
   <!-- ~~~~~~~~~~~~~~~~~~ fret -->
   <group>
     <layout>table</layout>

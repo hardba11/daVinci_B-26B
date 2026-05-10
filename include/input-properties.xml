@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
+<!--
+PROPERTY-PATH : /input/
+see :
+- /devices/status/keyboard/event/
+- /input/keyboard/key[*]/
+-->
 <PropertyList>
 
   <keyboard>
@@ -95,6 +100,41 @@ controls.gearDown(-1);
             <property>/gear/gear[2]/wow</property>
           </not>
         </condition>
+      </binding>
+    </key>
+
+
+    <!-- ~~~~~~~~~~~~~~~~~~ carrier -->
+    <key n="99">
+      <name>c</name>
+      <desc>toggle launch-bar and reinit catapult</desc>
+      <binding>
+        <command>nasal</command>
+        <script>
+          <![CDATA[
+b26.event_toggle_launchbar(-1);
+          ]]>
+        </script>
+      </binding>
+    </key>
+    <key n="67">
+      <name>C</name>
+      <desc>toggle catapult launch</desc>
+      <binding>
+        <command>nasal</command>
+        <script>
+          <![CDATA[
+b26.event_launch();
+          ]]>
+        </script>
+      </binding>
+    </key>
+    <key n="111">
+      <name>o</name>
+      <desc>toggle hook</desc>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/gear/tailhook</property>
       </binding>
     </key>
 

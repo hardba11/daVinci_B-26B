@@ -2,60 +2,37 @@
 
 <PropertyList>
 
-  <key>
-    <name>d</name>
-    <desc>Toggle Windows and Entry Hatch to Nose Wheel Well</desc>
-  </key>
-  <key>
-    <name>D</name>
-    <desc>Toggle Bay Doors</desc>
-  </key>
-  <key>
-    <name>n</name>
-    <desc>Propeller Coarse</desc>
-  </key>
-  <key>
-    <name>N</name>
-    <desc>Propeller Fine</desc>
-  </key>
-  <key>
-    <name>h</name>
-    <desc>Toggle HUD</desc>
-  </key>
-  <key>
-    <name>M</name>
-    <desc>Leaner Mixture</desc>
-  </key>
-  <key>
-    <name>m</name>
-    <desc>Richer Mixture</desc>
-  </key>
-  <key>
-    <name>s</name>
-    <desc>Start engines</desc>
-  </key>
-  <text>Remember to visit F10/Fuel and Payload and turn on Fuel before starting!
+  <key><name>s</name><desc>Start engines</desc></key>
+  <key><name>h</name><desc>Toggle HUD</desc></key>
+  <key><name>ctrl-p/ ctrl-P</name><desc>Enable / Disable autopilot to keep current heading, altitude and speed</desc></key>
+  <key><name>ctrl-a</name><desc>Toggle autopilot on Altitude</desc></key>
+  <key><name>ctrl-s</name><desc>Toggle autopilot on Speed</desc></key>
+  <key><name>ctrl-h</name><desc>Toggle autopilot on Heading (bug)</desc></key>
+  <key><name>[ / ]</name><desc>Flaps up / down</desc></key>
+  <key><name>j / k</name><desc>Speedbrakes up / down</desc></key>
+  <key><name>n / N</name><desc>Propeller Coarse / Fine</desc></key>
+  <key><name>m / M</name><desc>Richer / Leaner Mixture</desc></key>
+  <key><name>k / j</name><desc>Extend / Retract Speedbrakes</desc></key>
+  <key><name>d</name><desc>Toggle windows and entry hatch to nose wheel well</desc></key>
+  <key><name>D</name><desc>Toggle bay doors</desc></key>
+  <key><name>c</name><desc>Carrier launch-bar engage</desc></key>
+  <key><name>C</name><desc>Catapult launch command</desc></key>
+  <key><name>o</name><desc>Hook up/down</desc></key>
+  <text>
+START
+1. check fuel
+2. press "s" OR batt=ON, avionics=ON, fuel pumps=ON, magneto=BOTH, mixture=100, lights=adjust, starter=ON
+3. mixture=adjust
 
-Some notes on the propeller adjustment:
+TAKE OFF
+flaps2 - 150kt : rotate 
 
-Propeller pitch affects engine RPM and Manifold pressure, total speed. You *will* need to adjust it for maximum performance at altitude.
+FINALE
+180Kt - flaps7 - -900fpm
 
-The actual amount of propeller pitch is relative to the Prop Pitch levers in the cockpit. Remember that Throttle, Boost, Prop Pitch, and Mixture will all affect Manifold Pressure and speed at take off as well as
-at altitude.
-
----Start up---
-Ensure propeller pitch is set to full fine. Enable fuel tank selection. All magnetos on. Press "s" to start and then reduce mixture (M) to 70%.
-
----Take Off---
-Flaps down 10 degrees, Take off at 40" Manifold Pressure. Lift slightly back on the yoke and be prepared to use Aileron against Torque and use Rudder and differential braking to counteract swing. Lift Off at 120 Kts.
-
----Landing---
-Beware: The engine runs on low rpm  Set propeller pitch to full fine pitch on approach.
-Lower Flaps and Gear under 160 Kts. Approach Speed is 130 Kts. A curved Approach is recommended, because visibility on final is bad. Speed at Treshold should be 120 Kts.
-After Touchdown use Rudder and differential braking to keep the Aircraft straight. Don't slam on the brakes.
+LANDING
+130kt - flaps10
   </text>
-
-
 </PropertyList>
 
 
